@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умный блокнот с категориями</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Боковая панель с категориями -->
+        <aside class="sidebar">
+            <div class="categories-section">
+                <h2>Категории</h2>
+                <div class="categories-list" id="categoriesList">
+                    <!-- Категории будут загружены здесь -->
+                </div>
+                <div class="category-actions">
+                    <button id="addCategoryBtn" class="add-category-btn">
+                        <span>+</span> Новая категория
+                    </button>
+                </div>
+            </div>
+            
+            <div class="tools-section">
+                <h3>Инструменты</h3>
+                <div class="tool-buttons">
+                    <button id="exportBtn" class="tool-btn">Экспорт JSON</button>
+                    <button id="importBtn" class="tool-btn">Импорт JSON</button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;">
+                    <button id="clearAllBtn" class="tool-btn danger">Очистить всё</button>
+                </div>
+            </div>
+            
+            <div class="display-section">
+                <h3>Отображение</h3>
+                <div class="display-buttons">
+                    <button id="viewListBtn" class="view-btn active" data-view="list" title="Список">
+                        <span class="view-icon">≡</span> Список
+                    </button>
+                    <button id="viewGridBtn" class="view-btn" data-view="grid" title="Сетка">
+                        <span class="view-icon">⧉</span> Сетка
+                    </button>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <h3>Статистика</h3>
+                <div class="stats">
+                    <div>Всего заметок: <span id="totalNotes">0</span></div>
+                    <div>Активная категория: <span id="activeCategory">Все</span></div>
+                    <div>Категорий: <span id="totalCategories">0</span></div>
+                    <div>Сортировка: <span id="sortOrder">новые</span></div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Основная область с заметками -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <h1>Умный блокнот</h1>
+                    <div class="sort-controls">
+                        <span>Сортировка:</span>
+                        <button id="sortNewBtn" class="sort-btn active" data-sort="new">
+                            <span class="sort-icon">↓</span> Сначала новые
+                        </button>
+                        <button id="sortOldBtn" class="sort-btn" data-sort="old">
+                            <span class="sort-icon">↑</span> Сначала старые
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="category-filter">
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">Все категории</option>
+                        </select>
+                        <button id="clearFilterBtn" class="filter-clear">×</button>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Область создания заметки -->
+            <div class="note-creator">
+                <div class="creator-header">
+                    <div class="category-selector">
+                        <select id="noteCategory" class="category-select">
+                            <option value="">Выберите категорию</option>
+                        </select>
+                        <button id="editCategoriesBtn" class="edit-categories-btn" title="Управление категориями">⚙️</button>
+                    </div>
+                </div>
+                
+                <textarea 
+                    id="noteInput" 
+                    placeholder="Введите текст заметки... (Enter - сохранить, Shift+Enter - новая строка)"
+                    rows="3"
+                ></textarea>
+                
+                <div class="creator-footer">
+                    <div class="character-count">
+                        Символов: <span id="charCount">0</span>
+                    </div>
+                    <button id="saveBtn" class="save-btn">Сохранить заметку</button>
+                </div>
+            </div>
+            
+            <!-- Контейнер для заметок -->
+            <div class="notes-container list-view" id="notesContainer">
+                <!-- Заметки загрузятся здесь -->
+            </div>
+            
+            <!-- Модальное окно для управления категориями -->
+            <div id="categoryModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Управление категориями</h2>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="new-category-input">
+                            <input type="text" id="newCategoryName" placeholder="Название новой категории">
+                            <input type="color" id="newCategoryColor" value="#4CAF50" title="Выберите цвет">
+                            <button id="createCategoryBtn">Создать</button>
+                        </div>
+                        <div class="categories-manager" id="categoriesManager">
+                            <!-- Существующие категории для редактирования -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
