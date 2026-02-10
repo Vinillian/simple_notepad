@@ -599,6 +599,16 @@ function editNote(id) {
             editTextarea.focus();
             editTextarea.setSelectionRange(editTextarea.value.length, editTextarea.value.length);
             autoResizeTextarea(editTextarea);
+            
+            // Добавляем обработчик для автоматического определения Markdown
+            editTextarea.addEventListener('input', function() {
+                const hasMarkdown = containsMarkdown(this.value);
+                if (hasMarkdown) {
+                    this.classList.add('markdown-editor');
+                } else {
+                    this.classList.remove('markdown-editor');
+                }
+            });
         }
     }, 100);
 }
@@ -696,6 +706,183 @@ function setupViewMode() {
 }
 
 // ====================
+// MARKDOWN ФУНКЦИИ
+// ====================
+
+// Настройка marked
+marked.setOptions({
+    breaks: true,
+    gfm: true,
+    headerIds: false,
+    highlight: function(code, lang) {
+        // Простое подсвечивание кода
+        return code;
+    }
+});
+
+// Проверяет, содержит ли текст Markdown разметку
+function containsMarkdown(text) {
+    const markdownPatterns = [
+        /^#+\s/m,              // Заголовки
+        /\*\*.*\*\*/,          // Жирный текст
+        /\*.*\*/,              // Курсив
+        /^> /m,                // Цитаты
+        /^-\s/m,               // Маркированные списки
+        /^\d+\.\s/m,           // Нумерованные списки
+        /`[^`]+`/,             // Встроенный код
+        /^```[\s\S]*?^```/m,   // Блоки кода
+        /\[.*\]\(.*\)/,        // Ссылки
+        /!\[.*\]\(.*\)/,       // Изображения
+        /^\|.*\|$/m,           // Таблицы
+        /^---/m,               // Горизонтальные линии
+        /~~.*~~/               // Зачеркнутый текст
+    ];
+    
+    return markdownPatterns.some(pattern => pattern.test(text));
+}
+
+// Преобразует Markdown в HTML
+function renderMarkdown(text) {
+    if (!containsMarkdown(text)) {
+        return text.replace(/\n/g, '<br>');
+    }
+    
+    try {
+        return marked.parse(text);
+    } catch (error) {
+        console.error('Ошибка парсинга Markdown:', error);
+        return text.replace(/\n/g, '<br>');
+    }
+}
+
+// Функция для вставки Markdown
+function insertMarkdown(button, type) {
+    const noteEdit = button.closest('.note-edit');
+    const textarea = noteEdit.querySelector('.edit-textarea');
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const selectedText = textarea.value.substring(start, end);
+    
+    let insertText = '';
+    
+    switch(type) {
+        case 'H1':
+            insertText = selectedText ? `# ${selectedText}\n` : '# Заголовок\n';
+            break;
+        case 'H2':
+            insertText = selectedText ? `## ${selectedText}\n` : '## Подзаголовок\n';
+            break;
+        case 'Bold':
+            insertText = `**${selectedText || 'текст'}**`;
+            break;
+        case 'Italic':
+            insertText = `*${selectedText || 'текст'}*`;
+            break;
+        case 'Code':
+            insertText = `\`${selectedText || 'код'}\``;
+            break;
+        case 'CodeBlock':
+            insertText = `\`\`\`\n${selectedText || '// ваш код'}\n\`\`\`\n`;
+            break;
+        case 'Link':
+            insertText = `[${selectedText || 'текст'}](https://ссылка)`;
+            break;
+        case 'List':
+            insertText = `- ${selectedText || 'элемент списка'}\n`;
+            break;
+        case 'Quote':
+            insertText = `> ${selectedText || 'цитата'}\n`;
+            break;
+    }
+    
+    textarea.value = textarea.value.substring(0, start) + insertText + textarea.value.substring(end);
+    textarea.selectionStart = textarea.selectionEnd = start + insertText.length - (selectedText ? 0 : insertText.length);
+    textarea.focus();
+    textarea.dispatchEvent(new Event('input'));
+}
+
+// Переключение предпросмотра Markdown
+function toggleMarkdownPreview(button, noteId) {
+    const noteEdit = button.closest('.note-edit');
+    const textarea = noteEdit.querySelector('.edit-textarea');
+    let preview = noteEdit.querySelector('.markdown-preview');
+    
+    if (!preview) {
+        preview = document.createElement('div');
+        preview.className = 'markdown-preview';
+        noteEdit.insertBefore(preview, button.closest('.edit-actions'));
+        
+        const updatePreview = () => {
+            preview.innerHTML = renderMarkdown(textarea.value);
+        };
+        
+        textarea.addEventListener('input', updatePreview);
+        updatePreview();
+    }
+    
+    preview.classList.toggle('active');
+    button.classList.toggle('active');
+    button.textContent = preview.classList.contains('active') ? 'Редактировать' : 'Предпросмотр';
+}
+
+// Показ справки по Markdown
+function showMarkdownHelp() {
+    let help = document.querySelector('.markdown-help');
+    
+    if (!help) {
+        help = document.createElement('div');
+        help.className = 'markdown-help';
+        help.innerHTML = `
+            <h4>Markdown шпаргалка</h4>
+            <table>
+                <tr><td><code># Заголовок</code></td><td>Заголовок H1</td></tr>
+                <tr><td><code>## Заголовок</code></td><td>Заголовок H2</td></tr>
+                <tr><td><code>**жирный**</code></td><td>Жирный текст</td></tr>
+                <tr><td><code>*курсив*</code></td><td>Курсив</td></tr>
+                <tr><td><code>\`код\`</code></td><td>Встроенный код</td></tr>
+                <tr><td><code>\`\`\`</code></td><td>Блок кода</td></tr>
+                <tr><td><code>- список</code></td><td>Маркированный список</td></tr>
+                <tr><td><code>> цитата</code></td><td>Цитата</td></tr>
+                <tr><td><code>[текст](ссылка)</code></td><td>Ссылка</td></tr>
+                <tr><td><code>![alt](img.jpg)</code></td><td>Изображение</td></tr>
+                <tr><td><code>---</code></td><td>Горизонтальная линия</td></tr>
+            </table>
+            <button onclick="this.closest('.markdown-help').remove()" style="margin-top: 10px; padding: 5px 10px; background: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+        `;
+        document.body.appendChild(help);
+        
+        // Закрытие при клике вне окна
+        setTimeout(() => {
+            document.addEventListener('click', (e) => {
+                if (!help.contains(e.target)) {
+                    help.remove();
+                }
+            });
+        }, 100);
+    }
+    
+    help.classList.add('active');
+}
+
+// HTML для панели инструментов Markdown
+function createMarkdownToolbarHtml() {
+    return `
+        <div class="markdown-toolbar">
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'H1')" title="Заголовок 1">H1</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'H2')" title="Заголовок 2">H2</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Bold')" title="Жирный текст">B</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Italic')" title="Курсив">I</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Code')" title="Встроенный код">\`</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'CodeBlock')" title="Блок кода">\`\`\`</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Link')" title="Ссылка">Link</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'List')" title="Маркированный список">-</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Quote')" title="Цитата">></button>
+            <button class="markdown-tool" onclick="showMarkdownHelp()" title="Помощь по Markdown">?</button>
+        </div>
+    `;
+}
+
+// ====================
 // ОТОБРАЖЕНИЕ ЗАМЕТОК
 // ====================
 function displayNotes() {
@@ -732,6 +919,7 @@ function displayNotes() {
         const category = categories.find(c => c.id === note.category);
         const isExpanded = note.expanded || note.content.split('\n').length <= 10;
         const hasManyLines = note.content.split('\n').length > 10;
+        const hasMarkdown = containsMarkdown(note.content);
         
         html += `
             <div class="note" data-id="${note.id}" style="border-top-color: ${category?.color || '#4CAF50'}">
@@ -739,6 +927,7 @@ function displayNotes() {
                     <div class="note-category" style="background-color: ${category?.color || '#4CAF50'}">
                         <span class="category-color" style="background-color: ${category?.color || '#4CAF50'}"></span>
                         ${category?.name || 'Без категории'}
+                        ${hasMarkdown ? '<span class="markdown-badge" title="Содержит Markdown разметку"></span>' : ''}
                     </div>
                     <div class="note-actions">
                         <button class="note-action-btn edit-btn" onclick="editNote(${note.id})" title="Редактировать">✏️</button>
@@ -752,15 +941,17 @@ function displayNotes() {
                 
                 ${note.editMode ? `
                     <div class="note-edit active">
-                        <textarea class="edit-textarea" data-id="${note.id}">${note.content}</textarea>
+                        ${hasMarkdown ? createMarkdownToolbarHtml() : ''}
+                        <textarea class="edit-textarea ${hasMarkdown ? 'markdown-editor' : ''}" data-id="${note.id}" data-has-markdown="${hasMarkdown}">${note.content}</textarea>
                         <div class="edit-actions">
+                            ${hasMarkdown ? '<button type="button" class="markdown-preview-btn" onclick="toggleMarkdownPreview(this, ' + note.id + ')">Предпросмотр</button>' : ''}
                             <button class="cancel-edit-btn" onclick="cancelEditNote(${note.id})">Отмена</button>
-                            <button class="save-edit-btn" onclick="saveEditedNote(${note.id}, this.parentElement.previousElementSibling.value)">Сохранить</button>
+                            <button class="save-edit-btn" onclick="saveEditedNote(${note.id}, this.parentElement.parentElement.querySelector('.edit-textarea').value)">Сохранить</button>
                         </div>
                     </div>
                 ` : `
-                    <div class="note-content ${isExpanded ? '' : 'collapsed'}">
-                        ${note.content.replace(/\n/g, '<br>')}
+                    <div class="note-content markdown-content ${isExpanded ? '' : 'collapsed'}">
+                        ${renderMarkdown(note.content)}
                     </div>
                     ${!isExpanded && hasManyLines ? `
                         <button class="expand-btn" onclick="toggleNoteExpansion(${note.id})" style="background: none; border: none; color: #3498db; cursor: pointer; padding: 5px 0; text-align: left;">

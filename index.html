@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Умный блокнот с категориями</title>
+    <title>Умный блокнот с категориями и Markdown</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Markdown парсер -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div class="app-container">
@@ -89,6 +91,12 @@
                             <option value="">Выберите категорию</option>
                         </select>
                         <button id="editCategoriesBtn" class="edit-categories-btn" title="Управление категориями">⚙️</button>
+                    </div>
+                    <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+                        <small style="color: #7f8c8d;">Поддерживает Markdown</small>
+                        <button onclick="showMarkdownHelp()" style="background: none; border: none; color: #3498db; cursor: pointer; font-size: 12px; text-decoration: underline;">
+                            Шпаргалка по Markdown
+                        </button>
                     </div>
                 </div>
                 
