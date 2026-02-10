@@ -352,15 +352,41 @@ body {
     border: 2px solid #ddd;
     border-radius: 8px;
     resize: none;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     line-height: 1.6;
-    transition: height 0.2s ease;
+    transition: height 0.2s ease, border-color 0.3s ease;
     margin-bottom: 15px;
+}
+
+/* Стили полосы прокрутки для поля создания заметки */
+#noteInput::-webkit-scrollbar {
+    width: 8px;
+}
+
+#noteInput::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#noteInput::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+#noteInput::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+#noteInput:hover::-webkit-scrollbar-thumb {
+    background: #a8a8a8;
 }
 
 #noteInput:focus {
     border-color: #4CAF50;
     outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
 }
 
 .creator-footer {
@@ -641,7 +667,7 @@ body {
 
 .edit-textarea {
     width: 100%;
-    min-height: 150px; /* 20 строк примерно */
+    min-height: 150px;
     max-height: 400px;
     padding: 15px;
     border: 2px solid #3498db;
@@ -651,6 +677,27 @@ body {
     line-height: 1.6;
     resize: vertical;
     font-family: inherit;
+    overflow-y: auto;
+}
+
+/* Стили полосы прокрутки для поля редактирования заметки */
+.edit-textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.edit-textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.edit-textarea::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.edit-textarea::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
 }
 
 .edit-textarea:focus {

@@ -937,6 +937,11 @@ function setupAutoResize() {
     textarea.addEventListener('input', function() {
         autoResizeTextarea(this);
         document.getElementById('charCount').textContent = this.value.length;
+        
+        // Показать полосу прокрутки при необходимости
+        if (this.scrollHeight > 400) {
+            this.style.overflowY = 'auto';
+        }
     });
     
     // Инициализация
@@ -945,7 +950,15 @@ function setupAutoResize() {
 
 function autoResizeTextarea(textarea) {
     textarea.style.height = 'auto';
-    textarea.style.height = Math.min(textarea.scrollHeight, 400) + 'px';
+    
+    const newHeight = Math.min(textarea.scrollHeight, 400);
+    textarea.style.height = newHeight + 'px';
+    
+    if (textarea.scrollHeight > 400) {
+        textarea.style.overflowY = 'auto';
+    } else {
+        textarea.style.overflowY = 'hidden';
+    }
 }
 
 // ====================
