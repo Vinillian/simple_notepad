@@ -596,6 +596,7 @@ function getSortedNotes(notesArray) {
 // РЕЖИМ ОТОБРАЖЕНИЯ
 // ====================
 function setViewMode(mode) {
+    notes.forEach(note => note.expanded = false); // сбрасываем развёрнутые заметки
     viewMode = mode;
     document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
     if (mode === 'list') {
@@ -866,7 +867,7 @@ function displayNotes() {
         const isLink = note.type === 'link';
 
         html += `
-            <div class="note" data-id="${note.id}" style="border-top-color: ${category?.color || '#4CAF50'}">
+            <div class="note ${note.expanded ? 'expanded' : ''}" data-id="${note.id}" style="border-top-color: ${category?.color || '#4CAF50'}">
                 <div class="note-header">
                     <div class="note-category" style="background-color: ${category?.color || '#4CAF50'}">
                         <span class="category-color" style="background-color: ${category?.color || '#4CAF50'}"></span>
