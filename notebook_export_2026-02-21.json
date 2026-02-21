@@ -1,0 +1,1607 @@
+{
+  "notes": [
+    {
+      "id": 1771656793257.3538,
+      "content": "Идеи для нового проекта\n\nСоздать приложение для учета личных финансов с простым интерфейсом и аналитикой расходов.",
+      "category": "cat_1770546230364",
+      "date": "13.01.2024, 09:15",
+      "createdTimestamp": 1705137300000,
+      "updatedTimestamp": 1705137300000,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.9907,
+      "content": "https://habr.com/ru/articles/768752/",
+      "category": "2",
+      "date": "14.01.2024, 14:45",
+      "createdTimestamp": 1705243500000,
+      "updatedTimestamp": 1705243500000,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "habr.com"
+      }
+    },
+    {
+      "id": 1771656793257.4207,
+      "content": "https://www.ozon.ru/product/lopata-sovkovaya-relsovaya-stal-3425634607/?at=16tLGxPkDtmgrqNwfl5vvyysONRyRlCYYvLnjCrkmyq5",
+      "category": "1",
+      "date": "15.01.2024, 10:30",
+      "createdTimestamp": 1705329000000,
+      "updatedTimestamp": 1736575778659,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 1771656793257.1238,
+      "content": "https://www.ozon.ru/product/lopata-sovkovaya-relsovaya-stal-3425634607/?at=16tLGxPkDtmgrqNwfl5vvyysONRyRlCYYvLnjCrkmyq5",
+      "category": "1",
+      "date": "03.02.2026, 12:38",
+      "createdTimestamp": 1736606296266,
+      "updatedTimestamp": 1736575755596,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 1771656793257.531,
+      "content": "https://www.ozon.ru/product/zemleroyka-lopata-universalnaya-sovkovaya-22-5-sm-3468339165/?at=Z8tXgAkDVT8GLB9VSyBG6y9TZk0n7qtRGl1vKux5B9OB",
+      "category": "1",
+      "date": "03.02.2026, 12:41",
+      "createdTimestamp": 1736606519375,
+      "updatedTimestamp": 1736606519375,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 1771656793257.6418,
+      "content": "https://www.ozon.ru/product/lopata-shtykovaya-dlya-sada-i-ogoroda-stroitelnaya-relsovaya-stal-sadovyy-instrument-dlya-cherenka-2430266780/?at=83tBqW2zZtPr7R2Cnlvrx0imBzqg0UvjD9XAhR6mlW5",
+      "category": "1",
+      "date": "03.02.2026, 12:42",
+      "createdTimestamp": 1736606563942,
+      "updatedTimestamp": 1736606563942,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 1771656793257.8938,
+      "content": "https://www.ozon.ru/product/lopata-dlya-uborki-snega-posadochnaya-38-sm-3341331288/?at=x6tPvD794UqjBZLlHJEjP2mC7o7jGAu3Wwl75UXyXnYx",
+      "category": "1",
+      "date": "03.02.2026, 12:43",
+      "createdTimestamp": 1736606594230,
+      "updatedTimestamp": 1736606594230,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 1771656793257.66,
+      "content": "https://www.ozon.ru/product/lopata-dlya-uborki-snega-turisticheskaya-12-5-sm-3217286530/?at=79tnN28QxiQYnAWgS35o5KwFnOXAB1Fz9v8oBcKEGYDn",
+      "category": "1",
+      "date": "03.02.2026, 12:44",
+      "createdTimestamp": 1736606641414,
+      "updatedTimestamp": 1736606641414,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 1771656793257.6064,
+      "content": "https://taijiquan.narod.ru/articles/b4/b4.html",
+      "category": "2",
+      "date": "03.02.2026, 12:44",
+      "createdTimestamp": 1736606695845,
+      "updatedTimestamp": 1736606695845,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "taijiquan.narod.ru"
+      }
+    },
+    {
+      "id": 1771656793257.5117,
+      "content": "https://www.ozon.ru/product/lopata-sovkovaya-relsovaya-stal-3425634607/?at=ywtAo6qlgcQrqgAAIkyY56xum4kjYEf1QO4kZFvpDpA2",
+      "category": "1",
+      "date": "03.02.2026, 12:50",
+      "createdTimestamp": 1736607020705,
+      "updatedTimestamp": 1736607020705,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 1771656793257.6843,
+      "content": "https://habr.com/ru/companies/ruvds/articles/330880/",
+      "category": "2",
+      "date": "03.02.2026, 12:51",
+      "createdTimestamp": 1736607061841,
+      "updatedTimestamp": 1736607061841,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "habr.com"
+      }
+    },
+    {
+      "id": 1771656793257.319,
+      "content": "https://doka-guide.vercel.app/js/array-foreach/",
+      "category": "2",
+      "date": "03.02.2026, 13:00",
+      "createdTimestamp": 1736607633266,
+      "updatedTimestamp": 1736607633266,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": ".forEach() — JavaScript — Дока",
+        "description": "Сколькими способами можно обойти массив? Это ещё один способ, но без явного описания цикла.",
+        "image": "https://doka-guide.vercel.app//js/array-foreach/images/covers/og.png",
+        "siteName": "Дока"
+      }
+    },
+    {
+      "id": 1771656793257.9082,
+      "content": "Порошочки посмотреть\n\nАргинин порошок альфа-кетоглутарат, аминокислоты аакг, AAKG, 150 г, Мята",
+      "category": "cat_1770643079116",
+      "date": "03.02.2026, 14:00",
+      "createdTimestamp": 1736611221050,
+      "updatedTimestamp": 1736611221050,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.7478,
+      "content": "Предотвратил мошенника\n\n11 января 2026\nПредотвратил мошенника. \nПолучал одежду и наушники air pods за 30 к, сразу все схватил и побежал в примерочную.\nПопросил его оставить неоплаченный товар на столе. \nЗа 5 секунд он понял что костюм ему не подходит по размеру, навел камеру смартфона на коробку с наушниками, сказал что серийник не бьется и ушел. \nВсе было без предоплаты. \nСлужу отечеству.",
+      "category": "cat_1770546230364",
+      "date": "03.02.2026, 14:01",
+      "createdTimestamp": 1736611274520,
+      "updatedTimestamp": 1736611274520,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.5898,
+      "content": "https://magnets-shop.com/",
+      "category": "1",
+      "date": "03.02.2026, 14:02",
+      "createdTimestamp": 1736611324664,
+      "updatedTimestamp": 1736611324664,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "Не удалось загрузить описание",
+        "image": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fmagnets-shop.com%2F?w=400&h=300",
+        "siteName": "magnets-shop.com"
+      }
+    },
+    {
+      "id": 1771656793257.515,
+      "content": "https://learn.javascript.ru/",
+      "category": "cat_1770811049513",
+      "date": "03.02.2026, 14:03",
+      "createdTimestamp": 1736611383207,
+      "updatedTimestamp": 1736611383207,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Современный учебник JavaScript",
+        "description": "Современный учебник JavaScript, начиная с основ, включающий в себя много тонкостей и фишек JavaScript/DOM.",
+        "image": "https://learn.javascript.ru/img/site_preview_ru_1200x630.png",
+        "siteName": "learn.javascript.ru"
+      }
+    },
+    {
+      "id": 1771656793257.799,
+      "content": "https://developer.mozilla.org/ru/docs/Web",
+      "category": "cat_1770811049513",
+      "date": "03.02.2026, 14:03",
+      "createdTimestamp": 1736611407863,
+      "updatedTimestamp": 1736611407863,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "Не удалось загрузить описание",
+        "image": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fdeveloper.mozilla.org%2Fru%2Fdocs%2FWeb?w=400&h=300",
+        "siteName": "developer.mozilla.org"
+      }
+    },
+    {
+      "id": 1771656793257.5728,
+      "content": "https://contact-autism.ru/events/universalnyj-protokol",
+      "category": "2",
+      "date": "03.02.2026, 14:04",
+      "createdTimestamp": 1736611473254,
+      "updatedTimestamp": 1736611473254,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "«Универсальный протокол в реализации вмешательства ПФА/ТОН» | РОО помощи детям с РАС «Контакт»",
+        "description": "\"'Универсальный протокол' в реализации вмешательства ПФА ТОН_Практический функциональный анализ и тренинг с опорой на навыки Г. Хенли: универсальные рекомендации и индивидуализация\". Дата: 25 декабря ",
+        "image": "https://contact-autism.ru/new/wp-content/uploads/2022/12/20221225.jpg",
+        "siteName": "РОО помощи детям с РАС «Контакт»"
+      }
+    },
+    {
+      "id": 1771656793257.0642,
+      "content": "5 шагов остановки\n\n1) сделать паузу, \n2) посмотреть на игру,\n3) почувствовать свой якорь, \n4) понять проекцию, \n5)выбрать власть, а не правоту",
+      "category": "cat_1770643116164",
+      "date": "03.02.2026, 14:05",
+      "createdTimestamp": 1736611536725,
+      "updatedTimestamp": 1736611536725,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.1624,
+      "content": "https://yandex.ru/support/delivery-profile/ru/other-day/prohibited-for-delivery#zapreshaetsya-peredavat-k-aviadostavke-%7Baero-restricted%7D",
+      "category": "cat_1770546230364",
+      "date": "03.02.2026, 14:06",
+      "createdTimestamp": 1736611575990,
+      "updatedTimestamp": 1736611575990,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Запрещенные товары | ",
+        "description": " Примечание. В таблице ниже перечислены категории товаров, а также примеры конкретных товаров, которые запрещается передавать к доставке.",
+        "image": "https://yastatic.net/s3/doc-binary/src/support/delivery-profile/ru/img/delivery-favicon.png",
+        "siteName": "yandex.ru"
+      }
+    },
+    {
+      "id": 1771656793257.659,
+      "content": "https://market.yandex.ru/card/kofe-v-zernakh-poetti-daily-classic-crema-250-g/102308396656?do-waremd5=TJrc4mJS0KU-YEB9I5DP3w&cpc=qM4sCxtxWf7dfo4VeA9z126PaepCNHlthNkOXeL1ZdAapciPB8iFVxDqVbi4FlY32kC29TeIkGdmTFjH1Bvgx2IFGJanhbqyTYye_WPgRkWnlOv77LZ4e6OzEIY6TGZgdwhUTCIFzB9Bt850yT-KctcchkiHL_xi9KAr4AoU3QcbM3es8PvXcu5nGS2QhQLUSb-k7iKQKE3HIPwdPR91wqo_LJVsricIbJohB71w1nWvN5LRnvyurD0DsLpMBY2XI0G0UPtnff4SJCZddyjtUnKO7h-2V9TSB9XppucdyJIFE0lDlAoHADlmnX7oBw_lIchOFTcyll0i8GnjnZdfKjR1x_JII57ajrJLktEnAIyULcXqn-f_wTwcOxNTtJ4TdR8eBcSVSkC9kmgLIGcecU7sTfGEIG-X3A6mSVy6SCZCUwVgM7MaR3cXhDFxZs_3GD6qnJoJoVYpIcWmkKU_VwEQoki_n5BRrGKjkRcUw8fHCk3Ja9TGrL6OXwx0XSkfx2aIpfn2Fy0xQ9uajwpjQu-ys1Xm6E_uTe7JCGkZCr_N8g_beexQD5pDFut0FeJQnfJjVE46ZG8CmmnYa6hDsirQBrm9928DwAJyx2oEoWP_obu3IaFeyUpWmStd8Yr-SktVKbPmc-iWLmSPYdD9ES4Q5ZgZZLAlEcJuKqvrIlTZRFCsEyrCXjrwCjnJAbQx&nid=73839&ogV=-9",
+      "category": "1",
+      "date": "03.02.2026, 14:06",
+      "createdTimestamp": 1736611603021,
+      "updatedTimestamp": 1736611603021,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "Не удалось загрузить описание",
+        "image": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fmarket.yandex.ru%2Fcard%2Fkofe-v-zernakh-poetti-daily-classic-crema-250-g%2F102308396656%3Fdo-waremd5%3DTJrc4mJS0KU-YEB9I5DP3w%26cpc%3DqM4sCxtxWf7dfo4VeA9z126PaepCNHlthNkOXeL1ZdAapciPB8iFVxDqVbi4FlY32kC29TeIkGdmTFjH1Bvgx2IFGJanhbqyTYye_WPgRkWnlOv77LZ4e6OzEIY6TGZgdwhUTCIFzB9Bt850yT-KctcchkiHL_xi9KAr4AoU3QcbM3es8PvXcu5nGS2QhQLUSb-k7iKQKE3HIPwdPR91wqo_LJVsricIbJohB71w1nWvN5LRnvyurD0DsLpMBY2XI0G0UPtnff4SJCZddyjtUnKO7h-2V9TSB9XppucdyJIFE0lDlAoHADlmnX7oBw_lIchOFTcyll0i8GnjnZdfKjR1x_JII57ajrJLktEnAIyULcXqn-f_wTwcOxNTtJ4TdR8eBcSVSkC9kmgLIGcecU7sTfGEIG-X3A6mSVy6SCZCUwVgM7MaR3cXhDFxZs_3GD6qnJoJoVYpIcWmkKU_VwEQoki_n5BRrGKjkRcUw8fHCk3Ja9TGrL6OXwx0XSkfx2aIpfn2Fy0xQ9uajwpjQu-ys1Xm6E_uTe7JCGkZCr_N8g_beexQD5pDFut0FeJQnfJjVE46ZG8CmmnYa6hDsirQBrm9928DwAJyx2oEoWP_obu3IaFeyUpWmStd8Yr-SktVKbPmc-iWLmSPYdD9ES4Q5ZgZZLAlEcJuKqvrIlTZRFCsEyrCXjrwCjnJAbQx%26nid%3D73839%26ogV%3D-9?w=400&h=300",
+        "siteName": "market.yandex.ru"
+      }
+    },
+    {
+      "id": 1771656793257.8389,
+      "content": "https://market.yandex.ru/card/nabor-aksessuarov-wacaco-nanopresso-barista-kit/4856209927?do-waremd5=NUg4FxP5sWt-4x111nJFCw&clid=1651&ogV=-9",
+      "category": "1",
+      "date": "03.02.2026, 14:16",
+      "createdTimestamp": 1736612199638,
+      "updatedTimestamp": 1736612199638,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "market.yandex.ru"
+      }
+    },
+    {
+      "id": 1771656793257.5366,
+      "content": "https://online.metro-cc.ru/products/kofe-bushido-red-katana-v-zernakh-227g?utm_source=yandex&utm_medium=cpc&utm_content=ad_13492181339%7Cadgr_5131784759%7Cph_52948314089%7Cdev_desktop%7Cdrf_no%7Cst_search%7Cs_none%7Cp_4%7Cpt_premium%7Cregn_Щёлково%7Cregid_10765%7Cre_52948314089&utm_term=adt_n_%7Cadt_52948314089&utm_campaign=cid_76964956%7Cmix_ecomm_opv_yandex_feed_gallery_dynamic&referrer=reattribution%3D1&yclid=5602291646500438015",
+      "category": "1",
+      "date": "03.02.2026, 14:18",
+      "createdTimestamp": 1736612298661,
+      "updatedTimestamp": 1736612298661,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "ссылка"
+      }
+    },
+    {
+      "id": 1771656793257.8691,
+      "content": "https://www.dns-shop.ru/product/6460fa388e6bd2c3/kofemasina-kapsulnaa-wacaco-nanopresso-wccnphc-cernyj/?utm_source=webmaster_msk&utm_medium=cpc&utm_campaign=webmaster_msk&utm_referrer=https%3A%2F%2Fyandex.ru%2F",
+      "category": "1",
+      "date": "03.02.2026, 14:19",
+      "createdTimestamp": 1736612345324,
+      "updatedTimestamp": 1736612345324,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "dns-shop.ru"
+      }
+    },
+    {
+      "id": 1771656793257.9968,
+      "content": "https://stackoverflow.com/questions/3883004/how-does-the-modulo-operator-work-on-negative-numbers-in-python",
+      "category": "cat_1770811049513",
+      "date": "03.02.2026, 14:20",
+      "createdTimestamp": 1736612433364,
+      "updatedTimestamp": 1736612433364,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "stackoverflow.com"
+      }
+    },
+    {
+      "id": 1771656793257.6118,
+      "content": "https://psytests.org/accent/shmi88.html",
+      "category": "7",
+      "date": "03.02.2026, 14:21",
+      "createdTimestamp": 1736612489291,
+      "updatedTimestamp": 1736612489291,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "psytests.org"
+      }
+    },
+    {
+      "id": 1771656793257.9692,
+      "content": "https://yandex.ru/legal/reglament_c2c/ru/?win=638",
+      "category": "cat_1770546230364",
+      "date": "03.02.2026, 14:40",
+      "createdTimestamp": 1736613639094,
+      "updatedTimestamp": 1736613639094,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "yandex.ru"
+      }
+    },
+    {
+      "id": 1771656793257.8293,
+      "content": "https://yandex.ru/legal/pvz/ru/",
+      "category": "cat_1770546230364",
+      "date": "03.02.2026, 14:44",
+      "createdTimestamp": 1736613880963,
+      "updatedTimestamp": 1736613880963,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "yandex.ru"
+      }
+    },
+    {
+      "id": 1771656793257.272,
+      "content": "https://www.codewars.com/users/password/edit?reset_password_token=DrijQKSbKWTQNBXa5z2m",
+      "category": "cat_1770811049513",
+      "date": "03.02.2026, 14:45",
+      "createdTimestamp": 1736613927914,
+      "updatedTimestamp": 1736613927914,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "",
+        "description": "",
+        "image": "",
+        "siteName": "codewars.com"
+      }
+    },
+    {
+      "id": 1771656793257.5488,
+      "content": "Круассаны\n\nДля приготовления лакто-вегетарианских круассанов из замороженного слоёного теста без яиц вам понадобятся следующие ингредиенты:\n\n1. Замороженное слоёное тесто – 500 г\n2. Масло сливочное – 100 г (для начинки и смазывания)\n3. Сахар – 50 г\n4. Ванильный экстракт – 1 ч. ложка\n5. Молоко – 100 мл (для смазывания)\n6. Щепотка соли\n\nПриготовление:\n\n1. Разморозьте слоёное тесто в холодильнике, следуя инструкциям на упаковке.\n2. Раскатайте тесто в прямоугольник толщиной около 3-4 мм.\n3. Нарежьте тесто на треугольники, основание каждого треугольника должно быть около 10 см.\n4. В небольшой кастрюле растопите сливочное масло с сахаром и ванильным экстрактом до однородной массы.\n5. Нанесите небольшое количество начинки на основание каждого треугольника.\n6. Аккуратно сверните треугольники в круассаны, начиная с основания.\n7. Выложите круассаны на противень, застеленный пергаментом, и дайте им подняться в течение 30-40 минут.\n8. Смажьте круассаны молоком и выпекайте в предварительно разогретой до 200°C духовке около 15-20 минут до золотистой корочки.\n\nНаслаждайтесь нежными и ароматными круассанами, которые станут прекрасным дополнением к вашему завтраку или полднику. Приятного аппетита!",
+      "category": "8",
+      "date": "03.02.2026, 14:57",
+      "createdTimestamp": 1736614671442,
+      "updatedTimestamp": 1736614732709,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.255,
+      "content": "Пряники\n\nДля приготовления лакто-вегетарианских пряников без яиц вам понадобятся следующие ингредиенты:\n\n- 250 г муки (пшеничной или ржаной)\n- 100 г сахара (можно использовать коричневый)\n- 100 г сливочного масла (или растительного масла)\n- 100 мл молока\n- 1 ч. л. разрыхлителя теста\n- 1 ч. л. корицы\n- 1/2 ч. л. имбиря (по желанию)\n- Щепотка соли\n\nПриготовление:\n\n1. В глубокой миске смешайте муку, сахар, разрыхлитель, корицу, имбирь и соль.\n2. В отдельной емкости растопите сливочное масло и добавьте молоко. Хорошо перемешайте.\n3. Соедините сухие и влажные ингредиенты, замесите тесто. Оно должно быть мягким и эластичным.\n4. Заверните тесто в пленку и оставьте в холодильнике на 30 минут.\n5. Разогрейте духовку до 180°C. Раскатайте тесто на присыпанной мукой поверхности до толщины около 5 мм и вырежьте пряники желаемой формы.\n6. Выложите пряники на противень, застеленный пергаментом, и выпекайте 10-12 минут до золотистого цвета.\n\nПряники можно украсить глазурью или посыпать сахаром. \n\nПриятного аппетита и вдохновения в кулинарии!",
+      "category": "8",
+      "date": "03.02.2026, 15:17",
+      "createdTimestamp": 1736615872140,
+      "updatedTimestamp": 1736615872140,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.164,
+      "content": "Тирамису\n\nДля приготовления лакто-вегетарианского тирамису с кремом на основе сливок и вегетарианских савоярди без яиц, вам понадобятся следующие ингредиенты:\n\n**Для савоярди:**\n- 200 г муки\n- 100 г сахара\n- 100 мл коровьего молока\n- 50 г растопленного масла\n- 1 ч. л. разрыхлителя\n- Ванильный экстракт по вкусу\n\n**Для крема:**\n- 500 мл сливок (жирность не менее 30%)\n- 250 г маскарпоне\n- 100 г сахара\n- 1 ч. л. ванильного экстракта\n- Кофе для пропитки\n\n**Приготовление:**\n\n1. **Савоярди:** В миске смешайте муку, сахар и разрыхлитель. В отдельной емкости соедините молоко, растопленное масло и ванильный экстракт. Постепенно добавляйте жидкие ингредиенты к сухим, перемешивая до однородной массы. Выложите тесто на противень, выстланный пергаментом, и выпекайте при 180°C до золотистого цвета (примерно 15-20 минут). Остудите и нарежьте на полоски.\n\n2. **Крем:** В глубокой миске взбейте сливки до мягких пиков. В другой миске соедините маскарпоне, сахар и ванильный экстракт, тщательно перемешайте. Аккуратно введите взбитые сливки в маскарпоне, чтобы сохранить воздушность.\n\n3. **Сборка:** Пропитайте савоярди кофе, выложите их в форму, затем нанесите слой крема. Повторите слои, пока не закончатся ингредиенты. Завершите кремом и охладите в холодильнике минимум на 4 часа.\n\nПодавайте с посыпкой из какао-порошка. \n\nПриятного аппетита и вдохновения в кулинарных экспериментах!",
+      "category": "8",
+      "date": "03.02.2026, 15:18",
+      "createdTimestamp": 1736615913283,
+      "updatedTimestamp": 1736615923021,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.5764,
+      "content": "Тирамису 2\n\nДля приготовления вегетарианского савоярди без яиц на коровьем молоке, вам понадобятся следующие ингредиенты:\n\n- 200 г муки\n- 100 г сахара\n- 200 мл коровьего молока\n- 50 мл растительного масла\n- 1 ч. л. разрыхлителя теста\n- Ванильный экстракт по вкусу\n\n1. В глубокой миске смешайте муку, сахар и разрыхлитель.\n2. В отдельной емкости соедините коровье молоко, растительное масло и ванильный экстракт. Хорошо перемешайте.\n3. Постепенно добавляйте жидкую смесь к сухим ингредиентам, аккуратно перемешивая до получения однородного теста.\n4. Выложите тесто в форму, предварительно смазанную маслом, и выпекайте в разогретой до 180°C духовке около 25-30 минут, до золотистой корочки.\n5. Дайте остыть перед подачей.\n\nЭтот вегетарианский вариант савоярди станет отличной основой для десертов, таких как тирамису или просто с фруктами и кремом. \n\nПусть ваше кулинарное вдохновение всегда будет с вами!\n\nДля создания вегетарианского тирамису с использованием савоярди без яиц, вам понадобятся следующие ингредиенты:\n\n**Для савоярди:**\n- 200 г муки\n- 100 г сахарного песка\n- 100 мл коровьего молока\n- 50 мл растительного масла\n- 1 ч. л. разрыхлителя\n- Ванильный экстракт по вкусу\n\n**Для крема:**\n- 500 г маскарпоне\n- 200 мл коровьего молока\n- 100 г сахарного песка\n- 1 ч. л. ванильного экстракта\n- Какао-порошок для посыпки\n\n**Приготовление:**\n\n1. **Савоярди:** В миске смешайте муку, сахар и разрыхлитель. В отдельной емкости соедините молоко, растительное масло и ванильный экстракт. Постепенно добавляйте жидкие ингредиенты к сухим, перемешивая до получения однородного теста. Выложите тесто на противень, выстланный пергаментом, и выпекайте при температуре 180°C до золотистого цвета (примерно 15-20 минут). Остудите.\n\n2. **Крем:** В глубокой миске взбейте маскарпоне с сахаром и ванильным экстрактом до получения однородной массы. Постепенно добавляйте коровье молоко, продолжая взбивать до легкой и воздушной консистенции.\n\n3. **Сборка:** На дно формы выложите слой савоярди, пропитанных кофе или растительным молоком. Затем равномерно распределите половину крема. Повторите слои, завершая кремом. Посыпьте сверху какао-порошком.\n\n4. **Охлаждение:** Дайте тирамису настояться в холодильнике минимум 4 часа, а лучше на ночь.\n\nПриятного аппетита и вдохновения в ваших кулинарных экспериментах!",
+      "category": "8",
+      "date": "03.02.2026, 15:19",
+      "createdTimestamp": 1736615951492,
+      "updatedTimestamp": 1736615951492,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.978,
+      "content": "Савоярди\n\n1 Для приготовления вегетарианского савоярди без яиц, вам понадобятся следующие ингредиенты:\n\n- 200 г муки\n- 100 г сахарного песка\n- 100 мл миндального молока (или другого растительного молока)\n- 50 мл растительного масла\n- 1 ч. л. разрыхлителя\n- Ванильный экстракт по вкусу\n- Щепотка соли\n\n1. Разогрейте духовку до 180°C. Застелите противень пергаментной бумагой.\n2. В глубокой миске смешайте муку, сахар, разрыхлитель и соль.\n3. В отдельной емкости соедините миндальное молоко, растительное масло и ванильный экстракт.\n4. Постепенно добавляйте жидкие ингредиенты к сухим, аккуратно перемешивая до получения однородного теста.\n5. С помощью кондитерского мешка выдавите тесто на противень в форме палочек длиной около 10 см.\n6. Выпекайте в предварительно разогретой духовке 15-20 минут до золотистого цвета.\n7. Остудите перед подачей.\n\nЭтот вегетарианский вариант савоярди станет отличной основой для десертов, таких как тирамису или просто с чашечкой чая. Приятного аппетита!",
+      "category": "8",
+      "date": "03.02.2026, 15:19",
+      "createdTimestamp": 1736615971147,
+      "updatedTimestamp": 1736615834174,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.7888,
+      "content": "Рис для суши\n\nДля приготовления риса для суши вам понадобятся следующие ингредиенты:\n\n- 2 стакана японского риса (суши-рис)\n- 2,5 стакана воды\n- 1/3 стакана рисового уксуса\n- 2 столовые ложки сахара\n- 1 чайная ложка соли\n\nПриготовление:\n\n1. Промойте рис под холодной водой до тех пор, пока вода не станет прозрачной. Это поможет удалить лишний крахмал.\n2. Замочите рис в воде на 30 минут, затем слейте воду.\n3. В кастрюле доведите до кипения 2,5 стакана воды, добавьте рис и закройте крышкой. Уменьшите огонь до минимума и готовьте 18-20 минут, не открывая крышку.\n4. В небольшой кастрюле смешайте рисовый уксус, сахар и соль. Нагрейте на медленном огне, пока сахар и соль не растворятся.\n5. После приготовления риса дайте ему постоять под крышкой еще 10 минут. Затем переложите в большую миску и аккуратно перемешайте с уксусной заправкой, используя деревянную ложку, чтобы не повредить зерна.\n\nПодавайте рис для суши, когда он остынет до комнатной температуры. \n\nПусть ваше кулинарное путешествие будет наполнено вдохновением и радостью!",
+      "category": "8",
+      "date": "04.02.2026, 07:01",
+      "createdTimestamp": 1736571711634,
+      "updatedTimestamp": 1736571711634,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.1455,
+      "content": "Рецепт пицца\n\nДля приготовления пиццы на 1 кг теста вам понадобятся следующие ингредиенты:\n\n**Ингредиенты для теста:**\n- 1 кг муки высшего сорта\n- 600 мл воды\n- 20 г соли\n- 10 г сахара\n- 15 г свежих дрожжей (или 5 г сухих)\n- 30 мл оливкового масла\n\n**Приготовление теста:**\n1. В теплой воде растворите дрожжи и сахар, дайте постоять 10 минут до появления пены.\n2. В глубокой миске смешайте муку и соль. Сделайте углубление в центре и влейте дрожжевую смесь и оливковое масло.\n3. Замесите тесто до однородной консистенции, затем выложите на рабочую поверхность и месите около 10 минут, пока тесто не станет эластичным.\n4. Поместите тесто в смазанную маслом миску, накройте пленкой и дайте подняться в теплом месте на 1-2 часа, пока оно не удвоится в объеме.\n\n**Формирование пиццы:**\n1. Разделите тесто на порции по 250-300 г.\n2. Раскатайте каждую порцию в круг толщиной около 5 мм.\n3. Добавьте соус, сыр и ваши любимые начинки.\n\n**Выпекание:**\n1. Разогрейте духовку до 250°C.\n2. Выпекайте пиццу 10-12 минут до золотистой корочки.\n\nПусть ваша пицца станет настоящим кулинарным шедевром! Приятного аппетита!",
+      "category": "8",
+      "date": "04.02.2026, 07:02",
+      "createdTimestamp": 1736571772273,
+      "updatedTimestamp": 1736571772273,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.2344,
+      "content": "Рецепт Табаско\n\nДля приготовления самодельного табаско вам понадобятся следующие ингредиенты:\n\n1. 500 г свежих перцев (например, табаско или халапеньо).\n2. 250 мл уксуса (белого или яблочного).\n3. 1 ч. л. соли.\n\n1. Перцы тщательно промойте и нарежьте на мелкие кусочки.\n2. Поместите нарезанные перцы в блендер, добавьте соль и немного уксуса. Измельчите до однородной массы.\n3. Перелейте полученную массу в чистую стеклянную банку и добавьте оставшийся уксус.\n4. Закройте банку крышкой и оставьте в темном месте на 2-3 недели, периодически встряхивая.\n5. По истечении времени процедите смесь через марлю или мелкое сито, чтобы отделить жидкость от твердых частиц.\n\nВаш самодельный табаско готов! Используйте его для придания остроты и аромата вашим блюдам.\n\nПусть ваши кулинарные эксперименты будут успешными и вдохновляющими!",
+      "category": "8",
+      "date": "04.02.2026, 07:03",
+      "createdTimestamp": 1736571795322,
+      "updatedTimestamp": 1736571795322,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.9219,
+      "content": "Рецепт Гранола\n\nДля приготовления гранолы из овсянки с медом, ягодами и сливочным муссом вам понадобятся следующие ингредиенты:\n\n**Ингредиенты для гранолы:**\n- 200 г овсяных хлопьев\n- 100 г орехов (миндаль, грецкие или фундук)\n- 50 г семян (подсолнечник или тыква)\n- 100 мл меда\n- 50 мл растительного масла (оливкового или кокосового)\n- Щепотка соли\n- 1 ч. л. корицы (по желанию)\n\n**Ингредиенты для сливочного мусса:**\n- 200 мл сливок (33-35%)\n- 50 г сахарной пудры\n- 1 ч. л. ванильного экстракта\n\n**Приготовление:**\n\n1. **Гранола:** \n   - Разогрейте духовку до 180°C.\n   - В глубокой миске смешайте овсяные хлопья, орехи, семена, соль и корицу.\n   - В отдельной емкости соедините мед и растительное масло, затем добавьте к сухим ингредиентам. Хорошо перемешайте.\n   - Выложите смесь на противень, застеленный пергаментом, и равномерно распределите.\n   - Выпекайте 20-25 минут, периодически помешивая, до золотистого цвета. Дайте остыть.\n\n2. **Сливочный мусс:**\n   - В холодной миске взбейте сливки с сахарной пудрой и ванильным экстрактом до получения устойчивых пиков.\n\n3. **Сборка:**\n   - В сервировочные стаканы или тарелки выложите слой гранолы, затем добавьте свежие ягоды (малина, черника или клубника) и сверху щедро полейте сливочным муссом.\n\nЭта гранола станет не только изысканным завтраком, но и великолепным десертом. Приятного аппетита и вдохновения на кулинарные свершения!",
+      "category": "8",
+      "date": "04.02.2026, 07:03",
+      "createdTimestamp": 1736571823929,
+      "updatedTimestamp": 1736571823929,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.769,
+      "content": "Рецепт Морковная рыбка\n\nДля приготовления веганской рыбки из моркови с льняным маслом вам понадобятся следующие ингредиенты:\n\n- 2 крупных моркови\n- 2 ст. ложки льняного масла\n- 1 ст. ложка соевого соуса\n- 1 ч. ложка лимонного сока\n- 1 ч. ложка копченой паприки\n- Соль и перец по вкусу\n- Нори (водоросли) для обсыпки\n\n1. Очистите морковь и нарежьте её на тонкие полоски, имитируя форму рыбных филе.\n2. В небольшой миске смешайте льняное масло, соевый соус, лимонный сок, копченую паприку, соль и перец.\n3. Замаринуйте морковь в полученной смеси на 30 минут.\n4. Обваляйте морковь в измельченных нори, чтобы придать ей морской вкус.\n5. Обжарьте морковь на сковороде с антипригарным покрытием до золотистой корочки.\n\nПодавайте с гарниром из свежих овощей или на подушке из киноа. \n\nПриятного аппетита и вдохновения в ваших кулинарных экспериментах!",
+      "category": "8",
+      "date": "04.02.2026, 07:04",
+      "createdTimestamp": 1736571882609,
+      "updatedTimestamp": 1736571882609,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.1755,
+      "content": "https://www.pravmir.ru/molitva-da-voskresnet-bog/",
+      "category": "cat_1770643116164",
+      "date": "04.02.2026, 07:05",
+      "createdTimestamp": 1736571928633,
+      "updatedTimestamp": 1736571928633,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Молитва «Да воскреснет Бог». Молитва животворящему Кресту Господню",
+        "description": "Молитва «Да воскреснет Бог» Молитву «Да воскреснет Бог» еще называют «молитвой животворящему Кресту Господню» или «молитвой Честному Кресту». Обращаемся мы при этом к Господу с просьбой защитить нас от бесов и диавола. Мы знаем, что Христос после смерти на кресте сошел во ад, чтобы вывести оттуда пр",
+        "image": "https://www.pravmir.ru/wp-content/uploads/2013/11/starry-sky-1246272_960_720-960x584.jpg",
+        "siteName": "Правмир"
+      }
+    },
+    {
+      "id": 1771656793257.5195,
+      "content": "https://www.aspergers.ru/",
+      "category": "7",
+      "date": "04.02.2026, 07:22",
+      "createdTimestamp": 1736572927600,
+      "updatedTimestamp": 1736572927600,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Autistic City",
+        "description": "теги:",
+        "image": "https://www.aspergers.ru/sites/default/files/logo.png",
+        "siteName": "Autistic City"
+      }
+    },
+    {
+      "id": 1771656793257.5737,
+      "content": "https://teletype.in/@gardiys/R0sfZLO3Bpl#KMHM",
+      "category": "cat_1770811049513",
+      "date": "04.02.2026, 07:22",
+      "createdTimestamp": 1736572974897,
+      "updatedTimestamp": 1736572974897,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Roadmap Python Backend Developer",
+        "description": "Это самый полный роадмап по Python-разработке.",
+        "image": "https://img2.teletype.in/files/58/5e/585e09bd-6999-477f-babb-29450ff7b3d4.png",
+        "siteName": "Teletype"
+      }
+    },
+    {
+      "id": 1771656793257.6843,
+      "content": "https://habr.com/ru/articles/696840/",
+      "category": "2",
+      "date": "04.02.2026, 07:23",
+      "createdTimestamp": 1736573024039,
+      "updatedTimestamp": 1736573024039,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Приручение черного дракона. Этичный хакинг с Kali Linux. Часть 5. Методы получения доступа к системе",
+        "description": "Приветствую тебя, дорогой читатель, в пятой части серии статей «Приручение черного дракона. Этичный хакинг с Kali Linux». Отказ от ответственности: Данная статья предназначена исключительно для…",
+        "image": "https://habrastorage.org/getpro/habr/upload_files/ffb/690/5e0/ffb6905e098596ef5120abd2713ddc03.jpg",
+        "siteName": "Habr"
+      }
+    },
+    {
+      "id": 1771656793257.2622,
+      "content": "https://habr.com/ru/articles/340038/",
+      "category": "2",
+      "date": "04.02.2026, 07:24",
+      "createdTimestamp": 1736573063839,
+      "updatedTimestamp": 1736573063839,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "10 инструментов, позволяющих парсить информацию с веб-сайтов, включая цены конкурентов + правовая оценка для России",
+        "description": "Инструменты web scraping (парсинг) разработаны для извлечения, сбора любой открытой информации с веб-сайтов. Эти ресурсы нужны тогда, когда необходимо быстро получить и сохранить в структурированном…",
+        "image": "https://habr.com/share/publication/340038/ee1dcbcf4a67f64255a565cd6939bb0a/",
+        "siteName": "Habr"
+      }
+    },
+    {
+      "id": 1771656793257.7148,
+      "content": "https://www.youtube.com/watch?v=PTAkqURmI0s",
+      "category": "2",
+      "date": "04.02.2026, 07:25",
+      "createdTimestamp": 1736573120863,
+      "updatedTimestamp": 1736573120863,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "- YouTube",
+        "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+        "image": "https://img.youtube.com/vi/PTAkqURmI0s/maxresdefault.jpg",
+        "siteName": "YouTube"
+      }
+    },
+    {
+      "id": 1771656793257.46,
+      "content": "Рецепт Брауни\n\nДля приготовления вегетарианского брауни без яиц, используя какао-порошок и растительное масло, вам понадобятся следующие ингредиенты:\n\n- 1 стакан муки\n- 1/2 стакана какао-порошка\n- 1 стакан сахара (можно использовать коричневый для более глубокого вкуса)\n- 1/2 стакана растительного масла (например, подсолнечного или кокосового)\n- 1 стакан воды или растительного молока\n- 1 ч. ложка ванильного экстракта\n- 1 ч. ложка разрыхлителя\n- Щепотка соли\n\nПриготовление:\n\n1. Разогрейте духовку до 180°C и подготовьте форму для выпечки, смазав её маслом или выстелив пергаментом.\n2. В глубокой миске смешайте муку, какао-порошок, сахар, разрыхлитель и соль.\n3. В отдельной ёмкости соедините растительное масло, воду (или растительное молоко) и ванильный экстракт.\n4. Постепенно добавляйте жидкие ингредиенты к сухим, тщательно перемешивая до получения однородной массы.\n5. Вылейте тесто в подготовленную форму и выпекайте около 25-30 минут, проверяя готовность с помощью зубочистки.\n\nДайте брауни остыть перед нарезкой. Это лакомство порадует вас своей насыщенной текстурой и вкусом. Приятного аппетита!",
+      "category": "8",
+      "date": "04.02.2026, 07:25",
+      "createdTimestamp": 1736573151680,
+      "updatedTimestamp": 1736573151680,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.8127,
+      "content": "Рецепт Кимчи\n\nДля приготовления неострого кимчи из пекинской капусты с овощами вам понадобятся следующие ингредиенты:\n\n- 1 кочан пекинской капусты\n- 2 моркови\n- 1 редька дайкон\n- 4-5 зеленых луковиц\n- 4-5 зубчиков чеснока\n- 1 ст. ложка тертого имбиря\n- 2 ст. ложки сахара\n- 4 ст. ложки соевого соуса\n- 2 ст. ложки рисового уксуса\n- 1 ст. ложка кунжутного масла\n- Соль по вкусу\n\n1. Пекинскую капусту нарежьте на крупные куски и посолите, оставив на 1-2 часа, чтобы она пустила сок.\n2. Морковь и редьку нарежьте тонкой соломкой, а зеленый лук — кольцами.\n3. В отдельной миске смешайте чеснок, имбирь, сахар, соевый соус, рисовый уксус и кунжутное масло.\n4. Смешайте все овощи с полученной заправкой и оставьте на 30 минут для маринования.\n5. Упакуйте кимчи в стерилизованные банки и оставьте при комнатной температуре на 1-2 дня для ферментации, затем храните в холодильнике.\n\nЭто блюдо станет отличным дополнением к любому столу, придавая ему яркие вкусовые акценты. Приятного аппетита!",
+      "category": "8",
+      "date": "04.02.2026, 07:26",
+      "createdTimestamp": 1736573177958,
+      "updatedTimestamp": 1736573177958,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.6423,
+      "content": "Рецепт Овсяный кисель\n\nДля приготовления овсяного киселя с ягодами возьмем следующие ингредиенты:\n\n- Овсяные хлопья — 100 г\n- Вода — 500 мл\n- Ягоды (по вашему выбору) — 200 г\n- Сахар — по вкусу\n- Соль — щепотка\n- Лимонный сок — по вкусу\n\nПриготовление:\n\n1. Вскипятите 400 мл воды в кастрюле.\n2. В отдельной миске залейте овсяные хлопья 100 мл холодной воды и оставьте на 15 минут для набухания.\n3. После этого добавьте овсяные хлопья в кипящую воду, помешивая. Уменьшите огонь и варите около 10 минут до загустения.\n4. Затем процедите через сито, чтобы удалить крупицы овсянки, и верните жидкость в кастрюлю.\n5. Добавьте сахар, соль и лимонный сок по вкусу, тщательно перемешивая.\n6. Параллельно подогрейте ягоды в отдельной посуде, добавив немного сахара, чтобы они выпустили сок.\n7. Вылейте овсяный кисель в сервировочные тарелки, добавьте горячие ягоды сверху и дайте немного настояться.\n\nПодавая этот освежающий десерт, вы погружаетесь в уникальный мир текстур и ароматов. Приятного аппетита! До новых кулинарных открытий!",
+      "category": "8",
+      "date": "04.02.2026, 07:26",
+      "createdTimestamp": 1736573212534,
+      "updatedTimestamp": 1736573212534,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.6326,
+      "content": "Рецепт Медовик\n\nДля приготовления медовика на сметанном креме без яиц, следуйте этим шагам:\n\nИнгредиенты для коржей:\n- 250 г меда\n- 150 г сахара\n- 100 г сливочного масла\n- 1 ч. л. соды\n- 600 г муки\n- Ваниль по вкусу\n\nИнгредиенты для крема:\n- 500 г сметаны (желательно 25% жирности)\n- 150 г сахарной пудры\n- Ваниль по вкусу\n\nПриготовление:\n\n1. В кастрюле смешайте мед, сахар и сливочное масло. Нагревайте на слабом огне, пока сахар не растворится.\n2. Добавьте соду и перемешайте. Снимать с огня, когда масса станет пузыриться.\n3. Постепенно вводите муку, замешивая тесто. Оно должно быть мягким и эластичным.\n4. Разделите тесто на 6-8 частей, раскатайте каждую в тонкий круг и выпекайте при температуре 180°C до золотистого цвета.\n5. Для крема взбейте сметану с сахарной пудрой и ванилью до пышности.\n6. Сборка: каждый корж промажьте кремом, чередуя их, до формирования торта. Дайте настояться в холодильнике минимум 4 часа для пропитки.\n\nПусть ваше кулинарное путешествие будет сладким и вдохновляющим!",
+      "category": "8",
+      "date": "04.02.2026, 07:27",
+      "createdTimestamp": 1736573251630,
+      "updatedTimestamp": 1736573251630,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.9224,
+      "content": "Рецепт Песочное тесто\n\nДля приготовления постного песочного теста вам понадобятся следующие ингредиенты: 300 граммов муки, 100 миллилитров растительного масла, 100 граммов сахарного песка, 1 чайная ложка ванильного экстракта и 6-8 столовых ложек холодной воды.\n\n1. В глубокой миске соедините муку и сахар, тщательно перемешайте.\n2. Постепенно добавляйте растительное масло, перемешивая массу до получения крошковатой структуры.\n3. Влейте ванильный экстракт и, постепенно добавляя холодную воду, замесите тесто. Оно должно быть мягким и эластичным, но не липким.\n4. Заверните тесто в пленку и уберите в холодильник на 30 минут. \n\nЭто тесто станет отличной основой для ваших любимых пирогов и печений!\n\nС удовольствием желаю вам успешных кулинарных подвигов!",
+      "category": "8",
+      "date": "04.02.2026, 07:27",
+      "createdTimestamp": 1736573274949,
+      "updatedTimestamp": 1736573274949,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.124,
+      "content": "Рецепт Овсяное печенье\n\nДля приготовления мягкого овсяного печенья без яиц вам потребуются следующие ингредиенты:\n\n- 1 стакан овсяных хлопьев\n- 1 стакан муки (пшеничной или цельнозерновой)\n- 1/2 стакана сахара (по предпочтению, можно использовать коричневый сахар)\n- 1/2 стакана растительного масла (или растопленного кокосового масла)\n- 1/4 стакана молока (можно растительного)\n- 1 ч. ложка разрыхлителя\n- Щепотка соли\n- 1 ч. ложка ванильного экстракта\n- Дополнительно: изюм, орехи или шоколадные капли по желанию\n\nПриготовление:\n\n1. В глубокой миске смешайте овсяные хлопья, муку, сахар, разрыхлитель и соль.\n2. В отдельной емкости соедините растительное масло, молоко и ванильный экстракт. Хорошо перемешайте.\n3. Постепенно добавляйте жидкую смесь к сухим ингредиентам, тщательно перемешивая до получения однородного теста.\n4. При желании, добавьте изюм, орехи или шоколадные капли и вмешайте в тесто.\n5. Сформируйте небольшие кружки из теста и выложите их на противень, застеленный бумагой для выпечки.\n6. Выпекайте в предварительно разогретой до 180°C духовке около 12-15 минут, до легкого золотистого цвета.\n\nПозвольте печенью остыть немного перед подачей, чтобы оно стало нежным и мягким. Приятного аппетита! Желаю вам вдохновения в кулинарных экспериментах",
+      "category": "8",
+      "date": "04.02.2026, 07:28",
+      "createdTimestamp": 1736573301045,
+      "updatedTimestamp": 1736573301045,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.5112,
+      "content": "Рецепт Снова Савоярди\n\nВегетарианские печенья савоярди без яиц можно приготовить, используя следующие ингредиенты:\n\n**Ингредиенты:**\n- 200 г муки\n- 100 г сахара\n- 100 мл растительного молока (например, миндального)\n- 50 мл масла растительного\n- 1 ч. ложка экстракта ванили\n- 1 ч. ложка разрыхлителя\n- Щепотка соли\n- Какао-порошок или сахарная пудра для обсыпки (по желанию)\n\n**Приготовление:**\n1. Разогрейте духовку до 180°C. Подготовьте противень с пергаментной бумагой.\n2. В миске смешайте муку, разрыхлитель и соль. В отдельной емкости объедините растительное молоко, масло и экстракт ванили.\n3. Постепенно добавляйте сухие ингредиенты в жидкие, аккуратно перемешивая до получения однородного теста.\n4. С помощью кондитерского мешка или ложки выложите тесто на противень в виде длинных прямоугольников.\n5. Посыпьте их сахаром или какао-порошком, если хотите.\n6. Выпекайте около 15-20 минут, пока печенье не станет золотистым.\n7. Остудите перед использованием в тирамису.\n\nПриятного вам кулинарного вдохновения и отличного результата в приготовлении!",
+      "category": "8",
+      "date": "04.02.2026, 07:28",
+      "createdTimestamp": 1736573320621,
+      "updatedTimestamp": 1736573320621,
+      "expanded": false,
+      "editMode": false,
+      "type": "note",
+      "metadata": null
+    },
+    {
+      "id": 1771656793257.4456,
+      "content": "https://vege.one/recipes/syroedcheskie-retsepty/syroedcheskie-napitki/napitok-dlya-povysheniya-odzhasa/",
+      "category": "8",
+      "date": "04.02.2026, 07:29",
+      "createdTimestamp": 1736573387268,
+      "updatedTimestamp": 1736573387268,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "napitok-dlya-povysheniya-odzhasa",
+        "description": "",
+        "image": "https://vege.one/favicon.ico",
+        "siteName": "vege.one"
+      }
+    },
+    {
+      "id": 1771656793257.9863,
+      "content": "https://ru.hexlet.io/blog/posts/how-to-search",
+      "category": "2",
+      "date": "04.02.2026, 07:31",
+      "createdTimestamp": 1736573462540,
+      "updatedTimestamp": 1736573462540,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Как искать техническую информацию | Hexlet Guides",
+        "description": "Большинство проблем, с которыми сталкивается новичок, уже решены и описаны. Нужно лишь научиться находить эти решения и ответы",
+        "image": "https://ru.hexlet.io/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTAzLCJwdXIiOiJibG9iX2lkIn19--473a679e75a68452d6e89d8d165bae2157b24059/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX2FuZF9wYWQiOlsxNDU2LDcyOF0sInNhdmVyIjp7InF1YWxpdHkiOjg1fX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--b2ecf6121248a24883cda19469732b47b57f4e80/how-to-search-title.png",
+        "siteName": "hexlet.io"
+      }
+    },
+    {
+      "id": 1771656793257.135,
+      "content": "https://ru.hexlet.io/blog/posts/ponimaem-sleng-programmistov-mini-slovar-dlya-nachinayuschih-razrabotchikov",
+      "category": "2",
+      "date": "04.02.2026, 07:31",
+      "createdTimestamp": 1736573513724,
+      "updatedTimestamp": 1736573513724,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Понимаем сленг программистов: мини-словарь для начинающих разработчиков",
+        "description": "Начинающие разработчики не сразу понимают старших товарищей. Фразы вроде «я апишку свитчнул» или «заимпорти другую либу» звучат для новичков как лекция по…",
+        "image": "https://ru.hexlet.io/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTcwNywicHVyIjoiYmxvYl9pZCJ9fQ==--0d5adae2796e8d111972f38e374d27f86dcd8041/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX2FuZF9wYWQiOlsxNDU2LDcyOF0sInNhdmVyIjp7InF1YWxpdHkiOjg1fX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--b2ecf6121248a24883cda19469732b47b57f4e80/%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-01.png",
+        "siteName": "hexlet.io"
+      }
+    },
+    {
+      "id": 1771656793257.3472,
+      "content": "https://ru.hexlet.io/pages/recommended-books",
+      "category": "cat_1770811049513",
+      "date": "04.02.2026, 07:32",
+      "createdTimestamp": 1736573548459,
+      "updatedTimestamp": 1736573548459,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Рекомендуемые книги",
+        "description": "Это — книги «на все времена». Лучшие в своем роде и важные для программистов любых направлений. Мы рекомендуем прочитать их всем начинающим и опытным программистам.",
+        "image": "https://ru.hexlet.io/vite/assets/logo_ru_light-BpiEA1LT.svg",
+        "siteName": "hexlet.io"
+      }
+    },
+    {
+      "id": 1771656793257.011,
+      "content": "https://learngitbranching.js.org/?locale=ru_RU",
+      "category": "cat_1770811049513",
+      "date": "04.02.2026, 07:41",
+      "createdTimestamp": 1736574099184,
+      "updatedTimestamp": 1736574099184,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Learn Git Branching",
+        "description": "An interactive Git visualization tool to educate and challenge!",
+        "image": "https://pcottle.github.io/learnGitBranching/assets/learnGitBranching.png",
+        "siteName": "js.org"
+      }
+    },
+    {
+      "id": 1771656793257.3926,
+      "content": "https://rutube.ru/video/fe49f5043f53bba14cae82b13651f1a1/",
+      "category": "cat_1770643116164",
+      "date": "04.02.2026, 07:55",
+      "createdTimestamp": 1736574939664,
+      "updatedTimestamp": 1736574939664,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Вишну Сахасранам: тысяча имен Вишну. Мантра дарующая здоровье,богатство и любовь",
+        "description": "Вишну, не имеющий ни начала, ни конца, Повелитель всех миров, Тот, кто наблюдает за всем – постоянно прославляя его, человек освобождается от любого горя. Он – тот, кто благоволит брахманам, тот, кому известны все дхармы, тот, кто дарует все блага, Господь всех миров, Абсолютная Истина, Источник все",
+        "image": "https://pic.rutubelist.ru/video/f4/7e/f47e425f5441301922bccea01f05ccc7.jpg?size=l",
+        "siteName": "RUTUBE"
+      }
+    },
+    {
+      "id": 1771656793257.3733,
+      "content": "https://localdesktop.github.io/",
+      "category": "cat_1770811049513",
+      "date": "20.02.2026, 11:36",
+      "createdTimestamp": 1740051401654,
+      "updatedTimestamp": 1740051401654,
+      "expanded": false,
+      "editMode": false,
+      "type": "link",
+      "metadata": {
+        "title": "Home | Local Desktop | Linux on Android",
+        "description": "Local Desktop helps you run a desktop Linux environment on your Android device.",
+        "image": "https://localdesktop.github.io/img/logo.png",
+        "siteName": "github.io"
+      }
+    },
+    {
+      "id": 1771655373477.4475,
+      "content": "**11.02.2026 — Ежедневник**\n\n✅ Завершил юридическое заключение по ст. 26.1 ЗоЗПП\n✅ Объединил все заметки в единую базу\n✅ Проверил работу блокнота с категориями\n\n📌 **Планы на завтра:**\n- Начать изучение регулярных выражений в Python\n- Разобрать судебную практику по возвратам\n\n💭 **Мысли:**\nСистематизация заметок значительно ускоряет работу. Цветовое кодирование категорий помогает быстро находить нужную информацию.",
+      "category": "cat_1770671064709",
+      "date": "11.02.2026, 17:55",
+      "createdTimestamp": 1770825119748,
+      "updatedTimestamp": 1770825119748,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.3193,
+      "content": "**Юридическое заключение**\n\n**Вопрос:** Имеет ли покупатель право вскрывать заводскую упаковку товара **до его оплаты** в пункте выдачи заказов (ПВЗ) при дистанционной продаже?\n\n**Краткий ответ: НЕТ, такое право прямо не установлено законом.**\n\nНиже — постатейный анализ и итоговая правовая позиция, основанная **исключительно** на тексте ст. 26.1 Закона «О защите прав потребителей» (далее — ЗоЗПП) в действующей редакции.\n\n---\n\n## ЧАСТЬ 1. ПОСТАТЕЙНЫЙ АНАЛИЗ СТ. 26.1 ЗоЗПП\n\n### 1.1. Право на отказ до передачи (п. 4)\n> *«Потребитель **вправе отказаться от товара в любое время до его передачи**, а после передачи товара - в течение семи дней».*\n\n**Юридическое значение:**\n1. Закон предоставляет право **отказаться**, а не право **осматривать**.\n2. Момент **передачи** и момент **оплаты** законом **не связаны**. Допускается как оплата до передачи (предоплата), так и оплата в момент передачи.\n3. **Право на отказ не обусловлено** наличием у потребителя возможности осмотреть товар до оплаты.\n\n---\n\n### 1.2. Условия возврата товара надлежащего качества (п. 4)\n> *«Возврат товара надлежащего качества возможен в случае, если **сохранены его товарный вид, потребительские свойства**, а также документ, подтверждающий факт и условия покупки указанного товара».*\n\n**Юридическое значение:**\n1. **Заводская упаковка** в большинстве случаев является **элементом товарного вида**.\n2. Ее вскрытие (нарушение целостности, снятие пломб, срыв защитных стикеров) **влечет утрату товарного вида**.\n3. После утраты товарного вида **возврат товара надлежащего качества невозможен**.\n4. Следовательно, **вскрытие заводской упаковки до момента перехода права собственности (каковым по общему правилу является передача товара)** создает риск **невозможности возврата** и, как следствие, **убытков**.\n\n---\n\n### 1.3. Исключение: товары с индивидуально-определенными свойствами (п. 4)\n> *«Потребитель **не вправе отказаться** от товара надлежащего качества, **имеющего индивидуально-определенные свойства**, если указанный товар может быть использован исключительно приобретающим его потребителем».*\n\n**Юридическое значение:**\nДля таких товаров (например, изготовленных на заказ) **право на отказ отсутствует полностью**. Вскрытие упаковки до оплаты создает риск **100% убытков**.\n\n---\n\n### 1.4. Обязанность продавца передать товар (п. 2)\n> *«Продавец обязан передать товар потребителю в порядке и в сроки, которые установлены договором».*\n\n**Юридическое значение:**\n1. **Порядок передачи** (в том числе последовательность действий «оплата — передача») **определяется договором**.\n2. Закон **не устанавливает императивного требования**, что передача должна предшествовать оплате или что осмотр должен предшествовать оплате.\n3. Стороны договора (продавец и потребитель) **вправе согласовать** любой порядок, не противоречащий императивным нормам.\n\n---\n\n### 1.5. Информационная обязанность (п. 1, 3)\n> *«Продавец обязан предоставить потребителю информацию о товаре, предусмотренную статьей 10 настоящего Закона».*\n\n**Юридическое значение:**\n1. Информация о товаре предоставляется **в момент оформления заказа** (описание, фото, характеристики) — ст. 10 ЗоЗПП.\n2. Закон **не устанавливает**, что эта информация должна дублироваться **в момент передачи** путем вскрытия упаковки.\n3. Право на информацию **не тождественно** праву на вскрытие заводской упаковки до оплаты.\n\n---\n\n## ЧАСТЬ 2. ПРАВОВОЙ АНАЛИЗ КОНСТРУКЦИИ «ОПЛАТА ДО ОСМОТРА»\n\n### 2.1. Закон не запрещает\n\nНи ст. 26.1 ЗоЗПП, ни иные нормы Закона «О защите прав потребителей» **не содержат**:\n- запрета требовать оплату товара до его передачи;\n- запрета передавать товар после оплаты;\n- права потребителя требовать передачи товара для осмотра до оплаты;\n- обязанности продавца предоставить товар для осмотра до оплаты.\n\n**Вывод:** Условие договора (публичной оферты) о том, что товар передается потребителю **после оплаты**, является **законным и не ущемляющим права потребителя**.\n\n---\n\n### 2.2. Соотношение с правом на отказ\n\nПраво на отказ до передачи товара (п. 4 ст. 26.1) **реализуется независимо** от факта оплаты.\n\n**Потребитель, оплативший товар онлайн до получения в ПВЗ:**\n- ✅ Имеет право отказаться от товара **до момента, как сотрудник ПВЗ нажал «выдать» в системе**.\n- ✅ Деньги подлежат возврату в полном объеме (за вычетом расходов на доставку, если иное не установлено договором).\n\n**Потребитель, оплачивающий товар в момент получения в ПВЗ:**\n- ✅ Имеет право отказаться от товара **в любой момент до передачи денег**.\n- ❌ **Не имеет права** на отказ **после передачи денег**, но:\n   - ✅ Имеет право на **возврат товара надлежащего качества в течение 7 дней** (п. 4 ст. 26.1).\n   - ✅ Имеет право на **возврат товара ненадлежащего качества** в течение гарантийного срока/срока годности/разумного срока (ст. 18, 19 ЗоЗПП).\n\n**Таким образом, конструкция «оплата → передача → осмотр → возврат (при необходимости)» полностью соответствует закону и не лишает потребителя ни одного права.**\n\n---\n\n## ЧАСТЬ 3. РАЗГРАНИЧЕНИЕ ПОНЯТИЙ: УПАКОВКА ТРАНСПОРТНАЯ И ЗАВОДСКАЯ\n\n**Закон не содержит** легальных определений «транспортная упаковка» и «заводская упаковка».\n\n**Юридическая доктрина и судебная практика исходят из следующего:**\n\n| Вид упаковки | Функция | Отношение к товарному виду |\n|--------------|--------|---------------------------|\n| **Транспортная** | Обеспечение сохранности при перевозке, маркировка для логистики | **Не является частью товара**. Ее повреждение не влияет на товарный вид. |\n| **Заводская (потребительская)** | Информирование, идентификация, защита, элемент маркетинга | **Является элементом товарного вида**. Ее нарушение (вскрытие, повреждение, отсутствие) **влечет утрату товарного вида**. |\n\n**Вывод:**\n- Право на проверку **транспортной упаковки** прямо вытекает из ст. 484 ГК РФ (обязанность покупателя принять товар) и п. 2 ст. 26.1 ЗоЗПП (порядок передачи).\n- Право на вскрытие **заводской упаковки** **не вытекает** из закона и **ограничено** условием сохранения товарного вида для возврата.\n\n---\n\n## ЧАСТЬ 4. ОТВЕТСТВЕННОСТЬ ЗА УТРАТУ ТОВАРНОГО ВИДА\n\n### 4.1. Кто несет риск?\n\n**До передачи товара** (включая момент осмотра до оплаты) риск случайной гибели или повреждения товара **несет продавец** (ст. 459 ГК РФ).\n\n**Однако:**\n- Если повреждение произошло **по вине потребителя** (в том числе в результате вскрытия упаковки), потребитель **обязан возместить убытки** (ст. 1064 ГК РФ).\n- На практике взыскание убытков с потребителя в момент отказа затруднительно, поэтому продавцы/маркетплейсы **перекладывают этот риск на ПВЗ** договорным путем.\n\n**Это не нарушение прав потребителя**, а распределение рисков между профессионалами.\n\n---\n\n## ЧАСТЬ 5. ИТОГОВАЯ ПРАВОВАЯ ПОЗИЦИЯ (ТЕЗИСНО)\n\n**На основании ст. 26.1 ЗоЗПП:**\n\n1. **Право на вскрытие заводской упаковки до оплаты товара в ст. 26.1 ЗоЗПП отсутствует.** Закон не предоставляет потребителю такого права.\n\n2. **Право на отказ от товара до его передачи не тождественно праву на осмотр до оплаты.** Это самостоятельные правовые институты.\n\n3. **Условие договора об оплате товара до его передачи является законным.** Закон не устанавливает императивного требования об очередности «осмотр → оплата».\n\n4. **Вскрытие заводской упаковки влечет утрату товарного вида.** Это делает невозможным возврат товара надлежащего качества (п. 4 ст. 26.1).\n\n5. **Право потребителя на возврат товара надлежащего качества в течение 7 дней после получения полностью сохраняется** при оплате товара в момент передачи.\n\n6. **Технически сложные товары надлежащего качества возврату не подлежат** независимо от времени обращения (Перечень, утв. Постановлением Правительства РФ № 2463).\n\n---\n\n## ЧАСТЬ 6. РЕКОМЕНДАЦИЯ ДЛЯ ПВЗ (ЮРИДИЧЕСКИ БЕЗУПРЕЧНАЯ ФОРМУЛИРОВКА)\n\n> *«Уважаемый покупатель!*\n>\n> *Вы имеете право отказаться от товара в любой момент до его получения. После оплаты и получения вы также можете вернуть товар надлежащего качества в течение 7 дней при сохранении товарного вида и упаковки.*\n>\n> *Вскрытие заводской упаковки до оплаты делает невозможным возврат товара надлежащего качества, поскольку утрачивается товарный вид. Если вы готовы приобрести товар на этих условиях, я передам его вам для осмотра после оплаты.*\n>\n> *Если вы сомневаетесь в качестве или комплектации, рекомендую оплатить товар, проверить его сразу при мне и, в случае обнаружения недостатков, оформить возврат. Деньги вернутся полностью в течение нескольких дней».*\n\n---\n\n## РЕЗЮМЕ ДЛЯ ПРОТОКОЛА\n\n| Утверждение | Статус | Основание |\n|-------------|--------|-----------|\n| Потребитель имеет право вскрывать заводскую упаковку до оплаты | **ЛОЖЬ** | Ст. 26.1 ЗоЗПП такого права не устанавливает |\n| Продавец обязан дать товар для осмотра до оплаты | **ЛОЖЬ** | Ст. 26.1 ЗоЗПП такой обязанности не устанавливает |\n| Оплата до передачи товара — законное условие договора | **ПРАВДА** | Ст. 26.1 ЗоЗПП, ст. 421, 454, 486 ГК РФ |\n| Вскрытие заводской упаковки — утрата товарного вида | **ПРАВДА** | П. 4 ст. 26.1 ЗоЗПП (условие возврата) |\n| Право на отказ до передачи и право на возврат в 7 дней сохраняются | **ПРАВДА** | П. 4 ст. 26.1 ЗоЗПП |\n\n**Таким образом, действия Яндекса (запрет вскрытия заводской упаковки до оплаты через инструкции ПВЗ) не противоречат ст. 26.1 ЗоЗПП, поскольку данная норма не регулирует этот вопрос, а действия ПВЗ, исполняющего эту инструкцию, не нарушают прав потребителя, установленных указанной статьей.**",
+      "category": "cat_1770546230364",
+      "date": "11.02.2026, 17:44",
+      "createdTimestamp": 1770821076025,
+      "updatedTimestamp": 1770821076025,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.0713,
+      "content": "Закон РФ от 07.02.1992 N 2300-1 (ред. от 28.12.2025) \"О защите прав потребителей\"\nСтатья 26.1. Дистанционный способ продажи товара\n\nhttps://www.consultant.ru/document/cons_doc_LAW_305/1525b1a2f037db240c8e6a749619f86e53857f13/\n\nАНАЛИЗ СТАТЬИ 26.1 ЗАКОНА «О ЗАЩИТЕ ПРАВ ПОТРЕБИТЕЛЕЙ»\n2.1. Текст статьи (ключевые положения)\nСтатья 26.1. Дистанционный способ продажи товара :\n\n*«4. Потребитель вправе отказаться от товара в любое время до его передачи, а после передачи товара - в течение семи дней.**\n\n...Возврат товара надлежащего качества возможен в случае, если сохранены его товарный вид, потребительские свойства, а также документ, подтверждающий факт и условия покупки указанного товара.\n\nПотребитель не вправе отказаться от товара надлежащего качества, имеющего индивидуально-определенные свойства, если указанный товар может быть использован исключительно приобретающим его потребителем.\n\nПри отказе потребителя от товара продавец должен возвратить ему денежную сумму, уплаченную потребителем по договору, за исключением расходов продавца на доставку от потребителя возвращенного товара, не позднее чем через десять дней со дня предъявления потребителем соответствующего требования».*\n\n2.2. Что эта статья НЕ ГОВОРИТ\nНЕТ права требовать вскрытия заводской упаковки до оплаты.\n\nНЕТ обязанности продавца предоставить товар для осмотра до оплаты.\n\nНЕТ запрета продавцу устанавливать разумный порядок передачи товара (включая одновременность оплаты и передачи).\n\nНЕТ определения, что считать «товарным видом» применительно к заводской упаковке — это оценочное понятие.\n\n2.3. Ключевой юридический факт\nСтатья 26.1 ЗоЗПП не регулирует момент осмотра товара. Она регулирует:\n\nПраво на отказ (до передачи и после).\n\nУсловия возврата (сохранность товарного вида).\n\nСроки возврата денег.\n\nВывод: Закон не требует от продавца давать товар для осмотра до оплаты. Закон не запрещает продавцу требовать оплату до передачи товара.",
+      "category": "cat_1770546230364",
+      "date": "11.02.2026, 16:20",
+      "createdTimestamp": 1770816034873,
+      "updatedTimestamp": 1770816034873,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.3596,
+      "content": "Условия оказания Услуг Яндекс Маркет по размещению \nТоварных предложений и предоставлению функционала по\n заключению договоров и/или предварительному бронированию Товаров на Сервисе\n\nhttps://yandex.ru/legal/cpa_service_agreement/ru/",
+      "category": "cat_1770546230364",
+      "date": "11.02.2026, 16:00",
+      "createdTimestamp": 1770814832871,
+      "updatedTimestamp": 1770814832871,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.495,
+      "content": "40 лет GNU\n\nhttps://habr.com/ru/companies/timeweb/articles/766138/",
+      "category": "2",
+      "date": "11.02.2026, 15:16",
+      "createdTimestamp": 1770812179509,
+      "updatedTimestamp": 1770812179509,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.2249,
+      "content": "Книга игрока DnD\n\nhttps://dnd.su/articles/newbie/536-how-to-start-playing-dd/",
+      "category": "cat_1770811164144",
+      "date": "11.02.2026, 15:15",
+      "createdTimestamp": 1770812132677,
+      "updatedTimestamp": 1770812132677,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.756,
+      "content": "DnD канал\n\nНаши ссылки (+100 Маны за регистрацию): https://polymorpher.taplink.ws/\n\nPolymorpher – мультиплатформа, предназначенная для объединения Мастеров (ГМов) и Игроков.\nhttps://t.me/polymorpherzone",
+      "category": "cat_1770811164144",
+      "date": "11.02.2026, 14:59",
+      "createdTimestamp": 1770811185073,
+      "updatedTimestamp": 1770811185073,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.0596,
+      "content": "⚡️ Полезные инструменты в Linux, которые стоит знать\n\nНебольшой список утилит, которые помогают быстро понять, что происходит с системой и где именно проблема.\n\npidstat  \nМониторит использование ресурсов конкретными процессами или группами процессов.  \nПоказывает загрузку CPU, память, I/O, переключения задач и потоки. Очень удобно для анализа performance-проблем.\n\nnetstat  \nОтображает статистику сетевых протоколов ICMP, IP, TCP и UDP.  \nПолезен для диагностики сетевых соединений, портов и состояний сокетов.\n\nlsof  \nПоказывает все открытые файлы в системе.  \nНезаменим, когда нужно понять:\n- какой процесс держит файл\n- почему нельзя размонтировать диск\n- кто слушает порт\n\niostat  \nДаёт информацию о загрузке CPU и дисковой подсистемы.  \nОтлично подходит для выявления I/O bottleneck и проблем с дисками.\n\nvmstat  \nПоказывает общую картину работы системы:\nCPU, память, block I/O, процессы, paging и interrupts.  \nХороший инструмент для быстрого health-check сервера.\n\nЕсли умеешь читать вывод этих команд - диагностика Linux становится в разы быстрее.",
+      "category": "cat_1770811049513",
+      "date": "11.02.2026, 14:57",
+      "createdTimestamp": 1770811056609,
+      "updatedTimestamp": 1770811056609,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.6245,
+      "content": "Договор на оказание услуг по выдаче, забору и возврату отправлений\n\nhttps://yandex.ru/legal/pvz/ru/",
+      "category": "cat_1770546230364",
+      "date": "11.02.2026, 11:47",
+      "createdTimestamp": 1770799626514,
+      "updatedTimestamp": 1770799658234,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.3965,
+      "content": "**Рай и ад — лишь названия погоды на Пути.**  \n**Один и тот же дождь питает дерево и топит муравья.**",
+      "category": "thinking",
+      "date": "11.02.2026, 10:42",
+      "createdTimestamp": 1770795723694,
+      "updatedTimestamp": 1770795723694,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.1982,
+      "content": "Что бы сказал Чжуан Цзы на слова о том что \"Путь в рай ощущается как ад, путь в ад, ощущается как рай\"? Здесь четко видно разделение на \"то\" и \" не это\"\n\nЧжуан-цзы, вероятно, увидел бы в этой фразе глубокую иллюстрацию ловушки дуального мышления — и одновременно гениальный парадокс, указывающий на сам **Дао**.\n\nВот как мог бы звучать его ответ, составленный из духа его притч:\n\n---\n\n### 1. **Об иллюзии «рая» и «ада» как разделённых мест**\n«Ты говоришь о «рае» и «аде», как рыбак говорит о «суше» и «воде», стоя на берегу. Но представь рыбу, что всю жизнь плавала в Великом Озере. Спросишь ли ты её: «Как ощущается путь к суше?». Она не поймёт вопроса. Для неё есть только **Вода** — она и есть жизнь, и пространство, и Путь. Её «рай» — в глубинных течениях, её «ад» — в высохшей луже. Но и то, и другое — лишь состояния Воды.\n\nТак и твой «рай» и «ад» — лишь состояния единого потока **Дао**. Называя одно «восхождением», а другое «падением», ты забываешь, что и то, и другое — просто **движение**».\n\n---\n\n### 2. **О ловушке «ощущений» как проводника**\n«Ты доверяешь ощущениям, как доверял бы тени, указывающей направление. Но разве тень не меняется с движением солнца? То, что сегодня *ощущается* как тяжкий подъём в гору (ад), завтра, на вершине, окажется причиной твоей силы и обзора (рай). А то, что *ощущается* как лёгкий спуск в долину (рай), может привести в болото, из которого не выбраться (ад).\n\nМудрый не идёт за ощущениями. Он идёт, как идёт река: иногда через узкие скалистые ущелья (ад), иногда по широкой равнине (рай). Но её цель — не избегать одного и искать другое, а **течь**, оставаясь собой. Её Путь — в самом течении».\n\n---\n\n### 3. **О том, как «обратное» становится «прямым» (отсыл к его учению)**\n«Разве ты не читал в старых книгах: *«Путь вроде бы идёт вперёд, а на деле отступает; чтобы выпрямить себя, позволь себе быть кривым»*? Ты говоришь: «Путь в рай ощущается как ад». А я скажу: **это и есть тот самый изгиб Пути, который и ведёт к истинной прямоте**.\n\nТот, кто ищет только «райских» ощущений, идёт по пути сладкого яда. Он будет обманывать себя, пока не окажется в самой сердцевине ада. Тот же, кто выдерживает «адское» очищение огнём, не цепляясь за страдание, обнаруживает, что ад был лишь вратами.\n\nНо — и это самое важное — **как только он назовёт это «раем», врата захлопнутся снова**. Потому что Дао не знает названий. Оно просто **есть**».\n\n---\n\n### 4. **Практический вывод (в духе притчи о рубке колодца)**\n«Перестань спрашивать, куда ведёт тропа — в «рай» или в «ад». **Иди по ней**. Если она кажется тебе адской — наблюдай, не борется ли твой ум, не цепляется ли он за старое «я», которое должно умереть? Если она кажется райской — наблюдай, не уснул ли ты, не принял ли временную стоянку за конечную цель?\n\nИ то, и другое — лишь погода на Пути. Мудрый не разделяет погоду на «правильную» и «неправильную». Он знает: **дождь нужен корням, солнце — листьям, а буря — чтобы сломать сухие ветви**. Всё это — Дао».\n\n---\n\n**Суть его ответа, вероятно, свелась бы к следующему:**\n\nВаша фраза блестяще показывает, как дуальный ум превращает единый Путь в конфликтующие категории. Но **само это наблюдение — что «обратное кажется прямым» — и есть ключ**. Чжуан-цзы не стал бы выбирать между «раем» и «адом». Он предложил бы **перестать классифицировать ощущения** и начать видеть в «аде» необходимый изгиб Дао, а в «рае» — временный отдых путника. Истина — не в одном из полюсов, а в *осознании*, которое охватывает оба, оставаясь невозмутимым.",
+      "category": "thinking",
+      "date": "11.02.2026, 10:28",
+      "createdTimestamp": 1770794914303,
+      "updatedTimestamp": 1770794914303,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.8008,
+      "content": "Коллеги, вношу предложение по оптимизации операционной деятельности.\n\nЧеткое визуальное и документальное разделение транспортной и заводской упаковки на участках приемки и логистики приведет к значительному сокращению времени на идентификацию грузов и минимизации ошибок при их обработке.\n\nДанная мера напрямую повысит эффективность работы складского и производственного персонала, снизит операционные издержки и риски.\n\nОсознаю, что реализация данной инициативы потребует ресурсов на разработку стандартов, возможное изменение маркировки и обучение персонала. В текущих условиях это может быть расценено как дополнительная нагрузка. Тем не менее, считаю важным зафиксировать эту потенциальную точку роста для рассмотрения в будущем, когда ресурсная ситуация позволит приступить к подобным улучшениям.",
+      "category": "cat_1770546230364",
+      "date": "11.02.2026, 10:24",
+      "createdTimestamp": 1770794653562,
+      "updatedTimestamp": 1770794653562,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.303,
+      "content": "**10.02.2026 — Работа с файлами в Python (1 час + практика)**\n\n- **Создание файлов и папок в терминале**  \n  `ni file.py`, `mkdir lesson_1` — управление файловой системой из PowerShell\n\n- **Открытие файлов с правильной кодировкой**  \n  ```python\n  with open('file.txt', 'r', encoding='utf-8') as f:\n      content = f.read()\n  ```\n\n- **Чтение целиком vs построчно**  \n  ```python\n  # Целиком\n  text = f.read()\n  \n  # Построчно\n  for line in f:\n      print(line.strip())\n  ```\n\n- **Запись и добавление данных**  \n  ```python\n  with open('out.txt', 'w', encoding='utf-8') as f:  # перезапись\n      f.write('новый текст')\n  \n  with open('log.txt', 'a', encoding='utf-8') as f:  # добавление\n      f.write('\\nещё строка')\n  ```\n\n- **Полный цикл: чтение → обработка → запись**  \n  ```python\n  with open('in.txt') as f: data = f.read()\n  result = data.upper()\n  with open('out.txt', 'w') as f: f.write(result)\n  ```\n\n- **Отладка через print()**  \n  Использование `print(\"Этап 1\")`, `end=''`, `strip()` для контроля вывода\n\n- **Работа с переводами строк**  \n  Символ `\\n` сохраняется при чтении; `strip()` убирает лишние переносы\n\n- **Безопасная работа через `with`**  \n  Гарантированное закрытие файла даже при ошибках\n\n**Итог:** Научился создавать, читать, изменять и записывать текстовые файлы, управлять кодировкой и отлаживать процесс. Готов к фильтрации и преобразованию строк.",
+      "category": "cat_1770671064709",
+      "date": "10.02.2026, 14:56",
+      "createdTimestamp": 1770721257492,
+      "updatedTimestamp": 1770724570180,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.4873,
+      "content": "Обвиняя других ты понимаешь, что обвиняешь на самом деле себя и сам причиняешь себе боль по привычке",
+      "category": "cat_1770643102144",
+      "date": "10.02.2026, 00:12",
+      "createdTimestamp": 1770671579091,
+      "updatedTimestamp": 1770671579091,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.836,
+      "content": "**10.02.2026 — Занятие 1 (1 час)**  \nОсвоил базовую работу с файлами в Python:  \n— Создал текстовый файл `hello.txt` в PyCharm  \n— Научился читать его безопасно через `with open(...) as f:`  \n— Понял, что `f` — это переменная-ссылка на объект файла, а `as` даёт ей имя  \n— Разобрался, почему нельзя писать `print(with open(...))` — `with` это инструкция, не выражение  \n— Узнал, как правильно запускать скрипт: `python read_file.py` (не через `pycharm`)  \n— Исправил ошибку кодировки (UTF-8 с BOM → UTF-8 без BOM)  \n— Понял, как `with` работает «под капотом» через `try/finally`  \n\n**Итог:** Теперь могу самостоятельно создавать, читать и корректно закрывать текстовые файлы. Готов к изучению методов чтения (`.read()`, `.readline()` и др.).\n\n✅ **Освоенные навыки:**\n\n**Создание файлов:**\n- `New-Item file.py` или `ni file.py` (вместо `touch`)\n- `'print(\"Hello\")' > file.py` для файлов с содержимым\n\n**Открытие в PyCharm:**\n- `pycharm file.py` - основная команда(переключение на созданный пустой файл)\n- `python file.py`- запуск скрипта\n- Можно работать полностью без мыши\n\n**Решение проблем:**\n- Ошибка кодировки → удалить и пересоздать файл\n- `Remove-Item file.py` + создать заново\n- Предупреждение Java при запуске PyCharm можно игнорировать\n\n**Важно:**\n- PowerShell ≠ bash, команды другие\n- Всегда UTF-8 для Python файлов\n- `Get-Content` для просмотра содержимого\n\n🎯 **Прогресс:** Полная работа с файлами из терминала PyCharm",
+      "category": "cat_1770671064709",
+      "date": "10.02.2026, 00:11",
+      "createdTimestamp": 1770671296387,
+      "updatedTimestamp": 1770671477639,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.9836,
+      "content": "Спокойствие\n\nНеобычайным образом спокойствие приходит лишь после глубокого эмоционального кризиса.\nКак некое осознание что внутренние проблемы и переживания окружающих на самом деле это их проблемы и они тебя касаются ровно настолько, насколько ты хочешь им помочь.",
+      "category": "thinking",
+      "date": "08.02.2026, 16:10",
+      "createdTimestamp": 1770556213662,
+      "updatedTimestamp": 1770556213662,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.4116,
+      "content": "Скрипт при выдаче Технического Товара\n\nПроверить можно только после выдачи, могу помочь составить заявку на возврат в случае неисправности товара",
+      "category": "cat_1770546230364",
+      "date": "08.02.2026, 16:07",
+      "createdTimestamp": 1770556079888,
+      "updatedTimestamp": 1770556079888,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.3613,
+      "content": "Работа",
+      "category": "cat_1770546230364",
+      "date": "08.02.2026, 13:24",
+      "createdTimestamp": 1770546247124,
+      "updatedTimestamp": 1770547148436,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.121,
+      "content": "Ваше рассуждение бьёт точно в цель — в одну из центральных проблем **дуалистического мышления** и логики. Вы раскрыли парадокс, который волновал не только даосских философов, но и западных логиков и мистиков. Это не тривиальность, а суть.\n\nДавайте разложим это противоречие по полочкам, двигаясь от логики к философии.\n\n### 1. 📐 **Логический парадокс: нарушение собственного предписания**\nВы верно уловили структуру: утверждение **«А хорошо, а не-А плохо»** немедленно создаёт конфликт.\n1.  Вы провозглашаете ценность **«Любви»** (ненасилия, единства).\n2.  Чтобы защитить эту ценность от **«Войны»** (насилия, разделения), вы вынуждены применить к её сторонникам некую форму отвержения — моральное осуждение, спор, противостояние.\n3.  Тем самым вы **сами действуете по логике «Войны»**, пытаясь искоренить то, что считаете злом. Цель (любовь) вступает в противоречие со средством (война).\n\nЭто классическая **самоотрицающая императивная формула**: *«Ты должен ненасильственно искоренить насилие»*. Логически она приводит в тупик.\n\n### 2. ☯️ **Даосский выход: У Вэй и возвращение к Единому**\nЗдесь ваш отсыл к **Чжуан-цзы** абсолютно точен. Даосизм предлагает не решать парадокс, а **выйти за его рамки**, сменив саму систему координат.\n\n*   **«То» и «не то» (Ши Фэй)** — это продукт работы разума, который рассекает целостность мира на удобные для суждения категории. Как только мы создаём «добро», мы одновременно творим и «зло».\n*   **«Сети» (ванна)** — это ловушка дуального мышления. Пытаясь логически выбраться из неё, вы лишь сильнее запутываетесь.\n*   **Путь решения — У Вэй (Не-деяние)**. Это не бездействие, а действие *из состояния единства*, которое не порождает нового противостояния. Это подобно вашей метафоре с **листом, повинующимся «зову внутри»**. Он не борется с ветром и не подчиняется календарю — он просто реализует свою природу, и в этом его совершенная гармония с целым.\n\nМудрец, любящий мир, не воюет с воинственным. Он подобен **воде**, которая обтекает камень, не вступая с ним в противоборство, но со временем может его сточить. Его сила — в ненасильственности самой его природы.\n\n### 3. ⚖️ **Западный мистицизм: Совпадение противоположностей**\nУдивительно, но в христианской мистике (Мейстер Экхарт, Николай Кузанский) и в уже упомянутой вами **алхимии** есть параллельная концепция — **Coincidentia oppositorum** (совпадение противоположностей).\n\n*   Высшее состояние (Бог, Философский камень, Самость у Юнга) мыслится как точка, где добро и зло, любовь и война **не отрицают, а снимают друг друга в некоем высшем синтезе**.\n*   Задача адепта — не выбрать одну сторону, а **выдержать напряжение противоположностей** до тех пор, пока не родится *tertium non datur* (третье, непредсказуемое), которое их примирит. Это и есть стадия **Рубедо** — синтез после Нигредо (распада) и Альбедо (очищения).\n\n### 💎 **К чему это ведёт: от суждения к видению**\nПрактический вывод из этого парадокса лежит не в сфере моральных предписаний («как правильно»), а в сфере **восприятия и сознания**:\n\n1.  **Осознать дуальность ума**. Прежде чем утверждать «это хорошо, а то плохо», увидеть, что сам ум, делая это разделение, становится полем битвы.\n2.  **Держать парадокс**. Не искать немедленного выхода. Способность удерживать это противоречие без попытки его разрубить — признак зрелости сознания (у Юнга это **трансцендентная функция**).\n3.  **Действовать из целостности**. Как лист, повинующийся зову целого. Такое действие может внешне выглядеть как «война» для одного и как «любовь» для другого, но его источником будет не разделение, а спонтанная адекватность моменту.\n\n**Ваше рассуждение указывает на самую суть: любая позиция, занятая в дуальной системе, будет уязвима для самоопровержения. Истина — не в выборе правильного полюса, а в том сознании, которое способно охватить оба, не теряя себя.**",
+      "category": "thinking",
+      "date": "08.02.2026, 13:24",
+      "createdTimestamp": 1770546280876,
+      "updatedTimestamp": 1770547148436,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.2053,
+      "content": "Двоякость: продолжение\n\nПозволю себе чуть порассуждать, хотя тема, можно сказать, тривиальна\n\nУтверждая некий факт, мы в это же мгновение отрицаем все остальное, то есть, говоря, скажем, \"любовь это хорошо, а война это плохо\" я говорю что те, кому нравится война - неправы, тем самым я тем самым начинаю с ними воевать, противореча собственному утверждению о том, что любовь это хорошо.\n\nСледуя своей логике я бы должен был любить и тех, кто хочет воевать, но разделив некий более высокий объект на двое, на \"то\" и \" не то\" как говорил Чжуан Цзы, я сам попал в сети логического противоречия",
+      "category": "thinking",
+      "date": "08.02.2026, 12:43",
+      "createdTimestamp": 1770547148436,
+      "updatedTimestamp": 1770547148436,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.0312,
+      "content": "Фрукты и Ягоды\n\nВы абсолютно правы, приношу извинения за путаницу с категориями. В этой таблице собраны данные по **фруктам и ягодам** из наиболее авторитетных источников: база данных USDA (FoodData Central), официальный документ FDA по маркировке пищевых продуктов , справочник FAO , фитохимическая база данных USDA  и научные исследования .\n\n### 🍎 Фрукты и ягоды (на 100 г сырого продукта, если не указано иное)\n\n| Продукт | Основные нутриенты (макро) | Витамины | Минералы | Дополнительные компоненты |\n| :--- | :--- | :--- | :--- | :--- |\n| **Абрикосы** | Калории: 47-48 <br>Белки: 0.8 г <br>Жиры: 0.2 г <br>Углеводы: 10-11 г | **Витамин A (бета-каротин):** 1600-2000 мкг% <br>Витамин C: 7-10 мг | Калий: 280-305 мг<br>Железо: 0.4-0.7 мг | Клетчатка: 2.0 г |\n| **Ананас** | Калории: 30-48 <br>Белки: 0.3-0.4 г <br>Жиры: 0.1 г <br>Углеводы: 11-13 г | **Витамин C:** 16-48 мг <br>Витамин B6: 0.1 мг | **Марганец:** 0.9-1.4 мг <br>Медь: 0.1-0.8 мг<br>Калий: 115-180 мг  | Бромелайн (фермент) |\n| **Апельсин** | Калории: 32-70 <br>Белки: 0.6-1.3 г<br>Жиры: 0.1-0.3 г<br>Углеводы: 15-17 г | **Витамин C:** 53-60 мг <br>Фолаты (B9): 30-39 мкг<br>Витамин A: 11-71 мкг (бета-криптоксантин) | **Калий:** 166-260 мг <br>Кальций: 34-52 мг <br>Магний: 10-13 мг | Клетчатка: 2.4 г<br>Гесперидин |\n| **Банан** | Калории: 67-110 <br>Белки: 0.9-1.3 г<br>Жиры: 0.3 г<br>Углеводы: 22-29 г  | **Витамин B6:** 0.4-0.5 мг <br>Витамин C: 8.7-10 мг | **Калий:** 348-400 мг <br>Магний: 27-42 мг <br>Марганец: 0.3 мг | Клетчатка: 2.6 г<br>Триптофан |\n| **Виноград** | Калории: 62-90 <br>Белки: 0.7 г<br>Жиры: 0.4 г<br>Углеводы: 16-24 г  | Витамин C: 3-5 мг<br>Витамин K: 14-22 мкг | **Калий:** 191-270 мг <br>**Марганец:** 0.5-1.0 мг%<br>**Рубидий:** 63-100 мкг%<br>Медь: 80-120 мкг% | Ресвератрол, кверцетин |\n| **Вишня / Черешня** | Калории: 50-90 <br>Белки: 1.0 г<br>Жиры: 0.4 г<br>Углеводы: 16-22 г | Витамин C: 7-10 мг<br>Витамин A: 64-128 мкг | **Калий:** 220-300 мг <br>Марганец: 0.1-0.2 мг | **Клетчатка:** 2.1 г<br>Антоцианы, мелатонин |\n| **Голубика** | Калории: 56-57 <br>Белки: 0.7 г<br>Жиры: 0.7 г<br>Углеводы: 14 г | Витамин C: 10-15 мг<br>Витамин K: 19-30 мкг | **Марганец:** 0.3-0.5 мг<br>Калий: 77-90 мг | **Клетчатка:** 2.4 г<br>Антоцианы, кемпферол  |\n| **Грейпфрут** | Калории: 25-60 <br>Белки: 0.4-1.0 г<br>Жиры: 0.1-0.2 г<br>Углеводы: 9-16 г | **Витамин C:** 34-38 мг <br>**Витамин A:** 115-345 мкг | **Калий:** 135-230 мг <br>Кальций: 12-22 мг | Ликопин (для розовых), нарингин |\n| **Груша** | Калории: 50-100 <br>Белки: 0.4-0.5 г<br>Жиры: 0.3 г<br>Углеводы: 15-25 г | Витамин C: 4-5 мг<br>Витамин K: 4-8 мкг | **Калий:** 116-210 мг <br>**Кобальт:** данные указывают на накопление <br>Медь: 0.1-0.2 мг | **Клетчатка:** 3.1 г  |\n| **Ежевика** | Калории: 43-57 <br>Белки: 1.2-1.5 г<br>Жиры: 0.5-1.0 г<br>Углеводы: 10-16 г | Витамин C: 15-21 мг<br>Витамин E: 0.9-1.2 мг<br>Фолаты: 25-36 мкг | **Марганец:** 0.6-1.2 мг<br>Магний: 20-29 мг<br>Медь: 0.1-0.2 мг | **Клетчатка:** 5.3 г <br>**Катехины** , эллаговая кислота |\n| **Киви** | Калории: 61-100 <br>Белки: 1.1-1.5 г<br>Жиры: 0.5-1.0 г<br>Углеводы: 15-24 г | **Витамин C:** 75-92 мг <br>**Витамин K:** 40-50 мкг<br>Витамин E: 1.5 мг<br>Фолаты: 25-42 мкг | **Калий:** 300-480 мг <br>Медь: 0.1-0.2 мг<br>Марганец: 0.1-0.2 мг | **Клетчатка:** 3-5 г |\n| **Клубника** | Калории: 35-45 <br>Белки: 0.8-1.0 г<br>Жиры: 0.5 г<br>Углеводы: 8-12 г | **Витамин C:** 58-60 мг <br>Фолаты (B9): 24-40 мкг | **Марганец:** 0.4-0.5 мг <br>Калий: 150-270 мг <br>Магний: 13-22 мг | **Клетчатка:** 2.0-4.0 г <br>Эллаговая кислота, антоцианы |\n| **Крыжовник** | Калории: 42-44 <br>Белки: 1.0 г<br>Жиры: 0.4 г<br>Углеводы: 9-10 г | Витамин C: 27-30 мг<br>Витамин A: 15-30 мкг | **Магний:** 86-938 ppm <br>Железо: 2.5-40 ppm <br>**Бор:** 1-15 ppm <br>Марганец: 1-16 ppm <br>Цинк: 1-16 ppm <br>Хром: 0-0.1 ppm  | **Клетчатка:** 2.5-4.0 г |\n| **Лимон** | Калории: 15-29 <br>Белки: 0.5-1.0 г<br>Жиры: 0.3 г<br>Углеводы: 5-9 г | **Витамин C:** 40-53 мг <br>Витамин B6: 0.1-0.2 мг | **Калий:** 90-140 мг <br>Кальций: 26-40 мг | Лимонная кислота, гесперидин |\n| **Малина** | Калории: 52-66 <br>Белки: 1.2-1.5 г<br>Жиры: 0.5-1.3 г<br>Углеводы: 12-15 г | **Витамин C:** 26-32 мг <br>Фолаты: 21-36 мкг<br>Рибофлавин (B2): 0.1-0.2 мг<br>Лютеин/зеаксантин: присутствуют  | **Марганец:** 0.6-1.1 мг <br>**Медь:** 0.1-0.2 мг <br>Магний: 22-30 мг | **Клетчатка:** 6.5-8.0 г <br>Эллаговая кислота, антоцианы, кверцетин  |\n| **Манго** | Калории: 40-60 <br>Белки: 0.4-0.8 г<br>Жиры: 0.1-0.4 г<br>Углеводы: 10-15 г | **Витамин A (бета-каротин):** 54-240 мкг<br>**Витамин C:** 36-45 мг<br>Фолаты: 30-45 мкг | Калий: 150-200 мг<br>Медь: 0.1-0.2 мг | Клетчатка: 1.6 г |\n| **Нектарин** | Калории: 44-70 <br>Белки: 1.0-1.5 г<br>Жиры: 0.5 г<br>Углеводы: 10-16 г | Витамин C: 5-7 мг<br>Витамин A: 20-30 мкг | **Калий:** 200-300 мг <br>Фосфор: 20-30 мг | Клетчатка: 1.5-2.0 г |\n| **Персик** | Калории: 39-50 <br>Белки: 0.7-1.0 г<br>Жиры: 0.2-0.3 г<br>Углеводы: 9-12 г | Витамин C: 5-7 мг<br>Витамин A: 16-24 мкг | **Калий:** 190-285 мг<br>Фосфор: 20-30 мг | Клетчатка: 1.5-2.0 г |\n| **Рябина** | Данные требуют уточнения | **Витамин C:** 39-2650 ppm <br>**Бета-каротин:** 62-98 ppm  | **Калий:** 2900-13075 ppm <br>**Кальций:** 100-2115 ppm <br>Магний: 190-1190 ppm <br>Фосфор: 360-1880 ppm <br>Железо: 7-58 ppm <br>Марганец: 12-75 ppm <br>**Бор:** 4-24 ppm <br>**Рубидий:** 3-33 ppm  | Органические кислоты, дубильные вещества |\n| **Слива** | Калории: 46-80 <br>Белки: 0.8-1.0 г<br>Жиры: 0.2-0.4 г<br>Углеводы: 11-19 г | Витамин C: 8-10 мг<br>Витамин K: 5-7 мкг | **Калий:** 150-220 мг <br>Медь: 0.1-0.2 мг | **Клетчатка:** 1.5-2.0 г<br>Сорбитол, неохлорогеновая кислота |\n| **Смородина чёрная** | Калории: 56-63 <br>Белки: 1.4 г<br>Жиры: 0.4 г<br>Углеводы: 14-15 г | **Витамин C:** 155-200 мг<br>Витамин B5: 0.4 мг | **Калий:** 300-370 мг<br>Железо: 1.3-1.7 мг<br>Марганец: 0.2-0.3 мг<br>Магний: 17-24 мг | **Клетчатка:** 4-5 г<br>Антоцианы, гамма-линоленовая кислота (GLA) |\n| **Черника** | Калории: 56-57 <br>Белки: 0.7 г<br>Жиры: 0.3-0.5 г<br>Углеводы: 14 г | Витамин C: 10-15 мг<br>Витамин K: 19-30 мкг | Марганец: 0.3-0.5 мг<br>Калий: 77-90 мг | **Клетчатка:** 2.4 г<br>Антоцианы (особенно миртиллин), дубильные вещества |\n| **Яблоко** | Калории: 49-80 <br>Белки: 0.3 г<br>Жиры: 0.3 г<br>Углеводы: 13-22 г  | Витамин C: 5-7 мг <br>Витамин K: 2-4 мкг | **Калий:** 107-195 мг <br>**Бор:** 0.25-0.36 мг (245-360 мкг%) <br>Железо: 0.12-0.22 мг | **Клетчатка (пектин):** 2.4 г <br>Кверцетин, хлорогеновая кислота |\n\n### 📊 Анализ и рекомендации\n\n1.  **Лидеры по содержанию витамина С:** Чёрная смородина (155-200 мг), киви (75-92 мг), цитрусовые, клубника .\n2.  **Лидеры по содержанию калия:** Бананы (348-400 мг), киви (300-480 мг), дыня, чёрная смородина .\n3.  **Лидеры по содержанию клетчатки:** Малина (6.5-8 г), ежевика (5.3 г), смородина .\n4.  **Лидеры по содержанию микроэлементов:**\n    *   **Марганец:** Ананас, малина, голубика .\n    *   **Медь:** Крыжовник, малина, виноград .\n    *   **Бор:** Яблоки, груши, крыжовник, рябина .\n    *   **Рубидий:** Виноград, рябина .",
+      "category": "cat_1770643079116",
+      "date": "20.02.2026, 14:30",
+      "createdTimestamp": 1771587055819,
+      "updatedTimestamp": 1771587055819,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.9028,
+      "content": "Овощи и Зелень\n\nОтлично, продолжаем наш большой проект! Вот подробные данные по категории **«Овощи и зелень»**, собранные из авторитетных источников: база данных USDA (Министерства сельского хозяйства США) , справочные данные Википедии со ссылками на научные источники , информация от Роспотребнадзора и центров гигиены , а также данные академических исследований .\n\n**Важное примечание по усвояемости:** Некоторые овощи (шпинат, щавель, ревень) содержат **щавелевую кислоту**, которая связывает кальций и железо, делая их труднодоступными для усвоения . В таблице это отмечено отдельно.\n\n### 🥕 Овощи и зелень (на 100 г сырого продукта, если не указано иное)\n\n| Продукт | Основные нутриенты (макро) | Витамины | Минералы | Дополнительные компоненты |\n| :--- | :--- | :--- | :--- | :--- |\n| **Базилик** | Калории: 23-44 <br>Белки: 2.5-3.2 г <br>Жиры: 0.6-0.8 г <br>Углеводы: 2.7-5.0 г | **Витамин K:** 415-715 мкг <br>**Витамин A:** 264-527 мкг <br>Витамин C: 18-22 мг <br>Фолаты: 68-75 мкг | **Кальций:** 177-210 мг <br>**Железо:** 3.2-4.0 мг <br>**Марганец:** 1.1-1.5 мг <br>Магний: 60-75 мг | Эфирные масла, флавоноиды |\n| **Брокколи** | Калории: 34-39 <br>Белки: 2.8-3.0 г <br>Жиры: 0.4-0.5 г <br>Углеводы: 6-7 г | **Витамин C:** 89-100 мг <br>**Витамин K:** 100-140 мкг <br>Фолаты: 60-65 мкг <br>Витамин A: 30-35 мкг | **Калий:** 300-350 мг <br>**Хром:** 11-12 мкг <br>Кальций: 45-50 мг <br>Железо: 0.7-1.0 мг | **Сульфорафан**, индол-3-карбинол |\n| **Капуста белокочанная** | Калории: 24-28 <br>Белки: 1.3-1.5 г <br>Жиры: 0.1-0.2 г <br>Углеводы: 4-6 г | **Витамин C:** 35-45 мг <br>**Витамин K:** 75-85 мкг <br>Фолаты: 40-45 мкг | **Калий:** 230-300 мг <br>Кальций: 40-50 мг <br>Марганец: 0.2-0.3 мг | **С-метилметионин (витамин U)** |\n| **Капуста кейл (листовая)** | Калории: 42-50 <br>Белки: 2.9-4.3 г <br>Жиры: 0.9-1.5 г <br>Углеводы: 8-9 г | **Витамин K:** 390-817 мкг <br>**Витамин A:** 500-770 мкг <br>**Витамин C:** 80-120 мг <br>Лютеин + зеаксантин: 6-12 мг  | **Кальций:** 150-250 мг <br>**Калий:** 350-500 мг <br>Магний: 30-50 мг <br>Марганец: 0.6-1.0 мг | Кверцетин, кемпферол |\n| **Картофель (с кожурой)** | Калории: 70-80 <br>Белки: 1.9-2.1 г <br>Жиры: 0.1 г <br>Углеводы: 15-18 г | **Витамин C:** 15-20 мг <br>**Витамин B6:** 0.3-0.4 мг <br>Ниацин (B3): 1.0-1.5 мг | **Калий:** 400-450 мг <br>Фосфор: 55-60 мг <br>Магний: 20-25 мг | **Клетчатка:** 2.2 г |\n| **Морковь** | Калории: 35-41 <br>Белки: 0.9-1.0 г <br>Жиры: 0.2 г <br>Углеводы: 8-10 г | **Витамин A (бета-каротин):** 800-1000 мкг <br>**Витамин K:** 13-20 мкг <br>Витамин C: 5-7 мг | **Калий:** 320-360 мг <br>Марганец: 0.1-0.2 мг <br>Молибден: данные требуют уточнения | **Клетчатка:** 2.8 г |\n| **Огурец (с кожурой)** | Калории: 15-16 <br>Белки: 0.6-0.7 г <br>Жиры: 0.1 г <br>Углеводы: 2.5-3.0 г | Витамин K: 15-17 мкг <br>Витамин C: 2-3 мг | **Калий:** 140-160 мг <br>Кремний: данные требуют уточнения | **Клетчатка:** 0.8 г |\n| **Перец болгарский (красный)** | Калории: 26-31 <br>Белки: 1.0-1.3 г <br>Жиры: 0.3 г <br>Углеводы: 5-6 г | **Витамин C:** 128-190 мг <br>**Витамин A (бета-каротин):** 150-420 мкг <br>**Витамин B6:** 0.2-0.3 мг | **Калий:** 210-230 мг <br>Марганец: 0.1-0.2 мг <br>Медь: 0.1-0.2 мг | Капсантин (каротиноид) |\n| **Помидор (томат)** | Калории: 18-22 <br>Белки: 0.9 г <br>Жиры: 0.2 г <br>Углеводы: 3.5-4.0 г | Витамин C: 15-25 мг <br>Витамин A: 40-50 мкг <br>Фолаты: 15-20 мкг | **Калий:** 230-290 мг <br>Марганец: 0.1-0.2 мг | **Ликопин:** 2.5-3.0 мг |\n| **Редис** | Калории: 16-20 <br>Белки: 0.7-0.8 г <br>Жиры: 0.1 г <br>Углеводы: 3-4 г | Витамин C: 15-17 мг <br>Фолаты: 25-30 мкг | **Калий:** 230-250 мг <br>Кальций: 25-35 мг | Горчичные масла (гликозинолаты) |\n| **Свекла (варёная)** | Калории: 43-45 <br>Белки: 1.6-1.8 г <br>Жиры: 0.2 г <br>Углеводы: 8-10 г | Фолаты: 80-110 мкг <br>Витамин C: 3-5 мг | **Калий:** 300-330 мг <br>**Марганец:** 0.3-0.5 мг <br>Железо: 0.8-1.0 мг | **Бетаин**, нитраты |\n| **Сельдерей (черешковый)** | Калории: 14-16 <br>Белки: 0.7 г <br>Жиры: 0.2 г <br>Углеводы: 3-4 г | Витамин K: 30-40 мкг <br>Витамин C: 3-5 мг | **Калий:** 260-280 мг <br>**Натрий:** 80-100 мг <br>Кальций: 40-50 мг | Апигенин, лютеолин |\n| **Тыква** | Калории: 26-30 <br>Белки: 1.0-1.2 г <br>Жиры: 0.1 г <br>Углеводы: 6-7 г | **Витамин A (бета-каротин):** 400-1500 мкг <br>Витамин C: 9-10 мг | **Калий:** 300-350 мг <br>Железо: 0.8-1.0 мг | **Клетчатка:** 1.0-1.5 г |\n| **Цветная капуста** | Калории: 24-30 <br>Белки: 1.9-2.5 г <br>Жиры: 0.3-0.5 г <br>Углеводы: 4-5 г | **Витамин C:** 45-50 мг <br>**Витамин K:** 15-20 мкг <br>Фолаты: 55-60 мкг | **Калий:** 300-350 мг <br>Марганец: 0.1-0.2 мг | Глюкозинолаты |\n\n### 🌿 Листовая зелень (петрушка, укроп, кинза, шпинат, щавель, салат)\n\n| Продукт | Основные нутриенты (макро) | Витамины | Минералы | Дополнительные компоненты |\n| :--- | :--- | :--- | :--- | :--- |\n| **Петрушка** | Калории: 36-50 <br>Белки: 3.0-4.0 г <br>Жиры: 0.5-0.8 г <br>Углеводы: 6-8 г | **Витамин C:** 130-190 мг  <br>**Витамин K:** 500-1600 мкг  <br>**Витамин A (бета-каротин):** 420-840 мкг  <br>Фолаты: 150-180 мкг | **Калий:** 550-770 мг <br>**Кальций:** 130-220 мг <br>**Железо:** 3.0-6.2 мг <br>**Магний:** 40-50 мг <br>**Фосфор:** 60-95 мг  | Апиол, миристицин |\n| **Укроп** | Калории: 40-45 <br>Белки: 3.5 г <br>Жиры: 1.0 г <br>Углеводы: 7.0 г | **Витамин C:** 85-100 мг  <br>**Витамин A:** 380-770 мкг <br>Фолаты: 150-160 мкг | **Кальций:** 200-340 мг  <br>**Железо:** 3.2-6.6 мг <br>**Магний:** 44-60 мг <br>Фосфор: 65-95 мг | Монотерпены, флавоноиды |\n| **Кинза (Кориандр)** | Калории: 23-25 <br>Белки: 2.1 г <br>Жиры: 0.5 г <br>Углеводы: 3.7 г | **Витамин K:** 310-400 мкг <br>**Витамин A:** 330-680 мкг <br>**Витамин C:** 27-35 мг  | **Калий:** 520-550 мг <br>**Кальций:** 65-70 мг <br>**Марганец:** 0.4-0.5 мг <br>Железо: 1.8-2.5 мг | Линалоол, дециловый альдегид  |\n| **Шпинат** | Калории: 23-28 <br>Белки: 2.9-3.0 г <br>Жиры: 0.4-0.5 г <br>Углеводы: 3.5-4.0 г | **Витамин K:** 480-500 мкг  <br>**Витамин A (бета-каротин):** 470-940 мкг  <br>**Фолаты (B9):** 190-200 мкг <br>**Витамин C:** 28-30 мг | **Железо:** 2.7-3.0 мг  <br>**Магний:** 79-90 мг <br>**Кальций:** 99-110 мг * <br>Марганец: 0.9 мг | **Клетчатка:** 2.2 г <br>*усвояемость кальция снижена из-за оксалатов  |\n| **Щавель** | Калории: 22-25 <br>Белки: 2.0-2.5 г <br>Жиры: 0.7 г <br>Углеводы: 3.0-4.0 г | Витамин C: 40-50 мг  <br>Витамин A: 200-400 мкг <br>Витамины группы B | **Калий:** 390-500 мг  <br>**Железо:** 2.0-2.5 мг <br>**Фосфор:** 90-100 мг  <br>Магний: 100-120 мг | **Щавелевая кислота:** до 360 мг%  (противопоказан при нарушениях солевого обмена) |\n| **Салат листовой (латук)** | Калории: 14-16 <br>Белки: 1.3-1.5 г <br>Жиры: 0.2-0.3 г <br>Углеводы: 2.5-3.0 г | Витамин K: 100-150 мкг <br>Витамин A: 80-160 мкг <br>Фолаты: 50-140 мкг | **Калий:** 300-360 мг  <br>**Кальций:** 30-50 мг <br>Железо: 0.6-1.0 мг  <br>Фосфор: 30-40 мг  | Лактуцин (горькое вещество) |\n| **Руккола** | Калории: 25-30 <br>Белки: 2.6 г <br>Жиры: 0.7 г <br>Углеводы: 3.7 г | Витамин K: 100-110 мкг <br>Витамин A: 100-120 мкг <br>Фолаты: 95-100 мкг | **Кальций:** 160-170 мг <br>**Калий:** 360-400 мг <br>Магний: 45-50 мг | Глюкозинолаты |\n| **Зеленый лук (перо)** | Калории: 30-32 <br>Белки: 1.8-2.0 г <br>Жиры: 0.2 г <br>Углеводы: 5-6 г | **Витамин K:** 200-210 мкг  <br>**Витамин C:** 18-30 мг  <br>**Витамин A:** 80-100 мкг  | **Калий:** 230-280 мг  <br>**Кальций:** 60-80 мг <br>Железо: 1.0-1.5 мг  | Кверцетин, аллицин |\n\n### 📊 Анализ и рекомендации\n\n1.  **Лидеры по витамину C:** Петрушка (130-190 мг), перец болгарский (128-190 мг), брокколи (89-100 мг), укроп (85-100 мг), кинза (27-35 мг) .\n2.  **Лидеры по витамину K:** Петрушка (500-1600 мкг), шпинат (480-500 мкг), капуста кейл (390-817 мкг), базилик (415-715 мкг), зеленый лук (200-210 мкг) .\n3.  **Лидеры по витамину A (каротиноиды):** Морковь, шпинат, петрушка, капуста кейл, базилик, щавель .\n4.  **Лидеры по калию:** Петрушка (550-770 мг), кинза (520-550 мг), щавель (390-500 мг), капуста кейл (350-500 мг), картофель (400-450 мг) .\n5.  **Лидеры по кальцию:** Базилик (177-210 мг), петрушка (130-220 мг), укроп (200-340 мг), руккола (160-170 мг), капуста кейл (150-250 мг) .\n6.  **Лидеры по железу:** Петрушка (3.0-6.2 мг), укроп (3.2-6.6 мг), базилик (3.2-4.0 мг), шпинат (2.7-3.0 мг) .\n7.  **Лидеры по фосфору:** Петрушка (60-95 мг), укроп (65-95 мг), щавель (90-100 мг), шпинат (40-50 мг) .\n8.  **Осторожно с оксалатами:** Шпинат и щавель содержат высокий уровень щавелевой кислоты (до 360 мг%), поэтому людям с заболеваниями почек или нарушениями солевого обмена стоит ограничивать их потребление .",
+      "category": "cat_1770643079116",
+      "date": "20.02.2026, 14:31",
+      "createdTimestamp": 1771587090946,
+      "updatedTimestamp": 1771587090946,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.1504,
+      "content": "Бобовые\n\nОтлично, продолжаем! Вот подробные данные по категории **«Бобовые»**, собранные из наиболее авторитетных источников: база данных FAO/INFOODS (Продовольственная и сельскохозяйственная организация ООН) , научные публикации в рецензируемых журналах , академические справочники  и база данных USDA (Министерство сельского хозяйства США) .\n\n**Важное примечание:** Данные для зрелых семян бобовых указаны в пересчёте на **100 г сухого продукта**, если не указано иное. В варёном виде содержание нутриентов будет ниже из-за гидратации (впитывания воды).\n\n### 🫘 Бобовые (зрелые семена, сухие, на 100 г)\n\n| Продукт | Основные нутриенты (макро) | Витамины | Минералы | Дополнительные компоненты |\n| :--- | :--- | :--- | :--- | :--- |\n| **Горох** | **Белок:** 22.9-24.0 г <br>Жиры: 1.4-2.0 г <br>Углеводы: 41.2-63.0 г <br>Калории: ~350 ккал | **Витамин C:** 22-29 мг% <br>**Витамин B1:** 5.1-7.0 мг/кг <br>**Фолаты (B9):** данные варьируются<br>Ниацин (B3): ~1.0 мг/кг  | **Калий:** ~900 мг <br>**Фосфор:** 300-400 мг<br>**Магний:** 100-120 мг<br>Железо: 4-6 мг<br>Цинк: 3-4 мг | **Клетчатка:** 15-16 г<br>Фитиновая кислота: присутствует |\n| **Фасоль обыкновенная** | **Белок:** 21.3-26.0 г <br>Жиры: 1.6-2.0 г <br>Углеводы: 40.1-63.0 г <br>Калории: ~340 ккал | **Витамин B1:** 4.0-4.6 мг/кг <br>**Витамин B2:** 1.6 мг/кг <br>**Витамин B6:** 2.8 мг/кг <br>Ниацин (B3): 20.8 мг/кг  | **Калий:** 1400-1500 мг<br>**Фосфор:** 400-500 мг<br>**Кальций:** 100-150 мг<br>**Железо:** 5-8 мг<br>**Магний:** 150-200 мг<br>**Цинк:** 3-4 мг | **Клетчатка:** 15-25 г<br>**Фенольные соединения:** до 5012 мкг/г <br>Фитиновая кислота: 500-2500 мг/100г  |\n| **Нут** | **Белок:** 19.8-22.0 г <br>Жиры: 3.4-6.0 г <br>Углеводы: 41.2-63.0 г <br>Калории: ~360 ккал | **Витамин C:** 40 мг/кг <br>**Витамин B1:** 4.8 мг/кг <br>**Витамин B2:** 1.8 мг/кг <br>**Фолаты (B9):** данные варьируются<br>Ниацин (B3): 16 мг/кг  | **Калий:** 700-800 мг<br>**Фосфор:** 250-350 мг<br>**Магний:** 100-150 мг<br>**Железо:** 4-6 мг<br>**Марганец:** 1.5-2.0 мг<br>**Цинк:** 2-3 мг | **Клетчатка:** 10-15 г<br>**Фитиновая кислота:** ~500 мг/100г  |\n| **Чечевица** | **Белок:** 23.5-26.0 г <br>Жиры: 1.4-2.0 г <br>Углеводы: 52.0-63.0 г <br>Калории: ~350 ккал | **Витамин B1:** 4.3-5.0 мг/кг <br>**Витамин B2:** 2.6 мг/кг <br>**Фолаты (B9):** данные варьируются<br>Ниацин (B3): 22.0 мг/кг  | **Железо:** 6-8 мг<br>**Фосфор:** 300-400 мг<br>**Калий:** 600-700 мг<br>**Магний:** 70-80 мг<br>**Цинк:** 3-4 мг | **Клетчатка:** 10-20 г<br>**Фенольные соединения:** присутствуют <br>Фитиновая кислота: ~1000 мг/100г  |\n| **Соя** | **Белок:** 33.7-43.1 г <br>**Жиры:** 18.1-18.5 г <br>Углеводы: 6.3-36.0 г (зависит от сорта) <br>Калории: ~440 ккал | **Витамин B1:** 9.9 мг/кг <br>**Витамин B2:** 5.2 мг/кг <br>**Витамин B6:** 11.9 мг/кг <br>Фолаты (B9): данные варьируются<br>Ниацин (B3): 25.1 мг/кг  | **Калий:** 1700-1800 мг<br>**Фосфор:** 600-700 мг<br>**Магний:** 250-300 мг<br>**Кальций:** 200-250 мг<br>**Железо:** 8-15 мг<br>**Цинк:** 4-5 мг | **Клетчатка:** 9-10 г<br>**Изофлавоны:** генистеин, даидзеин<br>Фитиновая кислота: присутствует |\n| **Бобы кормовые** | **Белок:** 23.0-26.0 г <br>Жиры: 2.0 г <br>Углеводы: 55.0-63.0 г <br>Калории: ~340 ккал | **Витамин C:** 160 мг/кг <br>**Витамин B1:** 3.8 мг/кг <br>**Витамин B2:** 2.4 мг/кг <br>Ниацин (B3): 21.0 мг/кг  | **Калий:** 1000-1100 мг<br>**Фосфор:** 400-500 мг<br>**Магний:** 150-200 мг<br>**Железо:** 5-7 мг | **Клетчатка:** 15-20 г<br>Фитиновая кислота: присутствует |\n| **Маш (бобы мунг)** | **Белок:** 23-24 г<br>Жиры: 1.0-1.5 г<br>Углеводы: 55-60 г<br>Калории: ~340 ккал | **Фолаты (B9):** высокое содержание<br>Витамин B1: присутствует<br>Витамин B5: присутствует | **Марганец:** 1.0-1.5 мг<br>**Железо:** 5-7 мг<br>**Магний:** 150-200 мг<br>**Калий:** 1200-1300 мг | **Клетчатка:** 15-20 г<br>Фенольные соединения |\n| **Люпин** | **Белок:** 34.9-43.9 г <br>**Жиры:** 5.4-8.8 г <br>Углеводы: 28.9-39.9 г <br>Калории: ~370 ккал | Данные по витаминам ограничены | **Калий:** 1000-1100 мг<br>**Фосфор:** 400-500 мг<br>**Кальций:** 150-200 мг<br>**Магний:** 150-200 мг | **Клетчатка:** 15-20 г<br>Алкалоиды (в горьких сортах) |\n\n### 📊 Анализ и рекомендации\n\n1.  **Лидеры по содержанию белка:** **Соя (33-43%)** и **люпин (35-44%)** . Это максимальные значения среди всех бобовых.\n2.  **Лидеры по содержанию жиров:** **Соя (18%)** . Остальные бобовые содержат всего 1-3% жира.\n3.  **Лидеры по содержанию железа:** **Соя (8-15 мг)** и **чечевица (6-8 мг)**.\n4.  **Лидеры по содержанию фолатов (B9):** Практически все бобовые богаты фолиевой кислотой, особенно **фасоль и нут** .\n5.  **Лидеры по содержанию клетчатки:** **Фасоль (до 25 г)** и **горох (15-16 г)**.\n6.  **Антинутриенты:** Бобовые содержат **фитиновую кислоту** (500-2500 мг/100г) , которая может снижать усвоение минералов. Замачивание и проращивание значительно уменьшают её содержание.\n7.  **Фенольные соединения:** Бобовые богаты антиоксидантами — фенольными кислотами, флавоноидами, танинами . Наибольшее содержание отмечено в **фасоли обыкновенной** .",
+      "category": "cat_1770643079116",
+      "date": "20.02.2026, 14:32",
+      "createdTimestamp": 1771587128549,
+      "updatedTimestamp": 1771587128549,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.1858,
+      "content": "Зерновые и крупы\n\nОтлично, продолжаем наше большое исследование! Вот подробные данные по категории **«Зерновые и крупы»**, собранные из авторитетных источников: база данных USDA , научные публикации о пищевой ценности злаков , данные о содержании минералов и витаминов , а также информация о фитиновой кислоте и её влиянии на усвоение нутриентов .\n\n**Важное примечание:** Данные приведены для **сухих круп**, если не указано иное. При варке содержание нутриентов на 100 г продукта снижается из-за впитывания воды. Также важно помнить, что цельные злаки содержат **фитиновую кислоту** (см. примечание в конце таблицы), которая может снижать усвоение минералов .\n\n### 🌾 Зерновые и крупы (сухие, на 100 г)\n\n| Продукт | Основные нутриенты (макро) | Витамины | Минералы | Дополнительные компоненты |\n| :--- | :--- | :--- | :--- | :--- |\n| **Овёс (крупа овсяная)** | **Белок:** 11.3-16.9 г <br>**Жиры:** 5.8-8.7 г <br>**Углеводы:** 62.6-67.5 г <br>**Калории:** 386-389 ккал | **Витамин B1 (тиамин):** 0.5-0.8 мг<br>**Витамин B5 (пантотеновая):** 1.1-1.3 мг<br>**Фолаты (B9):** 32-56 мкг<br>**Витамин E:** 1.2-2.4 мг  | **Марганец:** 3.6-4.9 мг (до 245% суточной нормы)<br>**Фосфор:** 410-523 мг <br>**Магний:** 138-235 мг <br>**Железо:** 4.2-5.8 мг<br>**Цинк:** 3.2-4.2 мг<br>**Калий:** 362-429 мг <br>**Кремний:** 10-20 мг% (цельный овёс)  | **Клетчатка:** 10.1-10.6 г<br>**Бета-глюкан:** 3-5 г<br>**Фитиновая кислота:** 0.4-2.0 г  |\n| **Гречка (ядрица)** | **Белок:** 10.8-13.3 г <br>**Жиры:** 2.1-3.4 г <br>**Углеводы:** 68-74.6 г <br>**Калории:** 339-364 ккал | **Витамин B1:** 0.3-0.6 мг<br>**Витамин B2:** 0.2-0.4 мг<br>**Витамин B6:** 0.2-0.4 мг<br>**Ниацин (B3):** 4.2-7.0 мг  | **Магний:** 200-390 мг <br>**Фосфор:** 280-347 мг <br>**Марганец:** 1.2-2.2 мг <br>**Железо:** 3.7-6.7 мг <br>**Калий:** 350-460 мг<br>**Цинк:** 2.4-2.8 мг<br>**Медь:** 0.5-0.6 мг<br>**Кремний:** содержание значительное  | **Клетчатка:** 10.3-11.0 г<br>**Рутин (витамин P):** 30-50 мг<br>**Фитиновая кислота:** 0.5-1.5 г  |\n| **Рис (коричневый, нешлифованный)** | **Белок:** 6.7-8.0 г <br>**Жиры:** 1.8-3.0 г <br>**Углеводы:** 76.2-79.5 г <br>**Калории:** 361-370 ккал | **Витамин B1:** 0.4-0.6 мг<br>**Витамин B3:** 4.3-5.5 мг<br>**Витамин B6:** 0.5-0.7 мг<br>**Фолаты:** 20-30 мкг | **Марганец:** 2.0-3.7 мг <br>**Фосфор:** 250-337 мг <br>**Магний:** 110-160 мг <br>**Селен:** 15-23 мкг <br>**Цинк:** 1.8-2.1 мг | **Клетчатка:** 3.4-3.5 г<br>**Фитиновая кислота:** 0.5-1.8 г  |\n| **Рис (белый, шлифованный)** | **Белок:** 6.3-7.1 г <br>**Жиры:** 0.6-1.0 г <br>**Углеводы:** 78.3-80.0 г <br>**Калории:** 358-365 ккал | **Витамин B1:** 0.02-0.07 мг (значительно меньше из-за шлифовки)<br>**Ниацин:** 1.3-1.8 мг  | **Марганец:** 0.6-1.1 мг <br>**Фосфор:** 92-115 мг <br>**Магний:** 23-35 мг <br>**Селен:** 7-15 мкг  | **Клетчатка:** 0.6-1.3 г<br>Фитиновой кислоты значительно меньше, чем в коричневом рисе |\n| **Пшеница (цельное зерно)** | **Белок:** 10.3-14.5 г <br>**Жиры:** 1.8-2.5 г <br>**Углеводы:** 71.2-75.4 г <br>**Калории:** 327-364 ккал | **Витамин B1:** 0.4-0.5 мг<br>**Витамин B2:** 0.1-0.2 мг<br>**Витамин B3:** 4.3-6.4 мг<br>**Витамин B5:** 0.9-1.1 мг<br>**Фолаты:** 38-44 мкг  | **Марганец:** 2.6-3.2 мг <br>**Фосфор:** 270-410 мг <br>**Магний:** 107-160 мг <br>**Цинк:** 2.6-3.5 мг<br>**Железо:** 3.2-4.4 мг<br>**Селен:** 33-70 мкг  | **Клетчатка:** 10.7-12.2 г<br>**Фитиновая кислота:** 0.5-2.0 г  |\n| **Пшеничная мука (в/с)** | **Белок:** 9.5-10.8 г <br>**Жиры:** 0.9-1.4 г <br>**Углеводы:** 74.5-76.5 г <br>**Калории:** 360-367 ккал | **Витамин B1:** 0.07-0.1 мг (в 5-7 раз меньше, чем в цельном зерне)<br>**Ниацин:** 1.0-1.5 мг | **Фосфор:** 95-108 мг <br>**Магний:** 20-30 мг <br>**Железо:** 1.0-1.5 мг<br>**Цинк:** 0.7-0.8 мг  | **Клетчатка:** 2.5-3.0 г<br>Фитиновой кислоты значительно меньше, чем в цельном зерне |\n| **Кукуруза (цельное зерно)** | **Белок:** 7.3-9.4 г <br>**Жиры:** 3.3-4.7 г <br>**Углеводы:** 64.3-74.3 г <br>**Калории:** 365-386 ккал | **Витамин B1:** 0.2-0.4 мг<br>**Витамин B3:** 2.2-3.6 мг<br>**Витамин B6:** 0.3-0.5 мг<br>**Витамин E:** 0.5-2.0 мг  | **Магний:** 90-140 мг <br>**Фосфор:** 210-300 мг <br>**Марганец:** 0.4-0.8 мг <br>**Селен:** 11-17 мкг <br>**Цинк:** 1.7-2.2 мг | **Клетчатка:** 7.3-13.4 г<br>**Фитиновая кислота:** 0.5-2.2 г  |\n| **Кукурузная мука** | **Белок:** 6.7-8.1 г <br>**Жиры:** 1.5-3.5 г <br>**Углеводы:** 76.9-79.6 г <br>**Калории:** 361-370 ккал | **Витамин A:** 588 мкг RAE (в обогащённой жёлтой муке) <br>**Витамин B1:** 0.2-0.3 мг<br>**Витамин B3:** 1.5-2.0 мг | **Фосфор:** 105-150 мг <br>**Магний:** 30-45 мг <br>**Железо:** 1.0-1.5 мг<br>**Калий:** 140-160 мг  | **Клетчатка:** 3.5-5.0 г |\n| **Рожь (цельное зерно)** | **Белок:** 10.3-14.8 г <br>**Жиры:** 1.6-2.5 г<br>**Углеводы:** 69.8-75.0 г<br>**Калории:** 335-357 ккал | **Витамин B1:** 0.3-0.4 мг<br>**Витамин B2:** 0.2-0.3 мг<br>**Витамин B3:** 3.0-4.5 мг<br>**Фолаты:** 60-70 мкг | **Магний:** 90-140 мг <br>**Фосфор:** 280-380 мг<br>**Марганец:** 2.5-3.5 мг<br>**Железо:** 2.5-3.5 мг<br>**Цинк:** 2.3-3.2 мг<br>**Калий:** 510-600 мг  | **Клетчатка:** 13.2-16.0 г<br>**Фитиновая кислота:** 0.7-1.8 г <br>**Алкилрезорцинолы** |\n| **Пшено** | **Белок:** 10.5-11.8 г <br>**Жиры:** 3.3-4.3 г<br>**Углеводы:** 68.0-73.0 г<br>**Калории:** 350-378 ккал | **Витамин B1:** 0.4-0.5 мг<br>**Витамин B2:** 0.1-0.2 мг<br>**Витамин B3:** 2.5-3.5 мг<br>**Витамин B6:** 0.3-0.4 мг | **Магний:** 100-130 мг <br>**Фосфор:** 280-350 мг<br>**Железо:** 3.0-4.5 мг<br>**Цинк:** 2.0-2.8 мг<br>**Медь:** 0.5-0.8 мг<br>**Кремний:** 50-100 мг%  | **Клетчатка:** 3.5-8.5 г<br>**Фитиновая кислота:** 0.4-1.2 г  |\n| **Ячмень (перловка)** | **Белок:** 9.8-12.5 г <br>**Жиры:** 1.2-2.2 г<br>**Углеводы:** 63.3-73.5 г<br>**Калории:** 320-354 ккал | **Витамин B1:** 0.2-0.3 мг<br>**Витамин B3:** 3.0-4.0 мг<br>**Витамин B6:** 0.2-0.3 мг<br>**Фолаты:** 20-30 мкг | **Магний:** 70-130 мг <br>**Фосфор:** 220-330 мг<br>**Железо:** 2.5-4.0 мг<br>**Цинк:** 2.0-2.8 мг<br>**Селен:** 35-40 мкг | **Клетчатка:** 15.0-17.3 г<br>**Бета-глюкан:** 3-5 г<br>**Фитиновая кислота:** 0.4-1.1 г  |\n\n### 📊 Анализ и рекомендации\n\n1.  **Лидеры по содержанию белка:** **Овёс (до 17 г)** и **пшеница/рожь (до 14-15 г)** .\n2.  **Лидеры по содержанию клетчатки:** **Рожь (до 16 г)**, **ячмень (до 17 г)** и **овёс (до 10.6 г)** .\n3.  **Лидеры по содержанию магния:** **Гречка (до 390 мг)** и **овёс (до 235 мг)** .\n4.  **Лидеры по содержанию марганца:** **Овёс (до 4.9 мг)**, **гречка (до 2.2 мг)**, **рожь (до 3.5 мг)** .\n5.  **Лидеры по содержанию железа:** **Гречка (до 6.7 мг)** и **овёс (до 5.8 мг)** .\n6.  **Лидеры по содержанию фосфора:** **Овёс (до 523 мг)**, **пшеница (до 410 мг)** и **гречка (до 347 мг)** .\n7.  **Источники селена:** **Пшеница (до 70 мкг)**, **ячмень (35-40 мкг)**, **рис (15-23 мкг)** .\n8.  **Источники кремния:** **Пшено (50-100 мг%)**, **овёс (10-20 мг%)**, **гречка** .\n\n### ⚠️ Важное примечание о фитиновой кислоте\n\nЦельные злаки содержат **фитиновую кислоту** (фитаты) — антинутриент, который связывает минералы (цинк, железо, кальций, магний) и снижает их усвоение . Содержание фитатов варьирует от 0.4 до 2.2 г на 100 г .\n\n**Как уменьшить влияние фитиновой кислоты:**\n- **Замачивание** круп на 8-12 часов активирует фитазу — фермент, разрушающий фитаты .\n- **Проращивание** зерна значительно снижает содержание фитатов и увеличивает доступность минералов .\n- **Ферментация** (например, закваска в хлебе) может снизить содержание фитатов более чем на 90% .\n- Термическая обработка сама по себе мало влияет на фитаты, но в сочетании с закислением среды (тесто) эффект значителен .",
+      "category": "cat_1770643079116",
+      "date": "20.02.2026, 14:34",
+      "createdTimestamp": 1771587273741,
+      "updatedTimestamp": 1771587284569,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.9395,
+      "content": "Орехи и семена\n\nОтлично, продолжаем нашу масштабную работу! Вот подробные данные по категории **«Орехи и семена»**, собранные из наиболее авторитетных источников: научные публикации в рецензируемых журналах (PubMed) , база данных USDA (Министерство сельского хозяйства США) , а также данные о содержании фитиновой кислоты и методах её снижения .\n\n**Важное примечание:** Орехи и семена богаты **фитиновой кислотой** (фитатами) — антинутриентом, который связывает минералы (цинк, железо, кальций, магний) и снижает их усвоение . В таблице указано содержание фитатов, а в конце раздела даны рекомендации по их снижению путём замачивания .\n\n### 🌰 Орехи и семена (сырые, сухие, на 100 г)\n\n| Продукт | Основные нутриенты (макро) | Витамины | Минералы | Дополнительные компоненты |\n| :--- | :--- | :--- | :--- | :--- |\n| **Арахис** | **Белок:** 25.8-26.3 г <br>**Жиры:** 45.2-49.2 г <br>Углеводы: 16.1 г<br>**Калории:** 567 ккал | **Витамин E:** 8.3-10.1 мг <br>**Витамин B1 (тиамин):** 0.6-0.7 мг<br>**Витамин B3 (ниацин):** 12.1-18.9 мг <br>Фолаты (B9): 240 мкг | **Фосфор:** 350-376 мг <br>**Магний:** 168-182 мг <br>**Калий:** 705 мг<br>**Цинк:** 3.3-3.5 мг<br>**Железо:** 4.6-5.0 мг <br>Марганец: 1.9 мг | **Клетчатка:** 8.5 г<br>**Фитиновая кислота:** 0.2-2.0 г <br>**Полифенолы** (ресвератрол) |\n| **Грецкий орех** | **Белок:** 15.2-16.2 г <br>**Жиры:** 60.8-65.2 г <br>Углеводы: 13.7 г<br>**Калории:** 654 ккал | **Витамин B6:** 0.5 мг<br>**Витамин E:** 2.6-2.9 мг <br>**Фолаты (B9):** 98 мкг | **Фосфор:** 332-346 мг <br>**Магний:** 120-158 мг <br>**Калий:** 441 мг<br>**Цинк:** 3.1 мг<br>**Железо:** 2.9-3.1 мг<br>**Марганец:** 3.4 мг | **Клетчатка:** 6.7 г<br>**Фитиновая кислота:** 0.2-1.5 г <br>**Омега-3 (ALA):** 9.1 г  |\n| **Кедровый орех** | **Белок:** 13.7-14.0 г <br>**Жиры:** 68.4-68.6 г <br>Углеводы: 13.1 г<br>**Калории:** 673 ккал | **Витамин E:** 9.3-9.5 мг <br>**Витамин K:** 53.9 мкг <br>**Витамин B1:** 0.4 мг<br>**Витамин B2:** 0.2 мг  | **Фосфор:** 575-600 мг <br>**Магний:** 251-270 мг <br>**Калий:** 597-600 мг <br>**Цинк:** 6.5 мг <br>**Железо:** 5.5-5.8 мг <br>**Марганец:** 8.8 мг  | **Клетчатка:** 3.7 г <br>**Фитиновая кислота:** 0.2-0.4 г  |\n| **Кешью** | **Белок:** 18.5-18.7 г <br>**Жиры:** 48.5-50.0 г <br>Углеводы: 30.2 г<br>**Калории:** 553 ккал | **Витамин B1:** 0.4-0.5 мг <br>**Витамин B6:** 0.4 мг<br>**Витамин K:** 34.1 мкг<br>**Витамин E:** 5.7 мг  | **Магний:** 270-292 мг <br>**Фосфор:** 206-490 мг<br>**Калий:** 565-660 мг<br>**Цинк:** 5.6-5.8 мг<br>**Железо:** 3.8-6.7 мг<br>**Медь:** 2.2 мг (220% суточной нормы) | **Клетчатка:** 3.3 г<br>**Фитиновая кислота:** 0.1-0.4 г  |\n| **Кокос (мякоть)** | **Белок:** 3.3-3.5 г<br>**Жиры:** 33.5-35.0 г (насыщенные)<br>Углеводы: 15.2 г<br>**Калории:** 354 ккал | **Марганец:** 1.5 мг<br>**Медь:** 0.4 мг<br>**Селен:** 10.1 мкг | **Клетчатка:** 9.0 г<br>**Лауриновая кислота** |\n| **Кунжут** | **Белок:** 17.0-19.4 г <br>**Жиры:** 48.7-61.0 г <br>Углеводы: 23.5 г<br>**Калории:** 573-631 ккал | **Витамин B1:** 0.8-1.3 мг <br>**Витамин B2:** 0.3-0.4 мг <br>**Витамин B3:** 4.5-11.1 мг <br>**Витамин E:** 2.3 мг  | **Кальций:** 975-1474 мг <br>**Магний:** 540-600 мг <br>**Фосфор:** 720-800 мг <br>**Железо:** 14.6-16.0 мг <br>**Цинк:** 7.8-10.0 мг<br>**Медь:** 1.5 мг | **Клетчатка:** 11.8 г<br>**Фитиновая кислота:** 1.0-2.0 г <br>**Сезамин** (лигнан) |\n| **Льняное семя** | **Белок:** 18.3 г<br>**Жиры:** 42.2 г<br>Углеводы: 28.9 г<br>**Калории:** 534 ккал | **Витамин B1:** 0.5 мг<br>**Витамин B6:** 0.5 мг<br>**Фолаты (B9):** 87 мкг | **Магний:** 392 мг<br>**Фосфор:** 642 мг<br>**Калий:** 813 мг<br>**Марганец:** 2.5 мг | **Клетчатка:** 27.3 г<br>**Омега-3 (ALA):** 22.8 г<br>**Лигнаны** |\n| **Макадамия** | **Белок:** 7.9-8.4 г <br>**Жиры:** 75.8-76.0 г<br>Углеводы: 13.8 г<br>**Калории:** 718 ккал | **Витамин B1:** 1.2 мг<br>**Витамин B3:** 2.5 мг | **Марганец:** 4.1 мг<br>**Железо:** 3.7 мг<br>**Фосфор:** 188 мг | **Клетчатка:** 8.6 г<br>**Фитиновая кислота:** 0.1-0.3 г <br>**Пальмитолеиновая кислота** |\n| **Мак** | **Белок:** 17.9 г<br>**Жиры:** 41.6 г<br>Углеводы: 28.1 г<br>**Калории:** 525 ккал | **Витамин B1:** 0.9 мг<br>**Витамин B2:** 0.5 мг | **Кальций:** 1438 мг<br>**Фосфор:** 870 мг<br>**Магний:** 347 мг<br>**Железо:** 9.8 мг<br>**Марганец:** 6.7 мг | **Клетчатка:** 19.5 г<br>**Фитиновая кислота:** присутствует |\n| **Миндаль** | **Белок:** 18.6-21.2 г <br>**Жиры:** 49.4-53.7 г <br>Углеводы: 21.7 г<br>**Калории:** 579 ккал | **Витамин E:** 24.6-26.2 мг <br>**Витамин B2:** 0.6-1.1 мг <br>**Витамин B3:** 3.6-6.2 мг <br>Фолаты (B9): 50 мкг | **Кальций:** 269-273 мг <br>**Магний:** 234-268 мг <br>**Фосфор:** 481-500 мг <br>**Калий:** 705 мг<br>**Железо:** 4.2-4.8 мг <br>**Цинк:** 3.1-3.4 мг<br>**Марганец:** 2.3 мг | **Клетчатка:** 12.2 г<br>**Фитиновая кислота:** 0.3-1.5 г  |\n| **Подсолнечника семена** | **Белок:** 20.7-22.0 г <br>**Жиры:** 51.5-52.9 г <br>Углеводы: 20.0 г<br>**Калории:** 584 ккал | **Витамин E:** 31.2-35.2 мг <br>**Витамин B1:** 1.8-2.3 мг <br>**Витамин B3:** 7.0-15.7 мг <br>**Витамин B6:** 1.3 мг | **Магний:** 317-350 мг <br>**Фосфор:** 530-660 мг <br>**Селен:** 53-79 мкг<br>**Цинк:** 5.0-5.3 мг<br>**Железо:** 5.3-6.1 мг <br>**Медь:** 1.8 мг | **Клетчатка:** 8.6 г<br>**Фитиновая кислота:** 0.2-2.0 г  |\n| **Семена конопли** | **Белок:** 31.6 г<br>**Жиры:** 48.8 г<br>Углеводы: 8.7 г<br>**Калории:** 553 ккал | **Витамин E:** 0.8 мг<br>**Витамин B1:** 1.3 мг<br>**Витамин B2:** 0.3 мг | **Фосфор:** 1650 мг<br>**Калий:** 1200 мг<br>**Магний:** 700 мг<br>**Цинк:** 9.9 мг<br>**Железо:** 8.0 мг | **Клетчатка:** 4.0 г<br>**Омега-3 (ALA):** 8.7 г<br>**Омега-6:** 27.5 г |\n| **Тыквенные семечки** | **Белок:** 29.8-30.2 г<br>**Жиры:** 49.1-49.5 г<br>Углеводы: 10.7 г<br>**Калории:** 559 ккал | **Витамин K:** 51.4 мкг<br>**Витамин B2:** 0.2 мг<br>**Витамин B3:** 4.9 мг | **Магний:** 535-592 мг<br>**Фосфор:** 1170-1230 мг<br>**Калий:** 807-809 мг<br>**Цинк:** 7.8-10.3 мг<br>**Железо:** 8.8-14.9 мг<br>**Марганец:** 4.5 мг | **Клетчатка:** 6.0 г<br>**Фитиновая кислота:** 0.2-1.0 г  |\n| **Фисташки** | **Белок:** 20.6-21.1 г<br>**Жиры:** 45.4-46.0 г<br>Углеводы: 27.5 г<br>**Калории:** 560-570 ккал | **Витамин B6:** 1.7 мг<br>**Витамин B1:** 0.9 мг<br>**Витамин E:** 2.3 мг<br>**Витамин K:** 13.2 мкг | **Фосфор:** 485-500 мг<br>**Калий:** 1000-1020 мг<br>**Магний:** 120-130 мг<br>**Медь:** 1.3 мг<br>**Марганец:** 1.2 мг<br>**Железо:** 3.9-4.2 мг | **Клетчатка:** 10.3 г<br>**Фитиновая кислота:** 0.2-1.5 г  |\n| **Фундук** | **Белок:** 13.0-15.0 г <br>**Жиры:** 60.8-62.6 г <br>Углеводы: 16.7 г<br>**Калории:** 628 ккал | **Витамин E:** 15.0-21.0 мг <br>**Витамин B1:** 0.5 мг<br>**Витамин B6:** 0.6 мг<br>**Фолаты (B9):** 113 мкг | **Марганец:** 6.2 мг<br>**Медь:** 1.7 мг<br>**Магний:** 160-200 мг <br>**Фосфор:** 290-310 мг <br>**Железо:** 4.7-5.1 мг  | **Клетчатка:** 9.4 г<br>**Фитиновая кислота:** 0.2-1.2 г  |\n| **Чиа (семена)** | **Белок:** 16.5-17.0 г<br>**Жиры:** 30.7-31.0 г<br>Углеводы: 42.1 г<br>**Калории:** 486 ккал | **Витамин B1:** 0.6 мг<br>**Витамин B3:** 8.8 мг | **Фосфор:** 860 мг <br>**Кальций:** 631 мг <br>**Магний:** 335 мг <br>**Марганец:** 2.7 мг <br>**Селен:** 55.2 мкг  | **Клетчатка:** 34.4 г <br>**Омега-3 (ALA):** 17.8 г <br>**Фитиновая кислота:** 0.2-1.0 г  |\n| **Бразильский орех** | **Белок:** 14.3-14.5 г <br>**Жиры:** 66.4-66.7 г <br>Углеводы: 12.3 г<br>**Калории:** 659-700 ккал | **Витамин B1:** 0.6 мг<br>**Витамин E:** 5.7 мг | **Селен:** 1900-2500 мкг (до 4500% суточной нормы!) <br>**Магний:** 375-400 мг<br>**Фосфор:** 590-725 мг<br>**Медь:** 1.7 мг<br>**Цинк:** 4.1 мг | **Клетчатка:** 7.5 г<br>**Фитиновая кислота:** 0.1-0.3 г  |\n\n### 📊 Анализ и рекомендации\n\n1.  **Лидеры по содержанию белка:** **Тыквенные семечки (до 30 г)**, **арахис (до 26 г)**, **семена конопли (до 31 г)** .\n2.  **Лидеры по содержанию жиров:** **Макадамия (до 76 г)**, **кедровый орех (до 68 г)**, **бразильский орех (до 66 г)** .\n3.  **Лидеры по содержанию клетчатки:** **Чиа (34 г)**, **семена льна (27 г)**, **кунжут (12 г)** .\n4.  **Лидеры по содержанию витамина E:** **Подсолнечника семена (до 35 мг)**, **миндаль (до 26 мг)**, **фундук (до 21 мг)** .\n5.  **Лидеры по содержанию кальция:** **Кунжут (до 1474 мг)**, **мак (до 1438 мг)**, **миндаль (269 мг)** .\n6.  **Лидеры по содержанию магния:** **Тыквенные семечки (до 592 мг)**, **кунжут (до 600 мг)**, **семена конопли (700 мг)** .\n7.  **Лидеры по содержанию железа:** **Кунжут (до 16 мг)**, **тыквенные семечки (до 14.9 мг)**, **семена конопли (8 мг)** .\n8.  **Лидеры по содержанию цинка:** **Тыквенные семечки (до 10 мг)**, **кедровый орех (6.5 мг)**, **кешью (5.8 мг)** .\n9.  **Лидеры по содержанию селена:** **Бразильский орех (до 2500 мкг)** — всего 1-2 ореха покрывают суточную норму .\n10. **Источники омега-3 (ALA):** **Семена льна (22.8 г)**, **чиа (17.8 г)**, **грецкие орехи (9.1 г)** .\n\n### ⚠️ Важное примечание о фитиновой кислоте и замачивании\n\nОрехи и семена содержат **фитиновую кислоту** (фитаты), которая может снижать усвоение минералов .\n\n**Как уменьшить влияние фитиновой кислоты :**\n- **Замачивание** в подсоленной воде (1 ч.л. соли на 1 стакан орехов) на **7-12 часов** (или согласно таблице ниже) активирует фитазу — фермент, разрушающий фитаты .\n- **Промывание** и **просушивание** после замачивания.\n- **Проращивание** (особенно для семян) ещё сильнее снижает содержание фитатов.\n\n**Рекомендуемое время замачивания для разных орехов :**\n\n| Орех | Время замачивания |\n| :--- | :--- |\n| Миндаль | 8-12 часов |\n| Фундук | 8-12 часов |\n| Грецкие орехи | 4 часа |\n| Кешью | 2-4 часа |\n| Бразильские орехи | 3 часа |\n| Пекан | 6 часов |\n| Фисташки | 8 часов |\n| Макадамия | 2 часа |",
+      "category": "cat_1770643079116",
+      "date": "20.02.2026, 14:37",
+      "createdTimestamp": 1771587440748,
+      "updatedTimestamp": 1771587440748,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.0842,
+      "content": "Масла\n\nОтлично, продолжаем наше масштабное исследование! Вот подробные данные по категории **«Масла»**, собранные из авторитетных источников: официальный портал Роспотребнадзора , Масложировой Союз России , данные USDA (Министерства сельского хозяйства США) , белорусские медицинские порталы и научные публикации .\n\n**Важное примечание:** Масла — это практически чистый жир (99-100 г на 100 г продукта), поэтому их основная ценность определяется **жирнокислотным составом** (соотношением Омега-3, Омега-6 и Омега-9), содержанием жирорастворимых витаминов (A, D, E, K) и фитостеролов. В таблице указаны ключевые показатели для каждого масла.\n\n### 🫒 Масла (растительные, на 100 г продукта)\n\n| Продукт | Жирнокислотный состав (на 100 г) | Витамины | Минералы | Дополнительные компоненты |\n| :--- | :--- | :--- | :--- | :--- |\n| **Оливковое масло (Extra Virgin)** | **Омега-3 (ALA):** 0.5-0.8 г <br>**Омега-6 (LA):** 7-10 г <br>**Омега-9 (олеиновая):** 70-75 г <br>Насыщенные жиры: 13-14 г <br>Соотношение ω-3:ω-6 ~ 1:10  | **Витамин E:** 14-19 мг (95-126% нормы) <br>**Витамин K:** 50-60 мкг (42-50% нормы)  <br>Витамин A: 0 мкг | **Калий:** 1 мг <br>**Кальций:** 1 мг <br>**Натрий:** 2 мг  | **Фитостеролы:** 150-220 мг <br>**Полифенолы:** олеокантал, гидрокситирозол <br>**Температура дымления:** 190-210°C (Extra Virgin) |\n| **Подсолнечное масло** | **Омега-6 (LA):** 57-62 г <br>**Омега-9 (олеиновая):** 23-40 г <br>**Омега-3 (ALA):** 0.2 г <br>Насыщенные жиры: 10-12 г <br>Соотношение ω-3:ω-6 ~ 1:46  | **Витамин E:** 36-70 мг (240-467% нормы)  <br>**Витамин K:** 5.4 мкг (4.5% нормы)  | Данные ограничены | **Фитостеролы:** 450 мг  <br>**Температура дымления (рафинированное):** 227-240°C |\n| **Льняное масло** | **Омега-3 (ALA):** 48-60 г <br>**Омега-6 (LA):** 15-30 г <br>**Омега-9 (олеиновая):** 10-20 г <br>Насыщенные жиры: 6-9 г <br>Соотношение ω-3:ω-6 ~ 4:1  | **Витамин E:** 0.7-17 мг (5-113% нормы)  <br>**Витамин K:** 3-21 мкг (2.5-17.5% нормы)  | **Магний:** 15 мг <br>**Фосфор:** 27 мг <br>**Железо:** 0.3 мг  | **Лигнаны:** эстрогеноподобные гормоны <br>**Температура дымления:** 107°C (НЕ нагревать, только холодное использование) |\n| **Рапсовое масло** | **Омега-3 (ALA):** 9-10 г <br>**Омега-6 (LA):** 14-20 г <br>**Омега-9 (олеиновая):** 55-60 г <br>Насыщенные жиры: 6-7 г <br>Соотношение ω-3:ω-6 ~ 1:2  | **Витамин E:** 22-25 мг (147-166% нормы) <br>**Витамин K:** 112 мкг (93-124% нормы)  | **Цинк, медь, железо:** в небольшой концентрации  | **Эруковая кислота:** в современных сортах менее 0.5% (безопасно)  <br>**Температура дымления:** 204°C |\n| **Кокосовое масло** | **Насыщенные жиры:** 86-92 г (лауриновая, миристиновая, пальмитиновая) <br>**Омега-6 (LA):** 1.5-2.8 г <br>**Мононенасыщенные:** 5-8 г  | **Витамин E:** 0.1-0.2 мг <br>Витамин K: 0.5 мкг | Железо: 0.1 мг | **Лауриновая кислота:** 44-52% (обладает антимикробными свойствами)  <br>**Температура дымления (нерафинированное):** 177°C |\n| **Кунжутное масло** | **Омега-6 (LA):** 41-45 г <br>**Омега-9 (олеиновая):** 39-41 г <br>**Омега-3 (ALA):** 0.2-0.3 г <br>Насыщенные жиры: 14-15 г <br>Соотношение ω-3:ω-6 ~ 1:138  | **Витамин E:** 5-10 мг (33-66% нормы) <br>**Витамин K:** 13-20 мкг (11-17% нормы) <br>Витамины группы B: небольшое количество  | **Кальций:** до 100 мг (10% нормы в 1 ст.л.)  <br>**Магний, цинк, железо, медь, фосфор**  | **Сезамин, сезамолин:** мощные антиоксиданты <br>**Сквален:** 3-5 мг <br>**Температура дымления:** 177-210°C |\n| **Тыквенное масло** | **Омега-3 (ALA):** 0.5-1.5 г <br>**Омега-6 (LA):** 35-45 г <br>**Омега-9 (олеиновая):** 35-40 г <br>Насыщенные жиры: 10-20 г  | **Витамин E:** 25-50 мг (166-333% нормы) <br>**Витамин C:** 3-5 мг <br>**Витамины группы B (B2, B3)**  | **Цинк:** 3-5 мг (25-45% нормы) <br>**Селен:** 5-10 мкг (9-18% нормы) <br>**Магний, калий, хром**  | **Каротиноиды, лютеин, зеаксантин** <br>**Хлорофилл** (придаёт маслу зелёный оттенок) <br>**Фитостеролы:** до 300 мг |\n| **Кукурузное масло** | **Омега-6 (LA):** 53-55 г <br>**Омега-3 (ALA):** 1.1-1.2 г <br>**Омега-9 (олеиновая):** 25-30 г <br>Насыщенные жиры: 12-14 г <br>Соотношение ω-3:ω-6 ~ 1:46  | **Витамин E:** 14-30 мг (93-200% нормы) <br>**Витамин K:** 1.9 мкг | Данные ограничены | **Фитостеролы:** 800-1000 мг (один из лидеров) <br>**Температура дымления:** 232°C |\n| **Масло виноградной косточки** | **Омега-6 (LA):** 69-70 г <br>**Омега-3 (ALA):** 0.1 г <br>**Омега-9 (олеиновая):** 15-20 г <br>Насыщенные жиры: 8-10 г <br>Соотношение ω-3:ω-6 ~ 1:695  | **Витамин E:** 28-32 мг (186-213% нормы) | Данные ограничены | **Высокое содержание линолевой кислоты** <br>**Процианидины:** антиоксиданты <br>**Температура дымления:** 216°C |\n| **Масло грецкого ореха** | **Омега-3 (ALA):** 10-12 г <br>**Омега-6 (LA):** 52-55 г <br>**Омега-9 (олеиновая):** 15-25 г <br>Насыщенные жиры: 7-9 г <br>Соотношение ω-3:ω-6 ~ 1:5  | **Витамин E:** 5-10 мг (33-66% нормы) <br>**Витамин K:** 15 мкг | **Магний, фосфор, цинк** | **Мелатонин, эллаговая кислота** <br>**Температура дымления:** 160°C (только холодное использование) |\n| **Конопляное масло** | **Омега-3 (ALA):** 15-26 г <br>**Омега-6 (LA):** 50-55 г <br>**GLA (гамма-линоленовая):** 2-4 г <br>Соотношение ω-3:ω-6 ~ 1:2-1:3  | **Витамин E:** 5-10 мг (33-66% нормы) <br>**Витамины группы B** | **Кальций, магний, фосфор, калий, цинк** | **Хлорофилл** (зелёный цвет) <br>**Фитостеролы** <br>**Температура дымления:** 165°C |\n| **Горчичное масло** | **Омега-3 (ALA):** 5-6 г <br>**Омега-6 (LA):** 15-16 г <br>**Омега-9 (олеиновая):** 25-30 г <br>**Эруковая кислота:** до 5% <br>Соотношение ω-3:ω-6 ~ 1:2.5  | **Витамин E:** 9-10 мг (60% нормы) | Данные ограничены | **Аллилизотиоцианат** (природный консервант) <br>**Фитостеролы** <br>**Температура дымления:** 254°C |\n\n### 📊 Анализ и рекомендации\n\n1.  **Лидеры по содержанию Омега-3 (ALA):** **Льняное масло (48-60 г)**, **конопляное масло (15-26 г)**, **масло грецкого ореха (10-12 г)**, **рапсовое масло (9-10 г)** . Эти масла рекомендуется употреблять в холодном виде, не нагревая.\n2.  **Лидеры по содержанию Омега-6:** **Масло виноградной косточки (69-70 г)**, **подсолнечное масло (57-62 г)**, **кукурузное масло (53-55 г)** . Важно балансировать их с источниками Омега-3.\n3.  **Лидеры по оптимальному соотношению Омега-3:Омега-6:** **Льняное масло (4:1)**, **рапсовое масло (1:2)**, **конопляное масло (1:2-1:3)**, **горчичное масло (1:2.5)**, **масло грецкого ореха (1:5)** .\n4.  **Лидеры по содержанию витамина E:** **Подсолнечное масло (36-70 мг)**, **масло виноградной косточки (28-32 мг)**, **тыквенное масло (25-50 мг)**, **кукурузное масло (14-30 мг)** .\n5.  **Лидеры по содержанию витамина K:** **Рапсовое масло (112 мкг)**, **оливковое масло (50-60 мкг)**, **соевое масло (данные варьируются)** .\n6.  **Лидеры по содержанию фитостеролов:** **Кукурузное масло (800-1000 мг)**, **подсолнечное масло (450 мг)**, **оливковое масло (150-220 мг)** .\n7.  **Специфические микроэлементы:**\n    *   **Кальций:** Кунжутное масло (до 100 мг в 100 г, но обычно используется меньше) .\n    *   **Цинк и селен:** Тыквенное масло .\n    *   **Лауриновая кислота:** Кокосовое масло (обладает антимикробными свойствами) .\n\n### ⚠️ Важные примечания по использованию масел\n\n1.  **Температура дымления:** Для жарки лучше использовать масла с высокой температурой дымления (рафинированное подсолнечное, рапсовое, кукурузное, оливковое рафинированное). Масла холодного отжима (особенно льняное, масло грецкого ореха) нельзя нагревать — при нагреве они окисляются и выделяют вредные вещества .\n2.  **Хранение:** Большинство масел (особенно богатых Омега-3) быстро окисляются на свету и при доступе воздуха. Хранить их следует в тёмном прохладном месте, в плотно закрытой таре .\n3.  **Баланс Омега-3 и Омега-6:** В типичном рационе часто наблюдается избыток Омега-6 и дефицит Омега-3. Для здоровья важно увеличивать долю масел с высоким содержанием Омега-3 (льняное, рапсовое, конопляное) и уменьшать потребление масел с высоким содержанием Омега-6 (подсолнечное, кукурузное, виноградной косточки) .",
+      "category": "cat_1770643079116",
+      "date": "20.02.2026, 14:39",
+      "createdTimestamp": 1771587569770,
+      "updatedTimestamp": 1771587569770,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.6624,
+      "content": "Молочные Продукты\n\nОтлично, продолжаем наше масштабное исследование! Вот подробные данные по категории **«Молочные продукты»**, собранные из наиболее авторитетных источников: справочник под редакцией академиков Скурихина и Тутельяна (фундаментальный российский источник по химическому составу продуктов) , данные Роспотребнадзора , научные публикации в рецензируемых журналах (PubMed) , данные USDA (Министерства сельского хозяйства США) , база данных Open Food Facts  и информация центров гигиены и эпидемиологии .\n\n**Важное примечание:** Молочные продукты являются основным источником кальция, витамина D и рибофлавина в рационе . Они обеспечивают до 69% кальция, 65% витамина D и 42% ретинола в питании . Содержание нутриентов может значительно варьировать в зависимости от жирности продукта и технологии производства.\n\n### 🥛 Молочные продукты (на 100 г продукта, если не указано иное)\n\n| Продукт | Основные нутриенты (макро) | Витамины | Минералы | Дополнительные компоненты |\n| :--- | :--- | :--- | :--- | :--- |\n| **Молоко 2.5-3.2%** | **Белки:** 2.9-3.0 г <br>**Жиры:** 2.5-3.2 г <br>**Углеводы:** 4.7-4.8 г <br>**Калории:** 54-60 ккал | **Витамин B2 (рибофлавин):** 0.15-0.2 мг (26% нормы в чашке) <br>**Витамин B12:** 0.4 мкг (18% нормы в чашке) <br>**Витамин D:** 1.3-2.0 мкг (24% нормы в чашке) <br>**Витамин A:** 20-30 мкг | **Кальций:** 120-126 мг (28% нормы в чашке) <br>**Фосфор:** 90-95 мг (22% нормы в чашке) <br>**Калий:** 146-152 мг (10% нормы в чашке) <br>**Магний:** 12-14 мг <br>**Натрий:** 50-52 мг | **Казеин:** 80% белка <br>**Лактоза:** 4.8 г <br>**Сывороточные белки (альбумин, глобулин)**  |\n| **Молоко 1.5%** | **Белки:** 3.0 г <br>**Жиры:** 1.5 г <br>**Углеводы:** 4.8 г <br>**Калории:** 45 ккал | Аналогично 2.5% молоку, но жирорастворимых витаминов меньше | **Кальций:** 120 мг <br>**Фосфор:** 90 мг <br>**Калий:** 146 мг  | **Лактоза:** 4.8 г |\n| **Молоко обезжиренное (<0.5%)** | **Белки:** 3.0 г <br>**Жиры:** 0.05-0.1 г <br>**Углеводы:** 4.9 г <br>**Калории:** 31-32 ккал | Жирорастворимые витамины практически отсутствуют <br>**Витамин B2:** сохранён | **Кальций:** 126 мг <br>**Фосфор:** 95 мг <br>**Калий:** 152 мг  | **Лактоза:** 4.9 г |\n| **Кефир 2.5-3.2%** | **Белки:** 2.9-3.0 г <br>**Жиры:** 2.5-3.2 г <br>**Углеводы:** 4.0 г <br>**Калории:** 53-59 ккал | **Витамин B2:** 0.17-0.18 мг<br>**Витамин B12:** присутствует | **Кальций:** 120-126 мг <br>**Фосфор:** 90-95 мг <br>**Калий:** 146-152 мг  | **Пробиотики:** кефирные грибки <br>**Молочная кислота** |\n| **Кефир 1.0%** | **Белки:** 3.0 г <br>**Жиры:** 1.0 г <br>**Углеводы:** 4.0 г <br>**Калории:** 40 ккал | Умеренное содержание | **Кальций:** 120 мг <br>**Фосфор:** 90 мг <br>**Калий:** 146 мг  | **Пробиотики** |\n| **Йогурт (питьевой, 1.5%)** | **Белки:** 4.1 г <br>**Жиры:** 1.5 г <br>**Углеводы:** 5.9 г <br>**Калории:** 57 ккал | **Витамин B2:** 0.2 мг<br>**Витамин B12:** присутствует | **Кальций:** 124 мг <br>**Фосфор:** 95 мг <br>**Калий:** 152 мг  | **Пробиотики:** болгарская палочка, термофильный стрептококк |\n| **Йогурт (густой, 3.2%)** | **Белки:** 5.0 г <br>**Жиры:** 3.2 г <br>**Углеводы:** 3.5 г <br>**Калории:** 68 ккал | **Витамин A:** присутствует | **Кальций:** 122 мг <br>**Фосфор:** 96 мг <br>**Калий:** 147 мг  | **Пробиотики** |\n| **Ряженка 2.5-4.0%** | **Белки:** 2.8-2.9 г <br>**Жиры:** 2.5-4.0 г <br>**Углеводы:** 4.1-4.2 г <br>**Калории:** 53-67 ккал | **Витамин B2:** 0.13-0.15 мг<br>**Витамин A:** присутствует | **Кальций:** 124 мг <br>**Фосфор:** 92 мг <br>**Калий:** 146 мг  | **Продукт томления** (образуется при длительном нагревании) |\n| **Простокваша 2.5-3.2%** | **Белки:** 2.9 г <br>**Жиры:** 2.5-3.2 г <br>**Углеводы:** 4.1 г <br>**Калории:** 53-59 ккал | **Витамин B2:** 0.13-0.15 мг | **Кальций:** 118-126 мг <br>**Фосфор:** 95-96 мг <br>**Калий:** 144-152 мг  | **Молочнокислые бактерии** |\n| **Сметана 10%** | **Белки:** 2.7-3.8 г <br>**Жиры:** 10.0 г <br>**Углеводы:** 3.9-5.6 г <br>**Калории:** 119-130 ккал | **Витамин A:** 70-80 мкг<br>**Витамин E:** 0.3-0.4 мг<br>**Витамин B2:** 0.1 мг<br>**Витамин B12:** 0.3-0.4 мкг | **Кальций:** 90-120 мг <br>**Фосфор:** 60-82 мг <br>**Калий:** 124-165 мг  | **Лецитин**, холин |\n| **Сметана 20-30%** | **Белки:** 2.4-2.8 г <br>**Жиры:** 20-30 г <br>**Углеводы:** 3.0-3.6 г <br>**Калории:** 200-290 ккал | **Витамин A:** 150-200 мкг<br>**Витамин E:** 0.5-1.0 мг | **Кальций:** 85-100 мг<br>**Фосфор:** 60-70 мг<br>**Калий:** 100-120 мг | **Жирные кислоты** |\n| **Творог нежирный (0.6%)** | **Белки:** 22.0 г <br>**Жиры:** 0.6 г <br>**Углеводы:** 3.3 г <br>**Калории:** 110 ккал | **Витамин B2:** 0.3-0.4 мг<br>**Витамин B12:** 1.0-1.5 мкг<br>**Витамин A:** незначительно | **Кальций:** 120 мг <br>**Фосфор:** 180-189 мг <br>**Калий:** 117 мг <br>**Натрий:** 44 мг | **Казеин**, метионин |\n| **Творог 5%** | **Белки:** 17.0-18.0 г <br>**Жиры:** 5.0 г <br>**Углеводы:** 1.5-3.0 г <br>**Калории:** 113-121 ккал | **Витамин A:** 50-60 мкг<br>**Витамин B2:** 0.3 мг | **Кальций:** 120-166 мг <br>**Фосфор:** 180-220 мг <br>**Калий:** 112-117 мг | **Метионин** (незаменимая аминокислота) |\n| **Творог 9%** | **Белки:** 16.0-17.0 г <br>**Жиры:** 9.0 г <br>**Углеводы:** 2.0-3.0 г <br>**Калории:** 150-160 ккал | **Витамин A:** 80-90 мкг<br>**Витамин E:** 0.2 мг | **Кальций:** 110-150 мг<br>**Фосфор:** 150-170 мг<br>**Калий:** 100-110 мг | **Липоевая кислота** |\n| **Творог 18%** | **Белки:** 14.0-15.0 г <br>**Жиры:** 18.0 г <br>**Углеводы:** 2.0-2.8 г <br>**Калории:** 230-250 ккал | **Витамин A:** 150-180 мкг<br>**Витамин E:** 0.4-0.5 мг | **Кальций:** 100-120 мг<br>**Фосфор:** 130-150 мг<br>**Калий:** 90-100 мг | **Холин** |\n| **Сыр твёрдый (Пармезан, Чеддер, Голландский)** | **Белки:** 23-35 г <br>**Жиры:** 25-35 г <br>**Углеводы:** 0-3 г <br>**Калории:** 350-450 ккал | **Витамин A:** 200-400 мкг<br>**Витамин B2:** 0.4-0.5 мг<br>**Витамин B12:** 1.5-2.0 мкг<br>**Витамин K2 (менахинон):** 50-80 мкг (MK-7, MK-9)  | **Кальций:** 700-1200 мг <br>**Фосфор:** 500-800 мг<br>**Натрий:** 600-1000 мг<br>**Цинк:** 3-4 мг<br>**Селен:** 10-15 мкг | **Конъюгированная линолевая кислота (CLA)** <br>**Аминокислоты:** триптофан, тирозин |\n| **Сыр полутвёрдый (Гауда, Эдам, Российский)** | **Белки:** 22-28 г <br>**Жиры:** 25-30 г <br>**Углеводы:** 0-2 г <br>**Калории:** 330-400 ккал | **Витамин A:** 200-300 мкг<br>**Витамин B2:** 0.3-0.4 мг<br>**Витамин K2:** 60-80 мкг (в выдержанных сортах)  | **Кальций:** 600-800 мг<br>**Фосфор:** 400-600 мг<br>**Натрий:** 500-800 мг | **Молочнокислые бактерии** |\n| **Сыр мягкий (Бри, Камамбер)** | **Белки:** 18-21 г <br>**Жиры:** 20-30 г <br>**Углеводы:** 0-1 г <br>**Калории:** 300-350 ккал | **Витамин B2:** 0.4-0.5 мг<br>**Витамин B12:** 1.0-1.5 мкг | **Кальций:** 400-600 мг<br>**Фосфор:** 300-400 мг<br>**Натрий:** 600-800 мг | **Плесневые грибки** (Penicillium camemberti, Penicillium roqueforti) |\n| **Сыр Моцарелла** | **Белки:** 18-22 г <br>**Жиры:** 15-20 г <br>**Углеводы:** 1-3 г <br>**Калории:** 250-300 ккал | **Витамин B12:** 1.0-1.5 мкг<br>**Витамин A:** 150-200 мкг | **Кальций:** 500-700 мг<br>**Фосфор:** 350-450 мг<br>**Натрий:** 400-600 мг | **Влажность:** высокая (до 60%) |\n| **Сыр плавленый** | **Белки:** 10-20 г <br>**Жиры:** 20-30 г <br>**Углеводы:** 2-5 г <br>**Калории:** 250-350 ккал | **Витамин B2:** 0.2-0.3 мг<br>**Витамин A:** 150-200 мкг | **Кальций:** 400-600 мг<br>**Натрий:** 800-1200 мг | **Фосфаты-эмульгаторы** |\n| **Сливочное масло (несолёное, 82.5%)** | **Белки:** 0.5-1.0 г <br>**Жиры:** 82.5 г <br>**Углеводы:** 0.8-1.0 г <br>**Калории:** 740-750 ккал | **Витамин A:** 500-700 мкг<br>**Витамин E:** 1.5-2.5 мг<br>**Витамин D:** 0.5-1.5 мкг<br>**Витамин K:** 5-7 мкг | **Кальций:** 15-25 мг<br>**Фосфор:** 15-20 мг<br>**Калий:** 15-20 мг | **Масляная кислота** <br>**Конъюгированная линолевая кислота (CLA)** <br>**Холестерин:** 200-220 мг |\n| **Масло топлёное (Гхи)** | **Белки:** 0 г <br>**Жиры:** 99.0 г <br>**Углеводы:** 0 г <br>**Калории:** 890-900 ккал | **Витамин A:** 800-1000 мкг<br>**Витамин E:** 2.0-3.0 мг<br>**Витамин K:** 8-10 мкг | **Кальций:** 0-5 мг | **Масляная кислота** <br>**Не содержит лактозы и казеина** |\n| **Сгущённое молоко с сахаром** | **Белки:** 7.0-7.5 г <br>**Жиры:** 8.5-9.0 г <br>**Углеводы:** 55-57 г <br>**Калории:** 320-340 ккал | **Витамин A:** 50-80 мкг<br>**Витамин B2:** 0.3-0.4 мг | **Кальций:** 250-300 мг <br>**Фосфор:** 220-230 мг <br>**Калий:** 350-380 мг  | **Сахароза:** высокая концентрация |\n| **Сухое молоко** | **Белки:** 26-33 г <br>**Жиры:** 1-25 г (в зависимости от типа) <br>**Углеводы:** 38-52 г <br>**Калории:** 350-480 ккал | Все витамины молока в концентрированной форме | **Кальций:** 900-1155 мг <br>**Фосфор:** 790-920 мг <br>**Калий:** 1200-1400 мг  | **Концентрат молочных белков** |\n| **Сыворотка молочная** | **Белки:** 0.8-1.0 г <br>**Жиры:** 0.1-0.3 г <br>**Углеводы:** 4.5-5.0 г <br>**Калории:** 20-25 ккал | **Витамин B2:** 0.1-0.15 мг<br>**Витамин B5:** 0.3-0.4 мг | **Кальций:** 80-100 мг<br>**Калий:** 140-160 мг | **Сывороточные белки** (лактальбумин, лактоглобулин) |\n\n### 📊 Анализ и рекомендации\n\n1.  **Лидеры по содержанию белка:** **Твёрдые сыры (23-35 г)**, **творог нежирный (22 г)**, **сухое молоко (26-33 г)** .\n2.  **Лидеры по содержанию кальция:** **Твёрдые сыры (700-1200 мг)**, **сухое молоко (900-1155 мг)**, **сгущённое молоко (250-300 мг)**, **творог (120-166 мг)** .\n3.  **Лидеры по содержанию фосфора:** **Твёрдые сыры (500-800 мг)**, **сухое молоко (790-920 мг)**, **творог (180-220 мг)** .\n4.  **Лидеры по содержанию калия:** **Сухое молоко (1200-1400 мг)**, **сгущённое молоко (350-380 мг)**, **молоко (146-152 мг)** .\n5.  **Лидеры по содержанию витамина A:** **Сливочное масло (500-700 мкг)**, **топлёное масло (800-1000 мкг)**, **твёрдые сыры (200-400 мкг)** .\n6.  **Лидеры по содержанию витамина B2 (рибофлавин):** **Сыры (0.4-0.5 мг)**, **молоко (0.15-0.2 мг)** , **творог (0.3-0.4 мг)** .\n7.  **Лидеры по содержанию витамина B12:** **Сыры (1.0-2.0 мкг)**, **молоко (0.4 мкг)** .\n8.  **Лидеры по содержанию витамина D:** **Молоко обогащённое (1.3-2.0 мкг)**, **сливочное масло (0.5-1.5 мкг)** .\n9.  **Лидеры по содержанию витамина K2 (менахинон):** **Выдержанные сыры (50-80 мкг)** . Содержание зависит от технологии и времени созревания .\n\n### ⚠️ Важные примечания\n\n1.  **Усвояемость лактозы:** При непереносимости лактозы рекомендуется выбирать безлактозные продукты или твёрдые сыры (в них лактоза практически отсутствует).\n2.  **Содержание натрия:** Сыры и плавленые сыры содержат значительное количество соли (натрия) — от 500 до 1200 мг на 100 г . Это важно учитывать при гипертонии.\n3.  **Жирность:** Выбирайте молочные продукты с учётом желаемой калорийности рациона. Обезжиренные продукты содержат меньше жирорастворимых витаминов.\n4.  **Пробиотики:** Кисломолочные продукты (кефир, йогурт, ряженка) содержат полезные бактерии, улучшающие микрофлору кишечника .\n5.  **Суточная норма:** Взрослому здоровому человеку рекомендуется ежедневно 2 стакана молока и жидких кисломолочных продуктов, ломтик сыра (20 г) и порция сливочного масла (12 г) .",
+      "category": "cat_1770643079116",
+      "date": "20.02.2026, 14:42",
+      "createdTimestamp": 1771587739777,
+      "updatedTimestamp": 1771587739777,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771655373477.565,
+      "content": "Другое\n\nОтлично, завершаем формирование полной базы данных категорией **«Другое»**, куда вошли продукты, характерные для лактовегетарианского рациона, не попавшие в предыдущие группы. Источники: база данных USDA (Министерства сельского хозяйства США) , справочник под редакцией академиков Скурихина и Тутельяна , данные Роспотребнадзора , научные публикации по витамину K2 и другим нутриентам , а также информация от производителей обогащённых продуктов .\n\n### 🍄 Другое (грибы, водоросли, мёд, шоколад, соевые продукты, растительное молоко, соль)\n\n| Продукт | Основные нутриенты (макро) | Витамины | Минералы | Дополнительные компоненты |\n| :--- | :--- | :--- | :--- | :--- |\n| **Грибы шампиньоны** (свежие) | **Белки:** 3.1 г <br>**Жиры:** 0.3 г <br>**Углеводы:** 3.3 г <br>**Калории:** 22 ккал | **Витамин B2 (рибофлавин):** 0.4 мг (30% нормы) <br>**Витамин B3 (ниацин):** 3.6 мг (23% нормы) <br>**Витамин B5 (пантотеновая):** 1.5 мг (30% нормы) <br>**Витамин D:** 0.2-0.5 мкг (до 20-100 мкг после УФ-облучения)  | **Селен:** 9 мкг (16% нормы) <br>**Медь:** 0.3 мг (33% нормы) <br>**Калий:** 318 мг (9% нормы) <br>**Фосфор:** 86 мг (12% нормы)  | **Клетчатка:** 1.0 г <br>**Эргостерол** (предшественник витамина D) |\n| **Грибы шиитаке** (свежие) | **Белки:** 2.2 г <br>**Жиры:** 0.5 г <br>**Углеводы:** 6.8 г <br>**Калории:** 34 ккал | **Витамин B5:** 1.5 мг (30% нормы) <br>**Витамин B2:** 0.2 мг (15% нормы) <br>**Витамин D (УФ-облученные):** 10-20 мкг (50-133% нормы)  | **Медь:** 0.9 мг (100% нормы) <br>**Селен:** 5 мкг (9% нормы) <br>**Цинк:** 1.0 мг (9-13% нормы)  | **Лентинан** (бета-глюкан, иммуномодулятор) |\n| **Грибы вешенки** | **Белки:** 3.3 г <br>**Жиры:** 0.4 г <br>**Углеводы:** 6.1 г <br>**Калории:** 33 ккал | **Витамин B3:** 4.9 мг (31% нормы) <br>**Витамин B5:** 1.3 мг (26% нормы) <br>**Витамин B2:** 0.2 мг (15% нормы)  | **Калий:** 420 мг (12% нормы) <br>**Фосфор:** 120 мг (17% нормы) <br>**Железо:** 1.3 мг (7-13% нормы) | **Клетчатка:** 2.3 г |\n| **Ламинария (морская капуста)** (сухая) | **Белки:** 8.0 г <br>**Жиры:** 1.5 г <br>**Углеводы:** 55-60 г <br>**Калории:** 250-300 ккал | **Витамин A (бета-каротин):** 100-200 мкг <br>**Витамин C:** 5-10 мг <br>**Фолаты:** 180 мкг (45% нормы) | **Йод:** 500-1000 мкг (333-667% нормы)  <br>**Кальций:** 600-1000 мг (60-100% нормы) <br>**Железо:** 10-20 мг (56-200% нормы) <br>**Магний:** 600-800 мг (150-200% нормы)  | **Альгиновая кислота** (связывает токсины) |\n| **Спирулина** (сухая) | **Белки:** 57-60 г <br>**Жиры:** 6-8 г <br>**Углеводы:** 20-25 г <br>**Калории:** 300-350 ккал | **Витамин B12:** 0-3 мкг (до 120% нормы, но форма может быть неактивной для человека)  <br>**Витамин A (бета-каротин):** 5000-6000 мкг (500-600% РЭ) <br>**Витамин K:** 20-25 мкг | **Железо:** 28-30 мг (155-300% нормы) <br>**Марганец:** 1.9 мг (95% нормы) <br>**Медь:** 6.1 мг (680% нормы)  | **Фикоцианин** (антиоксидант) |\n| **Мёд** (натуральный) | **Белки:** 0.3-0.5 г <br>**Жиры:** 0 г <br>**Углеводы:** 80-82 г (фруктоза, глюкоза) <br>**Калории:** 320-330 ккал | **Витамин C:** 0.5-2 мг <br>**Витамин B2:** 0.04 мг <br>**Витамин B3:** 0.1 мг | **Калий:** 50-100 мг <br>**Кальций:** 5-10 мг <br>**Магний:** 2-5 мг <br>**Железо:** 0.5-1.0 мг <br>**Бор:** 0.3-0.5 мг (15-50% нормы)  | **Флавоноиды** (кверцетин, кемпферол) <br>**Ферменты** (глюкозооксидаза, инвертаза) |\n| **Тёмный шоколад** (70-85%) | **Белки:** 7-8 г <br>**Жиры:** 30-35 г <br>**Углеводы:** 45-50 г <br>**Калории:** 550-600 ккал | **Витамин K:** 5-7 мкг <br>**Витамин E:** 1.5-2.0 мг <br>**Витамины группы B** в небольшом количестве | **Медь:** 1.5-2.0 мг (150-220% нормы) <br>**Магний:** 120-150 мг (30-38% нормы) <br>**Железо:** 6-8 мг (33-80% нормы) <br>**Цинк:** 3-4 мг (27-50% нормы)  | **Клетчатка:** 8-10 г <br>**Флавоноиды** (катехины, процианидины) <br>**Теобромин** |\n| **Какао-порошок** (несладкий) | **Белки:** 20 г <br>**Жиры:** 14 г <br>**Углеводы:** 58 г <br>**Калории:** 228 ккал | **Витамин K:** 2.5 мкг <br>**Витамин E:** 0.1 мг | **Медь:** 3.8 мг (420% нормы) <br>**Марганец:** 3.8 мг (165% нормы) <br>**Магний:** 500 мг (125% нормы) <br>**Железо:** 13 мг (72-130% нормы)  | **Клетчатка:** 33 г <br>**Теобромин**, **кофеин** |\n| **Соль йодированная** | **Белки:** 0 г <br>**Жиры:** 0 г <br>**Углеводы:** 0 г <br>**Калории:** 0 ккал | — | **Йод:** 40 мкг/г (27% нормы в 1 г)  <br>**Натрий:** 390 мг/г | — |\n| **Тофу** (твердый, с кальцием) | **Белки:** 8-10 г <br>**Жиры:** 4-5 г <br>**Углеводы:** 2-3 г <br>**Калории:** 70-100 ккал | **Витамин B1:** 0.1 мг <br>**Витамин B2:** 0.1 мг <br>**Фолаты:** 15-30 мкг | **Кальций:** 350-400 мг (35-40% нормы) <br>**Железо:** 2.0-2.5 мг (11-25% нормы) <br>**Магний:** 30-40 мг (8-10% нормы)  | **Изофлавоны** (генистеин, даидзеин) |\n| **Темпе** | **Белки:** 19-20 г <br>**Жиры:** 10-12 г <br>**Углеводы:** 7-10 г <br>**Калории:** 190-210 ккал | **Витамин B2:** 0.5 мг <br>**Витамин B3:** 2.5 мг <br>**Витамин B6:** 0.2 мг | **Марганец:** 1.5 мг (65% нормы) <br>**Медь:** 0.6 мг (67% нормы) <br>**Магний:** 80-100 мг (20-25% нормы)  | **Клетчатка:** 8-10 г <br>**Пробиотики** (ферментированный продукт) |\n| **Натто** | **Белки:** 18-20 г <br>**Жиры:** 10-12 г <br>**Углеводы:** 12-15 г <br>**Калории:** 210-230 ккал | **Витамин K2 (менахинон-7):** 350-875 мкг (290-730% нормы)  <br>**Витамин B2:** 0.2-0.4 мг <br>**Витамин C:** 10-15 мг | **Железо:** 8.0-9.0 мг (44-90% нормы) <br>**Марганец:** 1.5 мг (65% нормы) <br>**Кальций:** 200-250 мг (20-25% нормы)  | **Наттокиназа** (фермент, полезный для сосудов) |\n| **Мисо** (паста) | **Белки:** 10-12 г <br>**Жиры:** 5-6 г <br>**Углеводы:** 20-25 г <br>**Калории:** 200-220 ккал | **Витамин K2:** 15-30 мкг (13-25% нормы) <br>**Витамины группы B** | **Марганец:** 1.0 мг (43% нормы) <br>**Медь:** 0.4 мг (44% нормы) <br>**Цинк:** 2.0 мг (18-25% нормы) | **Пробиотики**, **фитоэстрогены** |\n| **Соевое молоко** (обогащённое) | **Белки:** 3.0-3.5 г <br>**Жиры:** 1.5-2.0 г <br>**Углеводы:** 3-4 г <br>**Калории:** 40-50 ккал | **Витамин D (обогащённое):** 1.0-2.0 мкг (50-100% нормы в чашке) <br>**Витамин B12 (обогащённое):** 0.5-1.0 мкг (20-40% нормы в чашке) <br>**Витамин B2:** 0.2-0.3 мг | **Кальций (обогащённое):** 120-300 мг (12-30% нормы в чашке)  | **Изофлавоны** |\n| **Овсяное молоко** (обогащённое) | **Белки:** 1.0-1.5 г <br>**Жиры:** 1.5-2.0 г <br>**Углеводы:** 6-8 г <br>**Калории:** 50-70 ккал | **Витамин D:** 1.0-2.0 мкг (50-100% нормы в чашке) <br>**Витамин B12:** 0.5-1.0 мкг (20-40% нормы в чашке) <br>**Витамин B2:** 0.2 мг | **Кальций:** 120-300 мг (12-30% нормы в чашке)  | **Бета-глюкан** (растворимая клетчатка) |\n| **Миндальное молоко** (обогащённое) | **Белки:** 0.5-1.0 г <br>**Жиры:** 1.5-2.5 г <br>**Углеводы:** 2-4 г <br>**Калории:** 30-50 ккал | **Витамин E:** 4-6 мг (25-40% нормы в чашке) <br>**Витамин D:** 1.0-2.0 мкг (50-100% нормы в чашке) <br>**Витамин B12:** 0.5-1.0 мкг (20-40% нормы в чашке) | **Кальций:** 120-300 мг (12-30% нормы в чашке)  | — |\n| **Кокосовая стружка** (сушёная) | **Белки:** 5-6 г <br>**Жиры:** 60-65 г <br>**Углеводы:** 20-25 г <br>**Калории:** 600-650 ккал | **Витамин B3:** 1.0 мг <br>**Витамин B5:** 0.5 мг | **Марганец:** 2.0-3.0 мг (100-130% нормы) <br>**Медь:** 0.8 мг (90% нормы) <br>**Селен:** 20-25 мкг (36-45% нормы)  | **Клетчатка:** 15-18 г |\n\n### 📊 Анализ и рекомендации для лактовегетарианцев\n\n1.  **Источники витамина D:** Грибы, особенно **шиитаке**, после УФ-облучения могут обеспечить суточную норму . Растительное молоко часто обогащают витамином D.\n2.  **Источники витамина B12:** Лактовегетарианцы получают B12 из молочных продуктов. Для веганов необходимы обогащённые продукты или добавки. В таблице: обогащённое растительное молоко, **темпе** и **мисо** могут содержать небольшие количества, но они нестабильны .\n3.  **Источники витамина K2:** Абсолютный лидер — **натто** (ферментированные соевые бобы) . Также содержится в **твердых сырах** (рассмотрены ранее) и в небольших количествах в **мисо**, **темпе**.\n4.  **Источники железа:** **Спирулина**, **тёмный шоколад**, **тофу**, **натто**, **бобовые**. Усвоение негемового железа улучшается при сочетании с витамином C.\n5.  **Источники кальция:** Обогащённое растительное молоко, **тофу** с кальцием, **натто**, **бобовые**, зелёные овощи (рассмотрены ранее).\n6.  **Источники йода:** **Ламинария** (морская капуста) — самый богатый источник, но важно не превышать дозировку . **Йодированная соль** — надёжный способ профилактики дефицита.\n7.  **Источники магния:** **Какао-порошок**, **тёмный шоколад**, **спирулина**, **орехи и семена**, **бобовые**.\n8.  **Источники меди:** **Какао-порошок**, **тёмный шоколад**, **грибы**, **орехи и семена**.\n9.  **Антиоксиданты:** **Тёмный шоколад**, **какао**, **мёд**, **спирулина**, **грибы**.",
+      "category": "cat_1770643079116",
+      "date": "20.02.2026, 14:45",
+      "createdTimestamp": 1771587956153,
+      "updatedTimestamp": 1771587956153,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771274398436,
+      "content": "Исследование",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 23:39",
+      "createdTimestamp": 1771274398436,
+      "updatedTimestamp": 1771274398436,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771274293140,
+      "content": "Сумасшедшесть",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 23:38",
+      "createdTimestamp": 1771274293140,
+      "updatedTimestamp": 1771274293140,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771267959297,
+      "content": "Не понимание того что надо понимать\nПонимание того, что не надо понимать",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:52",
+      "createdTimestamp": 1771267959297,
+      "updatedTimestamp": 1771267959297,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266871436,
+      "content": "Не бойся проявляться в мир. \nГовори, что думаешь, своё мнение, взгляды, это норма.",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:34",
+      "createdTimestamp": 1771266871436,
+      "updatedTimestamp": 1771266871436,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266712558,
+      "content": "Даже если с тобой что-то не так - это нормально",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:31",
+      "createdTimestamp": 1771266712558,
+      "updatedTimestamp": 1771266712558,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266694647,
+      "content": "Ошибки это нормально",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:31",
+      "createdTimestamp": 1771266694647,
+      "updatedTimestamp": 1771266694647,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266684664,
+      "content": "Выглядеть нелепо - нормально",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:31",
+      "createdTimestamp": 1771266684664,
+      "updatedTimestamp": 1771266684664,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266630871,
+      "content": "Все так как и должно быть\nИ хорошо",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:30",
+      "createdTimestamp": 1771266630871,
+      "updatedTimestamp": 1771266630871,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266597814,
+      "content": "Принятие себя, своих особенностей и слабостей",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:29",
+      "createdTimestamp": 1771266597814,
+      "updatedTimestamp": 1771266597814,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266586127,
+      "content": "Признание себя, своих особенностей и слабостей",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:29",
+      "createdTimestamp": 1771266586127,
+      "updatedTimestamp": 1771266586127,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266564863,
+      "content": "Придумывание шуток по каждому поводу",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:29",
+      "createdTimestamp": 1771266564863,
+      "updatedTimestamp": 1771266564863,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266552023,
+      "content": "Все несерьезно",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:29",
+      "createdTimestamp": 1771266552023,
+      "updatedTimestamp": 1771266552023,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266548079,
+      "content": "Все серьезно",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:29",
+      "createdTimestamp": 1771266548079,
+      "updatedTimestamp": 1771266548079,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266542016,
+      "content": "Назначение позитивных атрибутов",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:29",
+      "createdTimestamp": 1771266542016,
+      "updatedTimestamp": 1771266542016,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266514015,
+      "content": "Изучаю как ученый",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:28",
+      "createdTimestamp": 1771266514015,
+      "updatedTimestamp": 1771266514015,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266500432,
+      "content": "Я ни на что не влияю, могу только действовать\nЧто придет, то придет",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:28",
+      "createdTimestamp": 1771266500432,
+      "updatedTimestamp": 1771266500432,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266467071,
+      "content": "Все по воле Господа",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:27",
+      "createdTimestamp": 1771266467071,
+      "updatedTimestamp": 1771266467071,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266453031,
+      "content": "Отсутствие контроля",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:27",
+      "createdTimestamp": 1771266453031,
+      "updatedTimestamp": 1771266453031,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1771266430693,
+      "content": "Наблюдение",
+      "category": "cat_1770643116164",
+      "date": "16.02.2026, 21:27",
+      "createdTimestamp": 1771266430693,
+      "updatedTimestamp": 1771266430693,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1770721257492,
+      "content": "**10.02.2026 — Работа с файлами в Python (1 час + практика)**\n\n- **Создание файлов и папок в терминале**  \n  `ni file.py`, `mkdir lesson_1` — управление файловой системой из PowerShell\n\n- **Открытие файлов с правильной кодировкой**  \n  ```python\n  with open('file.txt', 'r', encoding='utf-8') as f:\n      content = f.read()\n  ```\n\n- **Чтение целиком vs построчно**  \n  ```python\n  # Целиком\n  text = f.read()\n  \n  # Построчно\n  for line in f:\n      print(line.strip())\n  ```\n\n- **Запись и добавление данных**  \n  ```python\n  with open('out.txt', 'w', encoding='utf-8') as f:  # перезапись\n      f.write('новый текст')\n  \n  with open('log.txt', 'a', encoding='utf-8') as f:  # добавление\n      f.write('\\nещё строка')\n  ```\n\n- **Полный цикл: чтение → обработка → запись**  \n  ```python\n  with open('in.txt') as f: data = f.read()\n  result = data.upper()\n  with open('out.txt', 'w') as f: f.write(result)\n  ```\n\n- **Отладка через print()**  \n  Использование `print(\"Этап 1\")`, `end=''`, `strip()` для контроля вывода\n\n- **Работа с переводами строк**  \n  Символ `\\n` сохраняется при чтении; `strip()` убирает лишние переносы\n\n- **Безопасная работа через `with`**  \n  Гарантированное закрытие файла даже при ошибках\n\n**Итог:** Научился создавать, читать, изменять и записывать текстовые файлы, управлять кодировкой и отлаживать процесс. Готов к фильтрации и преобразованию строк.",
+      "category": "cat_1770671064709",
+      "date": "10.02.2026, 14:56",
+      "createdTimestamp": 1770721257492,
+      "updatedTimestamp": 1770724570180,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1770671579091,
+      "content": "Обвиняя других ты понимаешь, что обвиняешь на самом деле себя и сам причиняешь себе боль по привычке",
+      "category": "cat_1770643102144",
+      "date": "10.02.2026, 00:12",
+      "createdTimestamp": 1770671579091,
+      "updatedTimestamp": 1770671579091,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1770671296387,
+      "content": "**10.02.2026 — Занятие 1 (1 час)**  \nОсвоил базовую работу с файлами в Python:  \n— Создал текстовый файл `hello.txt` в PyCharm  \n— Научился читать его безопасно через `with open(...) as f:`  \n— Понял, что `f` — это переменная-ссылка на объект файла, а `as` даёт ей имя  \n— Разобрался, почему нельзя писать `print(with open(...))` — `with` это инструкция, не выражение  \n— Узнал, как правильно запускать скрипт: `python read_file.py` (не через `pycharm`)  \n— Исправил ошибку кодировки (UTF-8 с BOM → UTF-8 без BOM)  \n— Понял, как `with` работает «под капотом» через `try/finally`  \n\n**Итог:** Теперь могу самостоятельно создавать, читать и корректно закрывать текстовые файлы. Готов к изучению методов чтения (`.read()`, `.readline()` и др.).\n\n✅ **Освоенные навыки:**\n\n**Создание файлов:**\n- `New-Item file.py` или `ni file.py` (вместо `touch`)\n- `'print(\"Hello\")' > file.py` для файлов с содержимым\n\n**Открытие в PyCharm:**\n- `pycharm file.py` - основная команда(переключение на созданный пустой файл)\n- `python file.py`- запуск скрипта\n- Можно работать полностью без мыши\n\n**Решение проблем:**\n- Ошибка кодировки → удалить и пересоздать файл\n- `Remove-Item file.py` + создать заново\n- Предупреждение Java при запуске PyCharm можно игнорировать\n\n**Важно:**\n- PowerShell ≠ bash, команды другие\n- Всегда UTF-8 для Python файлов\n- `Get-Content` для просмотра содержимого\n\n🎯 **Прогресс:** Полная работа с файлами из терминала PyCharm",
+      "category": "cat_1770671064709",
+      "date": "10.02.2026, 00:11",
+      "createdTimestamp": 1770671296387,
+      "updatedTimestamp": 1770671477639,
+      "expanded": true,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1770637577214.6628,
+      "content": "Двоякость: продолжение\n\nПозволю себе чуть порассуждать, хотя тема, можно сказать, тривиальна\n\nУтверждая некий факт, мы в это же мгновение отрицаем все остальное, то есть, говоря, скажем, \"любовь это хорошо, а война это плохо\" я говорю что те, кому нравится война - неправы, тем самым я тем самым начинаю с ними воевать, противореча собственному утверждению о том, что любовь это хорошо.\n\nСледуя своей логике я бы должен был любить и тех, кто хочет воевать, но разделив некий более высокий объект на двое, на \"то\" и \" не то\" как говорил Чжуан Цзы, я сам попал в сети логического противоречия",
+      "category": "thinking",
+      "date": "08.02.2026, 12:43",
+      "expanded": false,
+      "editMode": false,
+      "createdTimestamp": 1770547148436,
+      "updatedTimestamp": 1770547148436,
+      "type": "note"
+    },
+    {
+      "id": 1770637577214.32,
+      "content": "Ваше рассуждение бьёт точно в цель — в одну из центральных проблем **дуалистического мышления** и логики. Вы раскрыли парадокс, который волновал не только даосских философов, но и западных логиков и мистиков. Это не тривиальность, а суть.\n\nДавайте разложим это противоречие по полочкам, двигаясь от логики к философии.\n\n### 1. 📐 **Логический парадокс: нарушение собственного предписания**\nВы верно уловили структуру: утверждение **«А хорошо, а не-А плохо»** немедленно создаёт конфликт.\n1.  Вы провозглашаете ценность **«Любви»** (ненасилия, единства).\n2.  Чтобы защитить эту ценность от **«Войны»** (насилия, разделения), вы вынуждены применить к её сторонникам некую форму отвержения — моральное осуждение, спор, противостояние.\n3.  Тем самым вы **сами действуете по логике «Войны»**, пытаясь искоренить то, что считаете злом. Цель (любовь) вступает в противоречие со средством (война).\n\nЭто классическая **самоотрицающая императивная формула**: *«Ты должен ненасильственно искоренить насилие»*. Логически она приводит в тупик.\n\n### 2. ☯️ **Даосский выход: У Вэй и возвращение к Единому**\nЗдесь ваш отсыл к **Чжуан-цзы** абсолютно точен. Даосизм предлагает не решать парадокс, а **выйти за его рамки**, сменив саму систему координат.\n\n*   **«То» и «не то» (Ши Фэй)** — это продукт работы разума, который рассекает целостность мира на удобные для суждения категории. Как только мы создаём «добро», мы одновременно творим и «зло».\n*   **«Сети» (ванна)** — это ловушка дуального мышления. Пытаясь логически выбраться из неё, вы лишь сильнее запутываетесь.\n*   **Путь решения — У Вэй (Не-деяние)**. Это не бездействие, а действие *из состояния единства*, которое не порождает нового противостояния. Это подобно вашей метафоре с **листом, повинующимся «зову внутри»**. Он не борется с ветром и не подчиняется календарю — он просто реализует свою природу, и в этом его совершенная гармония с целым.\n\nМудрец, любящий мир, не воюет с воинственным. Он подобен **воде**, которая обтекает камень, не вступая с ним в противоборство, но со временем может его сточить. Его сила — в ненасильственности самой его природы.\n\n### 3. ⚖️ **Западный мистицизм: Совпадение противоположностей**\nУдивительно, но в христианской мистике (Мейстер Экхарт, Николай Кузанский) и в уже упомянутой вами **алхимии** есть параллельная концепция — **Coincidentia oppositorum** (совпадение противоположностей).\n\n*   Высшее состояние (Бог, Философский камень, Самость у Юнга) мыслится как точка, где добро и зло, любовь и война **не отрицают, а снимают друг друга в некоем высшем синтезе**.\n*   Задача адепта — не выбрать одну сторону, а **выдержать напряжение противоположностей** до тех пор, пока не родится *tertium non datur* (третье, непредсказуемое), которое их примирит. Это и есть стадия **Рубедо** — синтез после Нигредо (распада) и Альбедо (очищения).\n\n### 💎 **К чему это ведёт: от суждения к видению**\nПрактический вывод из этого парадокса лежит не в сфере моральных предписаний («как правильно»), а в сфере **восприятия и сознания**:\n\n1.  **Осознать дуальность ума**. Прежде чем утверждать «это хорошо, а то плохо», увидеть, что сам ум, делая это разделение, становится полем битвы.\n2.  **Держать парадокс**. Не искать немедленного выхода. Способность удерживать это противоречие без попытки его разрубить — признак зрелости сознания (у Юнга это **трансцендентная функция**).\n3.  **Действовать из целостности**. Как лист, повинующийся зову целого. Такое действие может внешне выглядеть как «война» для одного и как «любовь» для другого, но его источником будет не разделение, а спонтанная адекватность моменту.\n\n**Ваше рассуждение указывает на самую суть: любая позиция, занятая в дуальной системе, будет уязвима для самоопровержения. Истина — не в выборе правильного полюса, а в том сознании, которое способно охватить оба, не теряя себя.**\n\nЕсли эта тема resonates, возможно, вам будет интересно глубже погрузиться в:\n*   **Даосские тексты**: «Чжуан-цзы» (особенно главы «О выравнивании вещей», «Свободная прогулка»).\n*   **Диалектику Гегеля**: где противоречие (тезис-антитезис) — двигатель к синтезу.\n*   **Парадоксы в диалогах Платона** (например, «Парменид»).",
+      "category": "thinking",
+      "date": "08.02.2026, 13:24",
+      "expanded": false,
+      "editMode": false,
+      "timestamp": 1770546280876,
+      "createdTimestamp": 1770546280876,
+      "updatedTimestamp": 1770547148436,
+      "type": "note"
+    },
+    {
+      "id": 1770637577214.4712,
+      "content": "Работа",
+      "category": "cat_1770546230364",
+      "date": "08.02.2026, 13:24",
+      "timestamp": 1770546247124,
+      "expanded": false,
+      "editMode": false,
+      "createdTimestamp": 1770546247124,
+      "updatedTimestamp": 1770547148436,
+      "type": "note"
+    },
+    {
+      "id": 1770637577214.0247,
+      "content": "Скрипт при выдаче Технического Товара\n\nПроверить можно только после выдачи, могу помочь составить заявку на возврат в случае неисправности товара",
+      "category": "cat_1770546230364",
+      "date": "08.02.2026, 16:07",
+      "createdTimestamp": 1770556079888,
+      "updatedTimestamp": 1770556079888,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    },
+    {
+      "id": 1770637577214.188,
+      "content": "Спокойствие\n\nНеобычайным образом спокойствие приходит лишь после глубокого эмоционального кризиса.\nКак некое осознание что внутренние проблемы и переживания окружающих на самом деле это их проблемы и они тебя касаются ровно настолько, насколько ты хочешь им помочь.",
+      "category": "thinking",
+      "date": "08.02.2026, 16:10",
+      "createdTimestamp": 1770556213662,
+      "updatedTimestamp": 1770556213662,
+      "expanded": false,
+      "editMode": false,
+      "type": "note"
+    }
+  ],
+  "categories": [
+    {
+      "id": "thinking",
+      "name": "Размышления",
+      "color": "#4CAF50",
+      "custom": true
+    },
+    {
+      "id": "tasks",
+      "name": "Задачи",
+      "color": "#2196F3",
+      "custom": true
+    },
+    {
+      "id": "ideas",
+      "name": "Идеи",
+      "color": "#FF9800",
+      "custom": true
+    },
+    {
+      "id": "cat_1770546230364",
+      "name": "Работа",
+      "color": "#be1313",
+      "custom": true
+    },
+    {
+      "id": "cat_1770643079116",
+      "name": "Здоровье/Питание",
+      "color": "#9adb00",
+      "custom": true
+    },
+    {
+      "id": "cat_1770643102144",
+      "name": "Психология",
+      "color": "#ecf00f",
+      "custom": true
+    },
+    {
+      "id": "cat_1770643116164",
+      "name": "Осознание",
+      "color": "#d60ff0",
+      "custom": true
+    },
+    {
+      "id": "cat_1770643126880",
+      "name": "Тайчи",
+      "color": "#0fd6f0",
+      "custom": true
+    },
+    {
+      "id": "cat_1770671064709",
+      "name": "Ежедневник",
+      "color": "#ffa200",
+      "custom": true
+    },
+    {
+      "id": "cat_1770811049513",
+      "name": "Учеба",
+      "color": "#006611",
+      "custom": true
+    },
+    {
+      "id": "cat_1770811164144",
+      "name": "Развлечение",
+      "color": "#e0e40c",
+      "custom": true
+    },
+    {
+      "id": "1",
+      "name": "Покупки",
+      "color": "#4CAF50",
+      "custom": true
+    },
+    {
+      "id": "2",
+      "name": "Статьи",
+      "color": "#2196F3",
+      "custom": true
+    },
+    {
+      "id": "7",
+      "name": "Психология",
+      "color": "#FF9800",
+      "custom": true
+    },
+    {
+      "id": "8",
+      "name": "Рецепты",
+      "color": "#2196F3",
+      "custom": true
+    }
+  ],
+  "settings": {
+    "sortOrder": "new",
+    "viewMode": "list"
+  },
+  "exportDate": "2026-02-21T06:59:51.596Z",
+  "version": "1.0"
+}

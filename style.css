@@ -343,6 +343,23 @@ body {
     font-size: 16px;
 }
 
+/* ДОБАВЛЕНО: поле ввода заголовка */
+.note-title-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.note-title-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
 #noteInput {
     width: 100%;
     min-height: 60px;
@@ -464,7 +481,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* уменьшено для заголовка */
+}
+
+/* ДОБАВЛЕНО: заголовок заметки */
+.note-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    word-break: break-word;
 }
 
 .note-category {
@@ -663,6 +689,16 @@ body {
 
 .note-edit.active {
     display: block;
+}
+
+/* ДОБАВЛЕНО: поля редактирования заголовка и контента */
+.edit-title {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 .edit-textarea {
@@ -1085,7 +1121,7 @@ body {
     font-family: monospace;
 }
 
-/* ========== СТИЛИ ДЛЯ ССЫЛОК (ДОБАВЛЕНО ИЗ notes 12.0) ========== */
+/* ========== СТИЛИ ДЛЯ ССЫЛОК ========== */
 .link-item {
     background: #f8f9fa;
     border-radius: 6px;

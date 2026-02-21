@@ -92,17 +92,14 @@
                         </select>
                         <button id="editCategoriesBtn" class="edit-categories-btn" title="Управление категориями">⚙️</button>
                     </div>
-                    <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
-                        <small style="color: #7f8c8d;">Поддерживает Markdown</small>
-                        <button onclick="showMarkdownHelp()" style="background: none; border: none; color: #3498db; cursor: pointer; font-size: 12px; text-decoration: underline;">
-                            Шпаргалка по Markdown
-                        </button>
-                    </div>
                 </div>
+                
+                <!-- ДОБАВЛЕНО поле для заголовка -->
+                <input type="text" id="noteTitle" class="note-title-input" placeholder="Заголовок (необязательно)">
                 
                 <textarea 
                     id="noteInput" 
-                    placeholder="Введите текст заметки... (Enter - сохранить, Shift+Enter - новая строка)"
+                    placeholder="Текст заметки... (Enter - сохранить, Shift+Enter - новая строка)"
                     rows="3"
                 ></textarea>
                 
