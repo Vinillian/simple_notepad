@@ -1,10 +1,8 @@
 const sqlite3 = require('sqlite3');
 const path = require('path');
 
-// Определяем путь к файлу базы данных (в папке backend)
 const dbPath = path.join(__dirname, 'notepad.db');
 
-// Создаём или открываем базу данных
 const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error('Ошибка подключения к базе данных:', err.message);
@@ -13,7 +11,6 @@ const db = new sqlite3.Database(dbPath, (err) => {
     }
 });
 
-// Функции-обёртки для работы с промисами
 db.runAsync = function (sql, params = []) {
     return new Promise((resolve, reject) => {
         this.run(sql, params, function (err) {
@@ -43,7 +40,6 @@ db.allAsync = function (sql, params = []) {
 
 // Инициализация таблиц (создание, если их нет)
 db.serialize(() => {
-    // Таблица категорий
     db.run(`
         CREATE TABLE IF NOT EXISTS categories (
             id TEXT PRIMARY KEY,
@@ -56,7 +52,6 @@ db.serialize(() => {
         else console.log('Таблица categories готова');
     });
 
-    // Таблица заметок — поле id сделано REAL для хранения чисел с плавающей точкой
     db.run(`
         CREATE TABLE IF NOT EXISTS notes (
             id REAL UNIQUE NOT NULL,
@@ -77,7 +72,6 @@ db.serialize(() => {
         else console.log('Таблица notes готова');
     });
 
-    // Таблица настроек (одна строка)
     db.run(`
         CREATE TABLE IF NOT EXISTS settings (
             id INTEGER PRIMARY KEY CHECK (id = 1),
@@ -88,7 +82,6 @@ db.serialize(() => {
         if (err) console.error('Ошибка создания таблицы settings:', err.message);
         else {
             console.log('Таблица settings готова');
-            // Вставляем настройки по умолчанию, если их нет
             db.run(`INSERT OR IGNORE INTO settings (id, sort_order, view_mode) VALUES (1, 'new', 'list')`);
         }
     });
