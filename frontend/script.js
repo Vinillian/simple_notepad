@@ -1,121 +1,223 @@
 // ====================
 // ГЛАВНЫЕ ПЕРЕМЕННЫЕ
 // ====================
-let notes = []; // Массив для хранения всех заметок
-let categories = []; // Массив для хранения категорий
-let activeCategory = 'all'; // Активная категория для фильтрации
-let editingNoteId = null; // ID редактируемой заметки
-let sortOrder = 'new'; // Порядок сортировки: 'new' или 'old'
-let viewMode = 'list'; // Режим отображения: 'list' или 'grid'
+let notes = [];           // отфильтрованные заметки для отображения
+let allNotes = [];        // полный список всех заметок (без фильтрации)
+let categories = [];
+let activeCategory = 'all';
+let editingNoteId = null;
+let sortOrder = 'new';
+let viewMode = 'list';
 
-// Только категория "Все заметки" стандартная, остальные будут пользовательскими
-const DEFAULT_CATEGORIES = [
-    { id: 'all', name: 'Все заметки', color: '#7f8c8d', custom: false }
-];
-
-// ========== ДЛЯ ССЫЛОК ==========
+// Кэш для ссылок
 let linkPreviewCache = new Map();
 let fetchQueue = new Map();
 let isFetching = false;
 
+const DEFAULT_CATEGORY = { id: 'all', name: 'Все заметки', color: '#7f8c8d', custom: false };
+
+// ====================
+// API БАЗОВЫЙ URL
+// ====================
+const API_BASE = 'http://localhost:3000/api';
+
+// ====================
+// ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ДЛЯ РАБОТЫ С API
+// ====================
+
+async function apiRequest(endpoint, method = 'GET', body = null) {
+    const options = {
+        method,
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    };
+    if (body) {
+        options.body = JSON.stringify(body);
+    }
+    try {
+        const response = await fetch(`${API_BASE}${endpoint}`, options);
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`HTTP error ${response.status}: ${errorText}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error(`API request failed: ${endpoint}`, error);
+        throw error;
+    }
+}
+
+// Заметки
+async function fetchNotes() {
+    // Загружаем все заметки с сортировкой (без фильтра по категории)
+    return await apiRequest(`/notes?sort=${sortOrder}`);
+}
+
+async function createNote(noteData) {
+    return await apiRequest('/notes', 'POST', noteData);
+}
+
+async function updateNote(id, noteData) {
+    return await apiRequest(`/notes/${id}`, 'PUT', noteData);
+}
+
+async function deleteNoteById(id) {
+    return await apiRequest(`/notes/${id}`, 'DELETE');
+}
+
+// Категории
+async function fetchCategories() {
+    const cats = await apiRequest('/categories');
+    // Добавляем виртуальную категорию "Все заметки", если её нет в ответе
+    if (!cats.some(c => c.id === 'all')) {
+        cats.unshift(DEFAULT_CATEGORY);
+    }
+    return cats;
+}
+
+async function createCategory(catData) {
+    return await apiRequest('/categories', 'POST', catData);
+}
+
+async function deleteCategoryById(id) {
+    return await apiRequest(`/categories/${id}`, 'DELETE');
+}
+
+// Настройки
+async function fetchSettings() {
+    return await apiRequest('/settings');
+}
+
+async function updateSettings(settingsData) {
+    return await apiRequest('/settings', 'PUT', settingsData);
+}
+
 // ====================
 // ИНИЦИАЛИЗАЦИЯ ПРИЛОЖЕНИЯ
 // ====================
-function initApp() {
+async function initApp() {
     console.log('Инициализация приложения...');
-    
-    loadSettings();
-    loadCategories();
-    loadNotes();
-    setupEventListeners();
-    setupAutoResize();
-    setupViewMode();
-    setupSortOrder();
-    updateStats();
-    
-    console.log('Приложение готово!');
-}
+    try {
+        // Загружаем настройки
+        const settings = await fetchSettings();
+        sortOrder = settings.sort_order || 'new';
+        viewMode = settings.view_mode || 'list';
 
-// ====================
-// НАСТРОЙКИ ПРИЛОЖЕНИЯ
-// ====================
-function loadSettings() {
-    const savedSettings = localStorage.getItem('notebookSettings');
-    if (savedSettings) {
-        const settings = JSON.parse(savedSettings);
-        sortOrder = settings.sortOrder || 'new';
-        viewMode = settings.viewMode || 'list';
+        // Загружаем категории
+        categories = await fetchCategories();
+        updateCategoriesUI();
+
+        // Загружаем все заметки
+        await loadAllNotes();
+
+        // Настраиваем обработчики событий
+        setupEventListeners();
+
+        // Настраиваем авторазмер textarea
+        setupAutoResize();
+
+        // Устанавливаем начальное отображение
+        setupViewMode();
+        setupSortOrder();
+
+        // Обновляем статистику
+        updateStats();
+
+        console.log('Приложение готово!');
+    } catch (error) {
+        console.error('Ошибка инициализации:', error);
+        alert('Не удалось загрузить данные. Проверьте, запущен ли сервер (backend).');
     }
 }
 
-function saveSettings() {
-    const settings = { sortOrder, viewMode };
-    localStorage.setItem('notebookSettings', JSON.stringify(settings));
+async function loadAllNotes() {
+    allNotes = await fetchNotes(); // загружаем все заметки с текущей сортировкой
+    filterNotesByCategory();
+    updateCategoriesUI();
 }
 
-// ====================
-// РАБОТА С КАТЕГОРИЯМИ (без изменений, сохранена как в предыдущей версии)
-// ====================
-function loadCategories() {
-    const savedCategories = localStorage.getItem('notebookCategories');
-    if (savedCategories) {
-        categories = JSON.parse(savedCategories);
-        if (!categories.some(cat => cat.id === 'all')) {
-            categories.unshift(DEFAULT_CATEGORIES[0]);
-        }
+function filterNotesByCategory() {
+    if (activeCategory === 'all') {
+        notes = [...allNotes];
     } else {
-        categories = [...DEFAULT_CATEGORIES];
-        const exampleCategories = [
-            { id: 'thinking', name: 'Размышления', color: '#4CAF50', custom: true },
-            { id: 'tasks', name: 'Задачи', color: '#2196F3', custom: true },
-            { id: 'ideas', name: 'Идеи', color: '#FF9800', custom: true }
-        ];
-        categories.push(...exampleCategories);
-        saveCategories();
+        notes = allNotes.filter(note => note.category_id === activeCategory);
     }
-    updateCategoriesUI();
-    updateCategorySelects();
+    displayNotes();
 }
 
-function saveCategories() {
-    localStorage.setItem('notebookCategories', JSON.stringify(categories));
-    updateCategoriesUI();
-    updateCategorySelects();
+// ====================
+// НАСТРОЙКИ И СОРТИРОВКА
+// ====================
+async function setSortOrder(order) {
+    sortOrder = order;
+    document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
+    if (order === 'new') {
+        document.getElementById('sortNewBtn').classList.add('active');
+        document.getElementById('sortOrder').textContent = 'новые';
+    } else {
+        document.getElementById('sortOldBtn').classList.add('active');
+        document.getElementById('sortOrder').textContent = 'старые';
+    }
+    // Сохраняем настройки на сервере
+    await updateSettings({ sort_order: order, view_mode: viewMode });
+    // Перезагружаем все заметки с новой сортировкой
+    await loadAllNotes();
 }
 
-function createCategory(name, color) {
-    if (!name || name.trim() === '') {
-        alert('Введите название категории!');
-        return;
+function setupSortOrder() {
+    // Просто обновляем UI согласно текущему sortOrder (без вызова setSortOrder, чтобы не делать запрос)
+    document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
+    if (sortOrder === 'new') {
+        document.getElementById('sortNewBtn').classList.add('active');
+        document.getElementById('sortOrder').textContent = 'новые';
+    } else {
+        document.getElementById('sortOldBtn').classList.add('active');
+        document.getElementById('sortOrder').textContent = 'старые';
     }
-    if (categories.some(cat => cat.name.toLowerCase() === name.toLowerCase())) {
-        alert('Категория с таким названием уже существует!');
-        return;
-    }
-    const newCategory = {
-        id: 'cat_' + Date.now(),
-        name: name.trim(),
-        color: color,
-        custom: true
-    };
-    categories.push(newCategory);
-    saveCategories();
-    document.getElementById('newCategoryName').value = '';
-    console.log('Создана новая категория:', newCategory);
 }
 
-function updateCategoriesUI() {
+// ====================
+// РЕЖИМ ОТОБРАЖЕНИЯ
+// ====================
+function setViewMode(mode) {
+    viewMode = mode;
+    document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
+    if (mode === 'list') {
+        document.getElementById('viewListBtn').classList.add('active');
+        document.getElementById('notesContainer').className = 'notes-container list-view';
+    } else {
+        document.getElementById('viewGridBtn').classList.add('active');
+        document.getElementById('notesContainer').className = 'notes-container grid-view';
+    }
+    // Сохраняем настройки на сервере
+    updateSettings({ sort_order: sortOrder, view_mode: mode }).catch(console.error);
+    // Сбрасываем expanded при смене режима (чтобы избежать артефактов)
+    notes.forEach(note => note.expanded = false);
+    displayNotes();
+}
+
+function setupViewMode() {
+    setViewMode(viewMode);
+}
+
+// ====================
+// КАТЕГОРИИ
+// ====================
+async function updateCategoriesUI() {
     const categoriesList = document.getElementById('categoriesList');
     const categoriesManager = document.getElementById('categoriesManager');
     categoriesList.innerHTML = '';
     categoriesManager.innerHTML = '';
 
+    // Считаем заметки по категориям из allNotes
     const notesByCategory = {};
-    notes.forEach(note => {
-        notesByCategory[note.category] = (notesByCategory[note.category] || 0) + 1;
+    allNotes.forEach(note => {
+        notesByCategory[note.category_id] = (notesByCategory[note.category_id] || 0) + 1;
     });
-    const totalNotesCount = notes.length;
+    const totalNotesCount = allNotes.length;
 
+    // Отображаем категории в боковой панели
     categories.forEach(category => {
         let count = notesByCategory[category.id] || 0;
         if (category.id === 'all') count = totalNotesCount;
@@ -133,11 +235,13 @@ function updateCategoriesUI() {
         categoriesList.appendChild(categoryItem);
     });
 
+    // Отображаем категории в менеджере (модальное окно)
     categories.forEach(category => {
         const managerItem = document.createElement('div');
         managerItem.className = 'category-manager-item';
         let deleteButton = '';
         let categoryType = '';
+
         if (category.id === 'all') {
             categoryType = '<span style="font-size: 12px; color: #95a5a6; margin-left: 10px;">(системная)</span>';
             deleteButton = '<span style="color: #95a5a6; font-size: 12px;">не удаляемая</span>';
@@ -145,6 +249,7 @@ function updateCategoriesUI() {
             categoryType = '<span style="font-size: 12px; color: #666; margin-left: 10px;">(пользовательская)</span>';
             deleteButton = `<button onclick="deleteCategory('${category.id}')" class="delete-category-btn" title="Удалить категорию">🗑️</button>`;
         }
+
         managerItem.innerHTML = `
             <div style="display: flex; align-items: center;">
                 <div class="category-manager-color" style="background-color: ${category.color}"></div>
@@ -157,11 +262,15 @@ function updateCategoriesUI() {
         `;
         categoriesManager.appendChild(managerItem);
     });
+
+    // Обновляем выпадающие списки
+    updateCategorySelects();
 }
 
 function updateCategorySelects() {
     const noteCategorySelect = document.getElementById('noteCategory');
     const categoryFilterSelect = document.getElementById('categoryFilter');
+
     noteCategorySelect.innerHTML = '<option value="">Выберите категорию</option>';
     categoryFilterSelect.innerHTML = '<option value="all">Все категории</option>';
 
@@ -182,30 +291,79 @@ function updateCategorySelects() {
             categoryFilterSelect.appendChild(option2);
         }
     });
+
     const firstCategory = categories.find(c => c.id !== 'all');
     if (firstCategory) noteCategorySelect.value = firstCategory.id;
 }
 
-function deleteCategory(categoryId) {
+async function setActiveCategory(categoryId) {
+    activeCategory = categoryId;
+    document.getElementById('activeCategory').textContent =
+        categoryId === 'all' ? 'Все' : categories.find(c => c.id === categoryId)?.name || 'Все';
+
+    filterNotesByCategory();
+    updateCategoriesUI();
+    document.getElementById('categoryFilter').value = categoryId;
+}
+
+async function createCategory(name, color) {
+    if (!name || name.trim() === '') {
+        alert('Введите название категории!');
+        return;
+    }
+    if (categories.some(cat => cat.name.toLowerCase() === name.toLowerCase())) {
+        alert('Категория с таким названием уже существует!');
+        return;
+    }
+    const newCategory = {
+        id: 'cat_' + Date.now(),
+        name: name.trim(),
+        color: color,
+        custom: true
+    };
+    try {
+        await createCategory(newCategory);
+        categories.push(newCategory);
+        await updateCategoriesUI();
+        document.getElementById('newCategoryName').value = '';
+        console.log('Создана новая категория:', newCategory);
+    } catch (error) {
+        alert('Ошибка при создании категории');
+    }
+}
+
+async function deleteCategory(categoryId) {
     const category = categories.find(c => c.id === categoryId);
     if (!category) return;
     if (category.id === 'all') {
         alert('Категорию "Все заметки" нельзя удалить!');
         return;
     }
-    const notesInCategory = notes.filter(note => note.category === categoryId);
+    const notesInCategory = allNotes.filter(note => note.category_id === categoryId);
     if (notesInCategory.length > 0) {
         const action = prompt(
             `В категории "${category.name}" есть ${notesInCategory.length} заметок.\n\n` +
             'Выберите действие:\n1 - Удалить категорию и все заметки в ней\n2 - Переместить заметки в другую категорию\n3 - Отмена'
         );
         if (action === '1') {
-            notes = notes.filter(note => note.category !== categoryId);
-            saveNotes();
-            categories = categories.filter(cat => cat.id !== categoryId);
-            saveCategories();
-            if (activeCategory === categoryId) setActiveCategory('all');
-            alert(`Категория "${category.name}" и все заметки в ней удалены.`);
+            // Удаляем все заметки этой категории на сервере
+            try {
+                for (const note of notesInCategory) {
+                    await deleteNoteById(note.id);
+                }
+                // Удаляем категорию
+                await deleteCategoryById(categoryId);
+                categories = categories.filter(cat => cat.id !== categoryId);
+                allNotes = allNotes.filter(note => note.category_id !== categoryId);
+                if (activeCategory === categoryId) {
+                    activeCategory = 'all';
+                }
+                filterNotesByCategory();
+                await updateCategoriesUI();
+                alert(`Категория "${category.name}" и все заметки в ней удалены.`);
+            } catch (error) {
+                alert('Ошибка при удалении категории и заметок');
+            }
         } else if (action === '2') {
             showMoveNotesDialog(categoryId, category.name, notesInCategory.length);
             return;
@@ -215,10 +373,18 @@ function deleteCategory(categoryId) {
         }
     } else {
         if (confirm(`Удалить категорию "${category.name}"?`)) {
-            categories = categories.filter(cat => cat.id !== categoryId);
-            saveCategories();
-            if (activeCategory === categoryId) setActiveCategory('all');
-            alert(`Категория "${category.name}" удалена.`);
+            try {
+                await deleteCategoryById(categoryId);
+                categories = categories.filter(cat => cat.id !== categoryId);
+                if (activeCategory === categoryId) {
+                    activeCategory = 'all';
+                }
+                filterNotesByCategory();
+                await updateCategoriesUI();
+                alert(`Категория "${category.name}" удалена.`);
+            } catch (error) {
+                alert('Ошибка при удалении категории');
+            }
         }
     }
 }
@@ -264,7 +430,7 @@ function closeMoveDialog() {
     if (dialog && dialog !== document.getElementById('categoryModal')) dialog.remove();
 }
 
-function moveNotesToCategory(oldCategoryId) {
+async function moveNotesToCategory(oldCategoryId) {
     const select = document.getElementById('targetCategorySelect');
     const newCategoryId = select.value;
     if (!newCategoryId) {
@@ -280,116 +446,36 @@ function moveNotesToCategory(oldCategoryId) {
         alert('Выбранная категория не найдена!');
         return;
     }
-    notes.forEach(note => {
-        if (note.category === oldCategoryId) note.category = newCategoryId;
-    });
-    categories = categories.filter(cat => cat.id !== oldCategoryId);
-    saveNotes();
-    saveCategories();
-    if (activeCategory === oldCategoryId) setActiveCategory('all');
-    closeMoveDialog();
-    document.getElementById('categoryModal').classList.remove('active');
-    alert(`Заметки перемещены в категорию "${newCategory.name}". Категория удалена.`);
-}
-
-function setActiveCategory(categoryId) {
-    activeCategory = categoryId;
-    document.getElementById('activeCategory').textContent = 
-        categoryId === 'all' ? 'Все' : categories.find(c => c.id === categoryId)?.name || 'Все';
-    updateCategoriesUI();
-    displayNotes();
-    document.getElementById('categoryFilter').value = categoryId;
-}
-
-// ====================
-// ЗАГРУЗКА ЗАМЕТОК (с добавлением заголовков для старых)
-// ====================
-function loadNotes() {
-    const savedNotes = localStorage.getItem('simpleNotes');
-    if (savedNotes) {
-        notes = JSON.parse(savedNotes);
-        console.log('Загружено заметок:', notes.length);
-        
-        notes.forEach(note => {
-            // Добавляем недостающие поля
-            if (!note.createdTimestamp) {
-                note.createdTimestamp = note.timestamp || Date.now();
-                note.updatedTimestamp = Date.now();
-            }
-            if (!note.id) note.id = Date.now() + Math.random();
-            if (!note.category) note.category = 'all';
-            if (!note.content) note.content = '';
-            if (!note.date) {
-                note.date = new Date(note.createdTimestamp).toLocaleString('ru-RU', {
-                    day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
-                });
-            }
-            if (!note.expanded) note.expanded = false;
-            if (!note.editMode) note.editMode = false;
-            
-            // ДОБАВЛЕНО: заголовок
-            if (!note.title) {
-                // Генерируем заголовок из первых слов контента
-                let raw = note.content.trim();
-                if (note.type === 'link') {
-                    // Для ссылок используем домен или "Ссылка"
-                    note.title = getDomainFromUrl(note.content) || 'Ссылка';
-                } else {
-                    // Для текста берём первую строку или первые 30 символов
-                    const firstLine = raw.split('\n')[0];
-                    note.title = firstLine.length > 30 ? firstLine.substring(0, 30) + '…' : firstLine;
-                }
-                // Если совсем пусто
-                if (!note.title) note.title = 'Без названия';
-            }
-            
-            // Для ссылок
-            if (note.type === undefined) {
-                note.type = isValidURL(note.content.trim()) && note.content.trim().split('\n').length === 1 ? 'link' : 'note';
-            }
-            if (note.type === 'link' && !note.metadata) {
-                note.metadata = null;
-            }
+    try {
+        // Обновляем каждую заметку в старой категории
+        const notesToMove = allNotes.filter(note => note.category_id === oldCategoryId);
+        for (const note of notesToMove) {
+            note.category_id = newCategoryId;
+            await updateNote(note.id, note);
+        }
+        // Удаляем старую категорию
+        await deleteCategoryById(oldCategoryId);
+        categories = categories.filter(cat => cat.id !== oldCategoryId);
+        allNotes.forEach(note => {
+            if (note.category_id === oldCategoryId) note.category_id = newCategoryId;
         });
-        
-        saveNotes();
-        displayNotes();
-        
-        setTimeout(() => {
-            loadMetadataForNewLinks();
-        }, 2000);
-    } else {
-        notes = [];
-        console.log('Сохраненных заметок не найдено');
+        if (activeCategory === oldCategoryId) {
+            activeCategory = 'all';
+        }
+        closeMoveDialog();
+        document.getElementById('categoryModal').classList.remove('active');
+        filterNotesByCategory();
+        await updateCategoriesUI();
+        alert(`Заметки перемещены в категорию "${newCategory.name}". Категория удалена.`);
+    } catch (error) {
+        alert('Ошибка при перемещении заметок');
     }
 }
 
 // ====================
-// СОХРАНЕНИЕ ЗАМЕТОК
+// ЗАМЕТКИ
 // ====================
-function saveNotes() {
-    notes.forEach(note => {
-        if (!note.createdTimestamp) note.createdTimestamp = Date.now();
-        if (!note.updatedTimestamp) note.updatedTimestamp = Date.now();
-        if (!note.id) note.id = Date.now() + Math.random();
-        if (!note.title) note.title = 'Без названия';
-        if (note.type === undefined) {
-            note.type = isValidURL(note.content.trim()) && note.content.trim().split('\n').length === 1 ? 'link' : 'note';
-        }
-        if (note.type === 'link' && !note.metadata) {
-            note.metadata = null;
-        }
-    });
-    localStorage.setItem('simpleNotes', JSON.stringify(notes));
-    console.log('Заметки сохранены, всего:', notes.length);
-    updateStats();
-    updateCategoriesUI();
-}
-
-// ====================
-// ДОБАВЛЕНИЕ ЗАМЕТКИ (с заголовком)
-// ====================
-function addNote(title, text, categoryId) {
+async function addNote(title, text, categoryId) {
     if (!text || text.trim() === '') {
         alert('Введите текст заметки!');
         return;
@@ -407,11 +493,10 @@ function addNote(title, text, categoryId) {
         alert('Выбранная категория не существует!');
         return;
     }
-    
+
     const trimmedText = text.trim();
     const isLink = isValidURL(trimmedText) && trimmedText.split('\n').length === 1;
-    
-    // Если заголовок не указан, генерируем
+
     let finalTitle = title.trim();
     if (!finalTitle) {
         if (isLink) {
@@ -421,68 +506,71 @@ function addNote(title, text, categoryId) {
             finalTitle = firstLine.length > 30 ? firstLine.substring(0, 30) + '…' : firstLine;
         }
     }
-    
+
     const now = Date.now();
     const newNote = {
         id: now,
         title: finalTitle,
         content: trimmedText,
-        category: categoryId,
+        category_id: categoryId,
         date: new Date().toLocaleString('ru-RU', {
             day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
         }),
-        createdTimestamp: now,
-        updatedTimestamp: now,
+        created_timestamp: now,
+        updated_timestamp: now,
         expanded: false,
-        editMode: false,
+        edit_mode: false,
         type: isLink ? 'link' : 'note',
         metadata: isLink ? null : undefined
     };
-    
-    notes.unshift(newNote);
-    saveNotes();
-    displayNotes();
-    
-    document.getElementById('noteTitle').value = '';
-    document.getElementById('noteInput').value = '';
-    document.getElementById('charCount').textContent = '0';
-    autoResizeTextarea(document.getElementById('noteInput'));
-    
-    console.log('Добавлена заметка:', newNote);
-    
-    if (isLink) {
-        setTimeout(() => fetchLinkMetadata(newNote.id, trimmedText), 500);
+
+    try {
+        await createNote(newNote);
+        allNotes.unshift(newNote); // добавляем в полный список
+        filterNotesByCategory();    // обновляем отображение (с учётом активной категории)
+        updateCategoriesUI();       // обновляем счётчики категорий
+
+        document.getElementById('noteTitle').value = '';
+        document.getElementById('noteInput').value = '';
+        document.getElementById('charCount').textContent = '0';
+        autoResizeTextarea(document.getElementById('noteInput'));
+
+        console.log('Добавлена заметка:', newNote);
+
+        if (isLink) {
+            setTimeout(() => fetchLinkMetadata(newNote.id, trimmedText), 500);
+        }
+    } catch (error) {
+        alert('Ошибка при сохранении заметки');
     }
 }
 
-// ====================
-// УДАЛЕНИЕ ЗАМЕТКИ
-// ====================
-function deleteNote(id) {
+async function deleteNote(id) {
     if (confirm('Удалить эту заметку?')) {
-        notes = notes.filter(note => note.id !== id);
-        saveNotes();
-        displayNotes();
-        console.log('Заметка удалена, ID:', id);
+        try {
+            await deleteNoteById(id);
+            allNotes = allNotes.filter(note => note.id !== id);
+            filterNotesByCategory();
+            updateCategoriesUI();
+            console.log('Заметка удалена, ID:', id);
+        } catch (error) {
+            alert('Ошибка при удалении заметки');
+        }
     }
 }
 
-// ====================
-// СОХРАНЕНИЕ ОТРЕДАКТИРОВАННОЙ ЗАМЕТКИ
-// ====================
-function saveEditedNote(id, newTitle, newContent) {
-    const note = notes.find(n => n.id === id);
+async function saveEditedNote(id, newTitle, newContent) {
+    const note = allNotes.find(n => n.id === id);
     if (!note) return;
     if (!newContent || newContent.trim() === '') {
         alert('Текст заметки не может быть пустым!');
         return;
     }
-    
+
     const trimmed = newContent.trim();
     const wasLink = note.type === 'link';
     const isNowLink = isValidURL(trimmed) && trimmed.split('\n').length === 1;
-    
-    // Если заголовок пустой, генерируем
+
     let finalTitle = newTitle.trim();
     if (!finalTitle) {
         if (isNowLink) {
@@ -492,16 +580,16 @@ function saveEditedNote(id, newTitle, newContent) {
             finalTitle = firstLine.length > 30 ? firstLine.substring(0, 30) + '…' : firstLine;
         }
     }
-    
+
     note.title = finalTitle;
     note.content = trimmed;
     note.date = new Date().toLocaleString('ru-RU', {
         day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
     });
-    note.updatedTimestamp = Date.now();
-    note.editMode = false;
+    note.updated_timestamp = Date.now();
+    note.edit_mode = false;
     editingNoteId = null;
-    
+
     if (isNowLink) {
         note.type = 'link';
         if (!note.metadata) note.metadata = null;
@@ -509,28 +597,32 @@ function saveEditedNote(id, newTitle, newContent) {
         note.type = 'note';
         delete note.metadata;
     }
-    
-    saveNotes();
-    displayNotes();
-    console.log('Заметка отредактирована, ID:', id);
-    
-    if (isNowLink && (!wasLink || note.content !== trimmed)) {
-        setTimeout(() => fetchLinkMetadata(note.id, note.content), 500);
+
+    try {
+        await updateNote(id, note);
+        // allNotes уже содержит обновлённую заметку, просто перефильтровываем
+        filterNotesByCategory();
+        updateCategoriesUI();
+        console.log('Заметка отредактирована, ID:', id);
+
+        if (isNowLink && (!wasLink || note.content !== trimmed)) {
+            setTimeout(() => fetchLinkMetadata(note.id, note.content), 500);
+        }
+    } catch (error) {
+        alert('Ошибка при сохранении изменений');
     }
 }
 
-// ====================
-// РЕДАКТИРОВАНИЕ ЗАМЕТКИ (вызов режима)
-// ====================
 function editNote(id) {
-    const note = notes.find(n => n.id === id);
+    const note = allNotes.find(n => n.id === id);
     if (!note) return;
-    
-    notes.forEach(n => n.editMode = false);
-    note.editMode = true;
+
+    // Сбрасываем режим редактирования у всех заметок (и в allNotes, и в notes)
+    allNotes.forEach(n => n.edit_mode = false);
+    note.edit_mode = true;
     editingNoteId = id;
-    displayNotes();
-    
+    filterNotesByCategory(); // перерисовываем с активным режимом редактирования
+
     setTimeout(() => {
         const editTitle = document.querySelector(`[data-id="${id}"] .edit-title`);
         const editTextarea = document.querySelector(`[data-id="${id}"] .edit-textarea`);
@@ -539,8 +631,8 @@ function editNote(id) {
             else editTextarea.focus();
             editTextarea.setSelectionRange(editTextarea.value.length, editTextarea.value.length);
             autoResizeTextarea(editTextarea);
-            
-            editTextarea.addEventListener('input', function() {
+
+            editTextarea.addEventListener('input', function () {
                 const hasMarkdown = containsMarkdown(this.value);
                 if (hasMarkdown) this.classList.add('markdown-editor');
                 else this.classList.remove('markdown-editor');
@@ -550,72 +642,22 @@ function editNote(id) {
 }
 
 function cancelEditNote(id) {
-    const note = notes.find(n => n.id === id);
+    const note = allNotes.find(n => n.id === id);
     if (!note) return;
-    note.editMode = false;
+    note.edit_mode = false;
     editingNoteId = null;
-    displayNotes();
+    filterNotesByCategory();
 }
 
 function toggleNoteExpansion(id) {
-    const note = notes.find(n => n.id === id);
+    const note = allNotes.find(n => n.id === id);
     if (!note) return;
     note.expanded = !note.expanded;
-    displayNotes();
+    filterNotesByCategory(); // просто перерисовываем
 }
 
 // ====================
-// СОРТИРОВКА
-// ====================
-function setSortOrder(order) {
-    sortOrder = order;
-    document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
-    if (order === 'new') {
-        document.getElementById('sortNewBtn').classList.add('active');
-        document.getElementById('sortOrder').textContent = 'новые';
-    } else {
-        document.getElementById('sortOldBtn').classList.add('active');
-        document.getElementById('sortOrder').textContent = 'старые';
-    }
-    saveSettings();
-    displayNotes();
-    console.log('Сортировка установлена:', order);
-}
-
-function setupSortOrder() {
-    setSortOrder(sortOrder);
-}
-
-function getSortedNotes(notesArray) {
-    const sorted = [...notesArray];
-    sorted.sort((a, b) => sortOrder === 'new' ? b.createdTimestamp - a.createdTimestamp : a.createdTimestamp - b.createdTimestamp);
-    return sorted;
-}
-
-// ====================
-// РЕЖИМ ОТОБРАЖЕНИЯ
-// ====================
-function setViewMode(mode) {
-    notes.forEach(note => note.expanded = false); // сбрасываем развёрнутые заметки
-    viewMode = mode;
-    document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
-    if (mode === 'list') {
-        document.getElementById('viewListBtn').classList.add('active');
-        document.getElementById('notesContainer').className = 'notes-container list-view';
-    } else {
-        document.getElementById('viewGridBtn').classList.add('active');
-        document.getElementById('notesContainer').className = 'notes-container grid-view';
-    }
-    saveSettings();
-    console.log('Режим отображения установлен:', mode);
-}
-
-function setupViewMode() {
-    setViewMode(viewMode);
-}
-
-// ====================
-// MARKDOWN ФУНКЦИИ (без изменений)
+// MARKDOWN (без изменений)
 // ====================
 marked.setOptions({ breaks: true, gfm: true, headerIds: false });
 
@@ -645,7 +687,7 @@ function insertMarkdown(button, type) {
     const end = textarea.selectionEnd;
     const selectedText = textarea.value.substring(start, end);
     let insertText = '';
-    switch(type) {
+    switch (type) {
         case 'H1': insertText = selectedText ? `# ${selectedText}\n` : '# Заголовок\n'; break;
         case 'H2': insertText = selectedText ? `## ${selectedText}\n` : '## Подзаголовок\n'; break;
         case 'Bold': insertText = `**${selectedText || 'текст'}**`; break;
@@ -726,7 +768,7 @@ function createMarkdownToolbarHtml() {
 }
 
 // ====================
-// ФУНКЦИИ ДЛЯ ССЫЛОК (из notes 12.0, без изменений)
+// ФУНКЦИИ ДЛЯ ССЫЛОК
 // ====================
 function isValidURL(string) {
     try { const url = new URL(string); return url.protocol === 'http:' || url.protocol === 'https:'; } catch (_) { return false; }
@@ -797,21 +839,24 @@ async function processNextInQueue() {
     }
 }
 
-function updateNoteMetadata(noteId, metadata) {
-    const note = notes.find(n => n.id === noteId);
+async function updateNoteMetadata(noteId, metadata) {
+    const note = allNotes.find(n => n.id === noteId);
     if (note) {
         note.metadata = metadata;
-        // Если заголовок пустой, можно заполнить из метаданных
         if (note.type === 'link' && !note.title && metadata.title) {
             note.title = getShortTitle(metadata.title);
         }
-        saveNotes();
-        displayNotes();
+        try {
+            await updateNote(note.id, note);
+        } catch (error) {
+            console.error('Не удалось обновить метаданные на сервере', error);
+        }
+        filterNotesByCategory(); // обновляем отображение
     }
 }
 
 function loadMetadataForNewLinks() {
-    const linksWithoutMetadata = notes.filter(item => item.type === 'link' && !item.metadata).slice(0, 5);
+    const linksWithoutMetadata = allNotes.filter(item => item.type === 'link' && !item.metadata).slice(0, 5);
     linksWithoutMetadata.forEach((item, index) => {
         setTimeout(() => fetchLinkMetadata(item.id, item.content), index * 2000);
     });
@@ -835,7 +880,7 @@ function renderLinkContent(note) {
 }
 
 // ====================
-// ОТОБРАЖЕНИЕ ЗАМЕТОК (с заголовком)
+// ОТОБРАЖЕНИЕ ЗАМЕТОК
 // ====================
 function displayNotes() {
     const notesContainer = document.getElementById('notesContainer');
@@ -844,23 +889,10 @@ function displayNotes() {
         return;
     }
 
-    let filteredNotes = notes;
-    if (activeCategory !== 'all') filteredNotes = notes.filter(note => note.category === activeCategory);
-    if (filteredNotes.length === 0) {
-        notesContainer.innerHTML = `
-            <div class="empty-message">
-                В категории "${categories.find(c => c.id === activeCategory)?.name || 'этой'}" заметок нет.
-                ${activeCategory !== 'all' ? '<br><button onclick="setActiveCategory(\'all\')" style="margin-top:10px; padding:8px 16px; background:#4CAF50; color:white; border:none; border-radius:6px; cursor:pointer;">Показать все заметки</button>' : ''}
-            </div>
-        `;
-        return;
-    }
-
-    const sortedNotes = getSortedNotes(filteredNotes);
     let html = '';
 
-    sortedNotes.forEach(note => {
-        const category = categories.find(c => c.id === note.category);
+    notes.forEach(note => {
+        const category = categories.find(c => c.id === note.category_id);
         const isExpanded = note.expanded || note.content.split('\n').length <= 10;
         const hasManyLines = note.content.split('\n').length > 10;
         const hasMarkdown = containsMarkdown(note.content);
@@ -878,17 +910,16 @@ function displayNotes() {
                     <div class="note-actions">
                         <button class="note-action-btn edit-btn" onclick="editNote(${note.id})" title="Редактировать">✏️</button>
                         <button class="note-action-btn delete-btn" onclick="deleteNote(${note.id})" title="Удалить">🗑️</button>
-                        ${isExpanded && hasManyLines ? 
-                            `<button class="note-action-btn collapse-top-btn" onclick="toggleNoteExpansion(${note.id})" title="Свернуть">⬆️</button>` : 
-                            (!isExpanded ? `<button class="note-action-btn expand-btn" onclick="toggleNoteExpansion(${note.id})" title="Развернуть">⬇️</button>` : '')
-                        }
+                        ${isExpanded && hasManyLines ?
+                `<button class="note-action-btn collapse-top-btn" onclick="toggleNoteExpansion(${note.id})" title="Свернуть">⬆️</button>` :
+                (!isExpanded ? `<button class="note-action-btn expand-btn" onclick="toggleNoteExpansion(${note.id})" title="Развернуть">⬇️</button>` : '')
+            }
                     </div>
                 </div>
-                
-                <!-- ДОБАВЛЕНО: заголовок заметки -->
+
                 <div class="note-title">${note.title}</div>
-                
-                ${note.editMode ? `
+
+                ${note.edit_mode ? `
                     <div class="note-edit active">
                         ${hasMarkdown ? createMarkdownToolbarHtml() : ''}
                         <input type="text" class="edit-title" value="${note.title.replace(/"/g, '&quot;')}" placeholder="Заголовок">
@@ -909,7 +940,7 @@ function displayNotes() {
                         </button>
                     ` : ''}
                 `}
-                
+
                 <div class="note-footer">
                     <div class="note-date">${note.date}</div>
                     ${isExpanded && hasManyLines && !isLink ? `
@@ -926,15 +957,15 @@ function displayNotes() {
 }
 
 // ====================
-// ЭКСПОРТ/ИМПОРТ (с учётом заголовков)
+// ЭКСПОРТ/ИМПОРТ (JSON)
 // ====================
 function exportToJSON() {
-    if (notes.length === 0) {
-        alert('Нет заметок для экспорта');
+    if (allNotes.length === 0 && categories.filter(c => c.custom).length === 0) {
+        alert('Нет данных для экспорта');
         return;
     }
     const exportData = {
-        notes: notes,
+        notes: allNotes,
         categories: categories.filter(c => c.custom),
         settings: { sortOrder, viewMode },
         exportDate: new Date().toISOString(),
@@ -942,7 +973,7 @@ function exportToJSON() {
     };
     const dataStr = JSON.stringify(exportData, null, 2);
     const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
-    const exportFileDefaultName = `notebook_export_${new Date().toISOString().slice(0,10)}.json`;
+    const exportFileDefaultName = `notebook_export_${new Date().toISOString().slice(0, 10)}.json`;
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
@@ -951,113 +982,21 @@ function exportToJSON() {
 }
 
 function importFromJSON(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-    if (!file.name.endsWith('.json')) {
-        alert('Пожалуйста, выберите JSON файл');
-        return;
-    }
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        try {
-            const importData = JSON.parse(e.target.result);
-            if (!importData.notes || !Array.isArray(importData.notes)) {
-                throw new Error('Некорректный формат файла');
-            }
-            if (confirm(`Импортировать ${importData.notes.length} заметок и ${importData.categories?.length || 0} категорий? Существующие данные останутся.`)) {
-                if (importData.categories && Array.isArray(importData.categories)) {
-                    importData.categories.forEach(importedCat => {
-                        if (!categories.some(cat => cat.id === importedCat.id)) {
-                            importedCat.custom = true;
-                            categories.push(importedCat);
-                        }
-                    });
-                    saveCategories();
-                }
-                importData.notes.forEach(importedNote => {
-                    importedNote.id = Date.now() + Math.random();
-                    importedNote.createdTimestamp = importedNote.createdTimestamp || importedNote.timestamp || Date.now();
-                    importedNote.updatedTimestamp = importedNote.updatedTimestamp || Date.now();
-                    if (!categories.some(cat => cat.id === importedNote.category)) {
-                        importedNote.category = 'all';
-                    }
-                    if (importedNote.type === undefined) {
-                        importedNote.type = isValidURL(importedNote.content) ? 'link' : 'note';
-                    }
-                    if (importedNote.type === 'link' && !importedNote.metadata) {
-                        importedNote.metadata = null;
-                    }
-                    // ДОБАВЛЕНО: если нет заголовка, генерируем
-                    if (!importedNote.title) {
-                        if (importedNote.type === 'link') {
-                            importedNote.title = getDomainFromUrl(importedNote.content) || 'Ссылка';
-                        } else {
-                            const firstLine = importedNote.content.split('\n')[0];
-                            importedNote.title = firstLine.length > 30 ? firstLine.substring(0, 30) + '…' : firstLine;
-                        }
-                    }
-                    notes.unshift(importedNote);
-                });
-                if (importData.settings) {
-                    if (importData.settings.sortOrder) sortOrder = importData.settings.sortOrder;
-                    if (importData.settings.viewMode) viewMode = importData.settings.viewMode;
-                    saveSettings();
-                    setupSortOrder();
-                    setupViewMode();
-                }
-                saveNotes();
-                displayNotes();
-                alert(`Успешно импортировано ${importData.notes.length} заметок`);
-                console.log('Данные импортированы из JSON');
-                setTimeout(() => loadMetadataForNewLinks(), 2000);
-            }
-        } catch (error) {
-            alert('Ошибка при чтении файла: ' + error.message);
-            console.error('Ошибка импорта:', error);
-        }
-        event.target.value = '';
-    };
-    reader.readAsText(file);
+    alert('Импорт из JSON пока не поддерживается в серверной версии. Используйте скрипт миграции.');
+    event.target.value = '';
 }
 
 // ====================
-// ОЧИСТКА ВСЕХ ДАННЫХ
-// ====================
-function clearAllData() {
-    if (notes.length === 0 && categories.filter(c => c.custom).length === 0) {
-        alert('Нет данных для очистки');
-        return;
-    }
-    if (confirm('Удалить ВСЕ заметки и пользовательские категории? Это действие нельзя отменить.')) {
-        notes = [];
-        categories = [
-            DEFAULT_CATEGORIES[0],
-            { id: 'thinking', name: 'Размышления', color: '#4CAF50', custom: true },
-            { id: 'tasks', name: 'Задачи', color: '#2196F3', custom: true },
-            { id: 'ideas', name: 'Идеи', color: '#FF9800', custom: true }
-        ];
-        activeCategory = 'all';
-        editingNoteId = null;
-        saveNotes();
-        saveCategories();
-        setActiveCategory('all');
-        displayNotes();
-        alert('Все данные очищены');
-        console.log('Все данные очищены');
-    }
-}
-
-// ====================
-// ВСПОМОГАТЕЛЬНЫЕ
+// ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
 // ====================
 function updateStats() {
-    document.getElementById('totalNotes').textContent = notes.length;
+    document.getElementById('totalNotes').textContent = allNotes.length;
     document.getElementById('totalCategories').textContent = categories.filter(c => c.custom).length;
 }
 
 function setupAutoResize() {
     const textarea = document.getElementById('noteInput');
-    textarea.addEventListener('input', function() {
+    textarea.addEventListener('input', function () {
         autoResizeTextarea(this);
         document.getElementById('charCount').textContent = this.value.length;
         if (this.scrollHeight > 400) this.style.overflowY = 'auto';
@@ -1083,7 +1022,7 @@ function setupEventListeners() {
         addNote(title, text, categoryId);
     });
 
-    document.getElementById('noteInput').addEventListener('keydown', function(e) {
+    document.getElementById('noteInput').addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             const title = document.getElementById('noteTitle').value;
@@ -1116,7 +1055,7 @@ function setupEventListeners() {
         }
     });
 
-    document.getElementById('categoryFilter').addEventListener('change', function() {
+    document.getElementById('categoryFilter').addEventListener('change', function () {
         setActiveCategory(this.value);
     });
 
@@ -1140,6 +1079,45 @@ function setupEventListeners() {
 }
 
 // ====================
+// ОЧИСТКА ВСЕХ ДАННЫХ
+// ====================
+async function clearAllData() {
+    if (allNotes.length === 0 && categories.filter(c => c.custom).length === 0) {
+        alert('Нет данных для очистки');
+        return;
+    }
+    if (confirm('Удалить ВСЕ заметки и пользовательские категории? Это действие нельзя отменить.')) {
+        try {
+            // Удаляем все заметки
+            for (const note of allNotes) {
+                await deleteNoteById(note.id);
+            }
+            // Удаляем все пользовательские категории
+            for (const cat of categories.filter(c => c.custom)) {
+                await deleteCategoryById(cat.id);
+            }
+            // Сбрасываем локальные массивы
+            allNotes = [];
+            categories = [
+                { id: 'all', name: 'Все заметки', color: '#7f8c8d', custom: false },
+                { id: 'thinking', name: 'Размышления', color: '#4CAF50', custom: true },
+                { id: 'tasks', name: 'Задачи', color: '#2196F3', custom: true },
+                { id: 'ideas', name: 'Идеи', color: '#FF9800', custom: true }
+            ];
+            activeCategory = 'all';
+            editingNoteId = null;
+
+            filterNotesByCategory();
+            await updateCategoriesUI();
+            alert('Все данные очищены');
+            console.log('Все данные очищены');
+        } catch (error) {
+            alert('Ошибка при очистке данных');
+        }
+    }
+}
+
+// ====================
 // ЗАПУСК
 // ====================
 document.addEventListener('DOMContentLoaded', initApp);
@@ -1147,16 +1125,13 @@ document.addEventListener('DOMContentLoaded', initApp);
 // Отладка
 function debugInfo() {
     console.log('=== ДЕБАГ ИНФОРМАЦИЯ ===');
-    console.log('Всего заметок:', notes.length);
+    console.log('Всего заметок:', allNotes.length);
     console.log('Всего категорий:', categories.filter(c => c.custom).length);
     console.log('Активная категория:', activeCategory);
     console.log('Режим сортировки:', sortOrder);
     console.log('Режим отображения:', viewMode);
     console.log('Редактируемая заметка:', editingNoteId);
-    console.log('Заметки:', notes);
-    console.log('Категории:', categories);
-    console.log('localStorage заметки:', localStorage.getItem('simpleNotes'));
-    console.log('localStorage категории:', localStorage.getItem('notebookCategories'));
-    console.log('localStorage настройки:', localStorage.getItem('notebookSettings'));
+    console.log('allNotes:', allNotes);
+    console.log('categories:', categories);
     console.log('====================');
 }
