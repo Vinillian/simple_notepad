@@ -1,0 +1,520 @@
+{
+  "lastId": 34,
+  "groups": [
+    {
+      "id": 1,
+      "name": "Покупки",
+      "color": "#4CAF50"
+    },
+    {
+      "id": 2,
+      "name": "Статьи",
+      "color": "#2196F3"
+    },
+    {
+      "id": 3,
+      "name": "Работа",
+      "color": "#FF9800"
+    },
+    {
+      "id": 4,
+      "name": "Добавки/Здоровье",
+      "color": "#00BCD4"
+    },
+    {
+      "id": 5,
+      "name": "Учеба",
+      "color": "#4CAF50"
+    },
+    {
+      "id": 6,
+      "name": "Осознание",
+      "color": "#FF5722"
+    },
+    {
+      "id": 7,
+      "name": "Психология",
+      "color": "#FF9800"
+    },
+    {
+      "id": 8,
+      "name": "Рецепты",
+      "color": "#2196F3"
+    }
+  ],
+  "items": [
+    {
+      "id": 34,
+      "title": "Савоярди",
+      "content": "1 Для приготовления вегетарианского савоярди без яиц, вам понадобятся следующие ингредиенты:\n\n- 200 г муки\n- 100 г сахарного песка\n- 100 мл миндального молока (или другого растительного молока)\n- 50 мл растительного масла\n- 1 ч. л. разрыхлителя\n- Ванильный экстракт по вкусу\n- Щепотка соли\n\n1. Разогрейте духовку до 180°C. Застелите противень пергаментной бумагой.\n2. В глубокой миске смешайте муку, сахар, разрыхлитель и соль.\n3. В отдельной емкости соедините миндальное молоко, растительное масло и ванильный экстракт.\n4. Постепенно добавляйте жидкие ингредиенты к сухим, аккуратно перемешивая до получения однородного теста.\n5. С помощью кондитерского мешка выдавите тесто на противень в форме палочек длиной около 10 см.\n6. Выпекайте в предварительно разогретой духовке 15-20 минут до золотистого цвета.\n7. Остудите перед подачей.\n\nЭтот вегетарианский вариант савоярди станет отличной основой для десертов, таких как тирамису или просто с чашечкой чая. Приятного аппетита!",
+      "groupId": 8,
+      "type": "note",
+      "domain": null,
+      "created": "2026-02-03T15:19:31.147Z",
+      "updated": "2026-02-03T16:17:14.163Z"
+    },
+    {
+      "id": 33,
+      "title": "Тирамису 2",
+      "content": "Для приготовления вегетарианского савоярди без яиц на коровьем молоке, вам понадобятся следующие ингредиенты:\n\n- 200 г муки\n- 100 г сахара\n- 200 мл коровьего молока\n- 50 мл растительного масла\n- 1 ч. л. разрыхлителя теста\n- Ванильный экстракт по вкусу\n\n1. В глубокой миске смешайте муку, сахар и разрыхлитель.\n2. В отдельной емкости соедините коровье молоко, растительное масло и ванильный экстракт. Хорошо перемешайте.\n3. Постепенно добавляйте жидкую смесь к сухим ингредиентам, аккуратно перемешивая до получения однородного теста.\n4. Выложите тесто в форму, предварительно смазанную маслом, и выпекайте в разогретой до 180°C духовке около 25-30 минут, до золотистой корочки.\n5. Дайте остыть перед подачей.\n\nЭтот вегетарианский вариант савоярди станет отличной основой для десертов, таких как тирамису или просто с фруктами и кремом. \n\nПусть ваше кулинарное вдохновение всегда будет с вами!\n\nДля создания вегетарианского тирамису с использованием савоярди без яиц, вам понадобятся следующие ингредиенты:\n\n**Для савоярди:**\n- 200 г муки\n- 100 г сахарного песка\n- 100 мл коровьего молока\n- 50 мл растительного масла\n- 1 ч. л. разрыхлителя\n- Ванильный экстракт по вкусу\n\n**Для крема:**\n- 500 г маскарпоне\n- 200 мл коровьего молока\n- 100 г сахарного песка\n- 1 ч. л. ванильного экстракта\n- Какао-порошок для посыпки\n\n**Приготовление:**\n\n1. **Савоярди:** В миске смешайте муку, сахар и разрыхлитель. В отдельной емкости соедините молоко, растительное масло и ванильный экстракт. Постепенно добавляйте жидкие ингредиенты к сухим, перемешивая до получения однородного теста. Выложите тесто на противень, выстланный пергаментом, и выпекайте при температуре 180°C до золотистого цвета (примерно 15-20 минут). Остудите.\n\n2. **Крем:** В глубокой миске взбейте маскарпоне с сахаром и ванильным экстрактом до получения однородной массы. Постепенно добавляйте коровье молоко, продолжая взбивать до легкой и воздушной консистенции.\n\n3. **Сборка:** На дно формы выложите слой савоярди, пропитанных кофе или растительным молоком. Затем равномерно распределите половину крема. Повторите слои, завершая кремом. Посыпьте сверху какао-порошком.\n\n4. **Охлаждение:** Дайте тирамису настояться в холодильнике минимум 4 часа, а лучше на ночь.\n\nПриятного аппетита и вдохновения в ваших кулинарных экспериментах!",
+      "groupId": 8,
+      "type": "note",
+      "domain": null,
+      "created": "2026-02-03T15:19:11.492Z"
+    },
+    {
+      "id": 32,
+      "title": "Тирамису",
+      "content": "Для приготовления лакто-вегетарианского тирамису с кремом на основе сливок и вегетарианских савоярди без яиц, вам понадобятся следующие ингредиенты:\n\n**Для савоярди:**\n- 200 г муки\n- 100 г сахара\n- 100 мл коровьего молока\n- 50 г растопленного масла\n- 1 ч. л. разрыхлителя\n- Ванильный экстракт по вкусу\n\n**Для крема:**\n- 500 мл сливок (жирность не менее 30%)\n- 250 г маскарпоне\n- 100 г сахара\n- 1 ч. л. ванильного экстракта\n- Кофе для пропитки\n\n**Приготовление:**\n\n1. **Савоярди:** В миске смешайте муку, сахар и разрыхлитель. В отдельной емкости соедините молоко, растопленное масло и ванильный экстракт. Постепенно добавляйте жидкие ингредиенты к сухим, перемешивая до однородной массы. Выложите тесто на противень, выстланный пергаментом, и выпекайте при 180°C до золотистого цвета (примерно 15-20 минут). Остудите и нарежьте на полоски.\n\n2. **Крем:** В глубокой миске взбейте сливки до мягких пиков. В другой миске соедините маскарпоне, сахар и ванильный экстракт, тщательно перемешайте. Аккуратно введите взбитые сливки в маскарпоне, чтобы сохранить воздушность.\n\n3. **Сборка:** Пропитайте савоярди кофе, выложите их в форму, затем нанесите слой крема. Повторите слои, пока не закончатся ингредиенты. Завершите кремом и охладите в холодильнике минимум на 4 часа.\n\nПодавайте с посыпкой из какао-порошка. \n\nПриятного аппетита и вдохновения в кулинарных экспериментах!",
+      "groupId": 8,
+      "type": "note",
+      "domain": null,
+      "created": "2026-02-03T15:18:33.283Z",
+      "updated": "2026-02-03T15:38:43.021Z"
+    },
+    {
+      "id": 31,
+      "title": "Пряники",
+      "content": "Для приготовления лакто-вегетарианских пряников без яиц вам понадобятся следующие ингредиенты:\n\n- 250 г муки (пшеничной или ржаной)\n- 100 г сахара (можно использовать коричневый)\n- 100 г сливочного масла (или растительного масла)\n- 100 мл молока\n- 1 ч. л. разрыхлителя теста\n- 1 ч. л. корицы\n- 1/2 ч. л. имбиря (по желанию)\n- Щепотка соли\n\nПриготовление:\n\n1. В глубокой миске смешайте муку, сахар, разрыхлитель, корицу, имбирь и соль.\n2. В отдельной емкости растопите сливочное масло и добавьте молоко. Хорошо перемешайте.\n3. Соедините сухие и влажные ингредиенты, замесите тесто. Оно должно быть мягким и эластичным.\n4. Заверните тесто в пленку и оставьте в холодильнике на 30 минут.\n5. Разогрейте духовку до 180°C. Раскатайте тесто на присыпанной мукой поверхности до толщины около 5 мм и вырежьте пряники желаемой формы.\n6. Выложите пряники на противень, застеленный пергаментом, и выпекайте 10-12 минут до золотистого цвета.\n\nПряники можно украсить глазурью или посыпать сахаром. \n\nПриятного аппетита и вдохновения в кулинарии!",
+      "groupId": 8,
+      "type": "note",
+      "domain": null,
+      "created": "2026-02-03T15:17:52.140Z"
+    },
+    {
+      "id": 30,
+      "title": "Круассаны",
+      "content": "Для приготовления лакто-вегетарианских круассанов из замороженного слоёного теста без яиц вам понадобятся следующие ингредиенты:\n\n1. Замороженное слоёное тесто – 500 г\n2. Масло сливочное – 100 г (для начинки и смазывания)\n3. Сахар – 50 г\n4. Ванильный экстракт – 1 ч. ложка\n5. Молоко – 100 мл (для смазывания)\n6. Щепотка соли\n\nПриготовление:\n\n1. Разморозьте слоёное тесто в холодильнике, следуя инструкциям на упаковке.\n2. Раскатайте тесто в прямоугольник толщиной около 3-4 мм.\n3. Нарежьте тесто на треугольники, основание каждого треугольника должно быть около 10 см.\n4. В небольшой кастрюле растопите сливочное масло с сахаром и ванильным экстрактом до однородной массы.\n5. Нанесите небольшое количество начинки на основание каждого треугольника.\n6. Аккуратно сверните треугольники в круассаны, начиная с основания.\n7. Выложите круассаны на противень, застеленный пергаментом, и дайте им подняться в течение 30-40 минут.\n8. Смажьте круассаны молоком и выпекайте в предварительно разогретой до 200°C духовке около 15-20 минут до золотистой корочки.\n\nНаслаждайтесь нежными и ароматными круассанами, которые станут прекрасным дополнением к вашему завтраку или полднику. Приятного аппетита!",
+      "groupId": 8,
+      "type": "note",
+      "domain": null,
+      "created": "2026-02-03T14:57:51.442Z",
+      "updated": "2026-02-03T15:38:52.709Z"
+    },
+    {
+      "id": 29,
+      "title": "codewars",
+      "content": "https://www.codewars.com/users/password/edit?reset_password_token=DrijQKSbKWTQNBXa5z2m",
+      "groupId": 5,
+      "type": "link",
+      "domain": "codewars.com",
+      "created": "2026-02-03T14:45:27.914Z",
+      "preview": {
+        "url": "https://www.codewars.com/users/password/edit?reset_password_token=DrijQKSbKWTQNBXa5z2m",
+        "title": "Ссылка",
+        "description": "Ссылка на внешний ресурс",
+        "image": "https://www.google.com/s2/favicons?domain=www.codewars.com&sz=128",
+        "siteName": "codewars.com"
+      }
+    },
+    {
+      "id": 28,
+      "title": "Договор на оказание услуг по выдаче, забору и возврату отправлений",
+      "content": "https://yandex.ru/legal/pvz/ru/",
+      "groupId": 3,
+      "type": "link",
+      "domain": "yandex.ru",
+      "created": "2026-02-03T14:44:40.963Z",
+      "preview": {
+        "url": "https://yandex.ru/legal/pvz/ru/",
+        "title": "Ссылка",
+        "description": "Ссылка на внешний ресурс",
+        "image": "https://www.google.com/s2/favicons?domain=yandex.ru&sz=128",
+        "siteName": "yandex.ru"
+      }
+    },
+    {
+      "id": 27,
+      "title": "РЕГЛАМЕНТ ПО ПОРЯДКУ ПРИЕМА, ПЕРЕДАЧИ И ВЫДАЧИ КЛИЕНТСКИХ ОТПРАВЛЕНИЙ В ПВЗ ИСПОЛНИТЕЛЯ",
+      "content": "https://yandex.ru/legal/reglament_c2c/ru/?win=638",
+      "groupId": 3,
+      "type": "link",
+      "domain": "yandex.ru",
+      "created": "2026-02-03T14:40:39.094Z",
+      "preview": {
+        "url": "https://yandex.ru/legal/reglament_c2c/ru/?win=638",
+        "title": "Ссылка",
+        "description": "Ссылка на внешний ресурс",
+        "image": "https://www.google.com/s2/favicons?domain=yandex.ru&sz=128",
+        "siteName": "yandex.ru"
+      }
+    },
+    {
+      "id": 26,
+      "title": "Опросник Шмишека",
+      "content": "https://psytests.org/accent/shmi88.html",
+      "groupId": 7,
+      "type": "link",
+      "domain": "psytests.org",
+      "created": "2026-02-03T14:21:29.291Z",
+      "preview": {
+        "url": "https://psytests.org/accent/shmi88.html",
+        "title": "Ссылка",
+        "description": "Ссылка на внешний ресурс",
+        "image": "https://www.google.com/s2/favicons?domain=psytests.org&sz=128",
+        "siteName": "psytests.org"
+      }
+    },
+    {
+      "id": 25,
+      "title": "stackoverflow как оператор % работает в python",
+      "content": "https://stackoverflow.com/questions/3883004/how-does-the-modulo-operator-work-on-negative-numbers-in-python",
+      "groupId": 5,
+      "type": "link",
+      "domain": "stackoverflow.com",
+      "created": "2026-02-03T14:20:33.364Z",
+      "preview": {
+        "url": "https://stackoverflow.com/questions/3883004/how-does-the-modulo-operator-work-on-negative-numbers-in-python",
+        "title": "Ссылка",
+        "description": "Ссылка на внешний ресурс",
+        "image": "https://www.google.com/s2/favicons?domain=stackoverflow.com&sz=128",
+        "siteName": "stackoverflow.com"
+      }
+    },
+    {
+      "id": 24,
+      "title": "Wakako кофемашина 4999р",
+      "content": "https://www.dns-shop.ru/product/6460fa388e6bd2c3/kofemasina-kapsulnaa-wacaco-nanopresso-wccnphc-cernyj/?utm_source=webmaster_msk&utm_medium=cpc&utm_campaign=webmaster_msk&utm_referrer=https%3A%2F%2Fyandex.ru%2F",
+      "groupId": 1,
+      "type": "link",
+      "domain": "dns-shop.ru",
+      "created": "2026-02-03T14:19:05.324Z",
+      "preview": {
+        "url": "https://www.dns-shop.ru/product/6460fa388e6bd2c3/kofemasina-kapsulnaa-wacaco-nanopresso-wccnphc-cernyj/?utm_source=webmaster_msk&utm_medium=cpc&utm_campaign=webmaster_msk&utm_referrer=https%3A%2F%2Fyandex.ru%2F",
+        "title": "Ссылка",
+        "description": "Ссылка на внешний ресурс",
+        "image": "https://www.google.com/s2/favicons?domain=www.dns-shop.ru&sz=128",
+        "siteName": "dns-shop.ru"
+      }
+    },
+    {
+      "id": 23,
+      "title": "Bushido кофе с Metro",
+      "content": "https://online.metro-cc.ru/products/kofe-bushido-red-katana-v-zernakh-227g?utm_source=yandex&utm_medium=cpc&utm_content=ad_13492181339%7Cadgr_5131784759%7Cph_52948314089%7Cdev_desktop%7Cdrf_no%7Cst_search%7Cs_none%7Cp_4%7Cpt_premium%7Cregn_Щёлково%7Cregid_10765%7Cre_52948314089&utm_term=adt_n_%7Cadt_52948314089&utm_campaign=cid_76964956%7Cmix_ecomm_opv_yandex_feed_gallery_dynamic&referrer=reattribution%3D1&yclid=5602291646500438015",
+      "groupId": 1,
+      "type": "link",
+      "domain": "ссылка",
+      "created": "2026-02-03T14:18:18.661Z",
+      "preview": {
+        "title": "Bushido кофе с Metro",
+        "description": "Ссылка на внешний ресурс",
+        "image": "https://www.google.com/s2/favicons?domain=online.metro-cc.ru&sz=128",
+        "siteName": "ссылка"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Wakako аксессуары",
+      "content": "https://market.yandex.ru/card/nabor-aksessuarov-wacaco-nanopresso-barista-kit/4856209927?do-waremd5=NUg4FxP5sWt-4x111nJFCw&clid=1651&ogV=-9",
+      "groupId": 1,
+      "type": "link",
+      "domain": "market.yandex.ru",
+      "created": "2026-02-03T14:16:39.638Z",
+      "preview": {
+        "url": "https://market.yandex.ru/card/nabor-aksessuarov-wacaco-nanopresso-barista-kit/4856209927?do-waremd5=NUg4FxP5sWt-4x111nJFCw&clid=1651&ogV=-9",
+        "title": "Ссылка",
+        "description": "Ссылка на внешний ресурс",
+        "image": "https://www.google.com/s2/favicons?domain=market.yandex.ru&sz=128",
+        "siteName": "market.yandex.ru"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Кофе Poetty",
+      "content": "https://market.yandex.ru/card/kofe-v-zernakh-poetti-daily-classic-crema-250-g/102308396656?do-waremd5=TJrc4mJS0KU-YEB9I5DP3w&cpc=qM4sCxtxWf7dfo4VeA9z126PaepCNHlthNkOXeL1ZdAapciPB8iFVxDqVbi4FlY32kC29TeIkGdmTFjH1Bvgx2IFGJanhbqyTYye_WPgRkWnlOv77LZ4e6OzEIY6TGZgdwhUTCIFzB9Bt850yT-KctcchkiHL_xi9KAr4AoU3QcbM3es8PvXcu5nGS2QhQLUSb-k7iKQKE3HIPwdPR91wqo_LJVsricIbJohB71w1nWvN5LRnvyurD0DsLpMBY2XI0G0UPtnff4SJCZddyjtUnKO7h-2V9TSB9XppucdyJIFE0lDlAoHADlmnX7oBw_lIchOFTcyll0i8GnjnZdfKjR1x_JII57ajrJLktEnAIyULcXqn-f_wTwcOxNTtJ4TdR8eBcSVSkC9kmgLIGcecU7sTfGEIG-X3A6mSVy6SCZCUwVgM7MaR3cXhDFxZs_3GD6qnJoJoVYpIcWmkKU_VwEQoki_n5BRrGKjkRcUw8fHCk3Ja9TGrL6OXwx0XSkfx2aIpfn2Fy0xQ9uajwpjQu-ys1Xm6E_uTe7JCGkZCr_N8g_beexQD5pDFut0FeJQnfJjVE46ZG8CmmnYa6hDsirQBrm9928DwAJyx2oEoWP_obu3IaFeyUpWmStd8Yr-SktVKbPmc-iWLmSPYdD9ES4Q5ZgZZLAlEcJuKqvrIlTZRFCsEyrCXjrwCjnJAbQx&nid=73839&ogV=-9",
+      "groupId": 1,
+      "type": "link",
+      "domain": "market.yandex.ru",
+      "created": "2026-02-03T14:06:43.021Z",
+      "preview": {
+        "url": "https://market.yandex.ru/card/kofe-v-zernakh-poetti-daily-classic-crema-250-g/102308396656?do-waremd5=TJrc4mJS0KU-YEB9I5DP3w&cpc=qM4sCxtxWf7dfo4VeA9z126PaepCNHlthNkOXeL1ZdAapciPB8iFVxDqVbi4FlY32kC29TeIkGdmTFjH1Bvgx2IFGJanhbqyTYye_WPgRkWnlOv77LZ4e6OzEIY6TGZgdwhUTCIFzB9Bt850yT-KctcchkiHL_xi9KAr4AoU3QcbM3es8PvXcu5nGS2QhQLUSb-k7iKQKE3HIPwdPR91wqo_LJVsricIbJohB71w1nWvN5LRnvyurD0DsLpMBY2XI0G0UPtnff4SJCZddyjtUnKO7h-2V9TSB9XppucdyJIFE0lDlAoHADlmnX7oBw_lIchOFTcyll0i8GnjnZdfKjR1x_JII57ajrJLktEnAIyULcXqn-f_wTwcOxNTtJ4TdR8eBcSVSkC9kmgLIGcecU7sTfGEIG-X3A6mSVy6SCZCUwVgM7MaR3cXhDFxZs_3GD6qnJoJoVYpIcWmkKU_VwEQoki_n5BRrGKjkRcUw8fHCk3Ja9TGrL6OXwx0XSkfx2aIpfn2Fy0xQ9uajwpjQu-ys1Xm6E_uTe7JCGkZCr_N8g_beexQD5pDFut0FeJQnfJjVE46ZG8CmmnYa6hDsirQBrm9928DwAJyx2oEoWP_obu3IaFeyUpWmStd8Yr-SktVKbPmc-iWLmSPYdD9ES4Q5ZgZZLAlEcJuKqvrIlTZRFCsEyrCXjrwCjnJAbQx&nid=73839&ogV=-9",
+        "title": "Ссылка",
+        "description": "Не удалось загрузить описание",
+        "image": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fmarket.yandex.ru%2Fcard%2Fkofe-v-zernakh-poetti-daily-classic-crema-250-g%2F102308396656%3Fdo-waremd5%3DTJrc4mJS0KU-YEB9I5DP3w%26cpc%3DqM4sCxtxWf7dfo4VeA9z126PaepCNHlthNkOXeL1ZdAapciPB8iFVxDqVbi4FlY32kC29TeIkGdmTFjH1Bvgx2IFGJanhbqyTYye_WPgRkWnlOv77LZ4e6OzEIY6TGZgdwhUTCIFzB9Bt850yT-KctcchkiHL_xi9KAr4AoU3QcbM3es8PvXcu5nGS2QhQLUSb-k7iKQKE3HIPwdPR91wqo_LJVsricIbJohB71w1nWvN5LRnvyurD0DsLpMBY2XI0G0UPtnff4SJCZddyjtUnKO7h-2V9TSB9XppucdyJIFE0lDlAoHADlmnX7oBw_lIchOFTcyll0i8GnjnZdfKjR1x_JII57ajrJLktEnAIyULcXqn-f_wTwcOxNTtJ4TdR8eBcSVSkC9kmgLIGcecU7sTfGEIG-X3A6mSVy6SCZCUwVgM7MaR3cXhDFxZs_3GD6qnJoJoVYpIcWmkKU_VwEQoki_n5BRrGKjkRcUw8fHCk3Ja9TGrL6OXwx0XSkfx2aIpfn2Fy0xQ9uajwpjQu-ys1Xm6E_uTe7JCGkZCr_N8g_beexQD5pDFut0FeJQnfJjVE46ZG8CmmnYa6hDsirQBrm9928DwAJyx2oEoWP_obu3IaFeyUpWmStd8Yr-SktVKbPmc-iWLmSPYdD9ES4Q5ZgZZLAlEcJuKqvrIlTZRFCsEyrCXjrwCjnJAbQx%26nid%3D73839%26ogV%3D-9?w=400&h=300",
+        "siteName": "market.yandex.ru"
+      }
+    },
+    {
+      "id": 20,
+      "title": "Яндекс запрещенка",
+      "content": "https://yandex.ru/support/delivery-profile/ru/other-day/prohibited-for-delivery#zapreshaetsya-peredavat-k-aviadostavke-%7Baero-restricted%7D",
+      "groupId": 3,
+      "type": "link",
+      "domain": "yandex.ru",
+      "created": "2026-02-03T14:06:15.990Z",
+      "preview": {
+        "url": "https://yandex.ru/support/delivery-profile/ru/other-day/prohibited-for-delivery#zapreshaetsya-peredavat-k-aviadostavke-%7Baero-restricted%7D",
+        "title": "Запрещенные товары | ",
+        "description": " Примечание. В таблице ниже перечислены категории товаров, а также примеры конкретных товаров, которые запрещается передавать к доставке.",
+        "image": "https://yastatic.net/s3/doc-binary/src/support/delivery-profile/ru/img/delivery-favicon.png",
+        "siteName": "yandex.ru"
+      }
+    },
+    {
+      "id": 19,
+      "title": "5 шагов остановки",
+      "content": "1) сделать паузу, \n2) посмотреть на игру,\n3) почувствовать свой якорь, \n4) понять проекцию, \n5)выбрать власть, а не правоту",
+      "groupId": 6,
+      "type": "note",
+      "domain": null,
+      "created": "2026-02-03T14:05:36.725Z"
+    },
+    {
+      "id": 18,
+      "title": "Универсальный протокол в реализации вмешательства ПФА/ТОН",
+      "content": "https://contact-autism.ru/events/universalnyj-protokol",
+      "groupId": 2,
+      "type": "link",
+      "domain": "contact-autism.ru",
+      "created": "2026-02-03T14:04:33.254Z",
+      "preview": {
+        "url": "https://contact-autism.ru/events/universalnyj-protokol",
+        "title": "«Универсальный протокол в реализации вмешательства ПФА/ТОН» | РОО помощи детям с РАС «Контакт»",
+        "description": "\"'Универсальный протокол' в реализации вмешательства ПФА ТОН_Практический функциональный анализ и тренинг с опорой на навыки Г. Хенли: универсальные рекомендации и индивидуализация\". Дата: 25 декабря ",
+        "image": "https://contact-autism.ru/new/wp-content/uploads/2022/12/20221225.jpg",
+        "siteName": "РОО помощи детям с РАС «Контакт»"
+      }
+    },
+    {
+      "id": 17,
+      "title": "Веб-технологии для разработчиков",
+      "content": "https://developer.mozilla.org/ru/docs/Web",
+      "groupId": 5,
+      "type": "link",
+      "domain": "developer.mozilla.org",
+      "created": "2026-02-03T14:03:27.863Z",
+      "preview": {
+        "url": "https://developer.mozilla.org/ru/docs/Web",
+        "title": "Ссылка",
+        "description": "Не удалось загрузить описание",
+        "image": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fdeveloper.mozilla.org%2Fru%2Fdocs%2FWeb?w=400&h=300",
+        "siteName": "developer.mozilla.org"
+      }
+    },
+    {
+      "id": 16,
+      "title": "учебник javascript онлайн",
+      "content": "https://learn.javascript.ru/",
+      "groupId": 5,
+      "type": "link",
+      "domain": "learn.javascript.ru",
+      "created": "2026-02-03T14:03:03.207Z",
+      "preview": {
+        "url": "https://learn.javascript.ru/",
+        "title": "Современный учебник JavaScript",
+        "description": "Современный учебник JavaScript, начиная с основ, включающий в себя много тонкостей и фишек JavaScript/DOM.",
+        "image": "https://learn.javascript.ru/img/site_preview_ru_1200x630.png",
+        "siteName": "learn.javascript.ru"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Магазин магнитов",
+      "content": "https://magnets-shop.com/",
+      "groupId": 1,
+      "type": "link",
+      "domain": "magnets-shop.com",
+      "created": "2026-02-03T14:02:04.664Z",
+      "preview": {
+        "url": "https://magnets-shop.com/",
+        "title": "Ссылка",
+        "description": "Не удалось загрузить описание",
+        "image": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fmagnets-shop.com%2F?w=400&h=300",
+        "siteName": "magnets-shop.com"
+      }
+    },
+    {
+      "id": 14,
+      "title": "Предотвратил мошенника",
+      "content": "11 января 2026\nПредотвратил мошенника. \nПолучал одежду и наушники air pods за 30 к, сразу все схватил и побежал в примерочную.\nПопросил его оставить неоплаченный товар на столе. \nЗа 5 секунд он понял что костюм ему не подходит по размеру, навел камеру смартфона на коробку с наушниками, сказал что серийник не бьется и ушел. \nВсе было без предоплаты. \nСлужу отечеству.",
+      "groupId": 3,
+      "type": "note",
+      "domain": null,
+      "created": "2026-02-03T14:01:14.520Z"
+    },
+    {
+      "id": 13,
+      "title": "Порошочки посмотреть",
+      "content": "Аргинин порошок альфа-кетоглутарат, аминокислоты аакг, AAKG, 150 г, Мята",
+      "groupId": 4,
+      "type": "note",
+      "domain": null,
+      "created": "2026-02-03T14:00:21.050Z"
+    },
+    {
+      "id": 12,
+      "title": "foreach",
+      "content": "https://doka-guide.vercel.app/js/array-foreach/",
+      "groupId": 2,
+      "type": "link",
+      "domain": "doka-guide.vercel.app",
+      "created": "2026-02-03T13:00:33.266Z",
+      "preview": {
+        "url": "https://doka-guide.vercel.app/js/array-foreach/",
+        "title": ".forEach() — JavaScript — Дока",
+        "description": "Сколькими способами можно обойти массив? Это ещё один способ, но без явного описания цикла.",
+        "image": "https://doka-guide.vercel.app//js/array-foreach/images/covers/og.png",
+        "siteName": "Дока"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Коллбэки в javascript",
+      "content": "https://habr.com/ru/companies/ruvds/articles/330880/",
+      "groupId": 2,
+      "type": "link",
+      "domain": "habr.com",
+      "created": "2026-02-03T12:51:01.841Z",
+      "preview": {
+        "title": "Коллбэки в javascript",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=habr.com&sz=128",
+        "siteName": "habr.com"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Совок 260 р без черенка",
+      "content": "https://www.ozon.ru/product/lopata-sovkovaya-relsovaya-stal-3425634607/?at=ywtAo6qlgcQrqgAAIkyY56xum4kjYEf1QO4kZFvpDpA2",
+      "groupId": 1,
+      "type": "link",
+      "domain": "ozon.ru",
+      "created": "2026-02-03T12:50:20.705Z",
+      "preview": {
+        "title": "Совок 260 р без черенка",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=www.ozon.ru&sz=128",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Статья о столбе",
+      "content": "https://taijiquan.narod.ru/articles/b4/b4.html",
+      "groupId": 2,
+      "type": "link",
+      "domain": "taijiquan.narod.ru",
+      "created": "2026-02-03T12:44:55.845Z",
+      "preview": {
+        "title": "Статья о столбе",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=taijiquan.narod.ru&sz=128",
+        "siteName": "taijiquan.narod.ru"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Лопата туристическая 195 р",
+      "content": "https://www.ozon.ru/product/lopata-dlya-uborki-snega-turisticheskaya-12-5-sm-3217286530/?at=79tnN28QxiQYnAWgS35o5KwFnOXAB1Fz9v8oBcKEGYDn",
+      "groupId": 1,
+      "type": "link",
+      "domain": "ozon.ru",
+      "created": "2026-02-03T12:44:01.414Z",
+      "preview": {
+        "title": "Лопата туристическая 195 р",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=www.ozon.ru&sz=128",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Лопата целиком 285 р",
+      "content": "https://www.ozon.ru/product/lopata-dlya-uborki-snega-posadochnaya-38-sm-3341331288/?at=x6tPvD794UqjBZLlHJEjP2mC7o7jGAu3Wwl75UXyXnYx",
+      "groupId": 1,
+      "type": "link",
+      "domain": "ozon.ru",
+      "created": "2026-02-03T12:43:14.230Z",
+      "preview": {
+        "title": "Лопата целиком 285 р",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=www.ozon.ru&sz=128",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Штыковой совок 255 р плоский",
+      "content": "https://www.ozon.ru/product/lopata-shtykovaya-dlya-sada-i-ogoroda-stroitelnaya-relsovaya-stal-sadovyy-instrument-dlya-cherenka-2430266780/?at=83tBqW2zZtPr7R2Cnlvrx0imBzqg0UvjD9XAhR6mlW5",
+      "groupId": 1,
+      "type": "link",
+      "domain": "ozon.ru",
+      "created": "2026-02-03T12:42:43.942Z",
+      "preview": {
+        "title": "Штыковой совок 255 р плоский",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=www.ozon.ru&sz=128",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Совок без черенка 255р",
+      "content": "https://www.ozon.ru/product/zemleroyka-lopata-universalnaya-sovkovaya-22-5-sm-3468339165/?at=Z8tXgAkDVT8GLB9VSyBG6y9TZk0n7qtRGl1vKux5B9OB",
+      "groupId": 1,
+      "type": "link",
+      "domain": "ozon.ru",
+      "created": "2026-02-03T12:41:59.375Z",
+      "preview": {
+        "title": "Совок без черенка 255р",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=www.ozon.ru&sz=128",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Дешевый совок рельсовая сталь",
+      "content": "https://www.ozon.ru/product/lopata-sovkovaya-relsovaya-stal-3425634607/?at=16tLGxPkDtmgrqNwfl5vvyysONRyRlCYYvLnjCrkmyq5",
+      "groupId": 1,
+      "type": "link",
+      "domain": "ozon.ru",
+      "created": "2026-02-03T12:38:16.266Z",
+      "preview": {
+        "title": "Дешевый совок рельсовая сталь",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=www.ozon.ru&sz=128",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 1,
+      "title": "Лопата совковая",
+      "content": "https://www.ozon.ru/product/lopata-sovkovaya-relsovaya-stal-3425634607/?at=16tLGxPkDtmgrqNwfl5vvyysONRyRlCYYvLnjCrkmyq5",
+      "groupId": 1,
+      "type": "link",
+      "domain": "ozon.ru",
+      "created": "2024-01-15T10:30:00",
+      "preview": {
+        "title": "Лопата совковая",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=www.ozon.ru&sz=128",
+        "siteName": "ozon.ru"
+      }
+    },
+    {
+      "id": 2,
+      "title": "React против Angular",
+      "content": "https://habr.com/ru/articles/768752/",
+      "groupId": 2,
+      "type": "link",
+      "domain": "habr.com",
+      "created": "2024-01-14T14:45:00",
+      "preview": {
+        "title": "React против Angular",
+        "description": "Ссылка сохранена ранее",
+        "image": "https://www.google.com/s2/favicons?domain=habr.com&sz=128",
+        "siteName": "habr.com"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Идеи для нового проекта",
+      "content": "Создать приложение для учета личных финансов с простым интерфейсом и аналитикой расходов.",
+      "groupId": 3,
+      "type": "note",
+      "domain": null,
+      "created": "2024-01-13T09:15:00"
+    }
+  ]
+}

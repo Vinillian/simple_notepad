@@ -3,144 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Умный блокнот с категориями и Markdown</title>
+    <title>Простой блокнот - 2 режима</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Markdown парсер -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Боковая панель с категориями -->
-        <aside class="sidebar">
-            <div class="categories-section">
-                <h2>Категории</h2>
-                <div class="categories-list" id="categoriesList">
-                    <!-- Категории будут загружены здесь -->
-                </div>
-                <div class="category-actions">
-                    <button id="addCategoryBtn" class="add-category-btn">
-                        <span>+</span> Новая категория
-                    </button>
-                </div>
-            </div>
-            
-            <div class="tools-section">
-                <h3>Инструменты</h3>
-                <div class="tool-buttons">
-                    <button id="exportBtn" class="tool-btn">Экспорт JSON</button>
-                    <button id="importBtn" class="tool-btn">Импорт JSON</button>
-                    <input type="file" id="importFile" accept=".json" style="display: none;">
-                    <button id="clearAllBtn" class="tool-btn danger">Очистить всё</button>
-                </div>
-            </div>
-            
-            <div class="display-section">
-                <h3>Отображение</h3>
-                <div class="display-buttons">
-                    <button id="viewListBtn" class="view-btn active" data-view="list" title="Список">
-                        <span class="view-icon">≡</span> Список
-                    </button>
-                    <button id="viewGridBtn" class="view-btn" data-view="grid" title="Сетка">
-                        <span class="view-icon">⧉</span> Сетка
-                    </button>
-                </div>
-            </div>
-            
-            <div class="stats-section">
-                <h3>Статистика</h3>
-                <div class="stats">
-                    <div>Всего заметок: <span id="totalNotes">0</span></div>
-                    <div>Активная категория: <span id="activeCategory">Все</span></div>
-                    <div>Категорий: <span id="totalCategories">0</span></div>
-                    <div>Сортировка: <span id="sortOrder">новые</span></div>
-                </div>
-            </div>
-        </aside>
-        
-        <!-- Основная область с заметками -->
-        <main class="main-content">
-            <header class="main-header">
-                <div class="header-left">
-                    <h1>Умный блокнот</h1>
-                    <div class="sort-controls">
-                        <span>Сортировка:</span>
-                        <button id="sortNewBtn" class="sort-btn active" data-sort="new">
-                            <span class="sort-icon">↓</span> Сначала новые
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1><i class="fas fa-book"></i> Простой блокнот</h1>
+                <div class="header-controls">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Поиск заметок...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="view-toggle-container">
+                        <button id="viewListBtn" class="view-toggle active" data-mode="list" title="Список (Ctrl+1)">
+                            <i class="fas fa-list"></i>
+                            <span>Список</span>
                         </button>
-                        <button id="sortOldBtn" class="sort-btn" data-sort="old">
-                            <span class="sort-icon">↑</span> Сначала старые
+                        <button id="viewGridBtn" class="view-toggle" data-mode="grid" title="Превью (Ctrl+2)">
+                            <i class="fas fa-th-large"></i>
+                            <span>Превью</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-subtitle">
+                <i class="fas fa-info-circle"></i>
+                <span>Режим "<span id="viewModeText">Список</span>" активен. <small>Ctrl+1/2 для переключения</small></span>
+            </div>
+        </header>
+
+        <div class="app-content">
+            <!-- Боковая панель ТОЛЬКО с группами -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-tags"></i> Группы</h3>
+                    <div class="groups-list" id="groupsList">
+                        <!-- Группы загружаются здесь -->
+                    </div>
+                    
+                    <div class="add-group">
+                        <input type="text" id="newGroupInput" placeholder="Новая группа...">
+                        <button id="addGroupBtn" class="btn-small">
+                            <i class="fas fa-plus"></i>
                         </button>
                     </div>
                 </div>
                 
-                <div class="header-right">
-                    <div class="category-filter">
-                        <select id="categoryFilter" class="filter-select">
-                            <option value="all">Все категории</option>
-                        </select>
-                        <button id="clearFilterBtn" class="filter-clear">×</button>
-                    </div>
-                </div>
-            </header>
-            
-            <!-- Область создания заметки -->
-            <div class="note-creator">
-                <div class="creator-header">
-                    <div class="category-selector">
-                        <select id="noteCategory" class="category-select">
-                            <option value="">Выберите категорию</option>
-                        </select>
-                        <button id="editCategoriesBtn" class="edit-categories-btn" title="Управление категориями">⚙️</button>
-                    </div>
-                    <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
-                        <small style="color: #7f8c8d;">Поддерживает Markdown</small>
-                        <button onclick="showMarkdownHelp()" style="background: none; border: none; color: #3498db; cursor: pointer; font-size: 12px; text-decoration: underline;">
-                            Шпаргалка по Markdown
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-database"></i> Управление данными</h3>
+                    <div class="data-actions">
+                        <button id="exportBtn" class="btn btn-secondary btn-small">
+                            <i class="fas fa-download"></i> Экспорт
                         </button>
+                        <label for="importInput" class="btn btn-secondary btn-small" style="cursor: pointer; margin: 0;">
+                            <i class="fas fa-upload"></i> Импорт
+                            <input type="file" id="importInput" accept=".json" style="display: none;">
+                        </label>
                     </div>
-                </div>
-                
-                <textarea 
-                    id="noteInput" 
-                    placeholder="Введите текст заметки... (Enter - сохранить, Shift+Enter - новая строка)"
-                    rows="3"
-                ></textarea>
-                
-                <div class="creator-footer">
-                    <div class="character-count">
-                        Символов: <span id="charCount">0</span>
-                    </div>
-                    <button id="saveBtn" class="save-btn">Сохранить заметку</button>
-                </div>
-            </div>
-            
-            <!-- Контейнер для заметок -->
-            <div class="notes-container list-view" id="notesContainer">
-                <!-- Заметки загрузятся здесь -->
-            </div>
-            
-            <!-- Модальное окно для управления категориями -->
-            <div id="categoryModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2>Управление категориями</h2>
-                        <button class="close-modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="new-category-input">
-                            <input type="text" id="newCategoryName" placeholder="Название новой категории">
-                            <input type="color" id="newCategoryColor" value="#4CAF50" title="Выберите цвет">
-                            <button id="createCategoryBtn">Создать</button>
+                    <div class="stats-info">
+                        <div class="stat-item">
+                            <i class="fas fa-sticky-note"></i>
+                            <span>Текст: <span id="textNotesCount">0</span></span>
                         </div>
-                        <div class="categories-manager" id="categoriesManager">
-                            <!-- Существующие категории для редактирования -->
+                        <div class="stat-item">
+                            <i class="fas fa-link"></i>
+                            <span>Ссылки: <span id="linkNotesCount">0</span></span>
                         </div>
                     </div>
                 </div>
+            </aside>
+
+            <!-- Основной контент -->
+            <main class="main-content">
+                <!-- Форма добавления заметки -->
+                <div class="add-note-form">
+                    <h3><i class="fas fa-plus-circle"></i> Новая заметка</h3>
+                    <div class="form-grid">
+                        <input type="text" id="noteTitle" placeholder="Название заметки" class="full-width">
+                        <select id="noteGroup">
+                            <option value="">Выберите группу</option>
+                        </select>
+                    </div>
+                    <textarea id="noteContent" placeholder="Введите текст заметки или ссылку... (Ctrl+Enter для сохранения)"></textarea>
+                    <button id="addNoteBtn" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Сохранить заметку
+                    </button>
+                </div>
+
+                <!-- Список заметок -->
+                <div class="notes-header">
+                    <div>
+                        <h3><i class="fas fa-clipboard-list"></i> Заметки</h3>
+                        <span id="notesCount">0</span>
+                        <span class="pagination-info" id="paginationInfo"></span>
+                    </div>
+                    <div class="view-mode-info">
+                        <i id="viewModeIcon" class="fas fa-list"></i>
+                        <span id="currentViewMode">Список</span>
+                    </div>
+                </div>
+
+                <div class="notes-list list-view" id="notesList">
+                    <!-- Заметки загружаются здесь -->
+                </div>
+
+                <!-- Пагинация -->
+                <div class="pagination">
+                    <button id="loadMoreBtn" class="btn btn-secondary">
+                        <i class="fas fa-chevron-down"></i> Загрузить еще
+                    </button>
+                </div>
+            </main>
+        </div>
+
+        <footer class="app-footer">
+            <p>Простой блокнот v2.2 | Всего заметок: <span id="totalNotes">0</span></p>
+            <div class="app-info">
+                Режим: <span id="footerViewMode">Список</span> | Загружено: <span id="loadedNotes">0</span>
             </div>
-        </main>
+        </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Обновление статистики
+        function updateStats() {
+            if (window.app) {
+                const totalNotes = window.app.data.items.length;
+                const textNotes = window.app.data.items.filter(item => item.type === 'note').length;
+                const linkNotes = window.app.data.items.filter(item => item.type === 'link').length;
+                const loadedNotes = document.querySelectorAll('.note-card').length;
+                
+                document.getElementById('totalNotes').textContent = totalNotes;
+                document.getElementById('textNotesCount').textContent = textNotes;
+                document.getElementById('linkNotesCount').textContent = linkNotes;
+                document.getElementById('loadedNotes').textContent = loadedNotes;
+                
+                // Обновляем текст режима
+                const viewModeText = window.app.viewMode === 'list' ? 'Список' : 'Превью';
+                document.getElementById('viewModeText').textContent = viewModeText;
+                document.getElementById('currentViewMode').textContent = viewModeText;
+                document.getElementById('footerViewMode').textContent = viewModeText;
+                document.getElementById('viewModeIcon').className = window.app.viewMode === 'list' ? 'fas fa-list' : 'fas fa-th-large';
+            }
+        }
+        
+        // Запускаем обновление статистики
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                updateStats();
+                // Обновляем каждые 3 секунды
+                setInterval(updateStats, 3000);
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
