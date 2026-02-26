@@ -456,6 +456,21 @@ body {
     gap: 16px;
 }
 
+/* Раскрытая заметка в режиме превью (занимает всю ширину) */
+.notes-container.preview-view .note.expanded {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    background: #f9fff9;
+    border: 2px solid #4CAF50;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2);
+    transform: none;
+}
+
+.notes-container.preview-view .note.expanded:hover {
+    transform: none;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2);
+}
+
 .note {
     background: white;
     border: 1px solid #ddd;
