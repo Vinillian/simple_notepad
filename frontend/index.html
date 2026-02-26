@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Умный блокнот с категориями и Markdown</title>
+    <title>Simple Notepad (notes12 style)</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Markdown парсер -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+    <!-- Верхняя панель -->
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <h1><i class="fas fa-book"></i> Simple Notepad</h1>
+        </div>
+        <div class="top-bar-center">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск по заголовку или тексту...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </div>
+        <div class="top-bar-right">
+            <button id="viewListBtn" class="view-toggle" data-mode="list" title="Список (Ctrl+1)">
+                <i class="fas fa-list"></i> Список
+            </button>
+            <button id="viewGridBtn" class="view-toggle" data-mode="grid" title="Сетка (Ctrl+2)">
+                <i class="fas fa-th-large"></i> Сетка
+            </button>
+        </div>
+    </header>
+
+    <!-- Основной контейнер -->
     <div class="app-container">
-        <!-- Боковая панель с категориями -->
+        <!-- Боковая панель -->
         <aside class="sidebar">
             <div class="categories-section">
-                <h2>Категории</h2>
-                <div class="categories-list" id="categoriesList">
-                    <!-- Категории будут загружены здесь -->
-                </div>
+                <h2><i class="fas fa-tags"></i> Категории</h2>
+                <div class="categories-list" id="categoriesList"></div>
                 <div class="category-actions">
                     <button id="addCategoryBtn" class="add-category-btn">
                         <span>+</span> Новая категория
@@ -25,29 +45,17 @@
             </div>
             
             <div class="tools-section">
-                <h3>Инструменты</h3>
+                <h3><i class="fas fa-database"></i> Инструменты</h3>
                 <div class="tool-buttons">
-                    <button id="exportBtn" class="tool-btn">Экспорт JSON</button>
-                    <button id="importBtn" class="tool-btn">Импорт JSON</button>
+                    <button id="exportBtn" class="tool-btn"><i class="fas fa-download"></i> Экспорт JSON</button>
+                    <button id="importBtn" class="tool-btn"><i class="fas fa-upload"></i> Импорт JSON</button>
                     <input type="file" id="importFile" accept=".json" style="display: none;">
-                    <button id="clearAllBtn" class="tool-btn danger">Очистить всё</button>
-                </div>
-            </div>
-            
-            <div class="display-section">
-                <h3>Отображение</h3>
-                <div class="display-buttons">
-                    <button id="viewListBtn" class="view-btn active" data-view="list" title="Список">
-                        <span class="view-icon">≡</span> Список
-                    </button>
-                    <button id="viewGridBtn" class="view-btn" data-view="grid" title="Сетка">
-                        <span class="view-icon">⧉</span> Сетка
-                    </button>
+                    <button id="clearAllBtn" class="tool-btn danger"><i class="fas fa-trash-alt"></i> Очистить всё</button>
                 </div>
             </div>
             
             <div class="stats-section">
-                <h3>Статистика</h3>
+                <h3><i class="fas fa-chart-pie"></i> Статистика</h3>
                 <div class="stats">
                     <div>Всего заметок: <span id="totalNotes">0</span></div>
                     <div>Активная категория: <span id="activeCategory">Все</span></div>
@@ -57,18 +65,18 @@
             </div>
         </aside>
         
-        <!-- Основная область с заметками -->
+        <!-- Основная область -->
         <main class="main-content">
             <header class="main-header">
                 <div class="header-left">
-                    <h1>Умный блокнот</h1>
+                    <h1><span id="currentGroupTitle">Все заметки</span></h1>
                     <div class="sort-controls">
                         <span>Сортировка:</span>
                         <button id="sortNewBtn" class="sort-btn active" data-sort="new">
-                            <span class="sort-icon">↓</span> Сначала новые
+                            <i class="fas fa-arrow-down"></i> Сначала новые
                         </button>
                         <button id="sortOldBtn" class="sort-btn" data-sort="old">
-                            <span class="sort-icon">↑</span> Сначала старые
+                            <i class="fas fa-arrow-up"></i> Сначала старые
                         </button>
                     </div>
                 </div>
@@ -78,23 +86,24 @@
                         <select id="categoryFilter" class="filter-select">
                             <option value="all">Все категории</option>
                         </select>
-                        <button id="clearFilterBtn" class="filter-clear">×</button>
+                        <button id="clearFilterBtn" class="filter-clear"><i class="fas fa-times"></i></button>
                     </div>
                 </div>
             </header>
             
-            <!-- Область создания заметки -->
+            <!-- Форма создания заметки -->
             <div class="note-creator">
                 <div class="creator-header">
                     <div class="category-selector">
                         <select id="noteCategory" class="category-select">
                             <option value="">Выберите категорию</option>
                         </select>
-                        <button id="editCategoriesBtn" class="edit-categories-btn" title="Управление категориями">⚙️</button>
+                        <button id="editCategoriesBtn" class="edit-categories-btn" title="Управление категориями">
+                            <i class="fas fa-cog"></i>
+                        </button>
                     </div>
                 </div>
                 
-                <!-- ДОБАВЛЕНО поле для заголовка -->
                 <input type="text" id="noteTitle" class="note-title-input" placeholder="Заголовок (необязательно)">
                 
                 <textarea 
@@ -107,37 +116,34 @@
                     <div class="character-count">
                         Символов: <span id="charCount">0</span>
                     </div>
-                    <button id="saveBtn" class="save-btn">Сохранить заметку</button>
+                    <button id="saveBtn" class="save-btn"><i class="fas fa-save"></i> Сохранить заметку</button>
                 </div>
             </div>
             
-            <!-- Контейнер для заметок -->
-            <div class="notes-container list-view" id="notesContainer">
-                <!-- Заметки загрузятся здесь -->
-            </div>
+            <!-- Контейнер заметок -->
+            <div class="notes-container list-view" id="notesContainer"></div>
             
-            <!-- Модальное окно для управления категориями -->
+            <!-- Модальное окно категорий -->
             <div id="categoryModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2>Управление категориями</h2>
-                        <button class="close-modal">&times;</button>
+                        <h2><i class="fas fa-tags"></i> Управление категориями</h2>
+                        <button class="close-modal"><i class="fas fa-times"></i></button>
                     </div>
                     <div class="modal-body">
                         <div class="new-category-input">
                             <input type="text" id="newCategoryName" placeholder="Название новой категории">
                             <input type="color" id="newCategoryColor" value="#4CAF50" title="Выберите цвет">
-                            <button id="createCategoryBtn">Создать</button>
+                            <button id="createCategoryBtn" class="btn-primary">Создать</button>
                         </div>
-                        <div class="categories-manager" id="categoriesManager">
-                            <!-- Существующие категории для редактирования -->
-                        </div>
+                        <div class="categories-manager" id="categoriesManager"></div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Подключаем главный модуль -->
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
