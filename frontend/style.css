@@ -11,7 +11,7 @@ body {
     color: #333;
 }
 
-/* ===== Верхняя панель (новая) ===== */
+/* ===== Верхняя панель ===== */
 .top-bar {
     background: #2c3e50;
     color: white;
@@ -74,7 +74,7 @@ body {
     gap: 8px;
 }
 
-.view-toggle {
+.view-btn {
     background: rgba(255,255,255,0.15);
     border: none;
     color: white;
@@ -88,16 +88,16 @@ body {
     transition: background 0.2s;
 }
 
-.view-toggle:hover {
+.view-btn:hover {
     background: rgba(255,255,255,0.25);
 }
 
-.view-toggle.active {
+.view-btn.active {
     background: #3498db;
     color: white;
 }
 
-/* ===== Основной контейнер (без фиксации) ===== */
+/* ===== Основной контейнер ===== */
 .app-container {
     display: flex;
     max-width: 1400px;
@@ -258,7 +258,7 @@ body {
 /* ===== Основная область ===== */
 .main-content {
     flex: 1;
-    min-width: 0; /* предотвращает переполнение */
+    min-width: 0;
 }
 
 .main-header {
@@ -463,6 +463,22 @@ body {
     gap: 16px;
 }
 
+/* Раскрытая заметка в режиме сетки (занимает всю ширину) */
+.notes-container.grid-view .note.expanded {
+    grid-column: 1 / -1 !important;  /* принудительно растягиваем */
+    width: 100%;
+    background: #f9fff9;
+    border: 2px solid #4CAF50;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2);
+    transform: none;
+}
+
+.notes-container.grid-view .note.expanded:hover {
+    transform: none;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2);
+}
+
+/* Общие стили заметок */
 .note {
     background: white;
     border: 1px solid #ddd;
@@ -558,7 +574,7 @@ body {
     font-size: 11px;
 }
 
-/* Стили для ссылок (как в notes12) */
+/* Стили для ссылок */
 .link-item {
     background: #f8f9fa;
     border: 1px solid #eee;
@@ -769,4 +785,24 @@ body {
         gap: 12px;
         align-items: stretch;
     }
+}
+
+/* Скроллбар */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
 }

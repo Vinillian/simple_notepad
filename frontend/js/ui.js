@@ -1,5 +1,5 @@
 // ====================
-// ОТОБРАЖЕНИЕ ИНТЕРФЕЙСА (исправленная логика сворачивания)
+// ОТОБРАЖЕНИЕ ИНТЕРФЕЙСА
 // ====================
 
 import { state } from './main.js';
@@ -10,7 +10,7 @@ import { renderMarkdown, containsMarkdown, createMarkdownToolbarHtml } from './m
 import { autoResizeTextarea, formatDate } from './utils.js';
 import { updateSettings, deleteNoteById, deleteCategoryById } from './api.js';
 
-// Отображение заметок (исправлено)
+// Отображение заметок
 export function displayNotes(state) {
     const notesContainer = document.getElementById('notesContainer');
     if (state.notes.length === 0) {
@@ -22,11 +22,9 @@ export function displayNotes(state) {
 
     state.notes.forEach(note => {
         const category = state.categories.find(c => c.id === note.category_id);
-        const hasManyLines = note.content.split('\n').length > 10; // больше 10 строк - длинная заметка
+        const hasManyLines = note.content.split('\n').length > 10;
         const hasMarkdown = containsMarkdown(note.content);
         const isLink = note.type === 'link';
-
-        // Класс collapsed добавляется только если заметка длинная и не развернута пользователем
         const contentClass = `note-content ${isLink ? '' : 'markdown-content'} ${hasManyLines && !note.expanded ? 'collapsed' : ''}`;
 
         html += `
@@ -255,7 +253,6 @@ export function setupEventListeners(state) {
     document.getElementById('viewListBtn').addEventListener('click', () => {
         state.viewMode = 'list';
         updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
-        // При смене режима сворачиваем все заметки
         state.notes.forEach(note => note.expanded = false);
         setupViewMode(state);
         displayNotes(state);
