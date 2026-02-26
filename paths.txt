@@ -1,0 +1,65 @@
+```text
+C:\Users\user\VScode_projects\Web\simple_notepad\.gitignore
+C:\Users\user\VScode_projects\Web\simple_notepad\docker-compose.yml
+C:\Users\user\VScode_projects\Web\simple_notepad\paths.txt
+C:\Users\user\VScode_projects\Web\simple_notepad\README.md
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\config
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\controllers
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\middleware
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\migrations
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\models
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\routes
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\scripts
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\utils
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\db.js
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\package-lock.json
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\package.json
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\server.js
+C:\Users\user\VScode_projects\Web\simple_notepad\backend\swagger.js
+C:\Users\user\VScode_projects\Web\simple_notepad\frontend
+C:\Users\user\VScode_projects\Web\simple_notepad\backups
+```
+
+```text
+simple_notepad/
+├── .gitignore
+├── README.md
+├── paths.txt
+├── backend/
+│   ├── config/
+│   │   └── index.js
+│   ├── controllers/
+│   │   ├── categoryController.js
+│   │   ├── noteController.js
+│   │   └── settingController.js
+│   ├── db.js
+│   ├── middleware/
+│   │   ├── auth.js
+│   │   └── validation.js
+│   ├── migrations/
+│   │   └── init.sql
+│   ├── models/
+│   │   ├── Category.js
+│   │   ├── Note.js
+│   │   └── Setting.js
+│   ├── node_modules/              # папка с зависимостями Node.js (не хранится в Git)
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes/
+│   │   ├── categories.js
+│   │   ├── notes.js
+│   │   └── settings.js
+│   ├── scripts/
+│   │   └── importFromJson.js
+│   ├── server.js
+│   ├── swagger.js
+│   └── utils/
+│       └── errors.js
+├── backups/
+│   └── notebook_export_2026-02-21.json
+├── docker-compose.yml
+└── frontend/
+    ├── index.html
+    ├── script.js
+    └── style.css
+```

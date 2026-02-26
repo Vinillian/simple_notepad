@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const config = require('./config');
 const db = require('./db');
 
@@ -17,6 +18,9 @@ const PORT = config.port;
 app.use(cors());
 app.use(express.json());
 
+// Раздача статических файлов фронтенда (должна быть первой, чтобы перехватывать корневой запрос)
+app.use(express.static(path.join(__dirname, '../frontend')));
+
 // Подключаем Swagger
 setupSwagger(app);
 
@@ -25,11 +29,12 @@ app.use('/api/notes', notesRoutes);
 app.use('/api/categories', categoriesRoutes);
 app.use('/api/settings', settingsRoutes);
 
+// Корневой маршрут (может быть перекрыт статикой, если index.html есть)
 app.get('/', (req, res) => {
     res.send('Simple Notepad API is running');
 });
 
-// 404 - обработка несуществующих маршрутов (без указания пути)
+// 404 - обработка несуществующих маршрутов (после всех)
 app.use((req, res) => {
     res.status(404).json({ error: 'Endpoint not found' });
 });
