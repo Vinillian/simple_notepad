@@ -1,7 +1,3 @@
-// ====================
-// ФУНКЦИИ ДЛЯ РАБОТЫ СО ССЫЛКАМИ
-// ====================
-
 import { state } from './main.js';
 import { updateNote } from './api.js';
 
@@ -86,10 +82,7 @@ async function updateNoteMetadata(noteId, metadata) {
         } catch (error) {
             console.error('Не удалось обновить метаданные на сервере', error);
         }
-        const { filterNotesByCategory } = await import('./notes.js');
-        filterNotesByCategory(state);
-        const { displayNotes } = await import('./ui.js');
-        displayNotes(state);
+        import('./ui.js').then(module => module.displayNotes(state));
     }
 }
 
@@ -98,14 +91,48 @@ export function renderLinkContent(note) {
     const domain = getDomainFromUrl(url);
     const faviconUrl = getFaviconUrl(url);
     const metadata = note.metadata || {};
-    let html = '<div class="link-item">';
-    html += '<div class="link-header">';
-    if (faviconUrl) html += `<img src="${faviconUrl}" alt="favicon" class="link-favicon" loading="lazy">`;
-    else html += '<i class="fas fa-link link-icon-placeholder"></i>';
-    html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="link-url">${getShortTitle(metadata.title || note.title || domain)}</a>`;
-    html += '</div>';
-    html += `<div class="link-domain">${domain}</div>`;
-    if (metadata.description) html += `<div class="link-description">${getShortDescription(metadata)}</div>`;
-    html += '</div>';
-    return html;
+
+    if (state.viewMode === 'list') {
+        // Компактный вид для списка
+        let html = '<div class="link-item">';
+        html += '<div class="link-header">';
+        if (faviconUrl) html += `<img src="${faviconUrl}" alt="favicon" class="link-favicon" loading="lazy">`;
+        else html += '<i class="fas fa-link link-icon-placeholder"></i>';
+        html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="link-url">${getShortTitle(metadata.title || note.title || domain)}</a>`;
+        html += '</div>';
+        html += `<div class="link-domain">${domain}</div>`;
+        if (metadata.description) html += `<div class="link-description">${getShortDescription(metadata)}</div>`;
+        html += '</div>';
+        return html;
+    } else {
+        // Режим превью – с изображением
+        let html = '<div class="link-preview">';
+        if (metadata.image) {
+            html += `<img src="${metadata.image}" class="link-preview-image" alt="Preview" loading="lazy" onerror="this.style.display='none'">`;
+        }
+        html += '<div class="link-preview-info">';
+        if (metadata.title) {
+            html += `<div class="link-preview-title">${escapeHTML(metadata.title)}</div>`;
+        }
+        if (metadata.description) {
+            html += `<div class="link-preview-description">${escapeHTML(metadata.description)}</div>`;
+        }
+        html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="link-preview-url">`;
+        if (faviconUrl) {
+            html += `<img src="${faviconUrl}" class="link-preview-favicon" alt="">`;
+        }
+        html += `<span>${escapeHTML(domain)}</span>`;
+        html += '</a></div></div>';
+        return html;
+    }
+}
+
+function escapeHTML(str) {
+    return str.replace(/[&<>"]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        if (m === '"') return '&quot;';
+        return m;
+    });
 }

@@ -24,15 +24,15 @@
             <button id="viewListBtn" class="view-btn" data-view="list" title="Список (Ctrl+1)">
                 <i class="fas fa-list"></i> Список
             </button>
-            <button id="viewGridBtn" class="view-btn" data-view="grid" title="Сетка (Ctrl+2)">
-                <i class="fas fa-th-large"></i> Сетка
+            <button id="viewPreviewBtn" class="view-btn" data-view="preview" title="Превью (Ctrl+2)">
+                <i class="fas fa-th-large"></i> Превью
             </button>
         </div>
     </header>
 
-    <!-- Основной контейнер -->
+    <!-- Основной контейнер (две колонки) -->
     <div class="app-container">
-        <!-- Боковая панель -->
+        <!-- Боковая панель: группы -->
         <aside class="sidebar">
             <div class="categories-section">
                 <h2><i class="fas fa-tags"></i> Категории</h2>
@@ -65,7 +65,7 @@
             </div>
         </aside>
         
-        <!-- Основная область -->
+        <!-- Основная область: заметки -->
         <main class="main-content">
             <header class="main-header">
                 <div class="header-left">
@@ -120,10 +120,10 @@
                 </div>
             </div>
             
-            <!-- Контейнер заметок -->
+            <!-- Контейнер для заметок -->
             <div class="notes-container list-view" id="notesContainer"></div>
             
-            <!-- Модальное окно категорий -->
+            <!-- Модальное окно для управления категориями -->
             <div id="categoryModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">

@@ -1,7 +1,3 @@
-// ====================
-// ОПЕРАЦИИ С ЗАМЕТКАМИ
-// ====================
-
 import { state } from './main.js';
 import { createNote, updateNote, deleteNoteById } from './api.js';
 import { isValidURL, getDomainFromUrl, fetchLinkMetadata } from './links.js';
@@ -15,24 +11,9 @@ export function filterNotesByCategory(state) {
 }
 
 export async function addNote(title, text, categoryId) {
-    if (!text || text.trim() === '') {
-        alert('Введите текст заметки!');
-        return;
-    }
-    if (!categoryId || categoryId === '') {
-        alert('Выберите категорию для заметки!');
-        return;
-    }
-    if (categoryId === 'all') {
-        alert('Нельзя создать заметку в категории "Все заметки"! Выберите другую категорию.');
-        return;
-    }
-    
-    const category = state.categories.find(c => c.id === categoryId);
-    if (!category) {
-        alert('Выбранная категория не существует!');
-        return;
-    }
+    if (!text?.trim()) { alert('Введите текст заметки!'); return; }
+    if (!categoryId || categoryId === '') { alert('Выберите категорию!'); return; }
+    if (categoryId === 'all') { alert('Нельзя создать заметку в категории "Все заметки"!'); return; }
 
     const trimmedText = text.trim();
     const isLink = isValidURL(trimmedText) && trimmedText.split('\n').length === 1;
@@ -112,10 +93,7 @@ export async function saveEditedNote(id, newTitle, newContent) {
     const note = state.allNotes.find(n => n.id === id);
     if (!note) return;
     
-    if (!newContent || newContent.trim() === '') {
-        alert('Текст заметки не может быть пустым!');
-        return;
-    }
+    if (!newContent?.trim()) { alert('Текст не может быть пустым!'); return; }
 
     const trimmed = newContent.trim();
     const wasLink = note.type === 'link';

@@ -1,7 +1,3 @@
-// ====================
-// ОТОБРАЖЕНИЕ ИНТЕРФЕЙСА
-// ====================
-
 import { state } from './main.js';
 import { setActiveCategory, updateCategoriesUI } from './categories.js';
 import { addNote, deleteNote, editNote, cancelEditNote, saveEditedNote, toggleNoteExpansion } from './notes.js';
@@ -12,9 +8,9 @@ import { updateSettings, deleteNoteById, deleteCategoryById } from './api.js';
 
 // Отображение заметок
 export function displayNotes(state) {
-    const notesContainer = document.getElementById('notesContainer');
+    const container = document.getElementById('notesContainer');
     if (state.notes.length === 0) {
-        notesContainer.innerHTML = '<div class="empty-message">Заметок пока нет. Добавьте первую!</div>';
+        container.innerHTML = '<div class="empty-message">Заметок пока нет. Добавьте первую!</div>';
         return;
     }
 
@@ -83,14 +79,21 @@ export function displayNotes(state) {
         `;
     });
 
-    notesContainer.innerHTML = html;
+    container.innerHTML = html;
 }
 
+// Обновление статистики
 export function updateStats(state) {
     document.getElementById('totalNotes').textContent = state.allNotes.length;
     document.getElementById('totalCategories').textContent = state.categories.filter(c => c.custom).length;
+    document.getElementById('currentGroupTitle').textContent =
+        state.activeCategory === 'all' ? 'Все заметки' : (state.categories.find(c => c.id === state.activeCategory)?.name || 'Все заметки');
+    document.getElementById('activeCategory').textContent =
+        state.activeCategory === 'all' ? 'Все' : (state.categories.find(c => c.id === state.activeCategory)?.name || 'Все');
+    document.getElementById('sortOrder').textContent = state.sortOrder === 'new' ? 'новые' : 'старые';
 }
 
+// Авторазмер textarea
 export function setupAutoResize() {
     const textarea = document.getElementById('noteInput');
     textarea.addEventListener('input', function () {
@@ -100,14 +103,18 @@ export function setupAutoResize() {
     autoResizeTextarea(textarea);
 }
 
+// Установка режима отображения
 export function setupViewMode(state) {
+    // Убираем активный класс у всех кнопок
     document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
+    const container = document.getElementById('notesContainer');
+    
     if (state.viewMode === 'list') {
         document.getElementById('viewListBtn').classList.add('active');
-        document.getElementById('notesContainer').className = 'notes-container list-view';
+        container.className = 'notes-container list-view';
     } else {
-        document.getElementById('viewGridBtn').classList.add('active');
-        document.getElementById('notesContainer').className = 'notes-container grid-view';
+        document.getElementById('viewPreviewBtn').classList.add('active');
+        container.className = 'notes-container preview-view';
     }
 }
 
@@ -115,10 +122,8 @@ export function setupSortOrder(state) {
     document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
     if (state.sortOrder === 'new') {
         document.getElementById('sortNewBtn').classList.add('active');
-        document.getElementById('sortOrder').textContent = 'новые';
     } else {
         document.getElementById('sortOldBtn').classList.add('active');
-        document.getElementById('sortOrder').textContent = 'старые';
     }
 }
 
@@ -142,7 +147,6 @@ function exportToJSON() {
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
-    console.log('Данные экспортированы в JSON');
 }
 
 // Импорт из JSON (заглушка)
@@ -187,6 +191,7 @@ async function clearAllData() {
     }
 }
 
+// Настройка обработчиков событий (исправлено: убраны await, добавлены .catch)
 export function setupEventListeners(state) {
     document.getElementById('saveBtn').addEventListener('click', () => {
         const title = document.getElementById('noteTitle').value;
@@ -236,32 +241,30 @@ export function setupEventListeners(state) {
         setActiveCategory('all');
     });
 
-    document.getElementById('sortNewBtn').addEventListener('click', async () => {
+    // Сортировка: убрали await, вызываем loadAllNotes независимо
+    document.getElementById('sortNewBtn').addEventListener('click', () => {
         state.sortOrder = 'new';
-        await updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode });
-        const { loadAllNotes } = await import('./main.js');
-        loadAllNotes();
+        updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
+        import('./main.js').then(module => module.loadAllNotes());
     });
 
-    document.getElementById('sortOldBtn').addEventListener('click', async () => {
+    document.getElementById('sortOldBtn').addEventListener('click', () => {
         state.sortOrder = 'old';
-        await updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode });
-        const { loadAllNotes } = await import('./main.js');
-        loadAllNotes();
+        updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
+        import('./main.js').then(module => module.loadAllNotes());
     });
 
+    // Переключение режимов: убрали await, переключение происходит мгновенно
     document.getElementById('viewListBtn').addEventListener('click', () => {
         state.viewMode = 'list';
         updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
-        state.notes.forEach(note => note.expanded = false);
         setupViewMode(state);
         displayNotes(state);
     });
 
-    document.getElementById('viewGridBtn').addEventListener('click', () => {
-        state.viewMode = 'grid';
+    document.getElementById('viewPreviewBtn').addEventListener('click', () => {
+        state.viewMode = 'preview';
         updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
-        state.notes.forEach(note => note.expanded = false);
         setupViewMode(state);
         displayNotes(state);
     });

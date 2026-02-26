@@ -2,7 +2,6 @@
 // ГЛАВНЫЙ МОДУЛЬ - СОСТОЯНИЕ ПРИЛОЖЕНИЯ
 // ====================
 
-// Состояние приложения
 export const state = {
     notes: [],           // отфильтрованные заметки для отображения
     allNotes: [],        // полный список всех заметок
@@ -10,7 +9,7 @@ export const state = {
     activeCategory: 'all',
     editingNoteId: null,
     sortOrder: 'new',
-    viewMode: 'list',
+    viewMode: 'list',     // 'list' или 'preview'
     linkPreviewCache: new Map(),
     fetchQueue: new Map(),
     isFetching: false
@@ -49,9 +48,8 @@ export async function initApp() {
 export async function loadAllNotes() {
     state.allNotes = await fetchNotes(state.sortOrder);
     
-    // Принудительно сворачиваем все заметки при загрузке
     state.allNotes.forEach(note => {
-        note.expanded = false;   // все заметки по умолчанию свернуты
+        if (note.expanded === undefined) note.expanded = false;
     });
     
     filterNotesByCategory(state);
@@ -59,5 +57,4 @@ export async function loadAllNotes() {
     displayNotes(state);
 }
 
-// Запуск
 document.addEventListener('DOMContentLoaded', initApp);
