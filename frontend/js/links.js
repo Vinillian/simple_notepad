@@ -1,10 +1,9 @@
 // ====================
-// Функции для работы со ссылками и их превью
+// ФУНКЦИИ ДЛЯ РАБОТЫ СО ССЫЛКАМИ
 // ====================
 
 import { state } from './main.js';
 import { updateNote } from './api.js';
-import { filterNotesByCategory } from './notes.js';
 
 export function isValidURL(string) {
     try { const url = new URL(string); return url.protocol === 'http:' || url.protocol === 'https:'; } catch (_) { return false; }
@@ -29,7 +28,6 @@ function getShortTitle(title) {
     return title.length <= 50 ? title : title.substring(0, 47) + '...';
 }
 
-// Очередь загрузки метаданных
 export async function fetchLinkMetadata(noteId, url) {
     if (state.linkPreviewCache.has(url)) {
         const metadata = state.linkPreviewCache.get(url);
@@ -88,11 +86,13 @@ async function updateNoteMetadata(noteId, metadata) {
         } catch (error) {
             console.error('Не удалось обновить метаданные на сервере', error);
         }
+        const { filterNotesByCategory } = await import('./notes.js');
         filterNotesByCategory(state);
+        const { displayNotes } = await import('./ui.js');
+        displayNotes(state);
     }
 }
 
-// Рендеринг содержимого ссылки (для списка/сетки)
 export function renderLinkContent(note) {
     const url = note.content.trim();
     const domain = getDomainFromUrl(url);

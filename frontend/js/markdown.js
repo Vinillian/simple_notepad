@@ -1,9 +1,8 @@
 // ====================
-// Markdown функции
+// MARKDOWN ФУНКЦИИ
 // ====================
 
-// Убедимся, что marked доступен глобально (из CDN)
-// Если нет, можно импортировать, но в нашем случае он уже есть.
+marked.setOptions({ breaks: true, gfm: true, headerIds: false });
 
 export function containsMarkdown(text) {
     const markdownPatterns = [
@@ -17,8 +16,6 @@ export function containsMarkdown(text) {
 export function renderMarkdown(text) {
     if (!containsMarkdown(text)) return text.replace(/\n/g, '<br>');
     try {
-        // marked.parse может возвращать строку или Promise в зависимости от версии
-        // Для синхронного использования вызываем как функцию
         return marked.parse(text);
     } catch (error) {
         console.error('Ошибка парсинга Markdown:', error);
@@ -26,7 +23,9 @@ export function renderMarkdown(text) {
     }
 }
 
-export function insertMarkdown(textarea, type) {
+export function insertMarkdown(button, type) {
+    const noteEdit = button.closest('.note-edit');
+    const textarea = noteEdit.querySelector('.edit-textarea');
     const start = textarea.selectionStart;
     const end = textarea.selectionEnd;
     const selectedText = textarea.value.substring(start, end);
@@ -41,7 +40,6 @@ export function insertMarkdown(textarea, type) {
         case 'Link': insertText = `[${selectedText || 'текст'}](https://ссылка)`; break;
         case 'List': insertText = `- ${selectedText || 'элемент списка'}\n`; break;
         case 'Quote': insertText = `> ${selectedText || 'цитата'}\n`; break;
-        default: return;
     }
     textarea.value = textarea.value.substring(0, start) + insertText + textarea.value.substring(end);
     textarea.selectionStart = textarea.selectionEnd = start + insertText.length - (selectedText ? 0 : insertText.length);
@@ -49,21 +47,21 @@ export function insertMarkdown(textarea, type) {
     textarea.dispatchEvent(new Event('input'));
 }
 
-export function createMarkdownToolbarHtml() {
-    return `
-        <div class="markdown-toolbar">
-            <button class="markdown-tool" data-md="H1" title="Заголовок 1">H1</button>
-            <button class="markdown-tool" data-md="H2" title="Заголовок 2">H2</button>
-            <button class="markdown-tool" data-md="Bold" title="Жирный текст">B</button>
-            <button class="markdown-tool" data-md="Italic" title="Курсив">I</button>
-            <button class="markdown-tool" data-md="Code" title="Встроенный код">\`</button>
-            <button class="markdown-tool" data-md="CodeBlock" title="Блок кода">\`\`\`</button>
-            <button class="markdown-tool" data-md="Link" title="Ссылка">Link</button>
-            <button class="markdown-tool" data-md="List" title="Маркированный список">-</button>
-            <button class="markdown-tool" data-md="Quote" title="Цитата">></button>
-            <button class="markdown-tool" data-md="Help" title="Помощь по Markdown">?</button>
-        </div>
-    `;
+export function toggleMarkdownPreview(button, noteId) {
+    const noteEdit = button.closest('.note-edit');
+    const textarea = noteEdit.querySelector('.edit-textarea');
+    let preview = noteEdit.querySelector('.markdown-preview');
+    if (!preview) {
+        preview = document.createElement('div');
+        preview.className = 'markdown-preview';
+        noteEdit.insertBefore(preview, button.closest('.edit-actions'));
+        const updatePreview = () => { preview.innerHTML = renderMarkdown(textarea.value); };
+        textarea.addEventListener('input', updatePreview);
+        updatePreview();
+    }
+    preview.classList.toggle('active');
+    button.classList.toggle('active');
+    button.textContent = preview.classList.contains('active') ? 'Редактировать' : 'Предпросмотр';
 }
 
 export function showMarkdownHelp() {
@@ -93,18 +91,22 @@ export function showMarkdownHelp() {
     help.classList.add('active');
 }
 
-export function toggleMarkdownPreview(button, textarea) {
-    const noteEdit = button.closest('.note-edit');
-    let preview = noteEdit.querySelector('.markdown-preview');
-    if (!preview) {
-        preview = document.createElement('div');
-        preview.className = 'markdown-preview';
-        noteEdit.insertBefore(preview, button.closest('.edit-actions'));
-        const updatePreview = () => { preview.innerHTML = renderMarkdown(textarea.value); };
-        textarea.addEventListener('input', updatePreview);
-        updatePreview();
-    }
-    preview.classList.toggle('active');
-    button.classList.toggle('active');
-    button.textContent = preview.classList.contains('active') ? 'Редактировать' : 'Предпросмотр';
+export function createMarkdownToolbarHtml() {
+    return `
+        <div class="markdown-toolbar">
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'H1')" title="Заголовок 1">H1</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'H2')" title="Заголовок 2">H2</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Bold')" title="Жирный текст">B</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Italic')" title="Курсив">I</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Code')" title="Встроенный код">\`</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'CodeBlock')" title="Блок кода">\`\`\`</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Link')" title="Ссылка">Link</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'List')" title="Маркированный список">-</button>
+            <button class="markdown-tool" onclick="insertMarkdown(this, 'Quote')" title="Цитата">></button>
+            <button class="markdown-tool" onclick="showMarkdownHelp()" title="Помощь по Markdown">?</button>
+        </div>
+    `;
 }
+
+window.insertMarkdown = insertMarkdown;
+window.showMarkdownHelp = showMarkdownHelp;

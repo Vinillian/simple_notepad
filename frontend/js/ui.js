@@ -1,187 +1,91 @@
 // ====================
-// Рендеринг интерфейса и обработчики событий
+// ОТОБРАЖЕНИЕ ИНТЕРФЕЙСА (исправленная логика сворачивания)
 // ====================
 
 import { state } from './main.js';
-import { setActiveCategory, createCategory, updateCategoriesUI } from './categories.js';
-import { addNote, deleteNote, editNote, cancelEditNote, saveEditedNote, toggleNoteExpansion, filterNotesByCategory } from './notes.js';
+import { setActiveCategory, updateCategoriesUI } from './categories.js';
+import { addNote, deleteNote, editNote, cancelEditNote, saveEditedNote, toggleNoteExpansion } from './notes.js';
 import { renderLinkContent } from './links.js';
-import { renderMarkdown, containsMarkdown, createMarkdownToolbarHtml, insertMarkdown, showMarkdownHelp, toggleMarkdownPreview } from './markdown.js';
+import { renderMarkdown, containsMarkdown, createMarkdownToolbarHtml } from './markdown.js';
 import { autoResizeTextarea, formatDate } from './utils.js';
-import { updateSettings } from './api.js';
+import { updateSettings, deleteNoteById, deleteCategoryById } from './api.js';
 
+// Отображение заметок (исправлено)
 export function displayNotes(state) {
-    const container = document.getElementById('notesContainer');
+    const notesContainer = document.getElementById('notesContainer');
     if (state.notes.length === 0) {
-        container.innerHTML = '<div class="empty-message">Заметок пока нет. Добавьте первую!</div>';
+        notesContainer.innerHTML = '<div class="empty-message">Заметок пока нет. Добавьте первую!</div>';
         return;
     }
 
-    container.innerHTML = '';
+    let html = '';
 
     state.notes.forEach(note => {
-        const noteEl = document.createElement('div');
-        noteEl.className = `note ${note.expanded ? 'expanded' : ''}`;
-        noteEl.dataset.id = note.id;
-
         const category = state.categories.find(c => c.id === note.category_id);
-        const categoryColor = category?.color || '#4CAF50';
-        const categoryName = category?.name || 'Без категории';
+        const hasManyLines = note.content.split('\n').length > 10; // больше 10 строк - длинная заметка
         const hasMarkdown = containsMarkdown(note.content);
         const isLink = note.type === 'link';
-        const lines = note.content.split('\n').length;
-        const isExpanded = note.expanded || lines <= 10;
-        const hasManyLines = lines > 10;
 
-        // Шапка
-        const header = document.createElement('div');
-        header.className = 'note-header';
+        // Класс collapsed добавляется только если заметка длинная и не развернута пользователем
+        const contentClass = `note-content ${isLink ? '' : 'markdown-content'} ${hasManyLines && !note.expanded ? 'collapsed' : ''}`;
 
-        const catDiv = document.createElement('div');
-        catDiv.className = 'note-category';
-        catDiv.style.backgroundColor = categoryColor;
-        catDiv.innerHTML = `
-            <span class="category-color" style="background-color: ${categoryColor}"></span>
-            ${categoryName}
-            ${hasMarkdown ? '<span class="markdown-badge" title="Содержит Markdown разметку"></span>' : ''}
-            ${isLink ? '<span style="margin-left: 5px;">🔗</span>' : ''}
+        html += `
+            <div class="note ${note.expanded ? 'expanded' : ''}" data-id="${note.id}" style="border-top-color: ${category?.color || '#4CAF50'}">
+                <div class="note-header">
+                    <div class="note-category" style="background-color: ${category?.color || '#4CAF50'}">
+                        <span class="category-color" style="background-color: ${category?.color || '#4CAF50'}"></span>
+                        ${category?.name || 'Без категории'}
+                        ${hasMarkdown ? '<span class="markdown-badge" title="Содержит Markdown разметку"></span>' : ''}
+                        ${isLink ? '<span style="margin-left: 5px;">🔗</span>' : ''}
+                    </div>
+                    <div class="note-actions">
+                        <button class="note-action-btn edit-btn" onclick="window.editNote(${note.id})" title="Редактировать">✏️</button>
+                        <button class="note-action-btn delete-btn" onclick="window.deleteNote(${note.id})" title="Удалить">🗑️</button>
+                        ${hasManyLines ? `
+                            <button class="note-action-btn expand-btn" onclick="window.toggleNoteExpansion(${note.id})" title="${note.expanded ? 'Свернуть' : 'Развернуть'}">
+                                ${note.expanded ? '⬆️' : '⬇️'}
+                            </button>
+                        ` : ''}
+                    </div>
+                </div>
+
+                <div class="note-title">${note.title}</div>
+
+                ${note.edit_mode ? `
+                    <div class="note-edit active">
+                        ${hasMarkdown ? createMarkdownToolbarHtml() : ''}
+                        <input type="text" class="edit-title" value="${note.title.replace(/"/g, '&quot;')}" placeholder="Заголовок">
+                        <textarea class="edit-textarea ${hasMarkdown ? 'markdown-editor' : ''}" data-id="${note.id}" data-has-markdown="${hasMarkdown}">${note.content}</textarea>
+                        <div class="edit-actions">
+                            ${hasMarkdown ? '<button type="button" class="markdown-preview-btn" onclick="window.toggleMarkdownPreview(this, ' + note.id + ')">Предпросмотр</button>' : ''}
+                            <button class="cancel-edit-btn" onclick="window.cancelEditNote(${note.id})">Отмена</button>
+                            <button class="save-edit-btn" onclick="window.saveEditedNote(${note.id}, this.parentElement.parentElement.querySelector('.edit-title').value, this.parentElement.parentElement.querySelector('.edit-textarea').value)">Сохранить</button>
+                        </div>
+                    </div>
+                ` : `
+                    <div class="${contentClass}">
+                        ${isLink ? renderLinkContent(note) : renderMarkdown(note.content)}
+                    </div>
+                    ${hasManyLines && !note.expanded ? `
+                        <button class="expand-btn" onclick="window.toggleNoteExpansion(${note.id})" style="background: none; border: none; color: #3498db; cursor: pointer; padding: 5px 0; text-align: left;">
+                            Показать полностью...
+                        </button>
+                    ` : ''}
+                `}
+
+                <div class="note-footer">
+                    <div class="note-date">${note.date || formatDate(note.updated_timestamp || note.created_timestamp)}</div>
+                    ${hasManyLines && note.expanded ? `
+                        <button onclick="window.toggleNoteExpansion(${note.id})" style="background: none; border: none; color: #95a5a6; cursor: pointer; font-size: 12px;">
+                            Свернуть
+                        </button>
+                    ` : ''}
+                </div>
+            </div>
         `;
-
-        const actions = document.createElement('div');
-        actions.className = 'note-actions';
-
-        const editBtn = document.createElement('button');
-        editBtn.className = 'note-action-btn edit-btn';
-        editBtn.title = 'Редактировать';
-        editBtn.innerHTML = '✏️';
-        editBtn.addEventListener('click', (e) => { e.stopPropagation(); editNote(note.id); });
-
-        const deleteBtn = document.createElement('button');
-        deleteBtn.className = 'note-action-btn delete-btn';
-        deleteBtn.title = 'Удалить';
-        deleteBtn.innerHTML = '🗑️';
-        deleteBtn.addEventListener('click', (e) => { e.stopPropagation(); deleteNote(note.id); });
-
-        actions.appendChild(editBtn);
-        actions.appendChild(deleteBtn);
-
-        if (isExpanded && hasManyLines) {
-            const collapseBtn = document.createElement('button');
-            collapseBtn.className = 'note-action-btn collapse-top-btn';
-            collapseBtn.title = 'Свернуть';
-            collapseBtn.innerHTML = '⬆️';
-            collapseBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleNoteExpansion(note.id); });
-            actions.appendChild(collapseBtn);
-        } else if (!isExpanded) {
-            const expandBtn = document.createElement('button');
-            expandBtn.className = 'note-action-btn expand-btn';
-            expandBtn.title = 'Развернуть';
-            expandBtn.innerHTML = '⬇️';
-            expandBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleNoteExpansion(note.id); });
-            actions.appendChild(expandBtn);
-        }
-
-        header.appendChild(catDiv);
-        header.appendChild(actions);
-
-        // Заголовок
-        const titleDiv = document.createElement('div');
-        titleDiv.className = 'note-title';
-        titleDiv.textContent = note.title;
-
-        // Контент
-        let contentDiv;
-        if (note.edit_mode) {
-            contentDiv = document.createElement('div');
-            contentDiv.className = 'note-edit active';
-            if (hasMarkdown) {
-                const toolbar = document.createElement('div');
-                toolbar.innerHTML = createMarkdownToolbarHtml();
-                toolbar.querySelectorAll('.markdown-tool').forEach(btn => {
-                    btn.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const textarea = contentDiv.querySelector('.edit-textarea');
-                        const type = btn.dataset.md;
-                        if (type === 'Help') showMarkdownHelp();
-                        else insertMarkdown(textarea, type);
-                    });
-                });
-                contentDiv.appendChild(toolbar);
-            }
-            const editTitle = document.createElement('input');
-            editTitle.type = 'text';
-            editTitle.className = 'edit-title';
-            editTitle.value = note.title;
-
-            const editTextarea = document.createElement('textarea');
-            editTextarea.className = `edit-textarea ${hasMarkdown ? 'markdown-editor' : ''}`;
-            editTextarea.value = note.content;
-            editTextarea.addEventListener('input', () => autoResizeTextarea(editTextarea));
-            setTimeout(() => autoResizeTextarea(editTextarea), 0);
-
-            const actionsDiv = document.createElement('div');
-            actionsDiv.className = 'edit-actions';
-
-            if (hasMarkdown) {
-                const previewBtn = document.createElement('button');
-                previewBtn.type = 'button';
-                previewBtn.className = 'markdown-preview-btn';
-                previewBtn.textContent = 'Предпросмотр';
-                previewBtn.addEventListener('click', () => toggleMarkdownPreview(previewBtn, editTextarea));
-                actionsDiv.appendChild(previewBtn);
-            }
-
-            const cancelBtn = document.createElement('button');
-            cancelBtn.className = 'cancel-edit-btn';
-            cancelBtn.textContent = 'Отмена';
-            cancelBtn.addEventListener('click', () => cancelEditNote(note.id));
-
-            const saveBtn = document.createElement('button');
-            saveBtn.className = 'save-edit-btn';
-            saveBtn.textContent = 'Сохранить';
-            saveBtn.addEventListener('click', () => {
-                saveEditedNote(note.id, editTitle.value, editTextarea.value);
-            });
-
-            actionsDiv.appendChild(cancelBtn);
-            actionsDiv.appendChild(saveBtn);
-
-            contentDiv.appendChild(editTitle);
-            contentDiv.appendChild(editTextarea);
-            contentDiv.appendChild(actionsDiv);
-        } else {
-            contentDiv = document.createElement('div');
-            contentDiv.className = `note-content ${isLink ? '' : 'markdown-content'} ${isExpanded ? '' : 'collapsed'}`;
-            if (isLink) {
-                contentDiv.innerHTML = renderLinkContent(note);
-            } else {
-                contentDiv.innerHTML = renderMarkdown(note.content);
-            }
-        }
-
-        // Футер
-        const footer = document.createElement('div');
-        footer.className = 'note-footer';
-        const dateSpan = document.createElement('span');
-        dateSpan.className = 'note-date';
-        dateSpan.textContent = note.date || formatDate(note.updated || note.created);
-        footer.appendChild(dateSpan);
-
-        if (isExpanded && hasManyLines && !isLink) {
-            const collapseFooterBtn = document.createElement('button');
-            collapseFooterBtn.textContent = 'Свернуть';
-            collapseFooterBtn.style.cssText = 'background: none; border: none; color: #95a5a6; cursor: pointer; font-size: 12px;';
-            collapseFooterBtn.addEventListener('click', () => toggleNoteExpansion(note.id));
-            footer.appendChild(collapseFooterBtn);
-        }
-
-        noteEl.appendChild(header);
-        noteEl.appendChild(titleDiv);
-        noteEl.appendChild(contentDiv);
-        noteEl.appendChild(footer);
-
-        container.appendChild(noteEl);
     });
+
+    notesContainer.innerHTML = html;
 }
 
 export function updateStats(state) {
@@ -199,111 +103,63 @@ export function setupAutoResize() {
 }
 
 export function setupViewMode(state) {
-    document.getElementById('viewListBtn').classList.toggle('active', state.viewMode === 'list');
-    document.getElementById('viewGridBtn').classList.toggle('active', state.viewMode === 'grid');
-    document.getElementById('notesContainer').className = `notes-container ${state.viewMode}-view`;
+    document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
+    if (state.viewMode === 'list') {
+        document.getElementById('viewListBtn').classList.add('active');
+        document.getElementById('notesContainer').className = 'notes-container list-view';
+    } else {
+        document.getElementById('viewGridBtn').classList.add('active');
+        document.getElementById('notesContainer').className = 'notes-container grid-view';
+    }
 }
 
 export function setupSortOrder(state) {
-    document.getElementById('sortNewBtn').classList.toggle('active', state.sortOrder === 'new');
-    document.getElementById('sortOldBtn').classList.toggle('active', state.sortOrder === 'old');
-    document.getElementById('sortOrder').textContent = state.sortOrder === 'new' ? 'новые' : 'старые';
+    document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
+    if (state.sortOrder === 'new') {
+        document.getElementById('sortNewBtn').classList.add('active');
+        document.getElementById('sortOrder').textContent = 'новые';
+    } else {
+        document.getElementById('sortOldBtn').classList.add('active');
+        document.getElementById('sortOrder').textContent = 'старые';
+    }
 }
 
-export function setupEventListeners(state) {
-    // Сохранение заметки
-    document.getElementById('saveBtn').addEventListener('click', () => {
-        const title = document.getElementById('noteTitle').value;
-        const text = document.getElementById('noteInput').value;
-        const categoryId = document.getElementById('noteCategory').value;
-        addNote(title, text, categoryId);
-    });
+// Экспорт в JSON
+function exportToJSON() {
+    if (state.allNotes.length === 0 && state.categories.filter(c => c.custom).length === 0) {
+        alert('Нет данных для экспорта');
+        return;
+    }
+    const exportData = {
+        notes: state.allNotes,
+        categories: state.categories.filter(c => c.custom),
+        settings: { sortOrder: state.sortOrder, viewMode: state.viewMode },
+        exportDate: new Date().toISOString(),
+        version: '1.0'
+    };
+    const dataStr = JSON.stringify(exportData, null, 2);
+    const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+    const exportFileDefaultName = `notebook_export_${new Date().toISOString().slice(0, 10)}.json`;
+    const linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement.click();
+    console.log('Данные экспортированы в JSON');
+}
 
-    document.getElementById('noteInput').addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            const title = document.getElementById('noteTitle').value;
-            const categoryId = document.getElementById('noteCategory').value;
-            addNote(title, e.target.value, categoryId);
-        }
-    });
+// Импорт из JSON (заглушка)
+function importFromJSON(event) {
+    alert('Импорт из JSON пока не поддерживается в серверной версии. Используйте скрипт миграции.');
+    event.target.value = '';
+}
 
-    // Категории
-    document.getElementById('addCategoryBtn').addEventListener('click', () => {
-        document.getElementById('categoryModal').classList.add('active');
-    });
-    document.getElementById('createCategoryBtn').addEventListener('click', () => {
-        const name = document.getElementById('newCategoryName').value;
-        const color = document.getElementById('newCategoryColor').value;
-        createCategory(name, color);
-    });
-    document.getElementById('editCategoriesBtn').addEventListener('click', () => {
-        document.getElementById('categoryModal').classList.add('active');
-    });
-    document.querySelector('.close-modal').addEventListener('click', () => {
-        document.getElementById('categoryModal').classList.remove('active');
-    });
-    document.getElementById('categoryModal').addEventListener('click', (e) => {
-        if (e.target === document.getElementById('categoryModal')) {
-            document.getElementById('categoryModal').classList.remove('active');
-        }
-    });
-
-    // Фильтр по категории
-    document.getElementById('categoryFilter').addEventListener('change', (e) => {
-        setActiveCategory(e.target.value);
-    });
-    document.getElementById('clearFilterBtn').addEventListener('click', () => {
-        setActiveCategory('all');
-    });
-
-    // Сортировка
-    document.getElementById('sortNewBtn').addEventListener('click', async () => {
-        state.sortOrder = 'new';
-        await updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode });
-        const { loadAllNotes } = await import('./main.js');
-        loadAllNotes();
-    });
-    document.getElementById('sortOldBtn').addEventListener('click', async () => {
-        state.sortOrder = 'old';
-        await updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode });
-        const { loadAllNotes } = await import('./main.js');
-        loadAllNotes();
-    });
-
-    // Режимы отображения
-    document.getElementById('viewListBtn').addEventListener('click', async () => {
-        state.viewMode = 'list';
-        await updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode });
-        setupViewMode(state);
-        displayNotes(state);
-    });
-    document.getElementById('viewGridBtn').addEventListener('click', async () => {
-        state.viewMode = 'grid';
-        await updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode });
-        setupViewMode(state);
-        displayNotes(state);
-    });
-
-    // Экспорт/импорт (заглушки, нужно реализовать позже)
-    document.getElementById('exportBtn').addEventListener('click', () => {
-        alert('Экспорт будет реализован позже');
-    });
-    document.getElementById('importBtn').addEventListener('click', () => {
-        document.getElementById('importFile').click();
-    });
-    document.getElementById('importFile').addEventListener('change', (e) => {
-        alert('Импорт будет реализован позже');
-        e.target.value = '';
-    });
-
-    // Очистка всех данных
-    document.getElementById('clearAllBtn').addEventListener('click', async () => {
-        if (state.allNotes.length === 0 && state.categories.filter(c => c.custom).length === 0) {
-            alert('Нет данных для очистки');
-            return;
-        }
-        if (!confirm('Удалить ВСЕ заметки и пользовательские категории?')) return;
+// Очистка всех данных
+async function clearAllData() {
+    if (state.allNotes.length === 0 && state.categories.filter(c => c.custom).length === 0) {
+        alert('Нет данных для очистки');
+        return;
+    }
+    if (confirm('Удалить ВСЕ заметки и пользовательские категории? Это действие нельзя отменить.')) {
         try {
             for (const note of state.allNotes) {
                 await deleteNoteById(note.id);
@@ -311,6 +167,7 @@ export function setupEventListeners(state) {
             for (const cat of state.categories.filter(c => c.custom)) {
                 await deleteCategoryById(cat.id);
             }
+            
             state.allNotes = [];
             state.categories = [
                 { id: 'all', name: 'Все заметки', color: '#7f8c8d', custom: false },
@@ -320,12 +177,114 @@ export function setupEventListeners(state) {
             ];
             state.activeCategory = 'all';
             state.editingNoteId = null;
+
+            const { filterNotesByCategory } = await import('./notes.js');
             filterNotesByCategory(state);
             displayNotes(state);
             await updateCategoriesUI(state);
             alert('Все данные очищены');
         } catch (error) {
-            alert('Ошибка при очистке');
+            alert('Ошибка при очистке данных');
+        }
+    }
+}
+
+export function setupEventListeners(state) {
+    document.getElementById('saveBtn').addEventListener('click', () => {
+        const title = document.getElementById('noteTitle').value;
+        const text = document.getElementById('noteInput').value;
+        const categoryId = document.getElementById('noteCategory').value;
+        addNote(title, text, categoryId);
+    });
+
+    document.getElementById('noteInput').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            const title = document.getElementById('noteTitle').value;
+            const categoryId = document.getElementById('noteCategory').value;
+            addNote(title, this.value, categoryId);
         }
     });
+
+    document.getElementById('addCategoryBtn').addEventListener('click', () => {
+        document.getElementById('categoryModal').classList.add('active');
+    });
+
+    document.getElementById('createCategoryBtn').addEventListener('click', () => {
+        const name = document.getElementById('newCategoryName').value;
+        const color = document.getElementById('newCategoryColor').value;
+        import('./categories.js').then(module => module.createCategory(name, color));
+    });
+
+    document.getElementById('editCategoriesBtn').addEventListener('click', () => {
+        document.getElementById('categoryModal').classList.add('active');
+    });
+
+    document.querySelector('.close-modal').addEventListener('click', () => {
+        document.getElementById('categoryModal').classList.remove('active');
+    });
+
+    document.getElementById('categoryModal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('categoryModal')) {
+            document.getElementById('categoryModal').classList.remove('active');
+        }
+    });
+
+    document.getElementById('categoryFilter').addEventListener('change', function () {
+        setActiveCategory(this.value);
+    });
+
+    document.getElementById('clearFilterBtn').addEventListener('click', () => {
+        setActiveCategory('all');
+    });
+
+    document.getElementById('sortNewBtn').addEventListener('click', async () => {
+        state.sortOrder = 'new';
+        await updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode });
+        const { loadAllNotes } = await import('./main.js');
+        loadAllNotes();
+    });
+
+    document.getElementById('sortOldBtn').addEventListener('click', async () => {
+        state.sortOrder = 'old';
+        await updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode });
+        const { loadAllNotes } = await import('./main.js');
+        loadAllNotes();
+    });
+
+    document.getElementById('viewListBtn').addEventListener('click', () => {
+        state.viewMode = 'list';
+        updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
+        // При смене режима сворачиваем все заметки
+        state.notes.forEach(note => note.expanded = false);
+        setupViewMode(state);
+        displayNotes(state);
+    });
+
+    document.getElementById('viewGridBtn').addEventListener('click', () => {
+        state.viewMode = 'grid';
+        updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
+        state.notes.forEach(note => note.expanded = false);
+        setupViewMode(state);
+        displayNotes(state);
+    });
+
+    document.getElementById('exportBtn').addEventListener('click', exportToJSON);
+    
+    document.getElementById('importBtn').addEventListener('click', () => {
+        document.getElementById('importFile').click();
+    });
+    
+    document.getElementById('importFile').addEventListener('change', importFromJSON);
+    document.getElementById('clearAllBtn').addEventListener('click', clearAllData);
 }
+
+// Делаем функции глобальными для onclick обработчиков
+window.editNote = editNote;
+window.deleteNote = deleteNote;
+window.toggleNoteExpansion = toggleNoteExpansion;
+window.cancelEditNote = cancelEditNote;
+window.saveEditedNote = saveEditedNote;
+window.toggleMarkdownPreview = (button, noteId) => {
+    import('./markdown.js').then(module => module.toggleMarkdownPreview(button, noteId));
+};

@@ -1,10 +1,9 @@
 // ====================
-// Управление категориями
+// УПРАВЛЕНИЕ КАТЕГОРИЯМИ
 // ====================
 
 import { state } from './main.js';
-import { createCategory as apiCreateCategory, deleteCategoryById } from './api.js';
-import { filterNotesByCategory } from './notes.js';
+import { createCategory as apiCreateCategory, deleteCategoryById, updateNote } from './api.js';
 
 export async function updateCategoriesUI(state) {
     const categoriesList = document.getElementById('categoriesList');
@@ -22,20 +21,19 @@ export async function updateCategoriesUI(state) {
         let count = notesByCategory[category.id] || 0;
         if (category.id === 'all') count = totalNotesCount;
 
-        const item = document.createElement('div');
-        item.className = `category-item ${state.activeCategory === category.id ? 'active' : ''}`;
-        item.innerHTML = `
+        const categoryItem = document.createElement('div');
+        categoryItem.className = `category-item ${state.activeCategory === category.id ? 'active' : ''}`;
+        categoryItem.innerHTML = `
             <div class="category-name">
                 <span class="category-color" style="background-color: ${category.color}"></span>
                 ${category.name}
             </div>
             <span class="category-count">${count}</span>
         `;
-        item.addEventListener('click', () => setActiveCategory(category.id));
-        categoriesList.appendChild(item);
+        categoryItem.addEventListener('click', () => setActiveCategory(category.id));
+        categoriesList.appendChild(categoryItem);
     });
 
-    // Менеджер категорий (модальное окно)
     state.categories.forEach(category => {
         const managerItem = document.createElement('div');
         managerItem.className = 'category-manager-item';
@@ -104,14 +102,21 @@ export async function setActiveCategory(categoryId) {
     document.getElementById('activeCategory').textContent =
         categoryId === 'all' ? 'Все' : state.categories.find(c => c.id === categoryId)?.name || 'Все';
     document.getElementById('categoryFilter').value = categoryId;
+
+    const { filterNotesByCategory } = await import('./notes.js');
     filterNotesByCategory(state);
+    
     const { displayNotes } = await import('./ui.js');
     displayNotes(state);
-    updateCategoriesUI(state);
+    
+    await updateCategoriesUI(state);
 }
 
 export async function createCategory(name, color) {
-    if (!name?.trim()) { alert('Введите название категории!'); return; }
+    if (!name || name.trim() === '') {
+        alert('Введите название категории!');
+        return;
+    }
     if (state.categories.some(cat => cat.name.toLowerCase() === name.toLowerCase())) {
         alert('Категория с таким названием уже существует!');
         return;
@@ -134,32 +139,42 @@ export async function createCategory(name, color) {
 
 export async function deleteCategory(categoryId) {
     const category = state.categories.find(c => c.id === categoryId);
-    if (!category || category.id === 'all') {
-        alert('Эту категорию нельзя удалить!');
+    if (!category) return;
+    if (category.id === 'all') {
+        alert('Категорию "Все заметки" нельзя удалить!');
         return;
     }
+    
     const notesInCategory = state.allNotes.filter(note => note.category_id === categoryId);
+    
     if (notesInCategory.length > 0) {
         const action = prompt(
             `В категории "${category.name}" есть ${notesInCategory.length} заметок.\n\n` +
-            '1 - Удалить категорию и все заметки\n2 - Переместить заметки в другую категорию\n3 - Отмена'
+            'Выберите действие:\n1 - Удалить категорию и все заметки в ней\n2 - Переместить заметки в другую категорию\n3 - Отмена'
         );
+        
         if (action === '1') {
             try {
                 for (const note of notesInCategory) {
                     await deleteNoteById(note.id);
                 }
                 await deleteCategoryById(categoryId);
-                state.categories = state.categories.filter(c => c.id !== categoryId);
-                state.allNotes = state.allNotes.filter(n => n.category_id !== categoryId);
-                if (state.activeCategory === categoryId) state.activeCategory = 'all';
+                state.categories = state.categories.filter(cat => cat.id !== categoryId);
+                state.allNotes = state.allNotes.filter(note => note.category_id !== categoryId);
+                if (state.activeCategory === categoryId) {
+                    state.activeCategory = 'all';
+                }
+                
+                const { filterNotesByCategory } = await import('./notes.js');
                 filterNotesByCategory(state);
+                
                 const { displayNotes } = await import('./ui.js');
                 displayNotes(state);
+                
                 await updateCategoriesUI(state);
-                alert(`Категория "${category.name}" и все заметки удалены.`);
+                alert(`Категория "${category.name}" и все заметки в ней удалены.`);
             } catch (error) {
-                alert('Ошибка при удалении');
+                alert('Ошибка при удалении категории и заметок');
             }
         } else if (action === '2') {
             showMoveNotesDialog(categoryId, category.name, notesInCategory.length);
@@ -168,19 +183,110 @@ export async function deleteCategory(categoryId) {
         if (confirm(`Удалить категорию "${category.name}"?`)) {
             try {
                 await deleteCategoryById(categoryId);
-                state.categories = state.categories.filter(c => c.id !== categoryId);
-                if (state.activeCategory === categoryId) state.activeCategory = 'all';
+                state.categories = state.categories.filter(cat => cat.id !== categoryId);
+                if (state.activeCategory === categoryId) {
+                    state.activeCategory = 'all';
+                }
+                
+                const { filterNotesByCategory } = await import('./notes.js');
                 filterNotesByCategory(state);
+                
                 const { displayNotes } = await import('./ui.js');
                 displayNotes(state);
+                
                 await updateCategoriesUI(state);
+                alert(`Категория "${category.name}" удалена.`);
             } catch (error) {
-                alert('Ошибка при удалении');
+                alert('Ошибка при удалении категории');
             }
         }
     }
 }
 
 function showMoveNotesDialog(oldCategoryId, categoryName, notesCount) {
-    // ... (реализация аналогична старой, но с использованием state)
+    const moveDialog = document.createElement('div');
+    moveDialog.className = 'modal active';
+    moveDialog.id = 'moveDialog';
+    moveDialog.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Переместить заметки</h2>
+                <button class="close-modal" onclick="document.getElementById('moveDialog').remove()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>В категории "${categoryName}" находится ${notesCount} заметок.</p>
+                <p>Выберите новую категорию для этих заметок:</p>
+                <select id="targetCategorySelect" class="category-select" style="width: 100%; margin: 15px 0;">
+                    <option value="">Выберите категорию</option>
+                </select>
+                <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
+                    <button onclick="document.getElementById('moveDialog').remove()" class="cancel-edit-btn">Отмена</button>
+                    <button onclick="moveNotesToCategory('${oldCategoryId}')" class="save-edit-btn">Переместить</button>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(moveDialog);
+    
+    const select = document.getElementById('targetCategorySelect');
+    state.categories.forEach(cat => {
+        if (cat.id !== oldCategoryId && cat.id !== 'all') {
+            const option = document.createElement('option');
+            option.value = cat.id;
+            option.textContent = cat.name;
+            option.style.color = cat.color;
+            select.appendChild(option);
+        }
+    });
 }
+
+window.moveNotesToCategory = async function(oldCategoryId) {
+    const select = document.getElementById('targetCategorySelect');
+    const newCategoryId = select.value;
+    if (!newCategoryId) {
+        alert('Выберите категорию для перемещения заметок!');
+        return;
+    }
+    if (newCategoryId === 'all') {
+        alert('Нельзя переместить заметки в категорию "Все заметки"!');
+        return;
+    }
+    
+    const newCategory = state.categories.find(c => c.id === newCategoryId);
+    if (!newCategory) {
+        alert('Выбранная категория не найдена!');
+        return;
+    }
+    
+    try {
+        const notesToMove = state.allNotes.filter(note => note.category_id === oldCategoryId);
+        for (const note of notesToMove) {
+            note.category_id = newCategoryId;
+            await updateNote(note.id, note);
+        }
+        
+        await deleteCategoryById(oldCategoryId);
+        state.categories = state.categories.filter(cat => cat.id !== oldCategoryId);
+        state.allNotes.forEach(note => {
+            if (note.category_id === oldCategoryId) note.category_id = newCategoryId;
+        });
+        
+        if (state.activeCategory === oldCategoryId) {
+            state.activeCategory = 'all';
+        }
+        
+        document.getElementById('moveDialog')?.remove();
+        document.getElementById('categoryModal').classList.remove('active');
+        
+        const { filterNotesByCategory } = await import('./notes.js');
+        filterNotesByCategory(state);
+        
+        const { displayNotes } = await import('./ui.js');
+        displayNotes(state);
+        
+        await updateCategoriesUI(state);
+        alert(`Заметки перемещены в категорию "${newCategory.name}". Категория удалена.`);
+    } catch (error) {
+        alert('Ошибка при перемещении заметок');
+    }
+};

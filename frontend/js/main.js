@@ -1,10 +1,11 @@
 // ====================
-// Главный модуль – точка входа
+// ГЛАВНЫЙ МОДУЛЬ - СОСТОЯНИЕ ПРИЛОЖЕНИЯ
 // ====================
 
+// Состояние приложения
 export const state = {
-    notes: [],
-    allNotes: [],
+    notes: [],           // отфильтрованные заметки для отображения
+    allNotes: [],        // полный список всех заметок
     categories: [],
     activeCategory: 'all',
     editingNoteId: null,
@@ -15,8 +16,8 @@ export const state = {
     isFetching: false
 };
 
-import { fetchSettings, fetchCategories, fetchNotes, deleteNoteById, deleteCategoryById } from './api.js';
-import { updateCategoriesUI, setActiveCategory } from './categories.js';
+import { fetchSettings, fetchCategories, fetchNotes } from './api.js';
+import { updateCategoriesUI } from './categories.js';
 import { filterNotesByCategory } from './notes.js';
 import { displayNotes, setupEventListeners, setupAutoResize, setupViewMode, setupSortOrder, updateStats } from './ui.js';
 
@@ -28,7 +29,7 @@ export async function initApp() {
         state.viewMode = settings.view_mode || 'list';
 
         state.categories = await fetchCategories();
-        updateCategoriesUI(state);
+        await updateCategoriesUI(state);
 
         await loadAllNotes();
 
@@ -37,6 +38,8 @@ export async function initApp() {
         setupViewMode(state);
         setupSortOrder(state);
         updateStats(state);
+
+        console.log('Приложение готово!');
     } catch (error) {
         console.error('Ошибка инициализации:', error);
         alert('Не удалось загрузить данные. Проверьте, запущен ли сервер (backend).');
@@ -45,8 +48,14 @@ export async function initApp() {
 
 export async function loadAllNotes() {
     state.allNotes = await fetchNotes(state.sortOrder);
+    
+    // Принудительно сворачиваем все заметки при загрузке
+    state.allNotes.forEach(note => {
+        note.expanded = false;   // все заметки по умолчанию свернуты
+    });
+    
     filterNotesByCategory(state);
-    updateCategoriesUI(state);
+    await updateCategoriesUI(state);
     displayNotes(state);
 }
 

@@ -1,31 +1,38 @@
 // ====================
-// Операции с заметками (создание, удаление, редактирование)
+// ОПЕРАЦИИ С ЗАМЕТКАМИ
 // ====================
 
 import { state } from './main.js';
 import { createNote, updateNote, deleteNoteById } from './api.js';
 import { isValidURL, getDomainFromUrl, fetchLinkMetadata } from './links.js';
-import { containsMarkdown } from './markdown.js';
 
-// Функция фильтрации заметок по активной категории и сортировки
 export function filterNotesByCategory(state) {
-    let filtered = state.allNotes;
-    if (state.activeCategory !== 'all') {
-        filtered = filtered.filter(note => note.category_id === state.activeCategory);
+    if (state.activeCategory === 'all') {
+        state.notes = [...state.allNotes];
+    } else {
+        state.notes = state.allNotes.filter(note => note.category_id === state.activeCategory);
     }
-    // Сортировка
-    filtered.sort((a, b) => {
-        const dateA = new Date(a.updated || a.created || 0);
-        const dateB = new Date(b.updated || b.created || 0);
-        return state.sortOrder === 'new' ? dateB - dateA : dateA - dateB;
-    });
-    state.notes = filtered;
 }
 
 export async function addNote(title, text, categoryId) {
-    if (!text?.trim()) { alert('Введите текст заметки!'); return; }
-    if (!categoryId) { alert('Выберите категорию!'); return; }
-    if (categoryId === 'all') { alert('Нельзя создать заметку в категории "Все заметки"!'); return; }
+    if (!text || text.trim() === '') {
+        alert('Введите текст заметки!');
+        return;
+    }
+    if (!categoryId || categoryId === '') {
+        alert('Выберите категорию для заметки!');
+        return;
+    }
+    if (categoryId === 'all') {
+        alert('Нельзя создать заметку в категории "Все заметки"! Выберите другую категорию.');
+        return;
+    }
+    
+    const category = state.categories.find(c => c.id === categoryId);
+    if (!category) {
+        alert('Выбранная категория не существует!');
+        return;
+    }
 
     const trimmedText = text.trim();
     const isLink = isValidURL(trimmedText) && trimmedText.split('\n').length === 1;
@@ -46,7 +53,9 @@ export async function addNote(title, text, categoryId) {
         title: finalTitle,
         content: trimmedText,
         category_id: categoryId,
-        date: new Date().toLocaleString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
+        date: new Date().toLocaleString('ru-RU', {
+            day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
+        }),
         created_timestamp: now,
         updated_timestamp: now,
         expanded: false,
@@ -59,14 +68,17 @@ export async function addNote(title, text, categoryId) {
         await createNote(newNote);
         state.allNotes.unshift(newNote);
         filterNotesByCategory(state);
+        
         const { displayNotes } = await import('./ui.js');
         displayNotes(state);
+        
         const { updateCategoriesUI } = await import('./categories.js');
-        updateCategoriesUI(state);
+        await updateCategoriesUI(state);
 
         document.getElementById('noteTitle').value = '';
         document.getElementById('noteInput').value = '';
         document.getElementById('charCount').textContent = '0';
+        
         const { autoResizeTextarea } = await import('./utils.js');
         autoResizeTextarea(document.getElementById('noteInput'));
 
@@ -79,24 +91,31 @@ export async function addNote(title, text, categoryId) {
 }
 
 export async function deleteNote(id) {
-    if (!confirm('Удалить эту заметку?')) return;
-    try {
-        await deleteNoteById(id);
-        state.allNotes = state.allNotes.filter(note => note.id !== id);
-        filterNotesByCategory(state);
-        const { displayNotes } = await import('./ui.js');
-        displayNotes(state);
-        const { updateCategoriesUI } = await import('./categories.js');
-        updateCategoriesUI(state);
-    } catch (error) {
-        alert('Ошибка при удалении заметки');
+    if (confirm('Удалить эту заметку?')) {
+        try {
+            await deleteNoteById(id);
+            state.allNotes = state.allNotes.filter(note => note.id !== id);
+            filterNotesByCategory(state);
+            
+            const { displayNotes } = await import('./ui.js');
+            displayNotes(state);
+            
+            const { updateCategoriesUI } = await import('./categories.js');
+            await updateCategoriesUI(state);
+        } catch (error) {
+            alert('Ошибка при удалении заметки');
+        }
     }
 }
 
 export async function saveEditedNote(id, newTitle, newContent) {
     const note = state.allNotes.find(n => n.id === id);
     if (!note) return;
-    if (!newContent?.trim()) { alert('Текст не может быть пустым!'); return; }
+    
+    if (!newContent || newContent.trim() === '') {
+        alert('Текст заметки не может быть пустым!');
+        return;
+    }
 
     const trimmed = newContent.trim();
     const wasLink = note.type === 'link';
@@ -114,7 +133,9 @@ export async function saveEditedNote(id, newTitle, newContent) {
 
     note.title = finalTitle;
     note.content = trimmed;
-    note.date = new Date().toLocaleString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    note.date = new Date().toLocaleString('ru-RU', {
+        day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
     note.updated_timestamp = Date.now();
     note.edit_mode = false;
     state.editingNoteId = null;
@@ -130,10 +151,12 @@ export async function saveEditedNote(id, newTitle, newContent) {
     try {
         await updateNote(id, note);
         filterNotesByCategory(state);
+        
         const { displayNotes } = await import('./ui.js');
         displayNotes(state);
+        
         const { updateCategoriesUI } = await import('./categories.js');
-        updateCategoriesUI(state);
+        await updateCategoriesUI(state);
 
         if (isNowLink && (!wasLink || note.content !== trimmed)) {
             setTimeout(() => fetchLinkMetadata(note.id, note.content), 500);
@@ -146,9 +169,11 @@ export async function saveEditedNote(id, newTitle, newContent) {
 export function editNote(id) {
     const note = state.allNotes.find(n => n.id === id);
     if (!note) return;
+
     state.allNotes.forEach(n => n.edit_mode = false);
     note.edit_mode = true;
     state.editingNoteId = id;
+    
     filterNotesByCategory(state);
     import('./ui.js').then(module => module.displayNotes(state));
 }
@@ -156,8 +181,10 @@ export function editNote(id) {
 export function cancelEditNote(id) {
     const note = state.allNotes.find(n => n.id === id);
     if (!note) return;
+    
     note.edit_mode = false;
     state.editingNoteId = null;
+    
     filterNotesByCategory(state);
     import('./ui.js').then(module => module.displayNotes(state));
 }
@@ -165,6 +192,7 @@ export function cancelEditNote(id) {
 export function toggleNoteExpansion(id) {
     const note = state.allNotes.find(n => n.id === id);
     if (!note) return;
+    
     note.expanded = !note.expanded;
     filterNotesByCategory(state);
     import('./ui.js').then(module => module.displayNotes(state));
