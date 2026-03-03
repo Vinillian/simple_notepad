@@ -1,4 +1,4 @@
-import { state } from './main.js';
+import { state, saveToLocalStorage } from './main.js';
 import { createNote, updateNote, deleteNoteById } from './api.js';
 import { isValidURL, getDomainFromUrl, fetchLinkMetadata } from './links.js';
 
@@ -56,6 +56,9 @@ export async function addNote(title, text, categoryId) {
         const { updateCategoriesUI } = await import('./categories.js');
         await updateCategoriesUI(state);
 
+        // сохраняем локально после успеха
+        saveToLocalStorage();
+
         document.getElementById('noteTitle').value = '';
         document.getElementById('noteInput').value = '';
         document.getElementById('charCount').textContent = '0';
@@ -67,25 +70,45 @@ export async function addNote(title, text, categoryId) {
             setTimeout(() => fetchLinkMetadata(newNote.id, trimmedText), 500);
         }
     } catch (error) {
-        alert('Ошибка при сохранении заметки');
+        // Ошибка сети – сохраняем локально с пометкой offline
+        console.warn('Не удалось сохранить на сервер, сохраняем локально', error);
+        newNote.offline = true; // флаг для будущей синхронизации
+        state.allNotes.unshift(newNote);
+        filterNotesByCategory(state);
+        const { displayNotes } = await import('./ui.js');
+        displayNotes(state);
+        const { updateCategoriesUI } = await import('./categories.js');
+        await updateCategoriesUI(state);
+        saveToLocalStorage();
+        alert('Заметка сохранена локально. При восстановлении соединения она будет синхронизирована.');
     }
 }
 
 export async function deleteNote(id) {
-    if (confirm('Удалить эту заметку?')) {
-        try {
-            await deleteNoteById(id);
-            state.allNotes = state.allNotes.filter(note => note.id !== id);
-            filterNotesByCategory(state);
-            
-            const { displayNotes } = await import('./ui.js');
-            displayNotes(state);
-            
-            const { updateCategoriesUI } = await import('./categories.js');
-            await updateCategoriesUI(state);
-        } catch (error) {
-            alert('Ошибка при удалении заметки');
-        }
+    if (!confirm('Удалить эту заметку?')) return;
+    try {
+        await deleteNoteById(id);
+        state.allNotes = state.allNotes.filter(note => note.id !== id);
+        filterNotesByCategory(state);
+        
+        const { displayNotes } = await import('./ui.js');
+        displayNotes(state);
+        
+        const { updateCategoriesUI } = await import('./categories.js');
+        await updateCategoriesUI(state);
+
+        saveToLocalStorage();
+    } catch (error) {
+        // Ошибка сети – удаляем локально, но отмечаем, что на сервере осталось
+        console.warn('Не удалось удалить на сервере, удаляем локально', error);
+        state.allNotes = state.allNotes.filter(note => note.id !== id);
+        filterNotesByCategory(state);
+        const { displayNotes } = await import('./ui.js');
+        displayNotes(state);
+        const { updateCategoriesUI } = await import('./categories.js');
+        await updateCategoriesUI(state);
+        saveToLocalStorage();
+        alert('Заметка удалена локально. Для полной синхронизации потребуется повторное удаление при соединении с сервером.');
     }
 }
 
@@ -136,11 +159,21 @@ export async function saveEditedNote(id, newTitle, newContent) {
         const { updateCategoriesUI } = await import('./categories.js');
         await updateCategoriesUI(state);
 
+        saveToLocalStorage();
+
         if (isNowLink && (!wasLink || note.content !== trimmed)) {
             setTimeout(() => fetchLinkMetadata(note.id, note.content), 500);
         }
     } catch (error) {
-        alert('Ошибка при сохранении изменений');
+        console.warn('Не удалось обновить на сервере, сохраняем локально', error);
+        note.offline = true; // помечаем как изменённое офлайн
+        filterNotesByCategory(state);
+        const { displayNotes } = await import('./ui.js');
+        displayNotes(state);
+        const { updateCategoriesUI } = await import('./categories.js');
+        await updateCategoriesUI(state);
+        saveToLocalStorage();
+        alert('Изменения сохранены локально. При восстановлении соединения они будут синхронизированы.');
     }
 }
 

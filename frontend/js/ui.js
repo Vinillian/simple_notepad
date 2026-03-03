@@ -4,7 +4,7 @@ import { addNote, deleteNote, editNote, cancelEditNote, saveEditedNote, toggleNo
 import { renderLinkContent } from './links.js';
 import { renderMarkdown, containsMarkdown, createMarkdownToolbarHtml } from './markdown.js';
 import { autoResizeTextarea, formatDate } from './utils.js';
-import { updateSettings, deleteNoteById, deleteCategoryById } from './api.js';
+import { updateSettings, deleteNoteById, deleteCategoryById, createNote, createCategory } from './api.js';
 
 // Отображение заметок
 export function displayNotes(state) {
@@ -105,7 +105,6 @@ export function setupAutoResize() {
 
 // Установка режима отображения
 export function setupViewMode(state) {
-    // Убираем активный класс у всех кнопок
     document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
     const container = document.getElementById('notesContainer');
     
@@ -149,14 +148,137 @@ function exportToJSON() {
     linkElement.click();
 }
 
-// Импорт из JSON (заглушка)
-function importFromJSON(event) {
-    alert('Импорт из JSON пока не поддерживается в серверной версии. Используйте скрипт миграции.');
-    event.target.value = '';
+// ----- Умный импорт -----
+function showImportDialog() {
+    const modal = document.createElement('div');
+    modal.className = 'modal active';
+    modal.id = 'importModal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Импорт данных</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Выберите режим импорта:</p>
+                <div style="display: flex; gap: 10px; justify-content: center; margin: 20px 0;">
+                    <button id="importReplaceBtn" class="btn-danger">Заменить все</button>
+                    <button id="importMergeBtn" class="btn-primary">Добавить новые</button>
+                    <button id="importCancelBtn" class="btn-secondary">Отмена</button>
+                </div>
+                <input type="file" id="importFileInput" accept=".json" style="display: none;">
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    const close = () => modal.remove();
+    modal.querySelector('.close-modal').addEventListener('click', close);
+    modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+
+    modal.querySelector('#importReplaceBtn').addEventListener('click', () => {
+        close();
+        selectImportFile('replace');
+    });
+    modal.querySelector('#importMergeBtn').addEventListener('click', () => {
+        close();
+        selectImportFile('merge');
+    });
+    modal.querySelector('#importCancelBtn').addEventListener('click', close);
+}
+
+function selectImportFile(mode) {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.onchange = (e) => processImport(e.target.files[0], mode);
+    input.click();
+}
+
+async function processImport(file, mode) {
+    if (!file) return;
+    try {
+        const text = await file.text();
+        const importedData = JSON.parse(text);
+
+        // Валидация структуры
+        if (!importedData.notes || !Array.isArray(importedData.notes) ||
+            !importedData.categories || !Array.isArray(importedData.categories)) {
+            alert('Неверный формат файла. Ожидается объект с массивами notes и categories.');
+            return;
+        }
+
+        if (mode === 'replace') {
+            if (confirm('Вы уверены? Все текущие данные будут удалены и заменены данными из файла.')) {
+                await clearAllData(); // используем существующую функцию
+                await importNotesAndCategories(importedData.notes, importedData.categories);
+                alert('Данные успешно заменены.');
+            }
+        } else if (mode === 'merge') {
+            const addedNotes = await mergeNotes(importedData.notes);
+            const addedCategories = await mergeCategories(importedData.categories);
+            alert(`Добавлено ${addedNotes} заметок и ${addedCategories} категорий.`);
+        }
+    } catch (error) {
+        console.error('Ошибка импорта:', error);
+        alert('Ошибка при обработке файла.');
+    }
+}
+
+async function importNotesAndCategories(notes, categories) {
+    for (const cat of categories) {
+        if (cat.id !== 'all') {
+            try { await createCategory(cat); } catch (e) { console.warn(e); }
+        }
+    }
+    for (const note of notes) {
+        try { await createNote(note); } catch (e) { console.warn(e); }
+    }
+    // перезагружаем состояние
+    const { loadAllNotes } = await import('./main.js');
+    await loadAllNotes();
+}
+
+async function mergeNotes(importedNotes) {
+    let added = 0;
+    const existingIds = new Set(state.allNotes.map(n => n.id));
+    for (const note of importedNotes) {
+        if (!existingIds.has(note.id)) {
+            try {
+                await createNote(note);
+                added++;
+            } catch (error) {
+                console.warn('Не удалось добавить заметку:', note.id, error);
+            }
+        }
+    }
+    const { loadAllNotes } = await import('./main.js');
+    await loadAllNotes();
+    return added;
+}
+
+async function mergeCategories(importedCategories) {
+    let added = 0;
+    const existingIds = new Set(state.categories.map(c => c.id));
+    for (const cat of importedCategories) {
+        if (cat.id === 'all') continue;
+        if (!existingIds.has(cat.id)) {
+            try {
+                await createCategory(cat);
+                added++;
+            } catch (error) {
+                console.warn('Не удалось добавить категорию:', cat.id, error);
+            }
+        }
+    }
+    // после добавления категорий обновляем UI
+    const { updateCategoriesUI } = await import('./categories.js');
+    await updateCategoriesUI(state);
+    return added;
 }
 
 // Очистка всех данных
-async function clearAllData() {
+export async function clearAllData() {
     if (state.allNotes.length === 0 && state.categories.filter(c => c.custom).length === 0) {
         alert('Нет данных для очистки');
         return;
@@ -191,7 +313,7 @@ async function clearAllData() {
     }
 }
 
-// Настройка обработчиков событий (исправлено: убраны await, добавлены .catch)
+// Настройка обработчиков событий
 export function setupEventListeners(state) {
     document.getElementById('saveBtn').addEventListener('click', () => {
         const title = document.getElementById('noteTitle').value;
@@ -241,20 +363,18 @@ export function setupEventListeners(state) {
         setActiveCategory('all');
     });
 
-    // Сортировка: убрали await, вызываем loadAllNotes независимо
-    document.getElementById('sortNewBtn').addEventListener('click', () => {
+    document.getElementById('sortNewBtn').addEventListener('click', async () => {
         state.sortOrder = 'new';
         updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
         import('./main.js').then(module => module.loadAllNotes());
     });
 
-    document.getElementById('sortOldBtn').addEventListener('click', () => {
+    document.getElementById('sortOldBtn').addEventListener('click', async () => {
         state.sortOrder = 'old';
         updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
         import('./main.js').then(module => module.loadAllNotes());
     });
 
-    // Переключение режимов: убрали await, переключение происходит мгновенно
     document.getElementById('viewListBtn').addEventListener('click', () => {
         state.viewMode = 'list';
         updateSettings({ sort_order: state.sortOrder, view_mode: state.viewMode }).catch(console.error);
@@ -271,11 +391,8 @@ export function setupEventListeners(state) {
 
     document.getElementById('exportBtn').addEventListener('click', exportToJSON);
     
-    document.getElementById('importBtn').addEventListener('click', () => {
-        document.getElementById('importFile').click();
-    });
+    document.getElementById('importBtn').addEventListener('click', showImportDialog);
     
-    document.getElementById('importFile').addEventListener('change', importFromJSON);
     document.getElementById('clearAllBtn').addEventListener('click', clearAllData);
 }
 
