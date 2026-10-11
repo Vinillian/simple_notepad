@@ -33,10 +33,10 @@ export function displayNotes(state) {
                         ${isLink ? '<span style="margin-left: 5px;">🔗</span>' : ''}
                     </div>
                     <div class="note-actions">
-                        <button class="note-action-btn edit-btn" onclick="window.editNote(${note.id})" title="Редактировать">✏️</button>
-                        <button class="note-action-btn delete-btn" onclick="window.deleteNote(${note.id})" title="Удалить">🗑️</button>
+                        <button class="note-action-btn edit-btn" onclick="window.editNote('${note.id}')" title="Редактировать">✏️</button>
+                        <button class="note-action-btn delete-btn" onclick="window.deleteNote('${note.id}')" title="Удалить">🗑️</button>
                         ${hasManyLines ? `
-                            <button class="note-action-btn expand-btn" onclick="window.toggleNoteExpansion(${note.id})" title="${note.expanded ? 'Свернуть' : 'Развернуть'}">
+                            <button class="note-action-btn expand-btn" onclick="window.toggleNoteExpansion('${note.id}')" title="${note.expanded ? 'Свернуть' : 'Развернуть'}">
                                 ${note.expanded ? '⬆️' : '⬇️'}
                             </button>
                         ` : ''}
@@ -51,9 +51,9 @@ export function displayNotes(state) {
                         <input type="text" class="edit-title" value="${note.title.replace(/"/g, '&quot;')}" placeholder="Заголовок">
                         <textarea class="edit-textarea ${hasMarkdown ? 'markdown-editor' : ''}" data-id="${note.id}" data-has-markdown="${hasMarkdown}">${note.content}</textarea>
                         <div class="edit-actions">
-                            ${hasMarkdown ? '<button type="button" class="markdown-preview-btn" onclick="window.toggleMarkdownPreview(this, ' + note.id + ')">Предпросмотр</button>' : ''}
-                            <button class="cancel-edit-btn" onclick="window.cancelEditNote(${note.id})">Отмена</button>
-                            <button class="save-edit-btn" onclick="window.saveEditedNote(${note.id}, this.parentElement.parentElement.querySelector('.edit-title').value, this.parentElement.parentElement.querySelector('.edit-textarea').value)">Сохранить</button>
+                            ${hasMarkdown ? '<button type="button" class="markdown-preview-btn" onclick="window.toggleMarkdownPreview(this, \'' + note.id + '\')">Предпросмотр</button>' : ''}
+                            <button class="cancel-edit-btn" onclick="window.cancelEditNote('${note.id}')">Отмена</button>
+                            <button class="save-edit-btn" onclick="window.saveEditedNote('${note.id}', this.parentElement.parentElement.querySelector('.edit-title').value, this.parentElement.parentElement.querySelector('.edit-textarea').value)">Сохранить</button>
                         </div>
                     </div>
                 ` : `
@@ -61,7 +61,7 @@ export function displayNotes(state) {
                         ${isLink ? renderLinkContent(note) : renderMarkdown(note.content)}
                     </div>
                     ${hasManyLines && !note.expanded ? `
-                        <button class="expand-btn" onclick="window.toggleNoteExpansion(${note.id})" style="background: none; border: none; color: #3498db; cursor: pointer; padding: 5px 0; text-align: left;">
+                        <button class="expand-btn" onclick="window.toggleNoteExpansion('${note.id}')" style="background: none; border: none; color: #3498db; cursor: pointer; padding: 5px 0; text-align: left;">
                             Показать полностью...
                         </button>
                     ` : ''}
@@ -70,7 +70,7 @@ export function displayNotes(state) {
                 <div class="note-footer">
                     <div class="note-date">${note.date || formatDate(note.updated_timestamp || note.created_timestamp)}</div>
                     ${hasManyLines && note.expanded ? `
-                        <button onclick="window.toggleNoteExpansion(${note.id})" style="background: none; border: none; color: #95a5a6; cursor: pointer; font-size: 12px;">
+                        <button onclick="window.toggleNoteExpansion('${note.id}')" style="background: none; border: none; color: #95a5a6; cursor: pointer; font-size: 12px;">
                             Свернуть
                         </button>
                     ` : ''}

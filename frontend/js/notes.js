@@ -88,7 +88,7 @@ export async function deleteNote(id) {
     if (!confirm('Удалить эту заметку?')) return;
     try {
         await deleteNoteById(id);
-        state.allNotes = state.allNotes.filter(note => note.id !== id);
+        state.allNotes = state.allNotes.filter(note => String(note.id) !== String(id));
         filterNotesByCategory(state);
         
         const { displayNotes } = await import('./ui.js');
@@ -101,7 +101,7 @@ export async function deleteNote(id) {
     } catch (error) {
         // Ошибка сети – удаляем локально, но отмечаем, что на сервере осталось
         console.warn('Не удалось удалить на сервере, удаляем локально', error);
-        state.allNotes = state.allNotes.filter(note => note.id !== id);
+        state.allNotes = state.allNotes.filter(note => String(note.id) !== String(id));
         filterNotesByCategory(state);
         const { displayNotes } = await import('./ui.js');
         displayNotes(state);
@@ -113,7 +113,7 @@ export async function deleteNote(id) {
 }
 
 export async function saveEditedNote(id, newTitle, newContent) {
-    const note = state.allNotes.find(n => n.id === id);
+    const note = state.allNotes.find(n => String(n.id) === String(id));
     if (!note) return;
     
     if (!newContent?.trim()) { alert('Текст не может быть пустым!'); return; }
@@ -178,7 +178,7 @@ export async function saveEditedNote(id, newTitle, newContent) {
 }
 
 export function editNote(id) {
-    const note = state.allNotes.find(n => n.id === id);
+    const note = state.allNotes.find(n => String(n.id) === String(id));
     if (!note) return;
 
     state.allNotes.forEach(n => n.edit_mode = false);
@@ -190,7 +190,7 @@ export function editNote(id) {
 }
 
 export function cancelEditNote(id) {
-    const note = state.allNotes.find(n => n.id === id);
+    const note = state.allNotes.find(n => String(n.id) === String(id));
     if (!note) return;
     
     note.edit_mode = false;
@@ -201,7 +201,7 @@ export function cancelEditNote(id) {
 }
 
 export function toggleNoteExpansion(id) {
-    const note = state.allNotes.find(n => n.id === id);
+    const note = state.allNotes.find(n => String(n.id) === String(id));
     if (!note) return;
     
     note.expanded = !note.expanded;

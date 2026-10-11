@@ -71,7 +71,7 @@ async function processNextInQueue() {
 }
 
 async function updateNoteMetadata(noteId, metadata) {
-    const note = state.allNotes.find(n => n.id === noteId);
+    const note = state.allNotes.find(n => String(n.id) === String(noteId));
     if (note) {
         note.metadata = metadata;
         if (note.type === 'link' && !note.title && metadata.title) {
