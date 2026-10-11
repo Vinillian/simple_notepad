@@ -16,6 +16,8 @@ export async function apiRequest(endpoint, method = 'GET', body = null) {
             const errorText = await response.text();
             throw new Error(`HTTP error ${response.status}: ${errorText}`);
         }
+        // DELETE answers 204 No Content, so there is no JSON body to parse.
+        if (response.status === 204) return null;
         return await response.json();
     } catch (error) {
         console.error(`API request failed: ${endpoint}`, error);
