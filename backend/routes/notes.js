@@ -28,6 +28,17 @@ const { validateNote } = require('../middleware/validation');
  *           type: string
  *           enum: [new, old]
  *         description: 'Сортировка: new - сначала новые, old - сначала старые'
+ *       - in: query
+ *         name: updated_after
+ *         schema:
+ *           type: number
+ *         description: 'Only notes changed after this time (milliseconds since the epoch). Deleted notes (tombstones, deleted = 1) are included, so that other devices can apply the deletions.'
+ *       - in: query
+ *         name: include_deleted
+ *         schema:
+ *           type: string
+ *           enum: ['1', 'true']
+ *         description: 'Also list deleted notes (tombstones). By default only live notes are returned.'
  *     responses:
  *       200:
  *         description: Список заметок
@@ -148,6 +159,7 @@ router.put('/:id', validateNote, noteController.updateNote);
  * /api/notes/{id}:
  *   delete:
  *     summary: Удалить заметку
+ *     description: 'The note is not removed but marked as deleted (deleted = 1, updated_timestamp = time of the deletion) and kept for 30 days, so that the deletion can be synced. A later PUT or POST of the note brings it back.'
  *     tags: [Notes]
  *     parameters:
  *       - in: path

@@ -65,11 +65,26 @@ db.serialize(() => {
             edit_mode BOOLEAN DEFAULT 0,
             type TEXT DEFAULT 'note',
             metadata TEXT,
+            deleted INTEGER NOT NULL DEFAULT 0,
             FOREIGN KEY (category_id) REFERENCES categories(id)
         )
     `, (err) => {
         if (err) console.error('Ошибка создания таблицы notes:', err.message);
         else console.log('Таблица notes готова');
+    });
+
+    // Older databases have no `deleted` column (tombstones for deleted notes).
+    db.all(`PRAGMA table_info(notes)`, (err, columns) => {
+        if (err) {
+            console.error('Ошибка чтения структуры таблицы notes:', err.message);
+            return;
+        }
+        if (!columns.some(column => column.name === 'deleted')) {
+            db.run(`ALTER TABLE notes ADD COLUMN deleted INTEGER NOT NULL DEFAULT 0`, (alterErr) => {
+                if (alterErr) console.error('Ошибка добавления колонки notes.deleted:', alterErr.message);
+                else console.log('Колонка notes.deleted добавлена');
+            });
+        }
     });
 
     db.run(`
