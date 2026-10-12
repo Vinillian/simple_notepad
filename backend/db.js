@@ -45,7 +45,9 @@ db.serialize(() => {
             id TEXT PRIMARY KEY,
             name TEXT NOT NULL,
             color TEXT NOT NULL,
-            custom BOOLEAN DEFAULT 1
+            custom BOOLEAN DEFAULT 1,
+            updated_timestamp INTEGER NOT NULL DEFAULT 0,
+            deleted INTEGER NOT NULL DEFAULT 0
         )
     `, (err) => {
         if (err) console.error('Ошибка создания таблицы categories:', err.message);
@@ -85,6 +87,24 @@ db.serialize(() => {
                 else console.log('Колонка notes.deleted добавлена');
             });
         }
+    });
+
+    // Older databases have no `updated_timestamp` and `deleted` columns in categories
+    // (tombstones for deleted categories).
+    db.all(`PRAGMA table_info(categories)`, (err, columns) => {
+        if (err) {
+            console.error('Ошибка чтения структуры таблицы categories:', err.message);
+            return;
+        }
+        const addColumn = (name, definition) => {
+            if (columns.some(column => column.name === name)) return;
+            db.run(`ALTER TABLE categories ADD COLUMN ${name} ${definition}`, (alterErr) => {
+                if (alterErr) console.error(`Ошибка добавления колонки categories.${name}:`, alterErr.message);
+                else console.log(`Колонка categories.${name} добавлена`);
+            });
+        };
+        addColumn('updated_timestamp', 'INTEGER NOT NULL DEFAULT 0');
+        addColumn('deleted', 'INTEGER NOT NULL DEFAULT 0');
     });
 
     db.run(`
