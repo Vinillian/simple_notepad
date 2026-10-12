@@ -118,9 +118,10 @@ simple_notepad/
 | POST  | `/api/notes`        | Создать новую заметку           |
 | PUT   | `/api/notes/:id`    | Обновить заметку                |
 | DELETE| `/api/notes/:id`    | Удалить заметку                 |
-| GET   | `/api/categories`   | Получить все категории          |
+| GET   | `/api/categories`   | Получить все категории (`?include_deleted=1` и `?updated_after=<мс>` добавляют удалённые) |
 | POST  | `/api/categories`   | Создать категорию               |
-| DELETE| `/api/categories/:id`| Удалить категорию               |
+| PUT   | `/api/categories/:id`| Обновить категорию (возвращает удалённую) |
+| DELETE| `/api/categories/:id`| Удалить категорию (остаётся как «надгробие» 30 дней) |
 | GET   | `/api/settings`     | Получить настройки               |
 | PUT   | `/api/settings`     | Обновить настройки               |
 
