@@ -845,3 +845,138 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #999;
 }
+
+/* ===== Окно категорий: создание и управление ===== */
+.category-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.manage-categories-btn {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #ddd;
+    color: #7f8c8d;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.manage-categories-btn:hover {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+/* Создание и управление показываются отдельно */
+#categoryModal[data-mode="create"] .categories-manager {
+    display: none;
+}
+
+#categoryModal[data-mode="manage"] #newCategorySection {
+    display: none;
+}
+
+.new-category-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.new-category-input input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.new-category-input input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.new-category-input input[type="color"],
+.category-manager-color {
+    width: 38px;
+    height: 36px;
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.btn-primary {
+    padding: 9px 16px;
+    background: #3498db;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.categories-manager {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.category-manager-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 4px;
+    border-bottom: 1px solid #eee;
+}
+
+.category-manager-item:last-child {
+    border-bottom: none;
+}
+
+.category-manager-name {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: transparent;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.category-manager-name:hover {
+    border-color: #ddd;
+}
+
+.category-manager-name:focus {
+    outline: none;
+    border-color: #3498db;
+    background: white;
+}
+
+.delete-category-btn {
+    padding: 6px 10px;
+    background: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-category-btn:hover {
+    background: #fdecea;
+}

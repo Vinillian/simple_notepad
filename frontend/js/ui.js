@@ -332,7 +332,11 @@ export function setupEventListeners(state) {
     });
 
     document.getElementById('addCategoryBtn').addEventListener('click', () => {
-        document.getElementById('categoryModal').classList.add('active');
+        import('./categories.js').then(module => module.openCategoryModal('create'));
+    });
+
+    document.getElementById('manageCategoriesBtn').addEventListener('click', () => {
+        import('./categories.js').then(module => module.openCategoryModal('manage'));
     });
 
     document.getElementById('createCategoryBtn').addEventListener('click', () => {
@@ -341,11 +345,15 @@ export function setupEventListeners(state) {
         import('./categories.js').then(module => module.createCategory(name, color));
     });
 
-    document.getElementById('editCategoriesBtn').addEventListener('click', () => {
-        document.getElementById('categoryModal').classList.add('active');
+    document.getElementById('newCategoryName').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') document.getElementById('createCategoryBtn').click();
     });
 
-    document.querySelector('.close-modal').addEventListener('click', () => {
+    document.getElementById('editCategoriesBtn').addEventListener('click', () => {
+        import('./categories.js').then(module => module.openCategoryModal('manage'));
+    });
+
+    document.querySelector('#categoryModal .close-modal').addEventListener('click', () => {
         document.getElementById('categoryModal').classList.remove('active');
     });
 

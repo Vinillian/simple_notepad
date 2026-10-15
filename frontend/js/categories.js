@@ -3,13 +3,11 @@
 // ====================
 
 import { state } from './main.js';
-import { createCategory as apiCreateCategory, deleteCategoryById, updateNote } from './api.js';
+import { createCategory as apiCreateCategory, updateCategoryById, deleteCategoryById, updateNote } from './api.js';
 
 export async function updateCategoriesUI(state) {
     const categoriesList = document.getElementById('categoriesList');
-    const categoriesManager = document.getElementById('categoriesManager');
     categoriesList.innerHTML = '';
-    categoriesManager.innerHTML = '';
 
     const notesByCategory = {};
     state.allNotes.forEach(note => {
@@ -26,7 +24,7 @@ export async function updateCategoriesUI(state) {
         categoryItem.innerHTML = `
             <div class="category-name">
                 <span class="category-color" style="background-color: ${category.color}"></span>
-                ${category.name}
+                ${escapeHtml(category.name)}
             </div>
             <span class="category-count">${count}</span>
         `;
@@ -34,38 +32,7 @@ export async function updateCategoriesUI(state) {
         categoriesList.appendChild(categoryItem);
     });
 
-    state.categories.forEach(category => {
-        const managerItem = document.createElement('div');
-        managerItem.className = 'category-manager-item';
-        let deleteButton = '';
-        let categoryType = '';
-
-        if (category.id === 'all') {
-            categoryType = '<span style="font-size: 12px; color: #95a5a6; margin-left: 10px;">(системная)</span>';
-            deleteButton = '<span style="color: #95a5a6; font-size: 12px;">не удаляемая</span>';
-        } else {
-            categoryType = '<span style="font-size: 12px; color: #666; margin-left: 10px;">(пользовательская)</span>';
-            deleteButton = `<button class="delete-category-btn" data-id="${category.id}" title="Удалить категорию">🗑️</button>`;
-        }
-
-        managerItem.innerHTML = `
-            <div style="display: flex; align-items: center;">
-                <div class="category-manager-color" style="background-color: ${category.color}"></div>
-                <span class="category-manager-name">${category.name}</span>
-                ${categoryType}
-            </div>
-            <div class="category-manager-actions">
-                ${deleteButton}
-            </div>
-        `;
-
-        if (category.id !== 'all') {
-            const delBtn = managerItem.querySelector('.delete-category-btn');
-            delBtn.addEventListener('click', () => deleteCategory(category.id));
-        }
-
-        categoriesManager.appendChild(managerItem);
-    });
+    renderCategoriesManager(state);
 
     updateCategorySelects(state);
 }
@@ -74,6 +41,8 @@ function updateCategorySelects(state) {
     const noteCategorySelect = document.getElementById('noteCategory');
     const categoryFilterSelect = document.getElementById('categoryFilter');
 
+    const previousNoteCategory = noteCategorySelect.value;
+    const previousFilter = categoryFilterSelect.value;
     noteCategorySelect.innerHTML = '<option value="">Выберите категорию</option>';
     categoryFilterSelect.innerHTML = '<option value="all">Все категории</option>';
 
@@ -93,8 +62,131 @@ function updateCategorySelects(state) {
         }
     });
 
+    // Keep what was chosen before the lists were rebuilt (for example after a
+    // rename); otherwise fall back to the first category.
+    const exists = (id) => id && id !== 'all' && state.categories.some(c => c.id === id);
     const firstCategory = state.categories.find(c => c.id !== 'all');
-    if (firstCategory) noteCategorySelect.value = firstCategory.id;
+    if (exists(previousNoteCategory)) noteCategorySelect.value = previousNoteCategory;
+    else if (firstCategory) noteCategorySelect.value = firstCategory.id;
+    if (previousFilter === 'all' || exists(previousFilter)) categoryFilterSelect.value = previousFilter;
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// <input type="color"> only accepts #rrggbb.
+function toColorInputValue(color) {
+    return /^#[0-9a-f]{6}$/i.test(color || '') ? color : '#888888';
+}
+
+export function openCategoryModal(mode) {
+    const modal = document.getElementById('categoryModal');
+    modal.dataset.mode = mode;
+    document.getElementById('categoryModalTitle').textContent =
+        mode === 'create' ? 'Новая категория' : 'Управление категориями';
+    modal.classList.add('active');
+    if (mode === 'create') document.getElementById('newCategoryName').focus();
+}
+
+export function closeCategoryModal() {
+    document.getElementById('categoryModal').classList.remove('active');
+}
+
+// One row per category: colour, name (renamed on Enter or when the field
+// loses focus) and a delete button. The system category "Все заметки" is not
+// listed, it cannot be changed.
+function renderCategoriesManager(state) {
+    const manager = document.getElementById('categoriesManager');
+    manager.innerHTML = '';
+
+    const userCategories = state.categories.filter(c => c.id !== 'all');
+    if (userCategories.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'empty-message';
+        empty.textContent = 'Категорий пока нет';
+        manager.appendChild(empty);
+        return;
+    }
+
+    userCategories.forEach(category => {
+        const row = document.createElement('div');
+        row.className = 'category-manager-item';
+
+        const colorInput = document.createElement('input');
+        colorInput.type = 'color';
+        colorInput.className = 'category-manager-color';
+        colorInput.value = toColorInputValue(category.color);
+        colorInput.title = 'Изменить цвет';
+        colorInput.addEventListener('change', () => {
+            saveCategoryChanges(category.id, { color: colorInput.value });
+        });
+
+        const nameInput = document.createElement('input');
+        nameInput.type = 'text';
+        nameInput.className = 'category-manager-name';
+        nameInput.value = category.name;
+        nameInput.title = 'Переименовать (Enter или клик в другое место)';
+        nameInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') nameInput.blur();
+            if (e.key === 'Escape') {
+                nameInput.value = category.name;
+                nameInput.blur();
+            }
+        });
+        nameInput.addEventListener('change', async () => {
+            const saved = await saveCategoryChanges(category.id, { name: nameInput.value });
+            if (!saved) nameInput.value = category.name;
+        });
+
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-category-btn';
+        deleteButton.title = 'Удалить категорию';
+        deleteButton.textContent = '🗑️';
+        deleteButton.addEventListener('click', () => deleteCategory(category.id));
+
+        row.append(colorInput, nameInput, deleteButton);
+        manager.appendChild(row);
+    });
+}
+
+// Renames and/or recolours a category on the server and in the page.
+// Returns true when the category now has the requested values.
+export async function saveCategoryChanges(categoryId, changes) {
+    const category = state.categories.find(c => c.id === categoryId);
+    if (!category) return false;
+
+    const name = (changes.name !== undefined ? changes.name : category.name).trim();
+    const color = changes.color !== undefined ? changes.color : category.color;
+
+    if (!name) {
+        alert('Введите название категории!');
+        return false;
+    }
+    if (state.categories.some(c => c.id !== categoryId && c.name.toLowerCase() === name.toLowerCase())) {
+        alert('Категория с таким названием уже существует!');
+        return false;
+    }
+    if (name === category.name && color === category.color) return true;
+
+    try {
+        await updateCategoryById(categoryId, { name, color, custom: category.custom });
+    } catch (error) {
+        alert('Ошибка при сохранении категории');
+        return false;
+    }
+    category.name = name;
+    category.color = color;
+
+    if (state.activeCategory === categoryId) {
+        document.getElementById('activeCategory').textContent = name;
+    }
+    const { displayNotes } = await import('./ui.js');
+    displayNotes(state);
+    await updateCategoriesUI(state);
+    return true;
 }
 
 export async function setActiveCategory(categoryId) {
@@ -132,6 +224,7 @@ export async function createCategory(name, color) {
         state.categories.push(newCategory);
         await updateCategoriesUI(state);
         document.getElementById('newCategoryName').value = '';
+        closeCategoryModal();
     } catch (error) {
         alert('Ошибка при создании категории');
     }
