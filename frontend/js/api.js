@@ -51,8 +51,11 @@ export async function fetchCategories() {
 export async function createCategory(catData) {
     return apiRequest('/categories', 'POST', catData);
 }
+export async function updateCategoryById(id, catData) {
+    return apiRequest(`/categories/${encodeURIComponent(id)}`, 'PUT', catData);
+}
 export async function deleteCategoryById(id) {
-    return apiRequest(`/categories/${id}`, 'DELETE');
+    return apiRequest(`/categories/${encodeURIComponent(id)}`, 'DELETE');
 }
 
 // ----- Настройки -----

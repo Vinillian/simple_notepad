@@ -41,6 +41,9 @@
                     <button id="addCategoryBtn" class="add-category-btn">
                         <span>+</span> Новая категория
                     </button>
+                    <button id="manageCategoriesBtn" class="manage-categories-btn">
+                        <i class="fas fa-cog"></i> Управление категориями
+                    </button>
                 </div>
             </div>
             
@@ -124,14 +127,14 @@
             <div class="notes-container list-view" id="notesContainer"></div>
             
             <!-- Модальное окно для управления категориями -->
-            <div id="categoryModal" class="modal">
+            <div id="categoryModal" class="modal" data-mode="manage">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2><i class="fas fa-tags"></i> Управление категориями</h2>
+                        <h2><i class="fas fa-tags"></i> <span id="categoryModalTitle">Управление категориями</span></h2>
                         <button class="close-modal"><i class="fas fa-times"></i></button>
                     </div>
                     <div class="modal-body">
-                        <div class="new-category-input">
+                        <div class="new-category-input" id="newCategorySection">
                             <input type="text" id="newCategoryName" placeholder="Название новой категории">
                             <input type="color" id="newCategoryColor" value="#4CAF50" title="Выберите цвет">
                             <button id="createCategoryBtn" class="btn-primary">Создать</button>
